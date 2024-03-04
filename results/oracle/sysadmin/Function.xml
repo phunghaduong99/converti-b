@@ -1,0 +1,179 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	function
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--功能(t_function)-->
+	<resultMap id="functionResult" type="function">
+		<result property="funccode" column="funccode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="funcname" column="funcname"/>
+		<result property="funcdefine" column="funcdefine"/>
+		<result property="functype" column="functype"/>
+	</resultMap>
+	<!--功能(t_function)-->
+	<resultMap id="functionListResult" type="function">
+		<result property="funccode" column="funccode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="funcname" column="funcname"/>
+		<result property="funcdefine" column="funcdefine"/>
+		<result property="functype" column="functype"/>
+	</resultMap>
+	<sql id="t_functionWhere">
+			<if test="funccode != null and funccode != ''">and
+				a.funccode=#{funccode}
+			</if>
+			<if test="systemcode != null and systemcode != ''">and
+				a.systemcode=#{systemcode}
+			</if>
+	</sql>
+	<sql id="t_functionPageWhere">
+		<include refid="t_functionWhere"/>	
+	     <if test="funcname != null and funcname != ''">and
+	     a.funcname like  '%${funcname}%'
+	     </if>
+		</sql>
+	<sql id="t_functionListWhere">
+		<include refid="t_functionWhere"/>	</sql>
+	<sql id="t_functionSelectWhere">
+		<include refid="t_functionWhere"/>	</sql>
+	<!--功能(t_function)-->
+	<insert id="insertFunction" parameterType="function">
+		insert into t_function (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--功能(t_function)-->
+	<update id="updateFunction" parameterType="function">
+		update t_function a set funccode=funccode
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--功能(t_function)-->
+	<delete id="deleteFunction" parameterType="function">
+		delete from t_function a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--功能(t_function)-->
+	<select id="getFunctionList" parameterType="map" resultMap="functionListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.funccode funccode,a.systemcode systemcode,a.funcname funcname,a.funcdefine funcdefine,a.functype functype
+		from t_function a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--功能(t_function)-->
+	<select id="getFunctionListCount" parameterType="map" resultType="int">
+		select count(1) a from t_function a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--功能(t_function)-->
+	<select id="getFunctionListNoPage" parameterType="function" resultMap="functionListResult">
+		select a.funccode funccode,a.systemcode systemcode,a.funcname funcname,a.funcdefine funcdefine,a.functype functype
+		from t_function a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.funccode,a.systemcode
+	</select>
+	<!--功能(t_function)-->
+	<select id="getFunction" parameterType="function" resultMap="functionResult">
+		select a.funccode funccode,a.systemcode systemcode,a.funcname funcname,a.funcdefine funcdefine,a.functype functype
+		from t_function a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.funccode,a.systemcode
+	</select>
+	<!--取得用户在一个系统下的功能(t_function)-->
+	 <select id="getOwnFunction" parameterType="function" resultMap="functionResult">
+  select a.funccode funccode,a.systemcode systemcode,a.funcname funcname,a.funcdefine funcdefine,a.functype functype from t_function a where a.funccode in (select trf.funccode from t_role_func trf where trf.roleid in (select roleid from t_user_role where userid=#{userid}))
+    <!--
+		Sorry, I can`t migrate	and
+		See console output for further details 
+	-->
+   </select>
+   
+   <select id="checkFunction" parameterType="function" resultType="int">
+      select  count(1) from t_role_func where roleid in (select roleid from t_user_role where userid=#{userid}) and funcCode in(select funcCode from t_function where funcdefine like '%${funcdefine}%')
+   </select>
+   
+    <select id="findFuncDefine" parameterType="function" resultMap="functionResult">
+      select a.funccode funccode,a.systemcode systemcode,a.funcname funcname,a.funcdefine funcdefine,a.functype functype from t_function
+        where funcdefine like '%${funcDefine}%'
+   </select>
+   
+   
+   
+</mapper>

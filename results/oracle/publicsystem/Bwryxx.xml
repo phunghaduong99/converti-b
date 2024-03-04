@@ -1,0 +1,234 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bwryxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--保卫人员信息(t_bwryxx)-->
+	<resultMap id="bwryxxResult" type="bwryxx">
+		<result property="qyid" column="qyid"/>
+		<result property="bwryid" column="bwryid"/>
+		<result property="xm" column="xm"/>
+		<result property="csrq" column="csrq"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="sgrq" column="sgrq"/>
+		<result property="lzyy" column="lzyy"/>
+		<result property="lzrq" column="lzrq"/>
+		<result property="bz" column="bz"/>
+		<result property="zt" column="zt"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	<!--保卫人员信息(t_bwryxx)-->
+	<resultMap id="bwryxxListResult" type="bwryxx">
+		<result property="qyid" column="qyid"/>
+		<result property="bwryid" column="bwryid"/>
+		<result property="xm" column="xm"/>
+		<result property="csrq" column="csrq"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="sgrq" column="sgrq"/>
+		<result property="lzyy" column="lzyy"/>
+		<result property="lzrq" column="lzrq"/>
+		<result property="bz" column="bz"/>
+		<result property="zt" column="zt"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	<sql id="t_bwryxxWhere">
+		<if test="qyid != null and qyid != ''">and
+			a.qyid=#{qyid}
+		</if>
+		<if test="bwryid != null and bwryid != ''">and
+			a.bwryid=#{bwryid}
+		</if>
+	</sql>
+	<sql id="t_bwryxxPageWhere">
+		<include refid="t_bwryxxWhere"/>
+		<if test="hylbdm != null and hylbdm != ''">and
+			b.hylbdm=#{hylbdm}
+		</if>
+		<if test="hylb != null and hylb != ''">and
+			b.hylb=#{hylb}
+		</if>
+		<if test="qybm != null and qybm != ''">and
+			b.qybm=#{qybm}
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			b.qymc like '%${qymc}%'
+		</if>
+		<if test="xm != null and xm != ''">and
+			a.xm like '%${xm}%'
+		</if>
+		<if test="gmsfhm != null and gmsfhm != ''">and
+			a.gmsfhm like '%${gmsfhm}%'
+		</if>
+		<if test="hjdxzqhdm != null and hjdxzqhdm != ''">and
+			a.hjdxzqhdm=#{gmsfhm}
+		</if>
+		<if test="hjdxzqh != null and hjdxzqh != ''">and
+			a.hjdxzqh=#{hjdxzqh}
+		</if>
+		<if test="hjdxz != null and hjdxz != ''">and
+			a.hjdxz=#{hjdxz}
+		</if>
+		<if test="zt != null and zt != ''">and
+		    a.zt=#{zt}
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			b.gxdwbm like '${gxdwbm}%'
+		</if>
+	</sql>
+	<sql id="t_bwryxxListWhere">
+		<include refid="t_bwryxxWhere"/>
+	</sql>
+	<sql id="t_bwryxxSelectWhere">
+		<include refid="t_bwryxxWhere"/>
+	</sql>
+	<!--保卫人员信息(t_bwryxx)-->
+	<insert id="insertBwryxx" parameterType="bwryxx">
+		insert into t_bwryxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--保卫人员信息(t_bwryxx)-->
+	<update id="updateBwryxx" parameterType="bwryxx">
+		update t_bwryxx a set a.bwryid=a.bwryid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--保卫人员信息(t_bwryxx)-->
+	<delete id="deleteBwryxx" parameterType="bwryxx">
+		delete from t_bwryxx a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--保卫人员信息(t_bwryxx)-->
+	<select id="getBwryxxList" parameterType="map" resultMap="bwryxxListResult">
+		select x.* from ( select rownum rowno,z.* from (select a.qyid
+		qyid,a.bwryid bwryid,a.xm xm,a.csrq csrq,a.xbdm xbdm,a.xb
+		xb,a.hjdxzqhdm hjdxzqhdm,a.hjdxzqh hjdxzqh,a.hjdxz
+		hjdxz,a.gmsfhm gmsfhm,a.sgrq sgrq,a.lzyy lzyy,a.lzrq lzrq,a.bz
+		bz,a.zt zt,a.lrr lrr,a.lrsj lrsj, b.qymc qymc,b.hylb hylb from
+		t_bwryxx a, t_qyjbxx b where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort}) z) x where rowno &gt;${beginRow} and rowno
+		&lt;= ${endRow}
+	</select>
+	<!--保卫人员信息(t_bwryxx)-->
+	<select id="getBwryxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bwryxx a, t_qyjbxx b where a.qyid =
+		b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--保卫人员信息(t_bwryxx)-->
+	<select id="getBwryxxListNoPage" parameterType="bwryxx" resultMap="bwryxxListResult">
+		select a.qyid qyid,a.bwryid bwryid,a.xm xm,a.csrq csrq,a.xbdm
+		xbdm,a.xb xb,a.hjdxzqhdm hjdxzqhdm,a.hjdxzqh hjdxzqh,a.hjdxz
+		hjdxz,a.gmsfhm gmsfhm,a.sgrq sgrq,a.lzyy lzyy,a.lzrq lzrq,a.bz
+		bz,a.zt zt,a.lrr lrr,a.lrsj lrsj, b.qymc qymc,b.hylb hylb from t_bwryxx a, t_qyjbxx b 
+		where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.bwryid
+	</select>
+	<!--保卫人员信息(t_bwryxx)-->
+	<select id="getBwryxx" parameterType="bwryxx" resultMap="bwryxxResult">
+		select a.qyid qyid,a.bwryid bwryid,a.xm xm,a.csrq csrq,a.xbdm
+		xbdm,a.xb xb,a.hjdxzqhdm hjdxzqhdm,a.hjdxzqh hjdxzqh,a.hjdxz
+		hjdxz,a.gmsfhm gmsfhm,a.sgrq sgrq,a.lzyy lzyy,a.lzrq lzrq,a.bz
+		bz,a.zt zt,a.lrr lrr,a.lrsj lrsj, b.qymc qymc,b.hylb hylb from
+		t_bwryxx a, t_qyjbxx b where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.bwryid
+	</select>
+	<!--保卫人员信息(t_bwryxx)-->
+	<select id="getBwryxxCount" parameterType="bwryxx" resultType="int">
+		select count(1) a from t_bwryxx a
+		where a.zt=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

@@ -1,0 +1,238 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	baryxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--保安人员信息(t_baryxx)-->
+	<resultMap id="baryxxResult" type="baryxx">
+		<result property="qyid" column="qyid"/>
+		<result property="baryid" column="baryid"/>
+		<result property="xm" column="xm"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="balxbm" column="balxbm"/>
+		<result property="balx" column="balx"/>
+		<result property="fzjg" column="fzjg"/>
+		<result property="sgrq" column="sgrq"/>
+		<result property="lzyy" column="lzyy"/>
+		<result property="lzrq" column="lzrq"/>
+		<result property="bz" column="bz"/>
+		<result property="zt" column="zt"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	<!--保安人员信息(t_baryxx)-->
+	<resultMap id="baryxxListResult" type="baryxx">
+		<result property="qyid" column="qyid"/>
+		<result property="baryid" column="baryid"/>
+		<result property="xm" column="xm"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="balxbm" column="balxbm"/>
+		<result property="balx" column="balx"/>
+		<result property="fzjg" column="fzjg"/>
+		<result property="sgrq" column="sgrq"/>
+		<result property="lzyy" column="lzyy"/>
+		<result property="lzrq" column="lzrq"/>
+		<result property="bz" column="bz"/>
+		<result property="zt" column="zt"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	<sql id="t_baryxxWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="baryid != null and baryid != ''">and
+				a.baryid=#{baryid}
+			</if>
+	</sql>
+	<sql id="t_baryxxPageWhere">
+		<include refid="t_baryxxWhere"/>	
+		<if test="hylbdm != null and hylbdm != ''">and
+				b.hylbdm=#{hylbdm}
+			</if>
+			<if test="hylb != null and hylb != ''">and
+				b.hylb=#{hylb}
+			</if>
+			<if test="qybm != null and qybm != ''">and
+				b.qybm=#{qybm}
+			</if>
+			<if test="qymc != null and qymc != ''">and
+				b.qymc like '%${qymc}%'
+			</if>
+			<if test="xm != null and xm != ''">and
+ 				a.xm like '%${xm}%'
+ 			</if>
+ 			<if test="gmsfhm != null and gmsfhm != ''">and
+ 				a.gmsfhm like '%${gmsfhm}%'
+ 			</if>
+ 			<if test="hjdxzqhdm != null and hjdxzqhdm != ''">and
+ 				a.hjdxzqhdm=#{hjdxzqhdm}
+ 			</if>
+ 			<if test="hjdxzqh != null and hjdxzqh != ''">and
+ 				a.hjdxzqh=#{hjdxzqh}
+ 			</if>
+ 			<if test="hjdxz != null and hjdxz != ''">and
+ 				a.hjdxz=#{hjdxz}
+ 			</if>
+ 			<if test="zt != null and zt != ''">and
+ 				a.zt=#{zt}
+ 			</if>
+ 			<if test="zt != null and zt != ''">and
+ 				a.zt=#{zt}
+ 			</if>
+ 			<if test="gxdwbm != null and gxdwbm != ''">and
+				b.gxdwbm like '${gxdwbm}%'
+			</if>
+	</sql>
+	<sql id="t_baryxxListWhere">
+		<include refid="t_baryxxWhere"/>	</sql>
+	<sql id="t_baryxxSelectWhere">
+		<include refid="t_baryxxWhere"/>	</sql>
+	<!--保安人员信息(t_baryxx)-->
+	<insert id="insertBaryxx" parameterType="baryxx">
+		insert into t_baryxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--保安人员信息(t_baryxx)-->
+	<update id="updateBaryxx" parameterType="baryxx">
+		update t_baryxx a set a.baryid=a.baryid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--保安人员信息(t_baryxx)-->
+	<delete id="deleteBaryxx" parameterType="baryxx">
+		delete from t_baryxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--保安人员信息(t_baryxx)-->
+	<select id="getBaryxxList" parameterType="map" resultMap="baryxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.baryid baryid,a.xm xm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdxzqhdm hjdxzqhdm,a.hjdxzqh hjdxzqh,a.hjdxz hjdxz,a.balxbm balxbm,a.balx balx,a.fzjg fzjg,a.sgrq sgrq,a.lzyy lzyy,a.lzrq lzrq,a.bz bz,a.zt zt,a.lrr lrr,a.lrsj lrsj,
+		b.qymc qymc,b.hylb hylb
+		from t_baryxx a, t_qyjbxx b
+		where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--保安人员信息(t_baryxx)-->
+	<select id="getBaryxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_baryxx a, t_qyjbxx b
+		where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--保安人员信息(t_baryxx)-->
+	<select id="getBaryxxListNoPage" parameterType="baryxx" resultMap="baryxxListResult">
+		select a.qyid qyid,a.baryid baryid,a.xm xm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdxzqhdm hjdxzqhdm,a.hjdxzqh hjdxzqh,a.hjdxz hjdxz,a.balxbm balxbm,a.balx balx,a.fzjg fzjg,a.sgrq sgrq,a.lzyy lzyy,a.lzrq lzrq,a.bz bz,a.zt zt,a.lrr lrr,a.lrsj lrsj,
+		b.qymc qymc,b.hylb hylb
+		from t_baryxx a, t_qyjbxx b
+		where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.baryid
+	</select>
+	<!--保安人员信息(t_baryxx)-->
+	<select id="getBaryxx" parameterType="baryxx" resultMap="baryxxResult">
+		select a.qyid qyid,a.baryid baryid,a.xm xm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdxzqhdm hjdxzqhdm,a.hjdxzqh hjdxzqh,a.hjdxz hjdxz,a.balxbm balxbm,a.balx balx,a.fzjg fzjg,a.sgrq sgrq,a.lzyy lzyy,a.lzrq lzrq,a.bz bz,a.zt zt,a.lrr lrr,a.lrsj lrsj,
+		b.qymc qymc,b.hylb hylb
+		from t_baryxx a, t_qyjbxx b
+		where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.baryid
+	</select>
+	<!--保安人员信息(t_baryxx)-->
+	<select id="getBaryxxCount" parameterType="baryxx" resultType="int">
+		select count(1) a from t_baryxx a
+		where a.zt=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

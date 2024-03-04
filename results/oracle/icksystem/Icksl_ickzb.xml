@@ -1,0 +1,161 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:24 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	icksl_ickzb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<resultMap id="icksl_ickzbResult" type="icksl_ickzb">
+		<result property="ickslid" column="ickslid"/>
+		<result property="zbid" column="zbid"/>
+		<result property="pczdpbh" column="pczdpbh"/>
+		<result property="zbhsuym" column="zbhsuym"/>
+	</resultMap>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<resultMap id="icksl_ickzbListResult" type="icksl_ickzb">
+		<result property="ickslid" column="ickslid"/>
+		<result property="zbid" column="zbid"/>
+		<result property="pczdpbh" column="pczdpbh"/>
+		<result property="zbhsuym" column="zbhsuym"/>
+	</resultMap>
+	<sql id="t_icksl_ickzbWhere">
+			<if test="ickslid != null and ickslid != ''">and
+				a.ickslid=#{ickslid}
+			</if>
+			<if test="zbid != null and zbid != ''">and
+				a.zbid=#{zbid}
+			</if>
+	</sql>
+	<sql id="t_icksl_ickzbPageWhere">
+		<include refid="t_icksl_ickzbWhere"/>	</sql>
+	<sql id="t_icksl_ickzbListWhere">
+		<include refid="t_icksl_ickzbWhere"/>	</sql>
+	<sql id="t_icksl_ickzbSelectWhere">
+		<include refid="t_icksl_ickzbWhere"/>	</sql>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<insert id="insertIcksl_ickzb" parameterType="icksl_ickzb">
+		insert into t_icksl_ickzb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<update id="updateIcksl_ickzb" parameterType="icksl_ickzb">
+		update t_icksl_ickzb a set a.zbid=a.zbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<delete id="deleteIcksl_ickzb" parameterType="icksl_ickzb">
+		delete from t_icksl_ickzb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<select id="getIcksl_ickzbList" parameterType="map" resultMap="icksl_ickzbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.ickslid ickslid,a.zbid zbid,a.pczdpbh pczdpbh,a.zbhsuym zbhsuym
+		from t_icksl_ickzb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<select id="getIcksl_ickzbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_icksl_ickzb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<select id="getIcksl_ickzbListNoPage" parameterType="icksl_ickzb" resultMap="icksl_ickzbListResult">
+		select a.ickslid ickslid,a.zbid zbid,a.pczdpbh pczdpbh,a.zbhsuym zbhsuym
+		from t_icksl_ickzb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ickslid,a.zbid
+	</select>
+	<!--IC卡受理_IC卡组包(t_icksl_ickzb)-->
+	<select id="getIcksl_ickzb" parameterType="icksl_ickzb" resultMap="icksl_ickzbResult">
+		select a.ickslid ickslid,a.zbid zbid,a.pczdpbh pczdpbh,a.zbhsuym zbhsuym
+		    from  t_icksl_ickzb a,
+			(select a.ickslid ickslid,max(a.zbid) zbid
+			    from  t_icksl_ickzb a
+			    where 1=1
+			   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+			   group by a.ickslid )b
+		   where 1=1 and  a.ickslid=b.ickslid and a.zbid=b.zbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ickslid,a.zbid
+	</select>
+</mapper>

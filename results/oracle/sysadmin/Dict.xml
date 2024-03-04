@@ -1,0 +1,190 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	dict
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--字典(t_dict)-->
+	<resultMap id="dictResult" type="dict">
+		<result property="dict_code" column="dict_code"/>
+		<result property="dict_name" column="dict_name"/>
+		<result property="super_dict_code" column="super_dict_code"/>
+		<result property="sib_order" column="sib_order"/>
+		<result property="leaf_flag" column="leaf_flag"/>
+		<result property="maint_flag" column="maint_flag"/>
+		<result property="dict_type" column="dict_type"/>
+		<result property="dict_simplepin" column="dict_simplepin"/>
+		<result property="dict_allpin" column="dict_allpin"/>
+		<result property="dict_itemtablename" column="dict_itemtablename"/>
+		<result property="dict_versionid" column="dict_versionid"/>
+		<result property="dict_id" column="dict_id"/>
+	</resultMap>
+	<!--字典(t_dict)-->
+	<resultMap id="dictListResult" type="dict">
+		<result property="dict_code" column="dict_code"/>
+		<result property="dict_name" column="dict_name"/>
+		<result property="super_dict_code" column="super_dict_code"/>
+		<result property="sib_order" column="sib_order"/>
+		<result property="leaf_flag" column="leaf_flag"/>
+		<result property="maint_flag" column="maint_flag"/>
+		<result property="dict_type" column="dict_type"/>
+		<result property="dict_simplepin" column="dict_simplepin"/>
+		<result property="dict_allpin" column="dict_allpin"/>
+		<result property="dict_itemtablename" column="dict_itemtablename"/>
+		<result property="dict_versionid" column="dict_versionid"/>
+		<result property="dict_id" column="dict_id"/>
+	</resultMap>
+	<sql id="t_dictWhere">
+			<if test="dict_code != null and dict_code != ''">and
+				a.dict_code=#{dict_code}
+			</if>
+			<if test="dict_id != null and dict_id != ''">and
+				a.dict_id=#{dict_id}
+			</if>
+	</sql>
+	<sql id="t_dictPageWhere">
+		<include refid="t_dictWhere"/>	
+	</sql>
+	<sql id="t_dictListWhere">
+		<include refid="t_dictWhere"/>	</sql>
+	<sql id="t_dictSelectWhere">
+		<include refid="t_dictWhere"/>	</sql>
+	<!--字典(t_dict)-->
+	<insert id="insertDict" parameterType="dict">
+		insert into t_dict (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--字典(t_dict)-->
+	<update id="updateDict" parameterType="dict">
+		update t_dict a set dict_code=dict_code
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--字典(t_dict)-->
+	<delete id="deleteDict" parameterType="dict">
+		delete from t_dict a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--字典(t_dict)-->
+	<select id="getDictList" parameterType="map" resultMap="dictListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.dict_code dict_code,a.dict_name dict_name,a.super_dict_code super_dict_code,a.sib_order sib_order,a.leaf_flag leaf_flag,a.maint_flag maint_flag,a.dict_type dict_type,a.dict_simplepin dict_simplepin,a.dict_allpin dict_allpin,a.dict_itemtablename dict_itemtablename,a.dict_versionid dict_versionid,a.dict_id dict_id
+		from t_dict a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--字典(t_dict)-->
+	<select id="getDictListCount" parameterType="map" resultType="int">
+		select count(1) a from t_dict a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--字典(t_dict)-->
+	<select id="getDictListNoPage" parameterType="dict" resultMap="dictListResult">
+		select a.dict_code dict_code,a.dict_name dict_name,a.super_dict_code super_dict_code,a.sib_order sib_order,a.leaf_flag leaf_flag,a.maint_flag maint_flag,a.dict_type dict_type,a.dict_simplepin dict_simplepin,a.dict_allpin dict_allpin,a.dict_itemtablename dict_itemtablename,a.dict_versionid dict_versionid,a.dict_id dict_id
+		from t_dict a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dict_code
+	</select>
+	<!--字典(t_dict)-->
+	<select id="getDict" parameterType="dict" resultMap="dictResult">
+		select a.dict_code dict_code,a.dict_name dict_name,a.super_dict_code super_dict_code,a.sib_order sib_order,a.leaf_flag leaf_flag,a.maint_flag maint_flag,a.dict_type dict_type,a.dict_simplepin dict_simplepin,a.dict_allpin dict_allpin,a.dict_itemtablename dict_itemtablename,a.dict_versionid dict_versionid,a.dict_id dict_id
+		from t_dict a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dict_code
+	</select>
+	
+	
+	<select id="getDictionaryAll" parameterType="dict" resultMap="dictResult">
+	select a.dict_code dict_code,a.dict_name dict_name,a.super_dict_code super_dict_code,a.sib_order sib_order,a.leaf_flag leaf_flag,a.maint_flag maint_flag,a.dict_type dict_type,a.dict_simplepin dict_simplepin,a.dict_allpin dict_allpin,a.dict_itemtablename dict_itemtablename,a.dict_versionid dict_versionid,a.dict_id dict_id
+		from t_dict a
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by sib_order 
+	</select>
+	<delete id="deleteDictionaryItemByDictionary" parameterType="dict">
+		delete from t_dict_item where dict_code = #{dict_code} 
+	</delete>
+	<select id="getChildrenDictionary" parameterType="dict" resultMap="dictResult">
+			select a.dict_code dict_code,a.dict_name dict_name,a.super_dict_code super_dict_code,a.sib_order sib_order,a.leaf_flag leaf_flag,a.maint_flag maint_flag,a.dict_type dict_type,a.dict_simplepin dict_simplepin,a.dict_allpin dict_allpin,a.dict_itemtablename dict_itemtablename,a.dict_versionid dict_versionid,a.dict_id dict_id
+		from t_dict a where  a.super_dict_code= #{dict_code} 
+	</select>
+	
+	
+</mapper>

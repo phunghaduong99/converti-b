@@ -1,0 +1,216 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	role_func
+		See console output for further details 
+	-->
+	  <!--
+		Sorry, I can`t migrate	function
+		See console output for further details 
+	-->
+	    <!--
+		Sorry, I can`t migrate	role
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--角色功能(t_role_func)-->
+	<resultMap id="role_funcResult" type="role_func">
+		<result property="roleid" column="roleid"/>
+		<result property="funccode" column="funccode"/>
+		<result property="param" column="param"/>
+	</resultMap>
+	<!--角色功能(t_role_func)-->
+	<resultMap id="role_funcListResult" type="role_func">
+		<result property="roleid" column="roleid"/>
+		<result property="funccode" column="funccode"/>
+		<result property="param" column="param"/>
+	</resultMap>
+		<!--功能(t_function)-->
+	<resultMap id="functionResult" type="function">
+		<result property="funccode" column="funccode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="funcname" column="funcname"/>
+		<result property="funcdefine" column="funcdefine"/>
+		<result property="functype" column="functype"/>
+		<result property="systemname" column="systemname"/>
+	</resultMap>
+	<!-- list用到 -->
+	  <resultMap id="roleFunctionResult" type="role_func">
+    <result property="roleid" column="roleid"/>
+    <result property="funccode" column="funccode"/>
+    <result property="funcname" column="funcname"/>
+    <result property="functype" column="functype"/>
+    <result property="systemcode" column="systemcode"/>
+    <!--  
+    <result property="param" column="param"/>
+    <result property="function.funcname" column="funcname"/>
+    <result property="function.system.systemname" column="systemname"/>
+    -->
+  </resultMap>
+	<sql id="t_role_funcWhere">
+			<if test="roleid != null and roleid != ''">and
+				a.roleid=#{roleid}
+			</if>
+			<if test="funccode != null and funccode != ''">and
+				a.funccode=#{funccode}
+			</if>
+	</sql>
+	<sql id="t_role_funcPageWhere">
+		<include refid="t_role_funcWhere"/>	</sql>
+	<sql id="t_role_funcListWhere">
+		<include refid="t_role_funcWhere"/>	</sql>
+	<sql id="t_role_funcSelectWhere">
+		<include refid="t_role_funcWhere"/>	</sql>
+	<!--角色功能(t_role_func)-->
+	<insert id="insertRole_func" parameterType="role_func">
+		insert into t_role_func (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--角色功能(t_role_func)-->
+	<update id="updateRole_func" parameterType="role_func">
+		update t_role_func a set roleid=roleid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--角色功能(t_role_func)-->
+	<delete id="deleteRole_func" parameterType="role_func">
+		delete from t_role_func a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--角色功能(t_role_func)-->
+	<select id="getRole_funcList" parameterType="map" resultMap="role_funcListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.roleid roleid,a.funccode funccode,a.param param
+		from t_role_func a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--角色功能(t_role_func)-->
+	<select id="getRole_funcListCount" parameterType="map" resultType="int">
+		select count(1) a from t_role_func a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--角色功能(t_role_func)-->
+	<select id="getRole_funcListNoPage" parameterType="role_func" resultMap="role_funcListResult">
+		select a.roleid roleid,a.funccode funccode,a.param param
+		from t_role_func a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid,a.funccode
+	</select>
+	<!--角色功能(t_role_func)-->
+	<select id="getRole_func" parameterType="role_func" resultMap="role_funcResult">
+		select a.roleid roleid,a.funccode funccode,a.param param
+		from t_role_func a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid,a.funccode
+	</select>
+	
+	  <select id="getRoleFuncParam" parameterType="role_func" resultType="java.lang.String">
+   select distinct param from t_role_func rf,t_function f,t_user_role r where rf.roleid=r.roleid and r.userid=#{userid} and rf.funccode=f.funccode and f.funcdefine=#{funcdefine} 
+   </select>
+	
+ <select id="getFunctionListNotInRole" parameterType="role_func" resultType="function">
+  select f.funccode as funccode,f.systemcode as systemcode,f.funcname as funcname,
+  f.funcdefine as funcdefine ,f.functype as functype,
+  s.systemName as "systemname" from t_function f ,t_system s
+   where not exists(select funccode from t_role_func rf where  f.funccode=rf.funccode 
+   and rf.roleid=#{roleid} ) and f.systemcode=s.systemcode 
+    <!--
+		Sorry, I can`t migrate	and
+		See console output for further details 
+	-->
+       <!--
+		Sorry, I can`t migrate	and
+		See console output for further details 
+	-->
+  </select>
+	<delete id="deleteRoleFunctionByFunction" parameterType="function">
+    delete from t_role_func where funccode=#{funccode}
+  </delete>
+  <delete id="deleteRoleFunctionByRole" parameterType="role">
+    delete from t_role_func where roleid=#{roleid}
+  </delete>
+   <update id="updateRoleFunctionParam" parameterType="role_func">
+    update  t_role_func set param=#{param} where funccode=#{funccode} and roleid=#{roleid}
+  </update>
+    <select id="getRoleFunctionList" parameterType="map" resultMap="roleFunctionResult">
+   select tf.funcCode,roleID,param ,funcName,f.functype,s.systemcode ,systemname from t_role_func tf,t_function f ,T_system s where roleID=#{roleid} and tf.funccode=f.funccode and f.systemcode=s.systemcode
+  </select>
+     <select id="getRoleFunctionListCount" parameterType="map" resultType="int">
+   select count(1)  from t_role_func where roleID=#{roleid}
+   </select>
+</mapper>

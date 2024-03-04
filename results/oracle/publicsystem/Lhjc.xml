@@ -1,0 +1,220 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	lhjc
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--联合检查(t_lhjc)-->
+	<resultMap id="lhjcResult" type="lhjc">
+		<result property="qyid" column="qyid"/>
+		<result property="lhjcid" column="lhjcid"/>
+		<result property="glbmlhjcdjxh" column="glbmlhjcdjxh"/>
+		<result property="lcjgjbdm" column="lcjgjbdm"/>
+		<result property="lcjgjb" column="lcjgjb"/>
+		<result property="lcjglxdm" column="lcjglxdm"/>
+		<result property="lcjglx" column="lcjglx"/>
+		<result property="lcjgdm" column="lcjgdm"/>
+		<result property="lcjgmc" column="lcjgmc"/>
+		<result property="lcsj" column="lcsj"/>
+		<result property="lcryxm" column="lcryxm"/>
+		<result property="lcsx" column="lcsx"/>
+		<result property="fxwt" column="fxwt"/>
+		<result property="lcjg" column="lcjg"/>
+		<result property="qymc" column="qymc"/>
+		<result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	<!--联合检查(t_lhjc)-->
+	<resultMap id="lhjcListResult" type="lhjc">
+		<result property="qyid" column="qyid"/>
+		<result property="lhjcid" column="lhjcid"/>
+		<result property="glbmlhjcdjxh" column="glbmlhjcdjxh"/>
+		<result property="lcjgjbdm" column="lcjgjbdm"/>
+		<result property="lcjgjb" column="lcjgjb"/>
+		<result property="lcjglxdm" column="lcjglxdm"/>
+		<result property="lcjglx" column="lcjglx"/>
+		<result property="lcjgdm" column="lcjgdm"/>
+		<result property="lcjgmc" column="lcjgmc"/>
+		<result property="lcsj" column="lcsj"/>
+		<result property="lcryxm" column="lcryxm"/>
+		<result property="lcsx" column="lcsx"/>
+		<result property="fxwt" column="fxwt"/>
+		<result property="lcjg" column="lcjg"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	<sql id="t_lhjcWhere">
+			<if test="lcjg != null and lcjg != ''">and
+				a.lcjg like '%${lcjg}%'
+			</if>
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="lhjcid != null and lhjcid != ''">and
+				a.lhjcid=#{lhjcid}
+			</if>
+			<if test="glbmlhjcdjxh != null and glbmlhjcdjxh != ''">and
+				a.glbmlhjcdjxh=#{glbmlhjcdjxh}
+			</if>
+			<if test="lcjgjbdm != null and lcjgjbdm != ''">and
+				a.lcjgjbdm=#{lcjgjbdm}
+			</if>
+			<if test="lcjglxdm != null and lcjglxdm != ''">and
+				a.lcjglxdm=#{lcjglxdm}
+			</if>
+			<if test="lcjgmc != null and lcjgmc != ''">and
+				a.lcjgmc like '%${lcjgmc}%'
+			</if>
+			<if test="lcryxm != null and lcryxm != ''">and
+				a.lcryxm like '%${lcryxm}%'
+			</if>
+			<if test="gxdwbm != null and gxdwbm != ''">and
+					t.gxdwbm like '%${gxdwbm}%'
+			</if>
+			<if test="qymc != null and qymc != ''">and
+					t.qymc like '%${qymc}%'
+			</if>
+			<if test="qybm != null and qybm != ''">and
+					t.qybm like '%${qybm}%'
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+					t.hylbdm like #{hylbdm}
+			</if>
+			<if test="lcsj != null and lcsj != ''">and
+				to_char(a.lcsj,'yyyy-MM-dd') &gt;=to_char(#{lcsj,jdbcType=TIMESTAMP},'yyyy-MM-dd')
+			</if>
+			<if test="lcsjzhi != null and lcsjzhi != ''">and
+				to_char(a.lcsj,'yyyy-MM-dd') &lt;=to_char(#{lcsjzhi,jdbcType=TIMESTAMP},'yyyy-MM-dd')||' 23:59:59'
+			</if>
+	</sql>
+	<sql id="t_lhjcPageWhere">
+		<include refid="t_lhjcWhere"/>	</sql>
+	<sql id="t_lhjcListWhere">
+		<include refid="t_lhjcWhere"/>	</sql>
+	<sql id="t_lhjcSelectWhere">
+		<include refid="t_lhjcWhere"/>	</sql>
+	<!--联合检查(t_lhjc)-->
+	<insert id="insertLhjc" parameterType="lhjc">
+		insert into t_lhjc (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--联合检查(t_lhjc)-->
+	<update id="updateLhjc" parameterType="lhjc">
+		update t_lhjc a set a.lhjcid=a.lhjcid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1 
+		<if test="lhjcid != null">and
+				a.lhjcid=#{lhjcid}
+		</if>
+		<!--  
+		<dynamic prepend="">
+			<include refid="t_lhjcWhere" />
+		</dynamic>
+		-->
+	</update>
+	<!--联合检查(t_lhjc)-->
+	<delete id="deleteLhjc" parameterType="lhjc">
+		update t_lhjc a set a.scbz=1 where 1=1
+		<if test="lhjcid != null">and
+				lhjcid=#{lhjcid}
+			</if>
+		<!--  
+		<dynamic prepend="">
+			<include refid="t_lhjcWhere" />
+		</dynamic>
+		-->
+	</delete>
+	<!--联合检查(t_lhjc)-->
+	<select id="getLhjcList" parameterType="map" resultMap="lhjcListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select t.qymc qymc,a.qyid qyid,a.lhjcid lhjcid,a.glbmlhjcdjxh glbmlhjcdjxh,a.lcjgjbdm lcjgjbdm,a.lcjgjb lcjgjb,a.lcjglxdm lcjglxdm,a.lcjglx lcjglx,a.lcjgdm lcjgdm,a.lcjgmc lcjgmc,a.lcsj lcsj,a.lcryxm lcryxm,a.lcsx lcsx,a.fxwt fxwt,a.lcjg lcjg
+		from t_lhjc a ,t_qyjbxx t
+		where 1=1 and a.scbz=0 and a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--联合检查(t_lhjc)-->
+	<select id="getLhjcListCount" parameterType="map" resultType="int">
+		select count(1) a from t_lhjc a ,t_qyjbxx t
+		where 1=1 and a.scbz=0 and a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--联合检查(t_lhjc)-->
+	<select id="getLhjcListNoPage" parameterType="lhjc" resultMap="lhjcListResult">
+		select t.qymc qymc,a.qyid qyid,a.lhjcid lhjcid,a.glbmlhjcdjxh glbmlhjcdjxh,a.lcjgjbdm lcjgjbdm,a.lcjgjb lcjgjb,a.lcjglxdm lcjglxdm,a.lcjglx lcjglx,a.lcjgdm lcjgdm,a.lcjgmc lcjgmc,a.lcsj lcsj,a.lcryxm lcryxm,a.lcsx lcsx,a.fxwt fxwt,a.lcjg lcjg
+		from t_lhjc a ,t_qyjbxx t
+		where 1=1 and a.scbz=0 and a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.lhjcid
+	</select>
+	<!--联合检查(t_lhjc)-->
+	<select id="getLhjc" parameterType="lhjc" resultMap="lhjcResult">
+		select t.qymc qymc,t.hylbdm hylbdm,a.qyid qyid,a.lhjcid lhjcid,a.glbmlhjcdjxh glbmlhjcdjxh,a.lcjgjbdm lcjgjbdm,a.lcjgjb lcjgjb,a.lcjglxdm lcjglxdm,a.lcjglx lcjglx,a.lcjgdm lcjgdm,a.lcjgmc lcjgmc,a.lcsj lcsj,a.lcryxm lcryxm,a.lcsx lcsx,a.fxwt fxwt,a.lcjg lcjg
+		from t_lhjc a ,t_qyjbxx t
+		where 1=1 and a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.lhjcid
+	</select>
+</mapper>

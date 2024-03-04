@@ -1,0 +1,217 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:57 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	Worksheet
+		See console output for further details 
+	-->
+	
+	<resultMap id="worksheetMap" type="Worksheet">
+		<result property="task.name" column="name_"/>
+		<result property="task.description" column="descr_"/>
+		<result property="task.dbid" column="dbid_"/>
+		<result property="task.state" column="state_"/>
+		<result property="task.activityName" column="activity_Name_"/>
+		<result property="task.assignee" column="assignee_"/>
+		
+		<result property="st.stNo" column="ST_NO"/>
+		
+		<!-- 申请人 -->
+		<association property="st.applicant" select="SupportTicket.getUserById" column="APPLICANT"/>
+		<result property="st.supportContent" column="SUPPORT_CONTENT"/>
+		<!-- 技术支持人信息 -->
+		<association property="st.lstSupportLeaders" select="SupportLeaderRelation.querySupportLeaderByStId" column="ID"/>
+		<!-- 单位 -->
+		<association property="st.supportDeptList" select="SupportDept.queryDepartmentByStId" column="ID"/>
+		
+		<result property="st.devScheDate" column="DEV_SCHE_DATE"/>
+		<result property="st.psgScheDate" column="PSG_SCHE_DATE"/>
+		<result property="st.stStatus" column="ST_STATUS"/>
+		<result property="st.region" column="REGION"/>
+		<result property="st.serialNumber" column="SERIAL_NUMBER"/>
+		<result property="st.id" column="ID"/>
+		<result property="st.devDsScheDate" column="DEV_DS_SCHE_DATE"/>
+		<result property="st.devDdScheDate" column="DEV_DD_SCHE_DATE"/>
+		<result property="st.devDtScheDate" column="DEV_DT_SCHE_DATE"/>
+		<result property="st.psgDsScheDate" column="PSG_DS_SCHE_DATE"/>
+		<result property="st.psgIsScheDate" column="PSG_IS_SCHE_DATE"/>
+
+		<result property="st.psgCompDate" column="PSG_COMP_DATE"/>
+		<result property="st.devCompDate" column="DEV_COMP_DATE"/>
+		<result property="st.psgDsCompDate" column="PSG_DS_COMP_DATE"/>
+		<result property="st.psgIsCompDate" column="PSG_IS_COMP_DATE"/>
+		<result property="st.devDsCompDate" column="DEV_DS_COMP_DATE"/>
+		<result property="st.devDdCompDate" column="DEV_DD_COMP_DATE"/>
+		<result property="st.devDtCompDate" column="DEV_DT_COMP_DATE"/>
+		<result property="st.applyingFeedbackDate" column="APPLYING_FEEDBACK_DATE"/>
+
+		<result property="st.feedbackConfirmDate" column="FEEDBACK_CONFIRM_DATE"/>
+
+		<result property="st.comments" column="COMMENTS"/>
+		<result property="st.archiveDate" column="ARCHIVE_DATE"/>
+		<result property="st.archiveUser.userid" column="ARCHIVE_USERID"/>
+		<result property="st.lastUpdateDate" column="last_update_date"/>
+		<result property="st.archive_code" column="archive_code"/>
+		<result property="st.applyDate" column="apply_date"/>
+	</resultMap>
+	
+	<sql id="worksheet.getlistForPage_ParticipationWhere">
+		<if test="type != null and type != ''">and
+			p.type_ = #{type}
+		</if>
+		<if test="task != null and task != ''">and
+			p.task_ = #{task}
+		</if>
+		<if test="user != null and user != ''">and
+			p.userid_ = #{user}
+		</if>
+		<if test="group != null and group != ''">and
+			p.groupid_ = #{group}
+		</if>
+		
+	</sql>
+	<sql id="worksheet.getListForPageWhere">
+		<if test="taskId != null and taskId != ''">and
+			t.dbid_ = #{taskId}
+		</if>
+		<if test="activity != null and activity != ''">and
+			t.name_=#{activity}
+		</if>
+		<if test="region != null and region != ''">and
+		 	s.region = #{region}
+		</if>
+		<if test="stNo != null and stNo != ''">and
+			s.st_no = #{stNo}
+		</if>
+		<if test="useSlMap != null and useSlMap != ''">and
+			sl.st_id = s.id
+			<if test="supportLeader != null and supportLeader != ''">and
+				sl.sl_id = #{supportLeader}
+			</if>
+		</if>
+	</sql>
+	
+	<sql id="worksheet.getlistForPageFrom">
+		<if test="useSlMap != null and useSlMap != ''">,
+			T_TS_STSL_MAP sl
+		</if>
+	</sql>
+	
+	<select id="worksheet.getlistForPage" parameterType="map" resultMap="worksheetMap">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+		
+			select
+			     t.*,s.*
+			from
+			    JBPM4_TASK t,
+			    t_ts_tech_support s,
+			    JBPM4_VARIABLE v
+			    <include refid="worksheet.getlistForPageFrom"/>
+			<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+			order by ${pageSort})  z 
+		) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+		
+	</select>
+	<select id="worksheet.getlistForPageCount" parameterType="map" resultType="int">
+		select
+			     count(t.dbid_)
+			from
+			    JBPM4_TASK t,
+			    t_ts_tech_support s,
+			    JBPM4_VARIABLE v
+			    <include refid="worksheet.getlistForPageFrom"/>
+			<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+
+	<select id="get_region_with_userrole" parameterType="map" resultType="dict_item">
+		select t.* from t_dict_item t,t_dict_item b,t_user_role ur,t_role r where t.dict_code = 'dm_ts_regin'
+		    and t.fact_value = b.fact_value and ur.roleid=r.roleid
+		    and b.dict_code = 'dm_ts_rm_map' and r.rolename = b.display_name
+		    and ur.userid=#{userid}
+	</select>
+	<select id="get_region_with_userrole_for_page" parameterType="map" resultType="dict_item">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+			select t.* from t_dict_item t,t_dict_item b,t_user_role ur,t_role r where t.dict_code = 'dm_ts_regin'
+		    and t.fact_value = b.fact_value and ur.roleid=r.roleid
+		    and b.dict_code = 'dm_ts_rm_map' and r.rolename = b.display_name
+		    and ur.userid=#{userid}
+		order by ${pageSort})  z 
+		) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<select id="get_region_with_userrole_for_pageCount" parameterType="map" resultType="int">
+		select count(1) from t_dict_item t,t_dict_item b,t_user_role ur,t_role r where t.dict_code = 'dm_ts_regin'
+		    and t.fact_value = b.fact_value and ur.roleid=r.roleid
+		    and b.dict_code = 'dm_ts_rm_map' and r.rolename = b.display_name
+		    and ur.userid=#{userid}
+	</select>
+	
+	<select id="get_region_with_deptcode" parameterType="map" resultType="dict_item">
+		select t.* from t_dict_item t,t_dict_item b,t_department ur,t_role r where t.dict_code = 'dm_ts_regin'
+		    and t.fact_value = b.fact_value and ur.departid=r.departid
+		    and b.dict_code = 'dm_ts_rm_map' and r.rolename = b.display_name
+		    and ur.departcode=#{departcode}
+	</select>
+	
+	<select id="get_region_with_deptcode_for_page" parameterType="map" resultType="dict_item">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+			select t.* from t_dict_item t,t_dict_item b,t_department ur,t_role r where t.dict_code = 'dm_ts_regin'
+		    and t.fact_value = b.fact_value and ur.departid=r.departid
+		    and b.dict_code = 'dm_ts_rm_map' and r.rolename = b.display_name
+		    and ur.departcode=#{departcode}
+		order by ${pageSort})  z 
+		) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow}
+	</select>
+	
+	<select id="get_region_with_deptcode_for_pageCount" parameterType="map" resultType="int">
+		select count(1) from t_dict_item t,t_dict_item b,t_department ur,t_role r where t.dict_code = 'dm_ts_regin'
+		    and t.fact_value = b.fact_value and ur.departid=r.departid
+		    and b.dict_code = 'dm_ts_rm_map' and r.rolename = b.display_name
+		    and ur.departcode=#{departcode}
+	</select>
+</mapper>

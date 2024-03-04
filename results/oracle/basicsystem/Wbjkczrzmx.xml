@@ -1,0 +1,157 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	wbjkczrzmx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<resultMap id="wbjkczrzmxResult" type="wbjkczrzmx">
+		<result property="czrzid" column="czrzid"/>
+		<result property="mxid" column="mxid"/>
+		<result property="czjglx" column="czjglx"/>
+		<result property="sbyy" column="sbyy"/>
+		<result property="djt" column="djt"/>
+		<result property="mc" column="mc"/>
+	</resultMap>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<resultMap id="wbjkczrzmxListResult" type="wbjkczrzmx">
+		<result property="czrzid" column="czrzid"/>
+		<result property="mxid" column="mxid"/>
+		<result property="czjglx" column="czjglx"/>
+		<result property="sbyy" column="sbyy"/>
+		<result property="djt" column="djt"/>
+		<result property="mc" column="mc"/>
+	</resultMap>
+	<sql id="t_wbjkczrzmxWhere">
+			<if test="czrzid != null and czrzid != ''">and
+				a.czrzid=#{czrzid}
+			</if>
+			<if test="mxid != null and mxid != ''">and
+				a.mxid=#{mxid}
+			</if>
+	</sql>
+	<sql id="t_wbjkczrzmxPageWhere">
+		<include refid="t_wbjkczrzmxWhere"/>	</sql>
+	<sql id="t_wbjkczrzmxListWhere">
+		<include refid="t_wbjkczrzmxWhere"/>	</sql>
+	<sql id="t_wbjkczrzmxSelectWhere">
+		<include refid="t_wbjkczrzmxWhere"/>	</sql>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<insert id="insertWbjkczrzmx" parameterType="wbjkczrzmx">
+		insert into t_wbjkczrzmx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<update id="updateWbjkczrzmx" parameterType="wbjkczrzmx">
+		update t_wbjkczrzmx a set a.mxid=a.mxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<delete id="deleteWbjkczrzmx" parameterType="wbjkczrzmx">
+		delete from t_wbjkczrzmx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<select id="getWbjkczrzmxList" parameterType="map" resultMap="wbjkczrzmxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.czrzid czrzid,a.mxid mxid,a.czjglx czjglx,a.sbyy sbyy,a.djt djt,a.mc mc
+		from t_wbjkczrzmx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<select id="getWbjkczrzmxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wbjkczrzmx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<select id="getWbjkczrzmxListNoPage" parameterType="wbjkczrzmx" resultMap="wbjkczrzmxListResult">
+		select a.czrzid czrzid,a.mxid mxid,a.czjglx czjglx,a.sbyy sbyy,a.djt djt,a.mc mc
+		from t_wbjkczrzmx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.czrzid,a.mxid
+	</select>
+	<!--外部接口操作日志明细(t_wbjkczrzmx)-->
+	<select id="getWbjkczrzmx" parameterType="wbjkczrzmx" resultMap="wbjkczrzmxResult">
+		select a.czrzid czrzid,a.mxid mxid,a.czjglx czjglx,a.sbyy sbyy,a.djt djt,a.mc mc
+		from t_wbjkczrzmx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.czrzid,a.mxid
+	</select>
+</mapper>

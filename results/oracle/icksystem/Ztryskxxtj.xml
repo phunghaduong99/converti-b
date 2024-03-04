@@ -1,0 +1,402 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	ztryskxxtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<resultMap id="ztryskxxtjResult" type="ztryskxxtj">
+		<result property="qyryskxxtjmxid" column="qyryskxxtjmxid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="qyfflbm" column="qyfflbm"/>
+		<result property="qyfflmc" column="qyfflmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssqyid" column="ssqyid"/>
+		<result property="ssqybm" column="ssqybm"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="ssqygxdwdm" column="ssqygxdwdm"/>
+		<result property="ssqygxdwmc" column="ssqygxdwmc"/>
+		<result property="ssqyzfldm" column="ssqyzfldm"/>
+		<result property="ssqyzflmc" column="ssqyzflmc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="ryid" column="ryid"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="cyrylbmc" column="cyrylbmc"/>
+		<result property="xm" column="xm"/>
+		<result property="qm" column="qm"/>
+		<result property="bm" column="bm"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="gjdm" column="gjdm"/>
+		<result property="gj" column="gj"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="hyzkdm" column="hyzkdm"/>
+		<result property="hyzk" column="hyzk"/>
+		<result property="shengao" column="shengao"/>
+		<result property="tizh" column="tizh"/>
+		<result property="xxdm" column="xxdm"/>
+		<result property="xx" column="xx"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="cyzjdm" column="cyzjdm"/>
+		<result property="cyzj" column="cyzj"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zzzhm" column="zzzhm"/>
+		<result property="zzdz" column="zzdz"/>
+		<result property="gwbh" column="gwbh"/>
+		<result property="gwmc" column="gwmc"/>
+		<result property="gwzrms" column="gwzrms"/>
+		<result property="shouji" column="shouji"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="jjlxr" column="jjlxr"/>
+		<result property="jjlxrdh" column="jjlxrdh"/>
+		<result property="gzdm" column="gzdm"/>
+		<result property="gz" column="gz"/>
+		<result property="zhiwu" column="zhiwu"/>
+		<result property="rzrq" column="rzrq"/>
+		<result property="lzrq" column="lzrq"/>
+		<result property="cyryztdm" column="cyryztdm"/>
+		<result property="cyryzt" column="cyryzt"/>
+		<result property="cxr" column="cxr"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="cxsj" column="cxsj"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdwmc" column="lrdwmc"/>
+		<result property="hcdw" column="hcdw"/>
+		<result property="hcr" column="hcr"/>
+		<result property="hcsj" column="hcsj"/>
+		<result property="zxyy" column="zxyy"/>
+		<result property="zkzt" column="zkzt"/>
+		<result property="bcsj" column="bcsj"/>
+		<result property="dcbs" column="dcbs"/>
+		<result property="bz" column="bz"/>
+		<result property="scbz" column="scbz"/>
+		<result property="biduiflag" column="biduiflag"/>
+		<result property="zpwtgyy" column="zpwtgyy"/>
+		<result property="zt" column="zt"/>
+		<result property="ywx" column="ywx"/>
+		<result property="ywm" column="ywm"/>
+		<result property="wgrjyxkz" column="wgrjyxkz"/>
+		<result property="qzzldm" column="qzzldm"/>
+		<result property="qzhm" column="qzhm"/>
+		<result property="zatlq" column="zatlq"/>
+		<result property="qfjg" column="qfjg"/>
+		<result property="rjrq" column="rjrq"/>
+		<result property="rjka" column="rjka"/>
+		<result property="kh" column="kh"/>
+		<result property="ickh" column="ickh"/>
+		<result property="slyy" column="slyy"/>
+		<result property="slr" column="slr"/>
+		<result property="slsj" column="slsj"/>
+		<result property="yxsksrq" column="yxsksrq"/>
+		<result property="yxqhzrq" column="yxqhzrq"/>
+		<result property="ickcjsj" column="ickcjsj"/>
+		<result property="ickcjr" column="ickcjr"/>
+		<result property="ickcjdbm" column="ickcjdbm"/>
+		<result property="ickcjdmc" column="ickcjdmc"/>
+		<result property="jssj" column="jssj"/>
+		<result property="jsbmc" column="jsbmc"/>
+		<result property="ffr" column="ffr"/>
+		<result property="ffsj" column="ffsj"/>
+		<result property="lqr" column="lqr"/>
+		<result property="lqsj" column="lqsj"/>
+		<result property="lqrzjlx" column="lqrzjlx"/>
+		<result property="lqrzjhm" column="lqrzjhm"/>
+		<result property="ickzxr" column="ickzxr"/>
+		<result property="ickzxsj" column="ickzxsj"/>
+		<result property="ickzxyy" column="ickzxyy"/>
+		<result property="njr" column="njr"/>
+		<result property="njsj" column="njsj"/>
+		<result property="zkztbs" column="zkztbs"/>
+		<result property="sfqr" column="sfqr"/>
+		<result property="ysr" column="ysr"/>
+		<result property="yssj" column="yssj"/>
+		<result property="dxrr" column="dxrr"/>
+		<result property="dxrsj" column="dxrsj"/>
+		<result property="cyssj" column="cyssj"/>
+		<result property="cysyy" column="cysyy"/>
+		<result property="cdxrsj" column="cdxrsj"/>
+		<result property="cdxryy" column="cdxryy"/>
+		<result property="bhkyy" column="bhkyy"/>
+		<result property="yksfsh" column="yksfsh"/>
+		<result property="ztryskxxtjmxid" column="ztryskxxtjmxid"/>
+		<result property="skid3" column="skid3"/>
+		<result property="tjrq" column="tjrq"/>
+	</resultMap>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<resultMap id="ztryskxxtjListResult" type="ztryskxxtj">
+		<result property="qyryskxxtjmxid" column="qyryskxxtjmxid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="qyfflbm" column="qyfflbm"/>
+		<result property="qyfflmc" column="qyfflmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssqyid" column="ssqyid"/>
+		<result property="ssqybm" column="ssqybm"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="ssqygxdwdm" column="ssqygxdwdm"/>
+		<result property="ssqygxdwmc" column="ssqygxdwmc"/>
+		<result property="ssqyzfldm" column="ssqyzfldm"/>
+		<result property="ssqyzflmc" column="ssqyzflmc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="ryid" column="ryid"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="cyrylbmc" column="cyrylbmc"/>
+		<result property="xm" column="xm"/>
+		<result property="qm" column="qm"/>
+		<result property="bm" column="bm"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="gjdm" column="gjdm"/>
+		<result property="gj" column="gj"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="hyzkdm" column="hyzkdm"/>
+		<result property="hyzk" column="hyzk"/>
+		<result property="shengao" column="shengao"/>
+		<result property="tizh" column="tizh"/>
+		<result property="xxdm" column="xxdm"/>
+		<result property="xx" column="xx"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="cyzjdm" column="cyzjdm"/>
+		<result property="cyzj" column="cyzj"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zzzhm" column="zzzhm"/>
+		<result property="zzdz" column="zzdz"/>
+		<result property="gwbh" column="gwbh"/>
+		<result property="gwmc" column="gwmc"/>
+		<result property="gwzrms" column="gwzrms"/>
+		<result property="shouji" column="shouji"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="jjlxr" column="jjlxr"/>
+		<result property="jjlxrdh" column="jjlxrdh"/>
+		<result property="gzdm" column="gzdm"/>
+		<result property="gz" column="gz"/>
+		<result property="zhiwu" column="zhiwu"/>
+		<result property="rzrq" column="rzrq"/>
+		<result property="lzrq" column="lzrq"/>
+		<result property="cyryztdm" column="cyryztdm"/>
+		<result property="cyryzt" column="cyryzt"/>
+		<result property="cxr" column="cxr"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="cxsj" column="cxsj"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdwmc" column="lrdwmc"/>
+		<result property="hcdw" column="hcdw"/>
+		<result property="hcr" column="hcr"/>
+		<result property="hcsj" column="hcsj"/>
+		<result property="zxyy" column="zxyy"/>
+		<result property="zkzt" column="zkzt"/>
+		<result property="bcsj" column="bcsj"/>
+		<result property="dcbs" column="dcbs"/>
+		<result property="bz" column="bz"/>
+		<result property="scbz" column="scbz"/>
+		<result property="biduiflag" column="biduiflag"/>
+		<result property="zpwtgyy" column="zpwtgyy"/>
+		<result property="zt" column="zt"/>
+		<result property="ywx" column="ywx"/>
+		<result property="ywm" column="ywm"/>
+		<result property="wgrjyxkz" column="wgrjyxkz"/>
+		<result property="qzzldm" column="qzzldm"/>
+		<result property="qzhm" column="qzhm"/>
+		<result property="zatlq" column="zatlq"/>
+		<result property="qfjg" column="qfjg"/>
+		<result property="rjrq" column="rjrq"/>
+		<result property="rjka" column="rjka"/>
+		<result property="kh" column="kh"/>
+		<result property="ickh" column="ickh"/>
+		<result property="slyy" column="slyy"/>
+		<result property="slr" column="slr"/>
+		<result property="slsj" column="slsj"/>
+		<result property="yxsksrq" column="yxsksrq"/>
+		<result property="yxqhzrq" column="yxqhzrq"/>
+		<result property="ickcjsj" column="ickcjsj"/>
+		<result property="ickcjr" column="ickcjr"/>
+		<result property="ickcjdbm" column="ickcjdbm"/>
+		<result property="ickcjdmc" column="ickcjdmc"/>
+		<result property="jssj" column="jssj"/>
+		<result property="jsbmc" column="jsbmc"/>
+		<result property="ffr" column="ffr"/>
+		<result property="ffsj" column="ffsj"/>
+		<result property="lqr" column="lqr"/>
+		<result property="lqsj" column="lqsj"/>
+		<result property="lqrzjlx" column="lqrzjlx"/>
+		<result property="lqrzjhm" column="lqrzjhm"/>
+		<result property="ickzxr" column="ickzxr"/>
+		<result property="ickzxsj" column="ickzxsj"/>
+		<result property="ickzxyy" column="ickzxyy"/>
+		<result property="njr" column="njr"/>
+		<result property="njsj" column="njsj"/>
+		<result property="zkztbs" column="zkztbs"/>
+		<result property="sfqr" column="sfqr"/>
+		<result property="ysr" column="ysr"/>
+		<result property="yssj" column="yssj"/>
+		<result property="dxrr" column="dxrr"/>
+		<result property="dxrsj" column="dxrsj"/>
+		<result property="cyssj" column="cyssj"/>
+		<result property="cysyy" column="cysyy"/>
+		<result property="cdxrsj" column="cdxrsj"/>
+		<result property="cdxryy" column="cdxryy"/>
+		<result property="bhkyy" column="bhkyy"/>
+		<result property="yksfsh" column="yksfsh"/>
+		<result property="ztryskxxtjmxid" column="ztryskxxtjmxid"/>
+		<result property="skid3" column="skid3"/>
+		<result property="tjrq" column="tjrq"/>
+	</resultMap>
+	<sql id="t_ztryskxxtjWhere">
+			<if test="ztryskxxtjmxid != null and ztryskxxtjmxid != ''">and
+				a.ztryskxxtjmxid=#{ztryskxxtjmxid}
+			</if>
+	</sql>
+	<sql id="t_ztryskxxtjPageWhere">
+		<include refid="t_ztryskxxtjWhere"/>	</sql>
+	<sql id="t_ztryskxxtjListWhere">
+		<include refid="t_ztryskxxtjWhere"/>	</sql>
+	<sql id="t_ztryskxxtjSelectWhere">
+		<include refid="t_ztryskxxtjWhere"/>	</sql>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<insert id="insertZtryskxxtj" parameterType="ztryskxxtj">
+		insert into t_ztryskxxtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<update id="updateZtryskxxtj" parameterType="ztryskxxtj">
+		update t_ztryskxxtj a set a.ztryskxxtjmxid=a.ztryskxxtjmxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<delete id="deleteZtryskxxtj" parameterType="ztryskxxtj">
+		delete from t_ztryskxxtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<select id="getZtryskxxtjList" parameterType="map" resultMap="ztryskxxtjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyryskxxtjmxid qyryskxxtjmxid,a.qybm qybm,a.qymc qymc,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssqyid ssqyid,a.ssqybm ssqybm,a.ssqymc ssqymc,a.ssqygxdwdm ssqygxdwdm,a.ssqygxdwmc ssqygxdwmc,a.ssqyzfldm ssqyzfldm,a.ssqyzflmc ssqyzflmc,a.hylbdm hylbdm,a.hylb hylb,a.sksj sksj,a.scsj scsj,a.ryid ryid,a.cyrybh cyrybh,a.cyrylbdm cyrylbdm,a.cyrylbmc cyrylbmc,a.xm xm,a.qm qm,a.bm bm,a.xmpy xmpy,a.gjdm gjdm,a.gj gj,a.mzdm mzdm,a.minzu minzu,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.hyzkdm hyzkdm,a.hyzk hyzk,a.shengao shengao,a.tizh tizh,a.xxdm xxdm,a.xx xx,a.hjdxzqh hjdxzqh,a.hjdxzqhdm hjdxzqhdm,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.zzzhm zzzhm,a.zzdz zzdz,a.gwbh gwbh,a.gwmc gwmc,a.gwzrms gwzrms,a.shouji shouji,a.lxdh lxdh,a.jjlxr jjlxr,a.jjlxrdh jjlxrdh,a.gzdm gzdm,a.gz gz,a.zhiwu zhiwu,a.rzrq rzrq,a.lzrq lzrq,a.cyryztdm cyryztdm,a.cyryzt cyryzt,a.cxr cxr,a.zxbz zxbz,a.cxsj cxsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.zxyy zxyy,a.zkzt zkzt,a.bcsj bcsj,a.dcbs dcbs,a.bz bz,a.scbz scbz,a.biduiflag biduiflag,a.zpwtgyy zpwtgyy,a.zt zt,a.ywx ywx,a.ywm ywm,a.wgrjyxkz wgrjyxkz,a.qzzldm qzzldm,a.qzhm qzhm,a.zatlq zatlq,a.qfjg qfjg,a.rjrq rjrq,a.rjka rjka,a.kh kh,a.ickh ickh,a.slyy slyy,a.slr slr,a.slsj slsj,a.yxsksrq yxsksrq,a.yxqhzrq yxqhzrq,a.ickcjsj ickcjsj,a.ickcjr ickcjr,a.ickcjdbm ickcjdbm,a.ickcjdmc ickcjdmc,a.jssj jssj,a.jsbmc jsbmc,a.ffr ffr,a.ffsj ffsj,a.lqr lqr,a.lqsj lqsj,a.lqrzjlx lqrzjlx,a.lqrzjhm lqrzjhm,a.ickzxr ickzxr,a.ickzxsj ickzxsj,a.ickzxyy ickzxyy,a.njr njr,a.njsj njsj,a.zkztbs zkztbs,a.sfqr sfqr,a.ysr ysr,a.yssj yssj,a.dxrr dxrr,a.dxrsj dxrsj,a.cyssj cyssj,a.cysyy cysyy,a.cdxrsj cdxrsj,a.cdxryy cdxryy,a.bhkyy bhkyy,a.yksfsh yksfsh,a.ztryskxxtjmxid ztryskxxtjmxid,a.skid3 skid3,a.tjrq tjrq
+		from t_ztryskxxtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<select id="getZtryskxxtjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_ztryskxxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<select id="getZtryskxxtjListNoPage" parameterType="ztryskxxtj" resultMap="ztryskxxtjListResult">
+		select a.qyryskxxtjmxid qyryskxxtjmxid,a.qybm qybm,a.qymc qymc,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssqyid ssqyid,a.ssqybm ssqybm,a.ssqymc ssqymc,a.ssqygxdwdm ssqygxdwdm,a.ssqygxdwmc ssqygxdwmc,a.ssqyzfldm ssqyzfldm,a.ssqyzflmc ssqyzflmc,a.hylbdm hylbdm,a.hylb hylb,a.sksj sksj,a.scsj scsj,a.ryid ryid,a.cyrybh cyrybh,a.cyrylbdm cyrylbdm,a.cyrylbmc cyrylbmc,a.xm xm,a.qm qm,a.bm bm,a.xmpy xmpy,a.gjdm gjdm,a.gj gj,a.mzdm mzdm,a.minzu minzu,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.hyzkdm hyzkdm,a.hyzk hyzk,a.shengao shengao,a.tizh tizh,a.xxdm xxdm,a.xx xx,a.hjdxzqh hjdxzqh,a.hjdxzqhdm hjdxzqhdm,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.zzzhm zzzhm,a.zzdz zzdz,a.gwbh gwbh,a.gwmc gwmc,a.gwzrms gwzrms,a.shouji shouji,a.lxdh lxdh,a.jjlxr jjlxr,a.jjlxrdh jjlxrdh,a.gzdm gzdm,a.gz gz,a.zhiwu zhiwu,a.rzrq rzrq,a.lzrq lzrq,a.cyryztdm cyryztdm,a.cyryzt cyryzt,a.cxr cxr,a.zxbz zxbz,a.cxsj cxsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.zxyy zxyy,a.zkzt zkzt,a.bcsj bcsj,a.dcbs dcbs,a.bz bz,a.scbz scbz,a.biduiflag biduiflag,a.zpwtgyy zpwtgyy,a.zt zt,a.ywx ywx,a.ywm ywm,a.wgrjyxkz wgrjyxkz,a.qzzldm qzzldm,a.qzhm qzhm,a.zatlq zatlq,a.qfjg qfjg,a.rjrq rjrq,a.rjka rjka,a.kh kh,a.ickh ickh,a.slyy slyy,a.slr slr,a.slsj slsj,a.yxsksrq yxsksrq,a.yxqhzrq yxqhzrq,a.ickcjsj ickcjsj,a.ickcjr ickcjr,a.ickcjdbm ickcjdbm,a.ickcjdmc ickcjdmc,a.jssj jssj,a.jsbmc jsbmc,a.ffr ffr,a.ffsj ffsj,a.lqr lqr,a.lqsj lqsj,a.lqrzjlx lqrzjlx,a.lqrzjhm lqrzjhm,a.ickzxr ickzxr,a.ickzxsj ickzxsj,a.ickzxyy ickzxyy,a.njr njr,a.njsj njsj,a.zkztbs zkztbs,a.sfqr sfqr,a.ysr ysr,a.yssj yssj,a.dxrr dxrr,a.dxrsj dxrsj,a.cyssj cyssj,a.cysyy cysyy,a.cdxrsj cdxrsj,a.cdxryy cdxryy,a.bhkyy bhkyy,a.yksfsh yksfsh,a.ztryskxxtjmxid ztryskxxtjmxid,a.skid3 skid3,a.tjrq tjrq
+		from t_ztryskxxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ztryskxxtjmxid
+	</select>
+	<!--走台人员刷卡信息统计明细(t_ztryskxxtj)-->
+	<select id="getZtryskxxtj" parameterType="ztryskxxtj" resultMap="ztryskxxtjResult">
+		select a.qyryskxxtjmxid qyryskxxtjmxid,a.qybm qybm,a.qymc qymc,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssqyid ssqyid,a.ssqybm ssqybm,a.ssqymc ssqymc,a.ssqygxdwdm ssqygxdwdm,a.ssqygxdwmc ssqygxdwmc,a.ssqyzfldm ssqyzfldm,a.ssqyzflmc ssqyzflmc,a.hylbdm hylbdm,a.hylb hylb,a.sksj sksj,a.scsj scsj,a.ryid ryid,a.cyrybh cyrybh,a.cyrylbdm cyrylbdm,a.cyrylbmc cyrylbmc,a.xm xm,a.qm qm,a.bm bm,a.xmpy xmpy,a.gjdm gjdm,a.gj gj,a.mzdm mzdm,a.minzu minzu,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.hyzkdm hyzkdm,a.hyzk hyzk,a.shengao shengao,a.tizh tizh,a.xxdm xxdm,a.xx xx,a.hjdxzqh hjdxzqh,a.hjdxzqhdm hjdxzqhdm,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.zzzhm zzzhm,a.zzdz zzdz,a.gwbh gwbh,a.gwmc gwmc,a.gwzrms gwzrms,a.shouji shouji,a.lxdh lxdh,a.jjlxr jjlxr,a.jjlxrdh jjlxrdh,a.gzdm gzdm,a.gz gz,a.zhiwu zhiwu,a.rzrq rzrq,a.lzrq lzrq,a.cyryztdm cyryztdm,a.cyryzt cyryzt,a.cxr cxr,a.zxbz zxbz,a.cxsj cxsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.zxyy zxyy,a.zkzt zkzt,a.bcsj bcsj,a.dcbs dcbs,a.bz bz,a.scbz scbz,a.biduiflag biduiflag,a.zpwtgyy zpwtgyy,a.zt zt,a.ywx ywx,a.ywm ywm,a.wgrjyxkz wgrjyxkz,a.qzzldm qzzldm,a.qzhm qzhm,a.zatlq zatlq,a.qfjg qfjg,a.rjrq rjrq,a.rjka rjka,a.kh kh,a.ickh ickh,a.slyy slyy,a.slr slr,a.slsj slsj,a.yxsksrq yxsksrq,a.yxqhzrq yxqhzrq,a.ickcjsj ickcjsj,a.ickcjr ickcjr,a.ickcjdbm ickcjdbm,a.ickcjdmc ickcjdmc,a.jssj jssj,a.jsbmc jsbmc,a.ffr ffr,a.ffsj ffsj,a.lqr lqr,a.lqsj lqsj,a.lqrzjlx lqrzjlx,a.lqrzjhm lqrzjhm,a.ickzxr ickzxr,a.ickzxsj ickzxsj,a.ickzxyy ickzxyy,a.njr njr,a.njsj njsj,a.zkztbs zkztbs,a.sfqr sfqr,a.ysr ysr,a.yssj yssj,a.dxrr dxrr,a.dxrsj dxrsj,a.cyssj cyssj,a.cysyy cysyy,a.cdxrsj cdxrsj,a.cdxryy cdxryy,a.bhkyy bhkyy,a.yksfsh yksfsh,a.ztryskxxtjmxid ztryskxxtjmxid,a.skid3 skid3,a.tjrq tjrq
+		from t_ztryskxxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ztryskxxtjmxid
+	</select>
+</mapper>

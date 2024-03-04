@@ -1,0 +1,654 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyjbxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	qyjbxx_ls
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业基本信息(t_qyjbxx)-->
+	<resultMap id="qyjbxxListResult" type="qyjbxx">
+		<result property="qyid" column="qyid"/>
+       <result property="hylbdm" column="hylbdm"/>
+       <result property="hylb" column="hylb"/>
+       <result property="qybm" column="qybm"/>
+       <result property="qymc" column="qymc"/>
+       <result property="qyzflbm" column="qyzflbm"/>
+       <result property="qyzflmc" column="qyzflmc"/>
+       <result property="qyfflbm" column="qyfflbm"/>
+       <result property="gxdwbm" column="gxdwbm"/>
+       <result property="gxdwmc" column="gxdwmc"/>
+       <result property="lxdh" column="lxdh"/>
+       <result property="jjlxbm" column="jjlxbm"/>
+       <result property="jjlxmc" column="jjlxmc"/>
+       <result property="zabdm" column="zabdm"/>
+       <result property="zajbmc" column="zajbmc"/>
+       <result property="yyztdm" column="yyztdm"/>
+       <result property="yyztmc" column="yyztmc"/>
+       <result property="zrs" column="zrs"/>
+       <result property="zt" column="zt"/>
+       <result property="zxbz" column="zxbz"/>
+       <result property="frdb" column="frdb"/>
+       <result property="zjztdm" column="zjztdm"/>
+       <result property="zjztmc" column="zjztmc"/>
+	</resultMap>
+	<!--企业基本信息(t_qyjbxx)-->
+	<resultMap id="qyjbxxResult" type="qyjbxx">
+		<result property="qyid" column="qyid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyqp" column="qyqp"/>
+		<result property="qyjp" column="qyjp"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="qyfflbm" column="qyfflbm"/>
+		<result property="qyfflmc" column="qyfflmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssdxjgajgdm" column="ssdxjgajgdm"/>
+		<result property="ssdxjgajgmc" column="ssdxjgajgmc"/>
+		<result property="ssddsjgdm" column="ssddsjgdm"/>
+		<result property="ssddsjgmc" column="ssddsjgmc"/>
+		<result property="qyzzjgdm" column="qyzzjgdm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="yzbm" column="yzbm"/>
+		<result property="chzh" column="chzh"/>
+		<result property="jwdzb" column="jwdzb"/>
+		<result property="jjlxbm" column="jjlxbm"/>
+		<result property="jjlxmc" column="jjlxmc"/>
+		<result property="jyfwzy" column="jyfwzy"/>
+		<result property="jyfwjy" column="jyfwjy"/>
+		<result property="zczj" column="zczj"/>
+		<result property="jymj" column="jymj"/>
+		<result property="zabdm" column="zabdm"/>
+		<result property="zajbmc" column="zajbmc"/>
+		<result property="yyztdm" column="yyztdm"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="frdb" column="frdb"/>
+		<result property="frdbzjlb" column="frdbzjlb"/>
+		<result property="frdbzjhm" column="frdbzjhm"/>
+		<result property="frdblxfs" column="frdblxfs"/>
+		<result property="kyrq" column="kyrq"/>
+		<result property="yysj" column="yysj"/>
+		<result property="babh" column="babh"/>
+		<result property="barq" column="barq"/>
+		<result property="tyrq" column="tyrq"/>
+		<result property="jyfs" column="jyfs"/>
+		<result property="jydz" column="jydz"/>
+		<result property="dwfzrzjlb" column="dwfzrzjlb"/>
+		<result property="dwfzrzjhm" column="dwfzrzjhm"/>
+		<result property="dwfzr" column="dwfzr"/>
+		<result property="dwfzrlxfs" column="dwfzrlxfs"/>
+		<result property="xfshdw" column="xfshdw"/>
+		<result property="xfhgzh" column="xfhgzh"/>
+		<result property="hcdw" column="hcdw"/>
+		<result property="hcr" column="hcr"/>
+		<result property="hcsj" column="hcsj"/>
+		<result property="gdxx" column="gdxx"/>
+		<result property="zrs" column="zrs"/>
+		<result property="hdrs" column="hdrs"/>
+		<result property="bagsmc" column="bagsmc"/>
+		<result property="bafzrgmsfhm" column="bafzrgmsfhm"/>
+		<result property="bafzrxm" column="bafzrxm"/>
+		<result property="bafzrdh" column="bafzrdh"/>
+		<result property="bars" column="bars"/>
+		<result property="jgpxrs" column="jgpxrs"/>
+		<result property="bagsyj" column="bagsyj"/>
+		<result property="cksl" column="cksl"/>
+		<result property="bxbjsl" column="bxbjsl"/>
+		<result property="bz" column="bz"/>
+		<result property="dcbs" column="dcbs"/>
+		<result property="dcsj" column="dcsj"/>
+		<result property="zt" column="zt"/>
+		<result property="ztgbrq" column="ztgbrq"/>
+		<result property="scbz" column="scbz"/>
+		<result property="jqbm" column="jqbm"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="zxyy" column="zxyy"/>
+		<result property="zdskb" column="zdskb"/>
+		<result property="bcsj" column="bcsj"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdwmc" column="lrdwmc"/>
+		<result property="zjztdm" column="zjztdm"/>
+       <result property="zjztmc" column="zjztmc"/>
+		<result property="bwbmdh" column="bwbmdh"/>
+		<result property="thbajgdm" column="thbajgdm"/>
+		<result property="thbajg" column="thbajg"/>
+		<result property="sfazsxt" column="sfazsxt"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+		<result property="djrq" column="djrq"/>
+		<result property="nsrq" column="nsrq"/>
+		<result property="qyjc" column="qyjc"/>
+		<result property="qyjcjp" column="qyjcjp"/>
+		<result property="qyjcqp" column="qyjcqp"/>
+		<result property="sgscxfjjs" column="sgscxfjjs"/>
+		<result property="jhltlxdm" column="jhltlxdm"/>
+		<result property="jhltlxmc" column="jhltlxmc"/>
+		<result property="dwfzrcyrybh" column="dwfzrcyrybh"/>
+	</resultMap>
+	<!--企业基本信息(t_qyjbxx)-->
+	<resultMap id="qyjbxx_lsListResult" type="qyjbxx_ls">
+		<result property="qylsid" column="qylsid"/>
+       <result property="qyid" column="qyid"/>
+       <result property="qybm" column="qybm"/>
+       <result property="qymc" column="qymc"/>
+       <result property="gxdwbm" column="gxdwbm"/>
+       <result property="gxdwmc" column="gxdwmc"/>
+       <result property="zt" column="zt"/>
+       <result property="ztgbrq" column="ztgbrq"/>
+       <result property="bcsj" column="bcsj"/>
+       <result property="zrs" column="zrs"/>
+       <result property="frdb" column="frdb"/>
+       <result property="qyzflmc" column="qyzflmc"/>
+    </resultMap>
+    <!--企业基本信息(t_qyjbxx)-->
+	<resultMap id="qyjbxxListZkdResult" type="qyjbxx">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="jyfs" column="jyfs"/>
+		<result property="frdb" column="frdb"/>
+		<result property="zt" column="zt"/>
+	</resultMap>
+    <!--企业基本信息(t_qyjbxx)-->
+    <resultMap id="qyidResult" type="qyjbxx">
+       <result property="qyid" column="qyid"/>
+    </resultMap>
+    <!-- 基本的企业信息项目 -->
+    <resultMap id="jbxxXiangMuResult" type="qyjbxx">
+       <result property="qyid" column="qyid"/>
+       <result property="qybm" column="qybm"/>
+       <result property="qymc" column="qymc"/>
+       <result property="hylb" column="hylb"/>
+       <result property="hylbdm" column="hylbdm"/>
+    </resultMap>
+    
+    <!-- 根据企业主分类 公安端查询场所数量 -->
+    <resultMap id="qyzflCountResult" type="qyjbxx">
+       <result property="zrs" column="zrs"/>
+       <result property="qyzflbm" column="qyzflbm"/>
+       <result property="qyzflmc" column="qyzflmc"/>
+    </resultMap>
+	<sql id="t_qyjbxxWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<!-- 重点单位需要用的的修改条件 重点单位同步企业数据 孙旭 -->
+			<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+	</sql>
+	<sql id="t_qyjbxxPageWhere">
+			<if test="selectTable != null and selectTable != ''">and<!-- 积分统计查询条件开始 -->
+				a.qybm=t.pfdxbm 
+			</if>
+			<if test="fenshu_selectTable != null and fenshu_selectTable != ''">and
+				a.qybm=t.pfdxbm 
+			</if>
+			<if test="jfColumn != null and jfColumn != ''">
+				<if test="dnjf != null and dnjf != ''">and
+					${jfColumn} &gt;= #{dnjf}
+				</if>
+				<if test="dnjf2 != null and dnjf2 != ''">and
+					${jfColumn} &lt; #{dnjf2}
+				</if>
+			</if>
+			<if test="zagxjgdm != null and zagxjgdm != ''">and
+				t.zagxjgdm like '${zagxjgdm}%'
+			</if>
+			<if test="nf != null and nf != ''">and
+				t.nf=#{nf}
+			</if>									<!-- 积分统计查询条件结束 -->
+			<if test="superbWhere != null and superbWhere != ''">and
+				${superbWhere}
+			</if>
+			<if test="query_simplepin != null and query_simplepin != ''">and
+			 	(a.qyjp like '%'||upper('${query_simplepin}')||'%' or
+			 	 a.qyqp like '%'||lower('${query_simplepin}')||'%' or
+			 	 a.qybm like '%${query_simplepin}%' or
+			 	 a.qymc like '%${query_simplepin}%') 
+			</if>
+			<if test="qyzflbm != null and qyzflbm != ''">and
+				a.qyzflbm = #{qyzflbm}
+			</if>
+			<if test="zjbh != null and zjbh != ''">and
+				c.zjbh like '%${zjbh}%'
+			</if>
+			<if test="djrqf != null and djrqf != ''">and
+				a.djrq &gt;=#djrqf:DATE#
+			</if>
+			<if test="djrqt != null and djrqt != ''">and
+				a.djrq &lt; #djrqt:DATE#+1
+			</if>
+			<if test="gxdwbm != null and gxdwbm != ''">and
+				a.gxdwbm like '${gxdwbm}%'
+			</if>
+			<if test="zabdm != null and zabdm != ''">and
+				a.zabdm =#{zabdm}
+			</if>
+			<if test="zjztdm != null and zjztdm != ''">and
+				a.zjztdm =#{zjztdm}
+			</if>
+			<if test="yyztdm != null and yyztdm != ''">and
+				a.yyztdm =#{yyztdm}
+			</if>
+			<if test="relation != null and relation != ''"><!-- 比较运算符 1-大于等于，2-小于等于，3-等于，4-大于，5-小于 -->
+     			<if test="zrs != null and zrs != ''">
+     				<if test="relation == 1">and
+						 	a.zrs &gt;=#{zrs}
+					</if>
+					<if test="relation == 2">and
+						 	a.zrs &lt;=#{zrs}
+					</if>
+		     		<if test="relation == 3">and
+							a.zrs = #{zrs}
+					</if>
+					<if test="relation == 4">and
+						 	a.zrs &gt;#{zrs}
+					</if>
+					<if test="relation == 5">and
+						 	a.zrs &lt;#{zrs}
+					</if>
+				</if>
+				<if test="zrs == null or zrs == ''">and
+					 	a.zrs &gt;= 0
+				</if>
+			</if>
+			<if test="sfhc != null and sfhc != ''">and<!-- 是否已信息确认(原核查功能) 0-未信息确认，1-已信息确认.若企业为娱乐场所，则需进行采集点提交后才能核查-->
+				<if test="sfhc == 0">
+					 a.zt &lt;&gt; '1'
+					 <if test="hylbdm != null and hylbdm != ''">
+					 	<if test="hylbdm == &quot;J&quot;">
+							and a.zt &lt;&gt; '0'
+						</if>
+					</if>
+					<if test="allhylbdm != null and allhylbdm != ''">
+					 	<if test="allhylbdm == &quot;'J'&quot;">
+							and a.zt &lt;&gt; '0'
+						</if>
+						<if test="allhylbdm == &quot;'K'&quot;">
+							and a.zt &lt;&gt; '0'
+						</if>
+						<if test="allhylbdm == &quot;'J','K'&quot;">
+							and a.zt &lt;&gt; '0'
+						</if>
+					</if>
+					<if test="sfglyg == 1">and<!-- 是否过滤异构系统，1为过滤，0为不过滤 9-14 添加 -->
+					 		to_number(a.zt)  &lt; 90
+					</if>
+				</if>
+				<if test="sfhc == 1">
+					 a.zt = '1'
+				</if>
+     		</if>
+     		<if test="sfyx != null and sfyx != ''">and<!-- 是否有效（公安端是否可见） 0-无效，1-有效, 2 需要核查的场所(2010-07-02 苗电话确认) -->
+				<if test="sfyx == 0">
+					 a.zt = '0'
+				</if>
+				<if test="sfyx == 1">
+					 (a.zt = '1' or a.zt = '2' 
+					 <if test="sftjyg == 1">or <!-- 是否统计异构，1统计，0不统计9-16 添加 -->
+							to_number(a.zt)  &gt;= 90
+					 </if>
+					 )
+				</if>
+				<if test="sfyx == 2">
+					  a.zt &lt;&gt; '1' and a.zt &lt;&gt; '0'
+					 <if test="sfglyg == 1">and<!-- 是否过滤异构系统，1为过滤，0为不过滤 9-14 添加 -->
+					 	to_number(a.zt)  &lt; 90
+					 </if>
+				</if>
+     		</if>
+     		
+     		<if test="ejshbz != null and ejshbz != ''">and<!-- 二级审核标识 0-派出所审核，1-市局审核 -->
+				<if test="ejshbz == 0">
+					 (a.zt = '3' or a.zt='2' or a.zt='12' or a.zt='13')
+				</if>
+				<if test="ejshbz == 1">
+					 a.zt = '10'
+				</if>
+     		</if>
+			<if test="zt != null and zt != ''">and
+				a.zt = #{zt}
+			</if>
+			<if test="zxbz != null and zxbz != ''">and
+				a.zxbz = #{zxbz}
+			</if>
+			<if test="jydz != null and jydz != ''">and
+				a.jydz like '%${jydz}%'
+			</if>
+			<if test="frdb != null and frdb != ''">and
+				a.frdb like '%${frdb}%'
+			</if>
+			<if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+			<if test="qybm != null and qybm != ''">and
+				a.qybm like '%${qybm}%'
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			<if test="allhylbdm != null and allhylbdm != ''">and<!-- 查询多个行业的企业，用于一个用户数据多个行业时 -->
+				a.hylbdm in (${allhylbdm})
+			</if>
+			<if test="lrdwbm != null and lrdwbm != ''">and
+				a.lrdwbm like '${lrdwbm}%'
+			</if>
+			<if test="deptCode != null and deptCode != ''">and
+				a.gxdwbm like '${deptCode}%'
+			</if>
+			<if test="jjlxmc != null and jjlxmc != ''">and
+				a.jjlxmc=#{jjlxmc}
+			</if>
+			<if test="flagTj != null and flagTj != ''">and
+				<if test="flagTj == &quot;shyes&quot;">
+					 (a.zt = '1' or a.zt='2') and a.zjztdm='1'
+				</if>
+			</if>
+			<if test="lrsj != null and lrsj != ''">and
+				a.lrsj &gt;=#lrsj:DATE#  and a.lrsj &lt; #lrsj:DATE#+1
+			</if>
+			<include refid="t_qyjbxxWhere"/>	
+	</sql>
+	<sql id="t_qyjbxxListWhere">
+		<include refid="t_qyjbxxWhere"/>	</sql>
+	<sql id="t_qyjbxxSelectWhere">
+		<include refid="t_qyjbxxWhere"/>	</sql>
+	<!--企业基本信息(t_qyjbxx)-->
+	<insert id="insertQyjbxx" parameterType="qyjbxx">
+		insert into t_qyjbxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业基本信息(t_qyjbxx)-->
+	<update id="updateQyjbxx" parameterType="qyjbxx">
+		update t_qyjbxx a set a.qyid=a.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业基本信息(t_qyjbxx)-->
+	<delete id="deleteQyjbxx" parameterType="qyjbxx">
+		delete from t_qyjbxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业基本信息(t_qyjbxx)采集点企业管理、公安端企业管理，公安端企业查询、企业信息确认（原核查功能）查询、企业变更查询、企业注销查询、派出所审核查询、市局审核查询-->
+	<select id="getQyjbxxList" parameterType="map" resultMap="qyjbxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,
+				a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,
+				a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.lxdh lxdh,a.frdb frdb,
+				a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.zabdm zabdm,a.zajbmc zajbmc,
+				a.yyztdm yyztdm,a.yyztmc yyztmc,a.zrs zrs,a.zt zt,a.zxbz zxbz,a.zjztdm,a.zjztmc
+		from t_qyjbxx a ,(select distinct t.qyid,t.zjbh,t.qsrq from t_qyzjb t where t.zjfl ='营业执照') c
+		<if test="selectTable != null and selectTable != ''">,	<!-- 积分场所统计t_jcqk检查场所数量 -->
+			(select  distinct a.pfdxbm from 
+				<if test="selectTable != null and selectTable != ''"> 
+					${selectTable}
+				</if>
+				<if test="jcqk_zagxjgdm != null and jcqk_zagxjgdm != ''">and
+					a.zagxjgdm like '${jcqk_zagxjgdm}%'
+				</if>
+				<if test="jcsj != null and jcsj != ''">and
+					a.jcsj &gt;=#{jcsj,jdbcType=TIMESTAMP}
+				</if>
+				<if test="jcsjzhi != null and jcsjzhi != ''">and
+					a.jcsj &lt; #{jcsjzhi,jdbcType=TIMESTAMP}+1
+				</if>
+				<if test="df != null and df != ''">  
+					<if test="df == -1">and
+						b.df &lt; 0
+					</if>
+				</if>
+			) t
+		</if>
+		<if test="fenshu_selectTable != null and fenshu_selectTable != ''">,<!-- 积分场所统计按分数段，时间段 -->
+			${fenshu_selectTable}
+		</if>
+		where 1=1 and a.qyid=c.qyid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and a.scbz=0
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业基本信息(t_qyjbxx)-->
+	<select id="getQyjbxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjbxx a ,(select distinct t.qyid,t.zjbh,t.qsrq from t_qyzjb t where t.zjfl ='营业执照') c
+		<if test="selectTable != null and selectTable != ''">,	<!-- 积分场所统计t_jcqk检查场所数量 -->
+			(select  distinct a.pfdxbm from 
+				<if test="selectTable != null and selectTable != ''"> 
+					${selectTable}
+				</if>
+				<if test="jcqk_zagxjgdm != null and jcqk_zagxjgdm != ''">and
+					a.zagxjgdm like '${jcqk_zagxjgdm}%'
+				</if>
+				<if test="jcsj != null and jcsj != ''">and
+					a.jcsj &gt;=#{jcsj,jdbcType=TIMESTAMP}
+				</if>
+				<if test="jcsjzhi != null and jcsjzhi != ''">and
+					a.jcsj &lt; #{jcsjzhi,jdbcType=TIMESTAMP}+1
+				</if>
+				<if test="df != null and df != ''">  
+					<if test="df == -1">and
+						b.df &lt; 0
+					</if>
+				</if>
+			) t
+		</if>
+		<if test="fenshu_selectTable != null and fenshu_selectTable != ''">,<!-- 积分场所统计按分数段，时间段 -->
+			${fenshu_selectTable}
+		</if>
+		where 1=1 and a.qyid=c.qyid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and a.scbz=0
+	</select>
+	<!--娱乐场所基本信息(t_qyjbxx)公安端场所变更详情查询-->
+	<select id="getQybgxqList" parameterType="map" resultMap="qyjbxx_lsListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+				(select a.frdb frdb,a.qylsid qylsid,a.qyid qyid,a.qybm qybm,a.qymc qymc,
+            			a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+             			a.zt zt,a.ztgbrq ztgbrq,a.bcsj bcsj,a.zrs zrs,a.qyzflmc qyzflmc
+		    from t_qyjbxx_ls a
+		    where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and a.czlx='变更'
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业基本信息(t_qyjbxx) 制卡端关联查询-->
+	<select id="getQyjbxxListZkd" parameterType="map" resultMap="qyjbxxListZkdResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.qybm qybm,a.qymc qymc,a.jyfs jyfs,
+				a.frdb frdb,
+				a.zt zt
+		from t_qyjbxx a 
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and a.scbz=0
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业基本信息(t_qyjbxx)-->
+	<select id="getQyjbxxListZkdCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjbxx a 
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and a.scbz=0
+	</select>
+	<!--娱乐场所基本信息(t_ylcsjbxx)-->
+	<select id="getQybgxqListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjbxx_ls a
+		    where  1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and a.czlx='变更'
+	</select>
+	<!--企业基本信息(t_qyjbxx)-->
+	<select id="getQyjbxxListNoPage" parameterType="qyjbxx" resultMap="qyjbxxListResult">
+		select a.qyid qyid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,
+				a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,
+				a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.lxdh lxdh,
+				a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.zabdm zabdm,a.zajbmc zajbmc,
+				a.yyztdm yyztdm,a.yyztmc yyztmc,a.zrs zrs,a.zt zt,a.zxbz zxbz,a.zjztdm,a.zjztmc,a.frdb
+		from t_qyjbxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid desc
+	</select>
+	<!--企业基本信息(t_qyjbxx)-->
+	<select id="getQyjbxx" parameterType="qyjbxx" resultMap="qyjbxxResult">
+		select a.qyid qyid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,
+		a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,
+		a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,
+		a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,
+		a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,
+		a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,
+		a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,
+		a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,
+		a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,
+		a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,
+		a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,
+		a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,
+		a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,
+		a.bwbmdh bwbmdh,a.thbajgdm thbajgdm,a.thbajg thbajg,a.sfazsxt sfazsxt,a.azsxtsl azsxtsl,a.zjztdm,a.zjztmc,a.djrq,a.nsrq,
+		a.qyjc qyjc,a.qyjcjp qyjcjp,a.qyjcqp qyjcqp,a.sgscxfjjs sgscxfjjs,a.jhltlxdm jhltlxdm,a.jhltlxmc jhltlxmc,
+		(select t.cyrybh from t_qyryxx t where t.scbz=0 and t.zjhm=a.dwfzrzjhm and t.qyid=a.qyid and rownum &lt;= 1) dwfzrcyrybh
+		from t_qyjbxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!--判断企业是否已存在-->
+	<select id="isQyjbxxExist" parameterType="qyjbxx" resultMap="qyidResult">
+		select a.qyid qyid
+		from t_qyjbxx a,t_qyzjb b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		and b.zjfl='营业执照' and b.zjbh=#{zjbh}
+	</select>
+	
+	<!-- 获取 基本的企业信息项目 -->
+	<select id="getQyjbxxXiangMu" parameterType="qyjbxx" resultMap="jbxxXiangMuResult">
+		select a.qyid qyid,a.qybm qybm,a.qymc qymc,a.hylb hylb,a.hylbdm hylbdm
+		from t_qyjbxx a
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 根据企业主分类 公安端查询场所数量 娱乐业标准化 -->
+	<select id="getQyzflCountList" parameterType="map" resultMap="qyzflCountResult">
+		select count(*) zrs,t.qyzflbm qyzflbm,t.qyzflmc qyzflmc from t_qyjbxx t 
+		where 1=1 and (t.zt = '1' or t.zt = '2'
+		<if test="sftjyg == 1">or <!-- 是否统计异构，1统计，0不统计9-16 添加 -->
+				to_number(t.zt)  &gt;= 90
+		</if>
+		)
+		    <if test="deptCode != null and deptCode != ''">and
+				t.gxdwbm like '${deptCode}%'
+			</if>
+			<if test="hylbdm == null or hylbdm == ''">and
+				t.hylbdm = 'J'
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				t.hylbdm = #{hylbdm}
+			</if>
+			<if test="yyztdm != null and yyztdm != ''">and
+				t.yyztdm = #{yyztdm}
+			</if>
+		group by t.qyzflbm,t.qyzflmc
+		order by t.qyzflbm,t.qyzflmc
+	</select>
+</mapper>

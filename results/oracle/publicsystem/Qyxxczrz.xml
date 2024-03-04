@@ -1,0 +1,154 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyxxczrz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<resultMap id="qyxxczrzResult" type="qyxxczrz">
+		<result property="qyxxczrzid" column="qyxxczrzid"/>
+		<result property="czsj" column="czsj"/>
+		<result property="czlx" column="czlx"/>
+		<result property="cznr" column="cznr"/>
+		<result property="czr" column="czr"/>
+		<result property="qybm" column="qybm"/>
+	</resultMap>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<resultMap id="qyxxczrzListResult" type="qyxxczrz">
+		<result property="qyxxczrzid" column="qyxxczrzid"/>
+		<result property="czsj" column="czsj"/>
+		<result property="czlx" column="czlx"/>
+		<result property="cznr" column="cznr"/>
+		<result property="czr" column="czr"/>
+		<result property="qybm" column="qybm"/>
+	</resultMap>
+	<sql id="t_qyxxczrzWhere">
+			<if test="qyxxczrzid != null and qyxxczrzid != ''">and
+				a.qyxxczrzid=#{qyxxczrzid}
+			</if>
+	</sql>
+	<sql id="t_qyxxczrzPageWhere">
+		<include refid="t_qyxxczrzWhere"/>	</sql>
+	<sql id="t_qyxxczrzListWhere">
+		<include refid="t_qyxxczrzWhere"/>	</sql>
+	<sql id="t_qyxxczrzSelectWhere">
+		<include refid="t_qyxxczrzWhere"/>	</sql>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<insert id="insertQyxxczrz" parameterType="qyxxczrz">
+		insert into t_qyxxczrz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<update id="updateQyxxczrz" parameterType="qyxxczrz">
+		update t_qyxxczrz a set a.qyxxczrzid=a.qyxxczrzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<delete id="deleteQyxxczrz" parameterType="qyxxczrz">
+		delete from t_qyxxczrz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<select id="getQyxxczrzList" parameterType="map" resultMap="qyxxczrzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyxxczrzid qyxxczrzid,a.czsj czsj,a.czlx czlx,a.cznr cznr,a.czr czr,a.qybm qybm
+		from t_qyxxczrz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<select id="getQyxxczrzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyxxczrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<select id="getQyxxczrzListNoPage" parameterType="qyxxczrz" resultMap="qyxxczrzListResult">
+		select a.qyxxczrzid qyxxczrzid,a.czsj czsj,a.czlx czlx,a.cznr cznr,a.czr czr,a.qybm qybm
+		from t_qyxxczrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyxxczrzid
+	</select>
+	<!--企业信息操作日志(t_qyxxczrz)-->
+	<select id="getQyxxczrz" parameterType="qyxxczrz" resultMap="qyxxczrzResult">
+		select a.qyxxczrzid qyxxczrzid,a.czsj czsj,a.czlx czlx,a.cznr cznr,a.czr czr,a.qybm qybm
+		from t_qyxxczrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyxxczrzid
+	</select>
+</mapper>

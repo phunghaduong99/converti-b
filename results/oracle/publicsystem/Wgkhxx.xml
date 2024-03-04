@@ -1,0 +1,165 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	wgkhxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--外国客户信息(t_wgkhxx)-->
+	<resultMap id="wgkhxxResult" type="wgkhxx">
+		<result property="khxxid" column="khxxid"/>
+		<result property="ywx" column="ywx"/>
+		<result property="ywm" column="ywm"/>
+		<result property="qzzldm" column="qzzldm"/>
+		<result property="qzzl" column="qzzl"/>
+		<result property="qzhm" column="qzhm"/>
+		<result property="zatlq" column="zatlq"/>
+		<result property="qfjg" column="qfjg"/>
+		<result property="rjrq" column="rjrq"/>
+		<result property="rjka" column="rjka"/>
+	</resultMap>
+	<!--外国客户信息(t_wgkhxx)-->
+	<resultMap id="wgkhxxListResult" type="wgkhxx">
+		<result property="khxxid" column="khxxid"/>
+		<result property="ywx" column="ywx"/>
+		<result property="ywm" column="ywm"/>
+		<result property="qzzldm" column="qzzldm"/>
+		<result property="qzzl" column="qzzl"/>
+		<result property="qzhm" column="qzhm"/>
+		<result property="zatlq" column="zatlq"/>
+		<result property="qfjg" column="qfjg"/>
+		<result property="rjrq" column="rjrq"/>
+		<result property="rjka" column="rjka"/>
+	</resultMap>
+	<sql id="t_wgkhxxWhere">
+		<if test="khxxid != null and khxxid != ''">and
+			a.khxxid=#{khxxid}
+		</if>
+		<if test="qzhm != null and qzhm != ''">and
+			a.qzhm=#{qzhm}
+		</if>
+	</sql>
+	<sql id="t_wgkhxxPageWhere">
+		<include refid="t_wgkhxxWhere"/>	</sql>
+	<sql id="t_wgkhxxListWhere">
+		<include refid="t_wgkhxxWhere"/>	</sql>
+	<sql id="t_wgkhxxSelectWhere">
+		<include refid="t_wgkhxxWhere"/>	</sql>
+	<!--外国客户信息(t_wgkhxx)-->
+	<insert id="insertWgkhxx" parameterType="wgkhxx">
+		insert into t_wgkhxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--外国客户信息(t_wgkhxx)-->
+	<update id="updateWgkhxx" parameterType="wgkhxx">
+		update t_wgkhxx a set a.khxxid=a.khxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--外国客户信息(t_wgkhxx)-->
+	<delete id="deleteWgkhxx" parameterType="wgkhxx">
+		delete from t_wgkhxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--外国客户信息(t_wgkhxx)-->
+	<select id="getWgkhxxList" parameterType="map" resultMap="wgkhxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.khxxid khxxid,a.ywx ywx,a.ywm ywm,a.qzzldm qzzldm,a.qzzl qzzl,a.qzhm qzhm,a.zatlq zatlq,a.qfjg qfjg,a.rjrq rjrq,a.rjka rjka
+		from t_wgkhxx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--外国客户信息(t_wgkhxx)-->
+	<select id="getWgkhxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wgkhxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--外国客户信息(t_wgkhxx)-->
+	<select id="getWgkhxxListNoPage" parameterType="wgkhxx" resultMap="wgkhxxListResult">
+		select a.khxxid khxxid,a.ywx ywx,a.ywm ywm,a.qzzldm qzzldm,a.qzzl qzzl,a.qzhm qzhm,a.zatlq zatlq,a.qfjg qfjg,a.rjrq rjrq,a.rjka rjka
+		from t_wgkhxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.khxxid
+	</select>
+	<!--外国客户信息(t_wgkhxx)-->
+	<select id="getWgkhxx" parameterType="wgkhxx" resultMap="wgkhxxResult">
+		select a.khxxid khxxid,a.ywx ywx,a.ywm ywm,a.qzzldm qzzldm,a.qzzl qzzl,a.qzhm qzhm,a.zatlq zatlq,a.qfjg qfjg,a.rjrq rjrq,a.rjka rjka
+		from t_wgkhxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.khxxid
+	</select>
+</mapper>

@@ -1,0 +1,166 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	yjgz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--预警规则(t_yjgz)-->
+	<resultMap id="yjgzResult" type="yjgz">
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="bdlx" column="bdlx"/>
+		<result property="sfyx" column="sfyx"/>
+		<result property="fbcl" column="fbcl"/>
+		<result property="fbfs" column="fbfs"/>
+		<result property="txdwzd" column="txdwzd"/>
+		<result property="gxdwzd" column="gxdwzd"/>
+		<result property="yjjb" column="yjjb"/>
+		<result property="yjfs" column="yjfs"/>
+		<result property="yjlx" column="yjlx"/>
+	</resultMap>
+	<!--预警规则(t_yjgz)-->
+	<resultMap id="yjgzListResult" type="yjgz">
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="bdlx" column="bdlx"/>
+		<result property="sfyx" column="sfyx"/>
+		<result property="fbcl" column="fbcl"/>
+		<result property="fbfs" column="fbfs"/>
+		<result property="txdwzd" column="txdwzd"/>
+		<result property="gxdwzd" column="gxdwzd"/>
+		<result property="yjjb" column="yjjb"/>
+		<result property="yjfs" column="yjfs"/>
+		<result property="yjlx" column="yjlx"/>
+	</resultMap>
+	<sql id="t_yjgzWhere">
+			<if test="yjgzid != null and yjgzid != ''">and
+				a.yjgzid=#{yjgzid}
+			</if>
+	</sql>
+	<sql id="t_yjgzPageWhere">
+		<include refid="t_yjgzWhere"/>	</sql>
+	<sql id="t_yjgzListWhere">
+		<include refid="t_yjgzWhere"/>	</sql>
+	<sql id="t_yjgzSelectWhere">
+		<include refid="t_yjgzWhere"/>	</sql>
+	<!--预警规则(t_yjgz)-->
+	<insert id="insertYjgz" parameterType="yjgz">
+		insert into t_yjgz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--预警规则(t_yjgz)-->
+	<update id="updateYjgz" parameterType="yjgz">
+		update t_yjgz a set a.yjgzid=a.yjgzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--预警规则(t_yjgz)-->
+	<delete id="deleteYjgz" parameterType="yjgz">
+		delete from t_yjgz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--预警规则(t_yjgz)-->
+	<select id="getYjgzList" parameterType="map" resultMap="yjgzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.yjgzid yjgzid,a.ywbm ywbm,a.bdbm bdbm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.yjjb yjjb,a.yjfs yjfs,a.yjlx yjlx
+		from t_yjgz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--预警规则(t_yjgz)-->
+	<select id="getYjgzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_yjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--预警规则(t_yjgz)-->
+	<select id="getYjgzListNoPage" parameterType="yjgz" resultMap="yjgzListResult">
+		select a.yjgzid yjgzid,a.ywbm ywbm,a.bdbm bdbm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.yjjb yjjb,a.yjfs yjfs,a.yjlx yjlx
+		from t_yjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.yjgzid
+	</select>
+	<!--预警规则(t_yjgz)-->
+	<select id="getYjgz" parameterType="yjgz" resultMap="yjgzResult">
+		select a.yjgzid yjgzid,a.ywbm ywbm,a.bdbm bdbm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.yjjb yjjb,a.yjfs yjfs,a.yjlx yjlx
+		from t_yjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.yjgzid
+	</select>
+</mapper>

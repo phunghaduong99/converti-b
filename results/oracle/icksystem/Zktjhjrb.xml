@@ -1,0 +1,168 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	zktjhjrb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<resultMap id="zktjhjrbResult" type="zktjhjrb">
+		<result property="zktjhzrbid" column="zktjhzrbid"/>
+		<result property="cjdtjrq" column="cjdtjrq"/>
+		<result property="cjdbm" column="cjdbm"/>
+		<result property="cjdmc" column="cjdmc"/>
+		<result property="zkzxbm" column="zkzxbm"/>
+		<result property="zkzxmc" column="zkzxmc"/>
+		<result property="tjkpzs" column="tjkpzs"/>
+		<result property="zzks" column="zzks"/>
+		<result property="wzks" column="wzks"/>
+		<result property="yzbs" column="yzbs"/>
+		<result property="yfss" column="yfss"/>
+		<result property="yfks" column="yfks"/>
+		<result property="czks" column="czks"/>
+	</resultMap>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<resultMap id="zktjhjrbListResult" type="zktjhjrb">
+		<result property="zktjhzrbid" column="zktjhzrbid"/>
+		<result property="cjdtjrq" column="cjdtjrq"/>
+		<result property="cjdbm" column="cjdbm"/>
+		<result property="cjdmc" column="cjdmc"/>
+		<result property="zkzxbm" column="zkzxbm"/>
+		<result property="zkzxmc" column="zkzxmc"/>
+		<result property="tjkpzs" column="tjkpzs"/>
+		<result property="zzks" column="zzks"/>
+		<result property="wzks" column="wzks"/>
+		<result property="yzbs" column="yzbs"/>
+		<result property="yfss" column="yfss"/>
+		<result property="yfks" column="yfks"/>
+		<result property="czks" column="czks"/>
+	</resultMap>
+	<sql id="t_zktjhjrbWhere">
+			<if test="zktjhzrbid != null and zktjhzrbid != ''">and
+				a.zktjhzrbid=#{zktjhzrbid}
+			</if>
+	</sql>
+	<sql id="t_zktjhjrbPageWhere">
+		<include refid="t_zktjhjrbWhere"/>	</sql>
+	<sql id="t_zktjhjrbListWhere">
+		<include refid="t_zktjhjrbWhere"/>	</sql>
+	<sql id="t_zktjhjrbSelectWhere">
+		<include refid="t_zktjhjrbWhere"/>	</sql>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<insert id="insertZktjhjrb" parameterType="zktjhjrb">
+		insert into t_zktjhjrb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<update id="updateZktjhjrb" parameterType="zktjhjrb">
+		update t_zktjhjrb a set a.zktjhzrbid=a.zktjhzrbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<delete id="deleteZktjhjrb" parameterType="zktjhjrb">
+		delete from t_zktjhjrb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<select id="getZktjhjrbList" parameterType="map" resultMap="zktjhjrbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.zktjhzrbid zktjhzrbid,a.cjdtjrq cjdtjrq,a.cjdbm cjdbm,a.cjdmc cjdmc,a.zkzxbm zkzxbm,a.zkzxmc zkzxmc,a.tjkpzs tjkpzs,a.zzks zzks,a.wzks wzks,a.yzbs yzbs,a.yfss yfss,a.yfks yfks,a.czks czks
+		from t_zktjhjrb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<select id="getZktjhjrbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_zktjhjrb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<select id="getZktjhjrbListNoPage" parameterType="zktjhjrb" resultMap="zktjhjrbListResult">
+		select a.zktjhzrbid zktjhzrbid,a.cjdtjrq cjdtjrq,a.cjdbm cjdbm,a.cjdmc cjdmc,a.zkzxbm zkzxbm,a.zkzxmc zkzxmc,a.tjkpzs tjkpzs,a.zzks zzks,a.wzks wzks,a.yzbs yzbs,a.yfss yfss,a.yfks yfks,a.czks czks
+		from t_zktjhjrb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zktjhzrbid
+	</select>
+	<!--制卡统计汇总日报(t_zktjhjrb)-->
+	<select id="getZktjhjrb" parameterType="zktjhjrb" resultMap="zktjhjrbResult">
+		select a.zktjhzrbid zktjhzrbid,a.cjdtjrq cjdtjrq,a.cjdbm cjdbm,a.cjdmc cjdmc,a.zkzxbm zkzxbm,a.zkzxmc zkzxmc,a.tjkpzs tjkpzs,a.zzks zzks,a.wzks wzks,a.yzbs yzbs,a.yfss yfss,a.yfks yfks,a.czks czks
+		from t_zktjhjrb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zktjhzrbid
+	</select>
+</mapper>

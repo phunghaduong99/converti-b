@@ -1,0 +1,187 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bjgz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--报警规则(t_bjgz)-->
+	<resultMap id="bjgzResult" type="bjgz">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdlxdm" column="bdlxdm"/>
+		<result property="bdlx" column="bdlx"/>
+		<result property="sfyx" column="sfyx"/>
+		<result property="fbcl" column="fbcl"/>
+		<result property="fbfs" column="fbfs"/>
+		<result property="txdwzd" column="txdwzd"/>
+		<result property="gxdwzd" column="gxdwzd"/>
+		<result property="bjjb" column="bjjb"/>
+		<result property="bjfs" column="bjfs"/>
+		<result property="bjlxdm" column="bjlxdm"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	<!--报警规则(t_bjgz)-->
+	<resultMap id="bjgzListResult" type="bjgz">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdlxdm" column="bdlxdm"/>
+		<result property="bdlx" column="bdlx"/>
+		<result property="sfyx" column="sfyx"/>
+		<result property="fbcl" column="fbcl"/>
+		<result property="fbfs" column="fbfs"/>
+		<result property="txdwzd" column="txdwzd"/>
+		<result property="gxdwzd" column="gxdwzd"/>
+		<result property="bjjb" column="bjjb"/>
+		<result property="bjfs" column="bjfs"/>
+		<result property="bjlxdm" column="bjlxdm"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	<sql id="t_bjgzWhere">
+			<if test="bjgzid != null and bjgzid != ''">and
+				a.bjgzid=#{bjgzid}
+			</if>
+	</sql>
+	<sql id="t_bjgzPageWhere">
+		<include refid="t_bjgzWhere"/>	</sql>
+	<sql id="t_bjgzListWhere">
+		<include refid="t_bjgzWhere"/>	</sql>
+	<sql id="t_bjgzSelectWhere">
+		<include refid="t_bjgzWhere"/>	</sql>
+	<!--报警规则(t_bjgz)-->
+	<insert id="insertBjgz" parameterType="bjgz">
+		insert into t_bjgz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--报警规则(t_bjgz)-->
+	<update id="updateBjgz" parameterType="bjgz">
+		update t_bjgz a set a.bjgzid=a.bjgzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--报警规则(t_bjgz)-->
+	<delete id="deleteBjgz" parameterType="bjgz">
+		delete from t_bjgz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--报警规则(t_bjgz)-->
+	<select id="getBjgzList" parameterType="map" resultMap="bjgzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bjgzid bjgzid,a.ywbm ywbm,a.ywbzdm ywbzdm,a.bdbm bdbm,a.bdbzdm bdbzdm,
+			a.bdlxdm bdlxdm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,
+			a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.bjjb bjjb,a.bjfs bjfs,bjlxdm bjlxdm,a.bjlx bjlx,
+			a.hylbdm hylbdm,a.hylb hylb
+		from t_bjgz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--报警规则(t_bjgz)-->
+	<select id="getBjgzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--报警规则(t_bjgz)-->
+	<select id="getBjgzListNoPage" parameterType="bjgz" resultMap="bjgzListResult">
+		select a.bjgzid bjgzid,a.ywbm ywbm,a.ywbzdm ywbzdm,a.bdbm bdbm,a.bdbzdm bdbzdm,
+			a.bdlxdm bdlxdm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,
+			a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.bjjb bjjb,a.bjfs bjfs,bjlxdm bjlxdm,a.bjlx bjlx,
+			a.hylbdm hylbdm,a.hylb hylb
+		from t_bjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid
+	</select>
+	<!--报警规则(t_bjgz)-->
+	<select id="getBjgz" parameterType="bjgz" resultMap="bjgzResult">
+		select a.bjgzid bjgzid,a.ywbm ywbm,a.ywbzdm ywbzdm,a.bdbm bdbm,a.bdbzdm bdbzdm,
+			a.bdlxdm bdlxdm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,
+			a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.bjjb bjjb,a.bjfs bjfs,bjlxdm bjlxdm,a.bjlx bjlx,
+			a.hylbdm hylbdm,a.hylb hylb
+		from t_bjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid
+	</select>
+</mapper>

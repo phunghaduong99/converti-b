@@ -1,0 +1,164 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	tjclxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--提交材料信息(t_tjclxx)-->
+	<resultMap id="tjclxxResult" type="tjclxx">
+		<result property="tjclxxid" column="tjclxxid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="qybaxxid" column="qybaxxid"/>
+		<result property="tjcllxdm" column="tjcllxdm"/>
+		<result property="tjcllx" column="tjcllx"/>
+		<result property="tijiaorq" column="tijiaorq"/>
+		<result property="tjrxm" column="tjrxm"/>
+		<result property="tjclnr" column="tjclnr"/>
+	</resultMap>
+	<!--提交材料信息(t_tjclxx)-->
+	<resultMap id="tjclxxListResult" type="tjclxx">
+		<result property="tjclxxid" column="tjclxxid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="qybaxxid" column="qybaxxid"/>
+		<result property="tjcllxdm" column="tjcllxdm"/>
+		<result property="tjcllx" column="tjcllx"/>
+		<result property="tijiaorq" column="tijiaorq"/>
+		<result property="tjrxm" column="tjrxm"/>
+		<result property="tjclnr" column="tjclnr"/>
+	</resultMap>
+	<sql id="t_tjclxxWhere">
+			<if test="tjclxxid != null and tjclxxid != ''">and
+				a.tjclxxid=#{tjclxxid}
+			</if>
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="qybaxxid != null and qybaxxid != ''">and
+				a.qybaxxid=#{qybaxxid}
+			</if>
+	</sql>
+	<sql id="t_tjclxxPageWhere">
+		<include refid="t_tjclxxWhere"/>	</sql>
+	<sql id="t_tjclxxListWhere">
+		<include refid="t_tjclxxWhere"/>	</sql>
+	<sql id="t_tjclxxSelectWhere">
+		<include refid="t_tjclxxWhere"/>	</sql>
+	<!--提交材料信息(t_tjclxx)-->
+	<insert id="insertTjclxx" parameterType="tjclxx">
+		insert into t_tjclxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--提交材料信息(t_tjclxx)-->
+	<update id="updateTjclxx" parameterType="tjclxx">
+		update t_tjclxx a set a.qybaxxid=a.qybaxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--提交材料信息(t_tjclxx)-->
+	<delete id="deleteTjclxx" parameterType="tjclxx">
+		delete from t_tjclxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--提交材料信息(t_tjclxx)-->
+	<select id="getTjclxxList" parameterType="map" resultMap="tjclxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tjclxxid tjclxxid,a.qyid qyid,a.qybaxxid qybaxxid,a.tjcllxdm tjcllxdm,a.tjcllx tjcllx,a.tijiaorq tijiaorq,a.tjrxm tjrxm,a.tjclnr tjclnr
+		from t_tjclxx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--提交材料信息(t_tjclxx)-->
+	<select id="getTjclxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_tjclxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--提交材料信息(t_tjclxx)-->
+	<select id="getTjclxxListNoPage" parameterType="tjclxx" resultMap="tjclxxListResult">
+		select a.tjclxxid tjclxxid,a.qyid qyid,a.qybaxxid qybaxxid,a.tjcllxdm tjcllxdm,a.tjcllx tjcllx,a.tijiaorq tijiaorq,a.tjrxm tjrxm,a.tjclnr tjclnr
+		from t_tjclxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tjclxxid,a.qyid,a.qybaxxid
+	</select>
+	<!--提交材料信息(t_tjclxx)-->
+	<select id="getTjclxx" parameterType="tjclxx" resultMap="tjclxxResult">
+		select a.tjclxxid tjclxxid,a.qyid qyid,a.qybaxxid qybaxxid,a.tjcllxdm tjcllxdm,a.tjcllx tjcllx,a.tijiaorq tijiaorq,a.tjrxm tjrxm,a.tjclnr tjclnr
+		from t_tjclxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tjclxxid,a.qyid,a.qybaxxid
+	</select>
+</mapper>

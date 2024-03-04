@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE sqlMap PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"  "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap >
+	<typeAlias alias="ggqyyh" type="com.aisino2.publicsystem.domain.GgQyyh"/>
+	<cacheModel id="oneDayCategory" type="LRU">
+		<flushInterval hours="24"/>
+	</cacheModel>
+
+	<parameterMap id="qyYgyhParGg" class="map"> 
+		<parameter property="errCode" jdbcType="INTEGER" javaType="java.lang.Integer" mode="OUT"/> 
+		<parameter property="errMsg" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT"/>
+		<parameter property="ryid" jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN"/>
+	</parameterMap>
+	<parameterMap id="qyYgyhZxParGg" class="map"> 
+		<parameter property="errCode" jdbcType="INTEGER" javaType="java.lang.Integer" mode="OUT"/> 
+		<parameter property="errMsg" jdbcType="VARCHAR" javaType="java.lang.String" mode="OUT"/>
+		<parameter property="ryid" jdbcType="INTEGER" javaType="java.lang.Integer" mode="IN"/>
+		<parameter property="isval" jdbcType="VARCHAR" javaType="java.lang.String" mode="IN"/>
+	</parameterMap>
+	
+ 
+
+    
+    <!-- 同步增加场所员工用户 -->
+	<procedure id="insertGgQyYgyh" parameterMap="qyYgyhParGg">
+	
+        <![CDATA[
+        {call privisys.TbzjGgqyygyh(?,?,?)}
+ 		]]>
+       
+    </procedure>
+    <!-- 同步修改场所员工用户 -->
+	<procedure id="updateGgQyYgyh" parameterMap="qyYgyhParGg">
+        <![CDATA[
+        {call privisys.TbxgGgqyygyh(?,?,?)}
+ 		]]>
+    </procedure>
+    <!-- 同步删除场所员工用户 -->
+	<procedure id="delGgQyYgyh" parameterMap="qyYgyhParGg">
+
+        <![CDATA[
+        {call privisys.TbscGgqyygyh(?,?,?)}
+ 		]]>
+
+    </procedure>
+    
+    <!-- 同步注销场所员工用户 -->
+	<procedure id="zhuxGgQyYgyh" parameterMap="qyYgyhZxParGg">
+
+			        <![CDATA[
+			        {call privisys.TbzxGgqyygyh(?,?,?,?)}
+			 		]]>
+
+    </procedure>
+    
+    
+
+    
+</sqlMap>
+
+

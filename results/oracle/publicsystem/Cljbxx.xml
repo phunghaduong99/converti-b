@@ -1,0 +1,362 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	cljbxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--车辆基本信息(t_cljbxx)-->
+	<resultMap id="cljbxxResult" type="cljbxx">
+		<result property="cljbxxid" column="cljbxxid"/>
+		<result property="cldjxh" column="cldjxh"/>
+		<result property="cllxbm" column="cllxbm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clppbm" column="clppbm"/>
+		<result property="clpp" column="clpp"/>
+		<result property="cszsbm" column="cszsbm"/>
+		<result property="cszs" column="cszs"/>
+		<result property="dyfsbm" column="dyfsbm"/>
+		<result property="dyfs" column="dyfs"/>
+		<result property="drfsbm" column="drfsbm"/>
+		<result property="drfs" column="drfs"/>
+		<result property="cph" column="cph"/>
+		<result property="sfycphbz" column="sfycphbz"/>
+		<result property="wcphyybm" column="wcphyybm"/>
+		<result property="wcphyy" column="wcphyy"/>
+		<result property="wcphyyms" column="wcphyyms"/>
+		<result property="hpzlbm" column="hpzlbm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="cjh" column="cjh"/>
+		<result property="slsj" column="slsj"/>
+		<result property="slr" column="slr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="cxsj" column="cxsj"/>
+		<result property="cxbz" column="cxbz"/>
+		<result property="cxr" column="cxr"/>
+		<result property="clxzbm" column="clxzbm"/>
+		<result property="clxz" column="clxz"/>
+		<result property="czm" column="czm"/>
+		<result property="czdh" column="czdh"/>
+		<result property="czgjdm" column="czgjdm"/>
+		<result property="czgj" column="czgj"/>
+		<result property="czhjdz" column="czhjdz"/>
+		<result property="czxzqhdm" column="czxzqhdm"/>
+		<result property="czxzqh" column="czxzqh"/>
+		<result property="czxbdm" column="czxbdm"/>
+		<result property="czxb" column="czxb"/>
+		<result property="czcyzjlxdm" column="czcyzjlxdm"/>
+		<result property="czcyzj" column="czcyzj"/>
+		<result property="czzjhm" column="czzjhm"/>
+		<result property="xslc" column="xslc"/>
+		<result property="clzt" column="clzt"/>
+		<result property="bz" column="bz"/>
+		<result property="cphjcdm" column="cphjcdm"/>
+		<result property="cphjc" column="cphjc"/>
+		<result property="cphxh" column="cphxh"/>
+		<result property="czzt" column="czzt"/>
+		<result property="ccrq" column="ccrq"/>
+		
+		<result property="clcd" column="clcd"/>
+		<result property="clcdbm" column="clcdbm"/>
+		<result property="clcs" column="clcs"/>
+		<result property="clcsbm" column="clcsbm"/>
+		<result property="clxh" column="clxh"/>
+		<result property="clxhbm" column="clxhbm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qybm" column="qybm"/>
+		
+		<result property="czxzdz" column="czxzdz"/>
+		<result property="czxzdxzqh" column="czxzdxzqh"/>
+		<result property="czxzdxzqhdm" column="czxzdxzqhdm"/>
+	</resultMap>
+	<!--车辆基本信息(t_cljbxx)-->
+	<resultMap id="cljbxxListResult" type="cljbxx">
+		<result property="cljbxxid" column="cljbxxid"/>
+		<result property="cldjxh" column="cldjxh"/>
+		<result property="cllxbm" column="cllxbm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clppbm" column="clppbm"/>
+		<result property="clpp" column="clpp"/>
+		<result property="cszsbm" column="cszsbm"/>
+		<result property="cszs" column="cszs"/>
+		<result property="dyfsbm" column="dyfsbm"/>
+		<result property="dyfs" column="dyfs"/>
+		<result property="drfsbm" column="drfsbm"/>
+		<result property="drfs" column="drfs"/>
+		<result property="cph" column="cph"/>
+		<result property="sfycphbz" column="sfycphbz"/>
+		<result property="wcphyybm" column="wcphyybm"/>
+		<result property="wcphyy" column="wcphyy"/>
+		<result property="wcphyyms" column="wcphyyms"/>
+		<result property="hpzlbm" column="hpzlbm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="cjh" column="cjh"/>
+		<result property="slsj" column="slsj"/>
+		<result property="slr" column="slr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="cxsj" column="cxsj"/>
+		<result property="cxbz" column="cxbz"/>
+		<result property="cxr" column="cxr"/>
+		<result property="clxzbm" column="clxzbm"/>
+		<result property="clxz" column="clxz"/>
+		<result property="czm" column="czm"/>
+		<result property="czdh" column="czdh"/>
+		<result property="czgjdm" column="czgjdm"/>
+		<result property="czgj" column="czgj"/>
+		<result property="czhjdz" column="czhjdz"/>
+		<result property="czxzqhdm" column="czxzqhdm"/>
+		<result property="czxzqh" column="czxzqh"/>
+		<result property="czxbdm" column="czxbdm"/>
+		<result property="czxb" column="czxb"/>
+		<result property="czcyzjlxdm" column="czcyzjlxdm"/>
+		<result property="czcyzj" column="czcyzj"/>
+		<result property="czzjhm" column="czzjhm"/>
+		<result property="xslc" column="xslc"/>
+		<result property="clzt" column="clzt"/>
+		<result property="bz" column="bz"/>
+		<result property="cphjcdm" column="cphjcdm"/>
+		<result property="cphjc" column="cphjc"/>
+		<result property="cphxh" column="cphxh"/>
+		<result property="czzt" column="czzt"/>
+		
+		<result property="clcd" column="clcd"/>
+		<result property="clcdbm" column="clcdbm"/>
+		<result property="clcs" column="clcs"/>
+		<result property="clcsbm" column="clcsbm"/>
+		<result property="clxh" column="clxh"/>
+		<result property="clxhbm" column="clxhbm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qybm" column="qybm"/>
+	</resultMap>
+	<!--车辆基本信息筛选框	-->
+	<resultMap id="cljbxxSelListResult" type="cljbxx">
+		<result property="cljbxxid" column="cljbxxid"/>
+		<result property="cjh" column="cjh"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="cph" column="cph"/>
+		<result property="cllx" column="cllx"/>
+		<result property="cszs" column="cszs"/>
+		<result property="clpp" column="clpp"/>
+		<result property="clxh" column="clxh"/>
+		<result property="clcs" column="clcs"/>
+		<result property="xslc" column="xslc"/>
+	</resultMap>
+	<sql id="t_cljbxxWhere">
+			<if test="cljbxxid != null and cljbxxid != ''">and
+				a.cljbxxid=#{cljbxxid}
+			</if>
+			
+			<if test="hylbdm != null and hylbdm != ''">and
+				q.hylbdm=#{hylbdm}
+			</if>
+			<if test="cldjxh != null and cldjxh != ''">and
+				a.cldjxh=#{cldjxh}
+			</if>
+			<if test="cph != null and cph != ''">and
+				a.cph like '%${cph}%'
+			</if>
+			<if test="clcdbm != null and clcdbm != ''">and
+				a.clcdbm=#{clcdbm}
+			</if>
+			<if test="clcsbm != null and clcsbm != ''">and
+				a.clcsbm=#{clcsbm}
+			</if>
+			<if test="clppbm != null and clppbm != ''">and
+				a.clppbm=#{clppbm}
+			</if>
+			<if test="clcs != null and clcs != ''">and
+				a.clcs like '%${clcs}%'
+			</if>
+			<if test="clpp != null and clpp != ''">and
+				a.clpp like '%${clpp}%'
+			</if>
+			<if test="clxh != null and clxh != ''">and
+				a.clxh like '%${clxh}%'
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				q.gxdwbm like '%${gxdwdm}%'
+			</if>
+			<if test="cllxbm != null and cllxbm != ''">and
+				a.cllxbm=#{cllxbm}
+			</if>
+			<if test="fdjh != null and fdjh != ''">and
+				a.fdjh=#{fdjh}
+			</if>
+			<if test="cjh != null and cjh != ''">and
+				a.cjh=#{cjh}
+			</if>
+			<if test="cszsbm != null and cszsbm != ''">and
+				a.cszsbm=#{cszsbm}
+			</if>
+			<if test="czcyzjlxdm != null and czcyzjlxdm != ''">and
+				a.czcyzjlxdm=#{czcyzjlxdm}
+			</if>
+			<if test="czzjhm != null and czzjhm != ''">and
+				a.czzjhm=#{czzjhm}
+			</if>
+			<if test="superbWhere != null and superbWhere != ''">and
+				${superbWhere}
+			</if>
+	</sql>
+	<sql id="t_cljbxxPageWhere">
+		<include refid="t_cljbxxWhere"/>
+		<if test="qybm != null and qybm != ''">and
+			q.qybm=#{qybm}
+		</if>
+	</sql>
+	<sql id="t_cljbxxListWhere">
+		<include refid="t_cljbxxWhere"/>	</sql>
+	<sql id="t_cljbxxSelectWhere">
+		<include refid="t_cljbxxWhere"/>	</sql>
+	<!--车辆基本信息(t_cljbxx)-->
+	<insert id="insertCljbxx" parameterType="cljbxx">
+		insert into t_cljbxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--车辆基本信息(t_cljbxx)-->
+	<update id="updateCljbxx" parameterType="cljbxx">
+		update t_cljbxx a set a.cljbxxid=a.cljbxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where a.cljbxxid=#{cljbxxid}
+	</update>
+	<!--车辆基本信息(t_cljbxx)-->
+	<delete id="deleteCljbxx" parameterType="cljbxx">
+		delete from t_cljbxx a where a.cljbxxid=#{cljbxxid}
+	</delete>
+	<!--车辆基本信息(t_cljbxx)-->
+	<select id="getCljbxxList" parameterType="map" resultMap="cljbxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.czxzdz czxzdz,a.czxzdxzqh czxzdxzqh,a.czxzdxzqhdm czxzdxzqhdm,q.qymc qymc,q.qybm qybm,a.clcd clcd,a.clcdbm clcdbm,a.clcs clcs,a.clcsbm clcsbm,a.clxh clxh,a.clxhbm clxhbm,a.cljbxxid cljbxxid,a.cldjxh cldjxh,a.cllxbm cllxbm,a.cllx cllx,a.clppbm clppbm,a.clpp clpp,a.cszsbm cszsbm,a.cszs cszs,a.dyfsbm dyfsbm,a.dyfs dyfs,a.drfsbm drfsbm,a.drfs drfs,a.cph cph,a.sfycphbz sfycphbz,a.wcphyybm wcphyybm,a.wcphyy wcphyy,a.wcphyyms wcphyyms,a.hpzlbm hpzlbm,a.hpzl hpzl,a.fdjh fdjh,a.cjh cjh,a.slsj slsj,a.slr slr,a.lrsj lrsj,a.lrr lrr,a.cxsj cxsj,a.cxbz cxbz,a.cxr cxr,a.clxzbm clxzbm,a.clxz clxz,a.czm czm,a.czdh czdh,a.czgjdm czgjdm,a.czgj czgj,a.czhjdz czhjdz,a.czxzqhdm czxzqhdm,a.czxzqh czxzqh,a.czxbdm czxbdm,a.czxb czxb,a.czcyzjlxdm czcyzjlxdm,a.czcyzj czcyzj,a.czzjhm czzjhm,a.xslc xslc,a.clzt clzt,a.bz bz,a.cphjcdm cphjcdm,a.cphjc cphjc,a.cphxh cphxh,a.czzt czzt
+		from t_cljbxx a ,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--车辆基本信息(t_cljbxx)-->
+	<select id="getCljbxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_cljbxx a ,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--车辆基本信息(t_cljbxx)-->
+	<select id="getCljbxxListNoPage" parameterType="cljbxx" resultMap="cljbxxListResult">
+		select a.czxzdz czxzdz,a.czxzdxzqh czxzdxzqh,a.czxzdxzqhdm czxzdxzqhdm,q.qymc qymc,q.qybm qybm,a.clcd clcd,a.clcdbm clcdbm,a.clcs clcs,a.clcsbm clcsbm,a.clxh clxh,a.clxhbm clxhbm,a.cljbxxid cljbxxid,a.cldjxh cldjxh,a.cllxbm cllxbm,a.cllx cllx,a.clppbm clppbm,a.clpp clpp,a.cszsbm cszsbm,a.cszs cszs,a.dyfsbm dyfsbm,a.dyfs dyfs,a.drfsbm drfsbm,a.drfs drfs,a.cph cph,a.sfycphbz sfycphbz,a.wcphyybm wcphyybm,a.wcphyy wcphyy,a.wcphyyms wcphyyms,a.hpzlbm hpzlbm,a.hpzl hpzl,a.fdjh fdjh,a.cjh cjh,a.slsj slsj,a.slr slr,a.lrsj lrsj,a.lrr lrr,a.cxsj cxsj,a.cxbz cxbz,a.cxr cxr,a.clxzbm clxzbm,a.clxz clxz,a.czm czm,a.czdh czdh,a.czgjdm czgjdm,a.czgj czgj,a.czhjdz czhjdz,a.czxzqhdm czxzqhdm,a.czxzqh czxzqh,a.czxbdm czxbdm,a.czxb czxb,a.czcyzjlxdm czcyzjlxdm,a.czcyzj czcyzj,a.czzjhm czzjhm,a.xslc xslc,a.clzt clzt,a.bz bz,a.cphjcdm cphjcdm,a.cphjc cphjc,a.cphxh cphxh,a.czzt czzt
+		from t_cljbxx a ,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.cljbxxid
+	</select>
+	<!--车辆基本信息(t_cljbxx)-->
+	<select id="getCljbxx" parameterType="cljbxx" resultMap="cljbxxResult">
+		select a.czxzdz czxzdz,a.czxzdxzqh czxzdxzqh,a.czxzdxzqhdm czxzdxzqhdm,q.qymc qymc,q.qybm qybm,a.clcd clcd,a.clcdbm clcdbm,a.clcs clcs,a.clcsbm clcsbm,a.clxh clxh,a.clxhbm clxhbm,a.cljbxxid cljbxxid,a.cldjxh cldjxh,a.cllxbm cllxbm,a.cllx cllx,a.clppbm clppbm,a.clpp clpp,a.cszsbm cszsbm,a.cszs cszs,a.dyfsbm dyfsbm,a.dyfs dyfs,a.drfsbm drfsbm,a.drfs drfs,a.cph cph,a.sfycphbz sfycphbz,a.wcphyybm wcphyybm,a.wcphyy wcphyy,a.wcphyyms wcphyyms,a.hpzlbm hpzlbm,a.hpzl hpzl,a.fdjh fdjh,a.cjh cjh,a.slsj slsj,a.slr slr,a.lrsj lrsj,a.lrr lrr,a.cxsj cxsj,a.cxbz cxbz,a.cxr cxr,a.clxzbm clxzbm,a.clxz clxz,a.czm czm,a.czdh czdh,a.czgjdm czgjdm,a.czgj czgj,a.czhjdz czhjdz,a.czxzqhdm czxzqhdm,a.czxzqh czxzqh,a.czxbdm czxbdm,a.czxb czxb,a.czcyzjlxdm czcyzjlxdm,a.czcyzj czcyzj,a.czzjhm czzjhm,a.xslc xslc,a.clzt clzt,a.bz bz,a.cphjcdm cphjcdm,a.cphjc cphjc,a.cphxh cphxh,a.czzt czzt,a.ccrq ccrq
+		from t_cljbxx a ,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.cljbxxid
+	</select>
+	<select id="jianChaClsfky" parameterType="cljbxx" resultType="int">
+		select count(1) from  t_cljbxx a ,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<if test="superbWhere != null and superbWhere != ''">and
+			${superbWhere}
+		</if>
+	</select>
+	
+	<!--车辆基本信息(t_cljbxx)筛选框-->
+	<sql id="t_cljbxxSelPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			q.qybm=#{qybm}
+		</if>
+		<if test="superbWhere != null and superbWhere != ''">and
+			instr(a.cph,#{superbWhere})&gt;0
+		</if>
+	</sql>
+	<select id="getSelCljbxxList" parameterType="map" resultMap="cljbxxSelListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.cljbxxid,a.cjh,a.fdjh,a.cph,a.cllx,a.cszs,a.clpp,a.clxh,a.clcs,a.xslc 
+		from t_cljbxx a,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--车辆基本信息(t_cljbxx)-->
+	<select id="getSelCljbxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_cljbxx a ,t_qyjbxx q 
+		where a.qyid=q.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

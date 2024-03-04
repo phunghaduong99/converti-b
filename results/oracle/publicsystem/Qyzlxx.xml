@@ -1,0 +1,171 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyzlxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业质量信息(t_qyzlxx)-->
+	<resultMap id="qyzlxxResult" type="qyzlxx">
+		<result property="qyzlxxid" column="qyzlxxid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="fbdwdm" column="fbdwdm"/>
+		<result property="fbdwmc" column="fbdwmc"/>
+		<result property="fbr" column="fbr"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="scbz" column="scbz"/>
+	</resultMap>
+	<!--企业质量信息(t_qyzlxx)-->
+	<resultMap id="qyzlxxListResult" type="qyzlxx">
+		<result property="qyzlxxid" column="qyzlxxid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="fbdwdm" column="fbdwdm"/>
+		<result property="fbdwmc" column="fbdwmc"/>
+		<result property="fbr" column="fbr"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="scbz" column="scbz"/>
+	</resultMap>
+	<sql id="t_qyzlxxWhere">
+			<if test="qyzlxxid != null and qyzlxxid != ''">and
+				a.qyzlxxid=#{qyzlxxid}
+			</if>
+	</sql>
+	<sql id="t_qyzlxxPageWhere">
+		<include refid="t_qyzlxxWhere"/>	</sql>
+	<sql id="t_qyzlxxListWhere">
+		<include refid="t_qyzlxxWhere"/>	</sql>
+	<sql id="t_qyzlxxSelectWhere">
+		<include refid="t_qyzlxxWhere"/>	</sql>
+	<!--企业质量信息(t_qyzlxx)-->
+	<insert id="insertQyzlxx" parameterType="qyzlxx">
+		insert into t_qyzlxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业质量信息(t_qyzlxx)-->
+	<update id="updateQyzlxx" parameterType="qyzlxx">
+		update t_qyzlxx a set a.qyzlxxid=a.qyzlxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业质量信息(t_qyzlxx)-->
+	<delete id="deleteQyzlxx" parameterType="qyzlxx">
+		delete from t_qyzlxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!-- 新修改分页查询 -->
+	<resultMap id="qyzlxxListResult2" type="qyzlxx">
+		<result property="qyzlxxid" column="qyzlxxid"/>
+		<result property="fbdwmc" column="fbdwmc"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="fjmc" column="fjmc"/>
+		<result property="qyzlxx_fjid" column="qyzlxx_fjid"/>
+	</resultMap>
+	<!--企业质量信息(t_qyzlxx)-->
+	<select id="getQyzlxxList" parameterType="map" resultMap="qyzlxxListResult2">
+		<!--  select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyzlxxid qyzlxxid,a.hylbdm hylbdm,a.hylb hylb,a.fbdwdm fbdwdm,a.fbdwmc fbdwmc,a.fbr fbr,a.fbsj fbsj,a.scbz scbz
+		from t_qyzlxx a ,t_qyzlxxfj t -->
+		
+		select x.* from (
+		select rownum rowno,z.* from
+		(select a.qyzlxxid qyzlxxid,a.fbdwmc fbdwmc,a.fbsj fbsj,t.fjmc fjmc,t.qyzlxxfjid qyzlxx_fjid
+		from t_qyzlxx a ,t_qyzlxxfj t
+		where a.qyzlxxid=t.qyzlxxid and a.scbz=0
+		<!--
+		Sorry, I can`t migrate	AND
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业质量信息(t_qyzlxx)-->
+	<select id="getQyzlxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyzlxx a ,t_qyzlxxfj t
+		where a.qyzlxxid=t.qyzlxxid and a.scbz=0
+		<!--
+		Sorry, I can`t migrate	AND
+		See console output for further details 
+	-->
+	</select>
+	<!--企业质量信息(t_qyzlxx)-->
+	<select id="getQyzlxxListNoPage" parameterType="qyzlxx" resultMap="qyzlxxListResult">
+		select a.qyzlxxid qyzlxxid,a.hylbdm hylbdm,a.hylb hylb,a.fbdwdm fbdwdm,a.fbdwmc fbdwmc,a.fbr fbr,a.fbsj fbsj,a.scbz scbz
+		from t_qyzlxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyzlxxid
+	</select>
+	<!--企业质量信息(t_qyzlxx)-->
+	<select id="getQyzlxx" parameterType="qyzlxx" resultMap="qyzlxxResult">
+		select a.qyzlxxid qyzlxxid,a.hylbdm hylbdm,a.hylb hylb,a.fbdwdm fbdwdm,a.fbdwmc fbdwmc,a.fbr fbr,a.fbsj fbsj,a.scbz scbz
+		from t_qyzlxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyzlxxid
+	</select>
+</mapper>

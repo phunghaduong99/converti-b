@@ -1,0 +1,194 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	role_menu
+		See console output for further details 
+	-->
+	  <!--
+		Sorry, I can`t migrate	role
+		See console output for further details 
+	-->
+  <!--
+		Sorry, I can`t migrate	menu
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--角色菜单(t_role_menu)-->
+	<resultMap id="role_menuResult" type="role_menu">
+		<result property="menucode" column="menucode"/>
+		<result property="roleid" column="roleid"/>
+	</resultMap>
+	<!--角色菜单(t_role_menu)-->
+	<resultMap id="role_menuListResult" type="role_menu">
+		<result property="menucode" column="menucode"/>
+		<result property="roleid" column="roleid"/>
+	</resultMap>
+	<!--菜单(t_menu)-->
+	<resultMap id="role_systemListResult" type="role_menu">
+		<result property="systemcode" column="systemcode"/>
+	</resultMap>
+	<sql id="t_role_menuWhere">
+			<if test="menucode != null and menucode != ''">and
+				a.menucode=#{menucode}
+			</if>
+			<if test="roleid != null and roleid != ''">and
+				a.roleid=#{roleid}
+			</if>
+	</sql>
+	<sql id="t_role_menuPageWhere">
+		<include refid="t_role_menuWhere"/>	</sql>
+	<sql id="t_role_menuListWhere">
+		<include refid="t_role_menuWhere"/>	</sql>
+	<sql id="t_role_menuSelectWhere">
+		<include refid="t_role_menuWhere"/>	</sql>
+	<!--角色菜单(t_role_menu)-->
+	<insert id="insertRole_menu" parameterType="role_menu">
+		insert into t_role_menu (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--角色菜单(t_role_menu)-->
+	<update id="updateRole_menu" parameterType="role_menu">
+		update t_role_menu a set menucode=menucode
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--角色菜单(t_role_menu)-->
+	<delete id="deleteRole_menu" parameterType="role_menu">
+		delete from t_role_menu a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--角色菜单(t_role_menu)-->
+	<select id="getRole_menuList" parameterType="map" resultMap="role_menuListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.menucode menucode,a.roleid roleid
+		from t_role_menu a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--角色菜单(t_role_menu)-->
+	<select id="getRole_menuListCount" parameterType="map" resultType="int">
+		select count(1) a from t_role_menu a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--角色菜单(t_role_menu)-->
+	<select id="getRole_menuListNoPage" parameterType="role_menu" resultMap="role_menuListResult">
+		select a.menucode menucode,a.roleid roleid
+		from t_role_menu a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.menucode,a.roleid
+	</select>
+	<!--角色菜单(t_role_menu)-->
+	<select id="getRole_menu" parameterType="role_menu" resultMap="role_menuResult">
+		select a.menucode menucode,a.roleid roleid
+		from t_role_menu a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.menucode,a.roleid
+	</select>
+		<!--根据roleid和systemcode取得角色菜单(t_role_menu)-->
+	<select id="getRoleMenusByRoleidAndSystemcode" parameterType="map" resultMap="role_menuResult">
+       select a.menucode menucode,a.roleid roleid from t_role_menu a ,t_menu m where a.roleid=#{roleid} and m.systemcode=#{systemcode} and a.menucode=m.menucode order by m.nodeOrder
+     </select>
+     
+      <delete id="deleteRoleMenuByMenu" parameterType="menu">
+    delete from t_role_menu where menucode=#{menucode}
+  </delete>
+
+  <delete id="deleteRoleMenuByRole" parameterType="role">
+    delete from t_role_menu where roleid=#{roleid}
+  </delete>
+     <select id="getRoleMenus" parameterType="role" resultMap="role_menuResult">
+select roleid,menucode from t_role_menu where roleid=#{roleid}
+</select>
+	<!--查询指定角色拥有哪个系统下的菜单-->
+	<select id="getRolesystemListNoPage" parameterType="role_menu" resultMap="role_systemListResult">
+		select distinct b.systemcode from t_role_menu a,t_menu b
+		where a.menucode=b.menucode
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--查询指定角色指定系统下的菜单-->
+	<select id="getRolesystemenuListNoPage" parameterType="role_menu" resultMap="role_menuListResult">
+		select  b.menucode menucode,a.roleid roleid from t_role_menu a,t_menu b
+    	where a.menucode=b.menucode
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

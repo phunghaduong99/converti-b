@@ -1,0 +1,318 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:24 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	st_device
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--无线终端设备(ST_DEVICE)-->
+	<resultMap id="st_deviceResult" type="st_device">
+		<result property="dev_serial" column="dev_serial"/>
+		<result property="dev_name" column="dev_name"/>
+		<result property="dev_ip" column="dev_ip"/>
+		<result property="dev_password" column="dev_password"/>
+		<result property="dev_log" column="dev_log"/>
+		<result property="dev_devrulezuc" column="dev_devrulezuc"/>
+		<result property="dev_devrulezuo" column="dev_devrulezuo"/>
+		<result property="gly_no" column="gly_no"/>
+		<result property="dev_update" column="dev_update"/>
+		<result property="dev_devrulezul" column="dev_devrulezul"/>
+		<result property="com" column="com"/>
+		<result property="port" column="port"/>
+		<result property="btl" column="btl"/>
+		<result property="xs" column="xs"/>
+		<result property="gly_psw" column="gly_psw"/>
+		<result property="dw_sj" column="dw_sj"/>
+		<result property="parent" column="parent"/>
+		<result property="mac" column="mac"/>
+		<result property="tjkq" column="tjkq"/>
+		<result property="on_line" column="on_line"/>
+		<result property="run_state" column="run_state"/>
+		<result property="note_ok" column="note_ok"/>
+		<result property="da_update" column="da_update"/>
+		<result property="notice_serial" column="notice_serial"/>
+		<result property="dev_cpu" column="dev_cpu"/>
+		<result property="dev_os" column="dev_os"/>
+		<result property="flow_rate" column="flow_rate"/>
+		<result property="csbm" column="csbm"/>
+		<result property="savetime" column="savetime"/>
+		<result property="max_flow_no" column="max_flow_no"/>
+		<result property="dev_version" column="dev_version"/>
+		<result property="dev_up" column="dev_up"/>
+		<result property="qyid" column="qyid"/>
+		<result property="parentName" column="parentName"/>
+		<result property="qymc" column="qymc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		
+
+	</resultMap>
+	<!--无线终端设备Page(ST_DEVICE)-->
+	<resultMap id="st_deviceListPageResult" type="st_device">
+		<result property="dev_serial" column="dev_serial"/>
+		<result property="dev_name" column="dev_name"/>
+		<result property="dev_ip" column="dev_ip"/>
+		<result property="dev_password" column="dev_password"/>
+		<result property="dev_log" column="dev_log"/>
+		<result property="dev_devrulezuc" column="dev_devrulezuc"/>
+		<result property="dev_devrulezuo" column="dev_devrulezuo"/>
+		<result property="gly_no" column="gly_no"/>
+		<result property="dev_update" column="dev_update"/>
+		<result property="dev_devrulezul" column="dev_devrulezul"/>
+		<result property="com" column="com"/>
+		<result property="port" column="port"/>
+		<result property="btl" column="btl"/>
+		<result property="xs" column="xs"/>
+		<result property="gly_psw" column="gly_psw"/>
+		<result property="dw_sj" column="dw_sj"/>
+		<result property="parent" column="parent"/>
+		<result property="mac" column="mac"/>
+		<result property="tjkq" column="tjkq"/>
+		<result property="on_line" column="on_line"/>
+		<result property="run_state" column="run_state"/>
+		<result property="note_ok" column="note_ok"/>
+		<result property="da_update" column="da_update"/>
+		<result property="notice_serial" column="notice_serial"/>
+		<result property="dev_cpu" column="dev_cpu"/>
+		<result property="dev_os" column="dev_os"/>
+		<result property="flow_rate" column="flow_rate"/>
+		<result property="csbm" column="csbm"/>
+		<result property="savetime" column="savetime"/>
+		<result property="max_flow_no" column="max_flow_no"/>
+		<result property="dev_version" column="dev_version"/>
+		<result property="dev_up" column="dev_up"/>
+		<result property="qyid" column="qyid"/>
+		<result property="qymc" column="qymc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	
+	<!--无线终端设备Page(ST_DEVICE)-->
+	<resultMap id="st_deviceListMoRenPageResult" type="st_device">
+		<result property="dev_serial" column="dev_serial"/>
+		<result property="dev_name" column="dev_name"/>
+	</resultMap>
+	
+	<!--无线终端设备(ST_DEVICE)-->
+	<resultMap id="st_deviceListResult" type="st_device">
+		<result property="dev_serial" column="dev_serial"/>
+		<result property="dev_name" column="dev_name"/>
+		<result property="dev_ip" column="dev_ip"/>
+		<result property="dev_password" column="dev_password"/>
+		<result property="dev_log" column="dev_log"/>
+		<result property="dev_devrulezuc" column="dev_devrulezuc"/>
+		<result property="dev_devrulezuo" column="dev_devrulezuo"/>
+		<result property="gly_no" column="gly_no"/>
+		<result property="dev_update" column="dev_update"/>
+		<result property="dev_devrulezul" column="dev_devrulezul"/>
+		<result property="com" column="com"/>
+		<result property="port" column="port"/>
+		<result property="btl" column="btl"/>
+		<result property="xs" column="xs"/>
+		<result property="gly_psw" column="gly_psw"/>
+		<result property="dw_sj" column="dw_sj"/>
+		<result property="parent" column="parent"/>
+		<result property="mac" column="mac"/>
+		<result property="tjkq" column="tjkq"/>
+		<result property="on_line" column="on_line"/>
+		<result property="run_state" column="run_state"/>
+		<result property="note_ok" column="note_ok"/>
+		<result property="da_update" column="da_update"/>
+		<result property="notice_serial" column="notice_serial"/>
+		<result property="dev_cpu" column="dev_cpu"/>
+		<result property="dev_os" column="dev_os"/>
+		<result property="flow_rate" column="flow_rate"/>
+		<result property="csbm" column="csbm"/>
+		<result property="savetime" column="savetime"/>
+		<result property="max_flow_no" column="max_flow_no"/>
+		<result property="dev_version" column="dev_version"/>
+		<result property="dev_up" column="dev_up"/>
+		<result property="qyid" column="qyid"/>
+	   <result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		
+	</resultMap>
+	<sql id="ST_DEVICEWhere">
+			<if test="dev_serial != null and dev_serial != ''">and
+				a.dev_serial=#{dev_serial}
+			</if>
+	</sql>
+	<sql id="ST_DEVICEPageWhere">
+		<include refid="ST_DEVICEWhere"/>
+		<if test="dev_name != null and dev_name != ''">and
+				a.dev_name like '%${dev_name}%'
+			</if>
+				<if test="mac != null and mac != ''">and
+				a.mac like '%${mac}%'
+			</if>
+				<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="qymc != null and qymc != ''">and
+				b.qymc = #{qymc}
+			</if>
+			<if test="csbm != null and csbm != ''">and
+				a.csbm  = #{csbm}
+			</if>
+			<if test="dev_ip != null and dev_ip != ''">and
+				a.dev_ip  like '%${dev_ip}%'
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm  = #{hylbdm}
+			</if>
+			<if test="hylb != null and hylb != ''">and
+				a.hylb   = #{hylb}
+			</if>
+			</sql>
+		
+	<sql id="ST_DEVICEListWhere">
+		<include refid="ST_DEVICEWhere"/>	</sql>
+	<sql id="ST_DEVICESelectWhere">
+		<include refid="ST_DEVICEWhere"/>	</sql>
+	<!--无线终端设备(ST_DEVICE)-->
+	<insert id="insertSt_device" parameterType="st_device">
+		insert into ST_DEVICE (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--无线终端设备(ST_DEVICE)-->
+	<update id="updateSt_device" parameterType="st_device">
+		update ST_DEVICE a set a.dev_serial=a.dev_serial
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--无线终端设备(ST_DEVICE)-->
+	<delete id="deleteSt_device" parameterType="st_device">
+		delete from ST_DEVICE a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--无线终端设备(ST_DEVICE)-->
+	<select id="getSt_deviceList" parameterType="map" resultMap="st_deviceListPageResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.dev_serial dev_serial,a.dev_name dev_name,a.dev_ip dev_ip,a.dev_password dev_password,a.dev_log dev_log,a.dev_devrulezuc dev_devrulezuc,a.dev_devrulezuo dev_devrulezuo,a.gly_no gly_no,a.dev_update dev_update,a.dev_devrulezul dev_devrulezul,a.com com,a.port port,a.btl btl,a.xs xs,a.gly_psw gly_psw,a.dw_sj dw_sj,a.parent parent,a.mac mac,a.tjkq tjkq,a.on_line on_line,a.run_state run_state,a.note_ok note_ok,a.da_update da_update,a.notice_serial notice_serial,a.dev_cpu dev_cpu,a.dev_os dev_os,a.flow_rate flow_rate,a.csbm csbm,a.savetime savetime,a.max_flow_no max_flow_no,a.dev_version dev_version,a.dev_up dev_up,a.qyid qyid
+		,b.qymc,a.hylbdm,a.hylb
+		from ST_DEVICE a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--无线终端设备(ST_DEVICE)-->
+	<select id="getSt_deviceListCount" parameterType="map" resultType="int">
+		select count(1) a 
+			from ST_DEVICE a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--无线终端设备(ST_DEVICE)-->
+	<select id="getSt_deviceListNoPage" parameterType="st_device" resultMap="st_deviceListResult">
+		select a.dev_serial dev_serial,a.dev_name dev_name,a.dev_ip dev_ip,a.dev_password dev_password,a.dev_log dev_log,a.dev_devrulezuc dev_devrulezuc,a.dev_devrulezuo dev_devrulezuo,a.gly_no gly_no,a.dev_update dev_update,a.dev_devrulezul dev_devrulezul,a.com com,a.port port,a.btl btl,a.xs xs,a.gly_psw gly_psw,a.dw_sj dw_sj,a.parent parent,a.mac mac,a.tjkq tjkq,a.on_line on_line,a.run_state run_state,a.note_ok note_ok,a.da_update da_update,a.notice_serial notice_serial,a.dev_cpu dev_cpu,a.dev_os dev_os,a.flow_rate flow_rate,a.csbm csbm,a.savetime savetime,a.max_flow_no max_flow_no,a.dev_version dev_version,a.dev_up dev_up,a.qyid qyid
+		,a.hylbdm,a.hylb
+		from ST_DEVICE a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dev_serial
+	</select>
+	<!--无线终端设备(ST_DEVICE)-->
+	<select id="getSt_device" parameterType="st_device" resultMap="st_deviceResult">
+		select a.dev_serial dev_serial,a.dev_name dev_name,a.dev_ip dev_ip,a.dev_password dev_password,a.dev_log dev_log,a.dev_devrulezuc dev_devrulezuc,a.dev_devrulezuo dev_devrulezuo,a.gly_no gly_no,a.dev_update dev_update,a.dev_devrulezul dev_devrulezul,a.com com,a.port port,a.btl btl,a.xs xs,a.gly_psw gly_psw,a.dw_sj dw_sj,a.parent parent,a.mac mac,a.tjkq tjkq,a.on_line on_line,a.run_state run_state,a.note_ok note_ok,a.da_update da_update,a.notice_serial notice_serial,a.dev_cpu dev_cpu,a.dev_os dev_os,a.flow_rate flow_rate,a.csbm csbm,a.savetime savetime,a.max_flow_no max_flow_no,a.dev_version dev_version,a.dev_up dev_up,a.qyid qyid
+		,b.dev_name parentName,c.qymc,a.hylbdm,a.hylb
+		from ST_DEVICE a,ST_DEVICE b ,t_qyjbxx c
+		where 1=1 and a.parent =b.dev_serial and a.qyid=c.qyid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dev_serial
+	</select>
+	
+	
+	<!--无线终端设备默认服务(ST_DEVICE)-->
+	<select id="getSt_deviceMoRenList" parameterType="map" resultMap="st_deviceListMoRenPageResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.dev_serial dev_serial,a.dev_name dev_name
+		from ST_DEVICE a 
+		where 1=1    and a.parent=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--无线终端设备默认服务(ST_DEVICE)-->
+	<select id="getSt_deviceMoRenListCount" parameterType="map" resultType="int">
+		select count(1) a 
+			from ST_DEVICE a 
+			where 1=1    and a.parent=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

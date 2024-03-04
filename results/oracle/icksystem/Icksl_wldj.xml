@@ -1,0 +1,156 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:24 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	icksl_wldj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<resultMap id="icksl_wldjResult" type="icksl_wldj">
+		<result property="ickslid" column="ickslid"/>
+		<result property="wlid" column="wlid"/>
+		<result property="wlbzkztbs" column="wlbzkztbs"/>
+	</resultMap>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<resultMap id="icksl_wldjOneResult" type="icksl_wldj">
+		<result property="ickslid" column="ickslid"/>
+		<result property="wlid" column="wlid"/>
+	</resultMap>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<resultMap id="icksl_wldjListResult" type="icksl_wldj">
+		<result property="ickslid" column="ickslid"/>
+		<result property="wlid" column="wlid"/>
+		<result property="wlbzkztbs" column="wlbzkztbs"/>
+	</resultMap>
+	<sql id="t_icksl_wldjWhere">
+			<if test="ickslid != null and ickslid != ''">and
+				a.ickslid=#{ickslid}
+			</if>
+			<if test="wlid != null and wlid != ''">and
+				a.wlid=#{wlid}
+			</if>
+	</sql>
+	<sql id="t_icksl_wldjPageWhere">
+		<include refid="t_icksl_wldjWhere"/>	</sql>
+	<sql id="t_icksl_wldjListWhere">
+		<include refid="t_icksl_wldjWhere"/>	</sql>
+	<sql id="t_icksl_wldjSelectWhere">
+		<include refid="t_icksl_wldjWhere"/>	</sql>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<insert id="insertIcksl_wldj" parameterType="icksl_wldj">
+		insert into t_icksl_wldj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<update id="updateIcksl_wldj" parameterType="icksl_wldj">
+		update t_icksl_wldj a set a.wlid=a.wlid , a.ickslid=a.ickslid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<delete id="deleteIcksl_wldj" parameterType="icksl_wldj">
+		delete from t_icksl_wldj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<select id="getIcksl_wldjList" parameterType="map" resultMap="icksl_wldjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.ickslid ickslid,a.wlid wlid,a.wlbzkztbs wlbzkztbs
+		from t_icksl_wldj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<select id="getIcksl_wldjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_icksl_wldj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<select id="getIcksl_wldjListNoPage" parameterType="icksl_wldj" resultMap="icksl_wldjListResult">
+		select a.ickslid ickslid,a.wlid wlid,a.wlbzkztbs wlbzkztbs
+		from t_icksl_wldj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ickslid,a.wlid
+	</select>
+	<!--IC卡受理_物流登记信息(t_icksl_wldj)-->
+	<select id="getIcksl_wldj" parameterType="icksl_wldj" resultMap="icksl_wldjOneResult">
+		select a.ickslid ickslid,max(a.wlid) wlid
+		from t_icksl_wldj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		group by a.ickslid
+	</select>
+</mapper>

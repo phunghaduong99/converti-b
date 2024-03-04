@@ -1,0 +1,305 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	rylbtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--人员类别统计(t_rylbtj)-->
+	<resultMap id="rylbtjResult" type="rylbtj">
+		<result property="rybtjid" column="rybtjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="glry" column="glry"/>
+		<result property="fddbr" column="fddbr"/>
+		<result property="zygdzcry" column="zygdzcry"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="qtglry" column="qtglry"/>
+		<result property="fwry" column="fwry"/>
+		<result property="ybfwry" column="ybfwry"/>
+		<result property="lsfwry" column="lsfwry"/>
+		<result property="yyry" column="yyry"/>
+		<result property="qtfwry" column="qtfwry"/>
+		<result property="bary" column="bary"/>
+		<result property="aqjcry" column="aqjcry"/>
+		<result property="qt" column="qt"/>
+		<result property="hj" column="hj"/>
+	</resultMap>
+	<!--人员类别统计(t_rylbtj)-->
+	<resultMap id="rylbtjListResult" type="rylbtj">
+		<result property="rybtjid" column="rybtjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="glry" column="glry"/>
+		<result property="fddbr" column="fddbr"/>
+		<result property="zygdzcry" column="zygdzcry"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="qtglry" column="qtglry"/>
+		<result property="fwry" column="fwry"/>
+		<result property="ybfwry" column="ybfwry"/>
+		<result property="lsfwry" column="lsfwry"/>
+		<result property="yyry" column="yyry"/>
+		<result property="qtfwry" column="qtfwry"/>
+		<result property="bary" column="bary"/>
+		<result property="aqjcry" column="aqjcry"/>
+		<result property="qt" column="qt"/>
+		<result property="hj" column="hj"/>
+	</resultMap>
+	<!--人员类别统计(t_rylbtj)-->
+	<resultMap id="ryhylbtjListResultTJ" type="rylbtj">
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qczlry" column="qczlry"/>
+		<result property="escry" column="escry"/>
+		<result property="esjry" column="esjry"/>
+		<result property="jxry" column="jxry"/>
+		<result property="czcry" column="czcry"/>
+	</resultMap>
+	<resultMap id="rylbtjListResultTJ" type="rylbtj">
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="glry" column="glry"/>
+		<result property="fwry" column="fwry"/>
+		<result property="bary" column="bary"/>
+		<result property="aqjcry" column="aqjcry"/>
+		<result property="qt" column="qt"/>
+		<result property="hj" column="hj"/>
+		<result property="glryT" column="glryT"/>
+		<result property="fwryT" column="fwryT"/>
+		<result property="baryT" column="baryT"/>
+		<result property="aqjcryT" column="aqjcryT"/>
+		<result property="qtT" column="qtT"/>
+		<result property="hjT" column="hjT"/>
+	</resultMap>
+	<sql id="t_rylbtjWhere">
+			<if test="rybtjid != null and rybtjid != ''">and
+				a.rybtjid=#{rybtjid}
+			</if>
+	</sql>
+	<sql id="t_rylbtjPageWhere">
+		<include refid="t_rylbtjWhere"/>	
+	    <if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+		</if>
+		<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+		</if>
+		<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+		</if>	
+		<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+		</if>
+		<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+		</if>
+	</sql>
+	<sql id="t_rylbtjListWhere">
+		<include refid="t_rylbtjWhere"/>	</sql>
+	<sql id="t_rylbtjSelectWhere">
+		<include refid="t_rylbtjWhere"/>	</sql>
+	<!--人员类别统计(t_rylbtj)-->
+	<insert id="insertRylbtj" parameterType="rylbtj">
+		insert into t_rylbtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--人员类别统计(t_rylbtj)-->
+	<update id="updateRylbtj" parameterType="rylbtj">
+		update t_rylbtj a set a.rybtjid=a.rybtjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--人员类别统计(t_rylbtj)-->
+	<delete id="deleteRylbtj" parameterType="rylbtj">
+		delete from t_rylbtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--人员类别统计(t_rylbtj)-->
+	<select id="getRylbtjList" parameterType="map" resultMap="rylbtjListResultTJ">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select 
+		 NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.glry end),'0') as glryT,
+		 NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.fwry end),'0') as fwryT,
+		 NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.bary end),'0') as baryT,
+		 NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.aqjcry end),'0') as aqjcryT,
+		 NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.qt end),'0') as qtT,
+		 NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.hj end),'0') as hjT,
+		 NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.glry end),'0') as glry,
+		 NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.fwry end),'0') as fwry,
+		 NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.bary end),'0') as bary,
+		 NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.aqjcry end),'0') as aqjcry,
+		 NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.qt end),'0') as qt,
+		 NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.hj end),'0') as hj
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_rylbtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--人员类别统计(t_rylbtj)-->
+	<select id="getRylbtjListCount" parameterType="map" resultType="int">
+	select count(1) from (
+		select count(1) a from t_rylbtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)
+	</select>
+	<!--人员类别统计(t_rylbtj)-->
+	<select id="getRylbtjListNoPage" parameterType="rylbtj" resultMap="rylbtjListResult">
+		select a.rybtjid rybtjid,a.hylbdm hylbdm,a.hylb hylb,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qybm qybm,a.qymc qymc,a.glry glry,a.fddbr fddbr,a.zygdzcry zygdzcry,a.zafzr zafzr,a.qtglry qtglry,a.fwry fwry,a.ybfwry ybfwry,a.lsfwry lsfwry,a.yyry yyry,a.qtfwry qtfwry,a.bary bary,a.aqjcry aqjcry,a.qt qt,a.hj hj
+		from t_rylbtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.rybtjid
+	</select>
+	<!--人员类别统计(t_rylbtj)-->
+	<select id="getRylbtj" parameterType="rylbtj" resultMap="rylbtjResult">
+		select a.rybtjid rybtjid,a.hylbdm hylbdm,a.hylb hylb,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qybm qybm,a.qymc qymc,a.glry glry,a.fddbr fddbr,a.zygdzcry zygdzcry,a.zafzr zafzr,a.qtglry qtglry,a.fwry fwry,a.ybfwry ybfwry,a.lsfwry lsfwry,a.yyry yyry,a.qtfwry qtfwry,a.bary bary,a.aqjcry aqjcry,a.qt qt,a.hj hj
+		from t_rylbtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.rybtjid
+	</select>
+	<!--人员类别统计(t_rylbtj)-->
+	<select id="getRyhylbtjList" parameterType="map" resultMap="ryhylbtjListResultTJ">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select 
+		 NVL(sum(case when a.hylbdm='F02' then a.hj end),'0') as qczlry,
+		 NVL(sum(case when a.hylbdm='E01' then a.hj end),'0') as escry,
+		 NVL(sum(case when a.hylbdm='E02' then a.hj end),'0') as esjry,
+		 NVL(sum(case when a.hylbdm='C' then a.hj end),'0') as jxry,
+		 NVL(sum(case when a.hylbdm='F01' then a.hj end),'0') as czcry
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_rylbtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--人员类别统计(t_rylbtj)-->
+	<select id="getRyhylbtjListCount" parameterType="map" resultType="int">
+	select count(1) from (
+		select count(1) a from t_rylbtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)
+	</select>
+</mapper>

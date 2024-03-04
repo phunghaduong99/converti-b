@@ -1,0 +1,208 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	wldj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--物流登记信息(t_wldj)-->
+	<resultMap id="wldjResult" type="wldj">
+		<result property="wlid" column="wlid"/>
+		<result property="wlpc" column="wlpc"/>
+		<result property="djr" column="djr"/>
+		<result property="zbsj" column="zbsj"/>
+		<result property="mbsldbh" column="mbsldbh"/>
+		<result property="mbsldmc" column="mbsldmc"/>
+		<result property="ztdm" column="ztdm"/>
+		<result property="ztdmmc" column="ztdmmc"/>
+		<result property="fkxx" column="fkxx"/>
+		<result property="fksj" column="fksj"/>
+		<result property="fsr" column="fsr"/>
+		<result property="fssj" column="fssj"/>
+		<result property="szdsbm" column="szdsbm"/>
+		<result property="szds" column="szds"/>
+		<result property="jsr" column="jsr"/>
+		<result property="jssj" column="jssj"/>
+		<result property="bz" column="bz"/>
+		<result property="wlgs" column="wlgs"/>
+		<result property="ydh" column="ydh"/>
+		<result property="bnksl" column="bnksl"/>
+	</resultMap>
+	<!--物流登记信息(t_wldj)-->
+	<resultMap id="wldjListResult" type="wldj">
+		<result property="wlid" column="wlid"/>
+		<result property="wlpc" column="wlpc"/>
+		<result property="djr" column="djr"/>
+		<result property="zbsj" column="zbsj"/>
+		<result property="mbsldbh" column="mbsldbh"/>
+		<result property="mbsldmc" column="mbsldmc"/>
+		<result property="ztdm" column="ztdm"/>
+		<result property="ztdmmc" column="ztdmmc"/>
+		<result property="fkxx" column="fkxx"/>
+		<result property="fksj" column="fksj"/>
+		<result property="fsr" column="fsr"/>
+		<result property="fssj" column="fssj"/>
+		<result property="szdsbm" column="szdsbm"/>
+		<result property="szds" column="szds"/>
+		<result property="jsr" column="jsr"/>
+		<result property="jssj" column="jssj"/>
+		<result property="bz" column="bz"/>
+		<result property="wlgs" column="wlgs"/>
+		<result property="ydh" column="ydh"/>
+		<result property="bnksl" column="bnksl"/>
+	</resultMap>
+	<sql id="t_wldjWhere">
+			<if test="wlid != null and wlid != ''">and
+				a.wlid=#{wlid}
+			</if>
+	</sql>
+	<sql id="t_wldjPageWhere">
+		<include refid="t_wldjWhere"/>	</sql>
+	<sql id="t_wldjListWhere">
+		<include refid="t_wldjWhere"/>	</sql>
+	<sql id="t_wldjSelectWhere">
+		<include refid="t_wldjWhere"/>	</sql>
+	<!--物流登记信息(t_wldj)-->
+	<insert id="insertWldj" parameterType="wldj">
+		insert into t_wldj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--物流登记信息(t_wldj)-->
+	<update id="updateWldj" parameterType="wldj">
+		update t_wldj a set a.wlid=a.wlid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--物流登记信息(t_wldj)-->
+	<delete id="deleteWldj" parameterType="wldj">
+		delete from t_wldj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--物流登记信息(t_wldj)-->
+	<select id="getWldjList" parameterType="map" resultMap="wldjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.wlid wlid,a.wlpc wlpc,a.djr djr,a.zbsj zbsj,a.mbsldbh mbsldbh,a.mbsldmc mbsldmc,
+			a.ztdm ztdm,a.ztdmmc ztdmmc,a.fkxx fkxx,a.fksj fksj,a.fsr fsr,a.fssj fssj,a.szdsbm szdsbm,
+			a.szds szds,a.jsr jsr,a.jssj jssj,a.bz bz,a.wlgs wlgs,a.ydh ydh,a.bnksl bnksl
+		from t_wldj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--物流登记信息(t_wldj)-->
+	<select id="getWldjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wldj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--物流登记台账信息(t_wldj)-->
+	<select id="getWldjTzList" parameterType="map" resultMap="wldjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.wlid wlid,a.wlpc wlpc,a.djr djr,a.zbsj zbsj,a.mbsldbh mbsldbh,a.mbsldmc mbsldmc,
+			a.ztdm ztdm,a.ztdmmc ztdmmc,a.fkxx fkxx,a.fksj fksj,a.fsr fsr,a.fssj fssj,a.szdsbm szdsbm,
+			a.szds szds,a.jsr jsr,a.jssj jssj,a.bz bz,a.wlgs wlgs,a.ydh ydh,a.bnksl bnksl
+		from t_wldj a 
+		where a.ztdm='2' or a.ztdm='4'
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--物流登记信息(t_wldj)-->
+	<select id="getWldjTzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wldj a
+		where a.ztdm='2' or a.ztdm='4'
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--物流登记信息(t_wldj)-->
+	<select id="getWldjListNoPage" parameterType="wldj" resultMap="wldjListResult">
+		select a.wlid wlid,a.wlpc wlpc,a.djr djr,a.zbsj zbsj,a.mbsldbh mbsldbh,a.mbsldmc mbsldmc,a.ztdm ztdm,a.ztdmmc ztdmmc,a.fkxx fkxx,a.fksj fksj,a.fsr fsr,a.fssj fssj,a.szdsbm szdsbm,a.szds szds,a.jsr jsr,a.jssj jssj,a.bz bz,a.wlgs wlgs,a.ydh ydh,a.bnksl bnksl
+		from t_wldj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wlid
+	</select>
+	<!--物流登记信息(t_wldj)-->
+	<select id="getWldj" parameterType="wldj" resultMap="wldjResult">
+		select a.wlid wlid,a.wlpc wlpc,a.djr djr,a.zbsj zbsj,a.mbsldbh mbsldbh,a.mbsldmc mbsldmc,a.ztdm ztdm,a.ztdmmc ztdmmc,a.fkxx fkxx,a.fksj fksj,a.fsr fsr,a.fssj fssj,a.szdsbm szdsbm,a.szds szds,a.jsr jsr,a.jssj jssj,a.bz bz,a.wlgs wlgs,a.ydh ydh,a.bnksl bnksl
+		from t_wldj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wlid
+	</select>
+</mapper>

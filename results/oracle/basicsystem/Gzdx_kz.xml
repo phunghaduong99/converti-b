@@ -1,0 +1,298 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	gzdx_kz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--关注对象快照(t_gzdx_kz)-->
+	<resultMap id="gzdx_kzResult" type="gzdx_kz">
+		<result property="gzdxid" column="gzdxid"/>
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="yjxxid" column="yjxxid"/>
+		<result property="gzdxkzid" column="gzdxkzid"/>
+		<result property="xm" column="xm"/>
+		<result property="bm" column="bm"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="cyzjdm" column="cyzjdm"/>
+		<result property="cyzj" column="cyzj"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="whcd" column="whcd"/>
+		<result property="gzdxsf" column="gzdxsf"/>
+		<result property="shengao" column="shengao"/>
+		<result property="xzdq" column="xzdq"/>
+		<result property="xzdqxz" column="xzdqxz"/>
+		<result property="tbdw" column="tbdw"/>
+		<result property="tbr" column="tbr"/>
+		<result property="tbrq" column="tbrq"/>
+		<result property="tbdabm" column="tbdabm"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="zxrq" column="zxrq"/>
+		<result property="zxr" column="zxr"/>
+		<result property="bz" column="bz"/>
+	</resultMap>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<resultMap id="gzdx_kzListResult" type="gzdx_kz">
+		<result property="gzdxid" column="gzdxid"/>
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="yjxxid" column="yjxxid"/>
+		<result property="gzdxkzid" column="gzdxkzid"/>
+		<result property="xm" column="xm"/>
+		<result property="bm" column="bm"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="hjdxzqh" column="hjdxzqh"/>
+		<result property="hjdxzqhdm" column="hjdxzqhdm"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="cyzjdm" column="cyzjdm"/>
+		<result property="cyzj" column="cyzj"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="whcd" column="whcd"/>
+		<result property="gzdxsf" column="gzdxsf"/>
+		<result property="shengao" column="shengao"/>
+		<result property="xzdq" column="xzdq"/>
+		<result property="xzdqxz" column="xzdqxz"/>
+		<result property="tbdw" column="tbdw"/>
+		<result property="tbr" column="tbr"/>
+		<result property="tbrq" column="tbrq"/>
+		<result property="tbdabm" column="tbdabm"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="zxrq" column="zxrq"/>
+		<result property="zxr" column="zxr"/>
+		<result property="bz" column="bz"/>
+	</resultMap>
+	<sql id="t_gzdx_kzWhere">
+			<if test="gzdxid != null and gzdxid != ''">and
+				a.gzdxid=#{gzdxid}
+			</if>
+			<if test="yjgzid != null and yjgzid != ''">and
+				a.yjgzid=#{yjgzid}
+			</if>
+			<if test="yjxxid != null and yjxxid != ''">and
+				a.yjxxid=#{yjxxid}
+			</if>
+			<if test="gzdxkzid != null and gzdxkzid != ''">and
+				a.gzdxkzid=#{gzdxkzid}
+			</if>
+	</sql>
+	<sql id="t_gzdx_kzPageWhere">
+		<include refid="t_gzdx_kzWhere"/>	</sql>
+	<sql id="t_gzdx_kzListWhere">
+		<include refid="t_gzdx_kzWhere"/>	</sql>
+	<sql id="t_gzdx_kzSelectWhere">
+		<include refid="t_gzdx_kzWhere"/>	</sql>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<insert id="insertGzdx_kz" parameterType="gzdx_kz">
+		insert into t_gzdx_kz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<update id="updateGzdx_kz" parameterType="gzdx_kz">
+		update t_gzdx_kz a set a.gzdxkzid=a.gzdxkzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<delete id="deleteGzdx_kz" parameterType="gzdx_kz">
+		delete from t_gzdx_kz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<select id="getGzdx_kzList" parameterType="map" resultMap="gzdx_kzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.gzdxid gzdxid,a.yjgzid yjgzid,a.yjxxid yjxxid,a.gzdxkzid gzdxkzid,a.xm xm,a.bm bm,a.xmpy xmpy,a.mzdm mzdm,a.minzu minzu,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.hjdxzqh hjdxzqh,a.hjdxzqhdm hjdxzqhdm,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.whcd whcd,a.gzdxsf gzdxsf,a.shengao shengao,a.xzdq xzdq,a.xzdqxz xzdqxz,a.tbdw tbdw,a.tbr tbr,a.tbrq tbrq,a.tbdabm tbdabm,a.zxbz zxbz,a.zxrq zxrq,a.zxr zxr,a.bz bz
+		from t_gzdx_kz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<select id="getGzdx_kzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_gzdx_kz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<select id="getGzdx_kzListNoPage" parameterType="gzdx_kz" resultMap="gzdx_kzListResult">
+		select a.gzdxid gzdxid,a.yjgzid yjgzid,a.yjxxid yjxxid,a.gzdxkzid gzdxkzid,a.xm xm,a.bm bm,a.xmpy xmpy,a.mzdm mzdm,a.minzu minzu,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.hjdxzqh hjdxzqh,a.hjdxzqhdm hjdxzqhdm,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.whcd whcd,a.gzdxsf gzdxsf,a.shengao shengao,a.xzdq xzdq,a.xzdqxz xzdqxz,a.tbdw tbdw,a.tbr tbr,a.tbrq tbrq,a.tbdabm tbdabm,a.zxbz zxbz,a.zxrq zxrq,a.zxr zxr,a.bz bz
+		from t_gzdx_kz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gzdxid,a.yjgzid,a.yjxxid,a.gzdxkzid
+	</select>
+	<!--关注对象快照(t_gzdx_kz)-->
+	<select id="getGzdx_kz" parameterType="gzdx_kz" resultMap="gzdx_kzResult">
+		select a.gzdxid gzdxid,a.yjgzid yjgzid,a.yjxxid yjxxid,a.gzdxkzid gzdxkzid,a.xm xm,a.bm bm,a.xmpy xmpy,a.mzdm mzdm,a.minzu minzu,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.hjdxzqh hjdxzqh,a.hjdxzqhdm hjdxzqhdm,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.whcd whcd,a.gzdxsf gzdxsf,a.shengao shengao,a.xzdq xzdq,a.xzdqxz xzdqxz,a.tbdw tbdw,a.tbr tbr,a.tbrq tbrq,a.tbdabm tbdabm,a.zxbz zxbz,a.zxrq zxrq,a.zxr zxr,a.bz bz
+		from t_gzdx_kz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gzdxid,a.yjgzid,a.yjxxid,a.gzdxkzid
+	</select>
+	
+	<insert id="insertGzdx_kzBDBJ" parameterType="gzdx_kz">
+		insert into t_gzdx_kz
+			  (yjgzid,
+			   yjxxid,
+			   gzdxkzid,
+			   xm,
+			   bm,
+			   xmpy,
+			   mzdm,
+			   minzu,
+			   xbdm,
+			   xb,
+			   csrq,
+			   hjdxzqh,
+			   hjdxzqhdm,
+			   hjdxz,
+			   cyzjdm,
+			   cyzj,
+			   zjhm,
+			   whcd,
+			   gzdxsf,
+			   shengao,
+			   xzdq,
+			   xzdqxz,
+			   tbdw,
+			   tbr,
+			   tbrq,
+			   tbdabm,
+			   zxbz,
+			   zxrq,
+			   zxr,
+			   bz,
+			   hylbdm,
+			   hylb,
+			   whcdbm,
+			   xzdqbm,
+			   zcbm,
+			   zc,
+			   lxdh)
+			
+			  select '1',
+			         #{yjxxid},
+			         #{gzdxkzid},
+			         xm,
+			         bm,
+			         xmpy,
+			         mzdm,
+			         minzu,
+			         xbdm,
+			         xb,
+			         csrq,
+			         hjdxzqh,
+			         hjdxzqhdm,
+			         hjdxz,
+			         cyzjdm,
+			         cyzj,
+			         zjhm,
+			         whcd,
+			         gzdxsf,
+			         shengao,
+			         xzdq,
+			         xzdqxz,
+			         tbdw,
+			         tbr,
+			         tbrq,
+			         tbdabm,
+			         zxbz,
+			         zxrq,
+			         zxr,
+			         bz,
+			         hylbdm,
+			         hylb,
+			         whcdbm,
+			         xzdqbm,
+			         zcbm,
+			         zc,
+			         lxdh
+			  
+			    from t_gzdx t
+			   where t.gzdxid = #{gzdxid}
+	
+	
+	
+	</insert>
+</mapper>

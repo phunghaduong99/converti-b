@@ -1,0 +1,206 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyyyrz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业营业日志(t_qyyyrz)-->
+	<resultMap id="qyyyrzResult" type="qyyyrz">
+		<result property="qyid" column="qyid"/>
+		<result property="yyrzid" column="yyrzid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="riqi" column="riqi"/>
+		<result property="ksyysj" column="ksyysj"/>
+		<result property="jsyysj" column="jsyysj"/>
+		<result property="csfzrbh" column="csfzrbh"/>
+		<result property="csfe" column="csfe"/>
+		<result property="zafzrbh" column="zafzrbh"/>
+		<result property="zafzrxm" column="zafzrxm"/>
+		<result property="sffsaj" column="sffsaj"/>
+		<result property="sfglbmjc" column="sfglbmjc"/>
+		<result property="dryysj" column="dryysj"/>
+		<result property="txrxm" column="txrxm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="cyryzs" column="cyryzs"/>
+		<result property="dtsbrs" column="dtsbrs"/>
+		<result property="dtxzrys" column="dtxzrys"/>
+		<result property="dtlzrs" column="dtlzrs"/>
+	</resultMap>
+	<!--企业营业日志(t_qyyyrz)-->
+	<resultMap id="qyyyrzListResult" type="qyyyrz">
+		<result property="qyid" column="qyid"/>
+		<result property="yyrzid" column="yyrzid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="riqi" column="riqi"/>
+		<result property="ksyysj" column="ksyysj"/>
+		<result property="jsyysj" column="jsyysj"/>
+		<result property="csfzrbh" column="csfzrbh"/>
+		<result property="csfe" column="csfe"/>
+		<result property="zafzrbh" column="zafzrbh"/>
+		<result property="zafzrxm" column="zafzrxm"/>
+		<result property="sffsaj" column="sffsaj"/>
+		<result property="sfglbmjc" column="sfglbmjc"/>
+		<result property="dryysj" column="dryysj"/>
+		<result property="txrxm" column="txrxm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+        <result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	<sql id="t_qyyyrzWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="yyrzid != null and yyrzid != ''">and
+				a.yyrzid=#{yyrzid}
+			</if>
+			<if test="zafzrxm != null and zafzrxm != ''">and
+				a.zafzrxm like '%${zafzrxm}%'
+			</if>
+	</sql>
+	<sql id="t_qyyyrzPageWhere">
+		<include refid="t_qyyyrzWhere"/>	</sql>
+	<sql id="t_qyyyrzListWhere">
+		<include refid="t_qyyyrzWhere"/>	</sql>
+	<sql id="t_qyyyrzSelectWhere">
+		<include refid="t_qyyyrzWhere"/>	</sql>
+	<!--企业营业日志(t_qyyyrz)-->
+	<insert id="insertQyyyrz" parameterType="qyyyrz">
+		insert into t_qyyyrz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业营业日志(t_qyyyrz)-->
+	<update id="updateQyyyrz" parameterType="qyyyrz">
+		update t_qyyyrz a set a.yyrzid=a.yyrzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业营业日志(t_qyyyrz)-->
+	<delete id="deleteQyyyrz" parameterType="qyyyrz">
+		delete from t_qyyyrz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业营业日志(t_qyyyrz)-->
+	<select id="getQyyyrzList" parameterType="map" resultMap="qyyyrzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.yyrzid yyrzid,a.hylbdm hylbdm,a.hylb hylb,a.riqi riqi,a.ksyysj ksyysj,a.jsyysj jsyysj,a.csfzrbh csfzrbh,a.csfe csfe,a.zafzrbh zafzrbh,a.zafzrxm zafzrxm,a.sffsaj sffsaj,a.sfglbmjc sfglbmjc,a.dryysj dryysj,a.txrxm txrxm
+		,b.qybm qybm , b.qymc qymc,b.gxdwbm,b.gxdwmc
+		from t_qyyyrz a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业营业日志(t_qyyyrz)-->
+	<select id="getQyyyrzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyyyrz a,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业营业日志(t_qyyyrz)-->
+	<select id="getQyyyrzListNoPage" parameterType="qyyyrz" resultMap="qyyyrzListResult">
+		select a.qyid qyid,a.yyrzid yyrzid,a.hylbdm hylbdm,a.hylb hylb,a.riqi riqi,a.ksyysj ksyysj,a.jsyysj jsyysj,a.csfzrbh csfzrbh,a.csfe csfe,a.zafzrbh zafzrbh,a.zafzrxm zafzrxm,a.sffsaj sffsaj,a.sfglbmjc sfglbmjc,a.dryysj dryysj,a.txrxm txrxm
+		from t_qyyyrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.yyrzid
+	</select>
+	<!--企业营业日志(t_qyyyrz)-->
+	<select id="getQyyyrz" parameterType="qyyyrz" resultMap="qyyyrzResult">
+		select b.qymc qymc,a.qyid qyid,a.yyrzid yyrzid,a.hylbdm hylbdm,a.hylb hylb,a.riqi riqi,a.ksyysj ksyysj,a.jsyysj jsyysj,a.csfzrbh csfzrbh,a.csfe csfe,a.zafzrbh zafzrbh,a.zafzrxm zafzrxm,a.sffsaj sffsaj,a.sfglbmjc sfglbmjc,a.dryysj dryysj,a.txrxm txrxm,
+		a.cyryzs cyryzs,a.dtsbrs dtsbrs,a.dtxzrys dtxzrys,a.dtlzrs dtlzrs
+		from t_qyyyrz a, t_qyjbxx b 
+		where a.qyid = b.qyid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.yyrzid
+	</select>
+	<!-- 根据qybm查询负责人信息 -->
+	<resultMap id="qyyyrzfzrResult" type="qyyyrz">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="csfzrbh" column="csfzrbh"/>
+		<result property="csfe" column="csfe"/>
+		<result property="zafzrbh" column="zafzrbh"/>
+		<result property="zafzrxm" column="zafzrxm"/>
+	</resultMap>
+	<select id="getQyyyrzFzry" parameterType="qyyyrz" resultMap="qyyyrzfzrResult">
+		select a.qyid qyid,a.qybm qybm,a.qymc qymc,a.dwfzr csfe,a.bafzrxm zafzrxm,
+      		nvl((select b.cyrybh from t_qyryxx b where b.zjhm = a.dwfzrzjhm and rownum &lt;= 1),'00000000000000000000') csfzrbh,
+        	nvl((select b.cyrybh from t_qyryxx b where b.xm=a.bafzrxm and b.qyid=a.qyid and b.cylbdm='13' and rownum &lt;= 1),'00000000000000000000') zafzrbh
+      	from t_qyjbxx a
+		where a.qybm=#{qybm}
+	</select>
+</mapper>

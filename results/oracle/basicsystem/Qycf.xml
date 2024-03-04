@@ -1,0 +1,223 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qycf
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业处罚(t_qycf)-->
+	<resultMap id="qycfResult" type="qycf">
+		<result property="qycfid" column="qycfid"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="ssdwbm" column="ssdwbm"/>
+		<result property="ssdwmc" column="ssdwmc"/>
+		<result property="wgqkms" column="wgqkms"/>
+		<result property="cfyj" column="cfyj"/>
+		<result property="cflx" column="cflx"/>
+		<result property="cfjg" column="cfjg"/>
+		<result property="pzjgbm" column="pzjgbm"/>
+		<result property="pzjgmc" column="pzjgmc"/>
+		<result property="pzrxm" column="pzrxm"/>
+		<result property="cfzxrxm" column="cfzxrxm"/>
+		<result property="cfrq" column="cfrq"/>
+		<result property="djsj" column="djsj"/>
+		<result property="djr" column="djr"/>
+		<result property="bz" column="bz"/>
+		<result property="cfjgdm" column="cfjgdm"/>
+		<result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	<!--企业处罚(t_qycf)-->
+	<resultMap id="qycfListResult" type="qycf">
+		<result property="qycfid" column="qycfid"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="ssdwbm" column="ssdwbm"/>
+		<result property="ssdwmc" column="ssdwmc"/>
+		<result property="wgqkms" column="wgqkms"/>
+		<result property="cfyj" column="cfyj"/>
+		<result property="cflx" column="cflx"/>
+		<result property="cfjg" column="cfjg"/>
+		<result property="pzjgbm" column="pzjgbm"/>
+		<result property="pzjgmc" column="pzjgmc"/>
+		<result property="pzrxm" column="pzrxm"/>
+		<result property="cfzxrxm" column="cfzxrxm"/>
+		<result property="cfrq" column="cfrq"/>
+		<result property="djsj" column="djsj"/>
+		<result property="djr" column="djr"/>
+		<result property="bz" column="bz"/>
+		<result property="cfjgdm" column="cfjgdm"/>
+		<result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	<sql id="t_qycfWhere">
+			<if test="qycfid != null and qycfid != ''">and
+				a.qycfid=#{qycfid}
+			</if>
+	</sql>
+	<sql id="t_qycfQueryWhere">
+			<if test="qycfid != null and qycfid != ''">and
+				a.qycfid=#{qycfid}
+			</if>
+			<if test="cflbbm != null and cflbbm != ''">and
+				a.cflbbm=#{cflbbm}
+			</if>
+			<if test="hylb != null and hylb != ''">and
+				a.hylbdm=#{hylb}
+			</if>
+			<if test="qymc != null and qymc != ''">and
+				a.qymc=#{qymc}
+			</if>
+			<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+			<if test="ssdwbm != null and ssdwbm != ''">and
+				a.ssdwbm like #{ssdwbm}||'%'
+			</if>
+			<if test="cfjg != null and cfjg != ''">and
+				a.cfjgdm=#{cfjg}
+			</if>
+			<if test="cfrq != null and cfrq != ''">and
+				a.cfrq &gt;=#{cfrq,jdbcType=TIMESTAMP}
+			</if>
+			<if test="cfrq2 != null and cfrq2 != ''">and
+				a.cfrq &lt;=#{cfrq2,jdbcType=TIMESTAMP}
+			</if>
+	</sql>
+	<sql id="t_qycfPageWhere">
+		<include refid="t_qycfWhere"/>	</sql>
+	<sql id="t_qycfListWhere">
+		<include refid="t_qycfWhere"/>	</sql>
+	<sql id="t_qycfSelectWhere">
+		<include refid="t_qycfWhere"/>	</sql>
+	<!--企业处罚(t_qycf)-->
+	<insert id="insertQycf" parameterType="qycf">
+		insert into t_qycf (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业处罚(t_qycf)-->
+	<update id="updateQycf" parameterType="qycf">
+		update t_qycf a set a.qycfid=a.qycfid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业处罚(t_qycf)-->
+	<delete id="deleteQycf" parameterType="qycf">
+		delete from t_qycf a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业处罚(t_qycf)-->
+	<select id="getQycfList" parameterType="map" resultMap="qycfListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bz ,a.cfjgdm, a.hylbdm, a.qycfid qycfid,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.wgqkms wgqkms,a.cfyj cfyj,a.cflx cflx,a.cfjg cfjg,a.pzjgbm pzjgbm,a.pzjgmc pzjgmc,a.pzrxm pzrxm,a.cfzxrxm cfzxrxm,a.cfrq cfrq,a.djsj djsj,a.djr djr
+		from t_qycf a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业处罚(t_qycf)-->
+	<select id="getQycfListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qycf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业处罚(t_qycf)-->
+	<select id="getQycfListNoPage" parameterType="qycf" resultMap="qycfListResult">
+		select a.bz ,a.cfjgdm, a.hylbdm, a.qycfid qycfid,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.wgqkms wgqkms,a.cfyj cfyj,a.cflx cflx,a.cfjg cfjg,a.pzjgbm pzjgbm,a.pzjgmc pzjgmc,a.pzrxm pzrxm,a.cfzxrxm cfzxrxm,a.cfrq cfrq,a.djsj djsj,a.djr djr
+		from t_qycf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qycfid
+	</select>
+	<!--企业处罚(t_qycf)-->
+	<select id="getQycf" parameterType="qycf" resultMap="qycfResult">
+		select a.bz ,a.cfjgdm, a.hylbdm,  a.qycfid qycfid,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.wgqkms wgqkms,a.cfyj cfyj,a.cflx cflx,a.cfjg cfjg,a.pzjgbm pzjgbm,a.pzjgmc pzjgmc,a.pzrxm pzrxm,a.cfzxrxm cfzxrxm,a.cfrq cfrq,a.djsj djsj,a.djr djr
+		from t_qycf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qycfid
+	</select>
+	
+	<!--企业处罚(t_qycf)-->
+	<select id="getQycfListExcel" parameterType="map" resultMap="qycfListResult">
+		select a.bz ,a.cfjgdm, a.hylbdm, a.qycfid qycfid,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.wgqkms wgqkms,a.cfyj cfyj,a.cflx cflx,a.cfjg cfjg,a.pzjgbm pzjgbm,a.pzjgmc pzjgmc,a.pzrxm pzrxm,a.cfzxrxm cfzxrxm,a.cfrq cfrq,a.djsj djsj,a.djr djr
+		from t_qycf a
+		where  rownum &lt;= ${endRow}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort}
+	</select>
+</mapper>

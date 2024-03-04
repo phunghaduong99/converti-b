@@ -1,0 +1,310 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	menu
+		See console output for further details 
+	-->
+	  <!--
+		Sorry, I can`t migrate	system
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--菜单(t_menu)-->
+	<resultMap id="menuResult" type="menu">
+		<result property="menucode" column="menucode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="menuname" column="menuname"/>
+		<result property="funcentry" column="funcentry"/>
+		<result property="menulevel" column="menulevel"/>
+		<result property="parentmenucode" column="parentmenucode"/>
+		<result property="menufullcode" column="menufullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="menuTypeCode" column="menuTypeCode"/>
+		<result property="menuTypeName" column="menuTypeName"/>
+		
+	</resultMap>
+	<!--菜单(t_menu)sql翻译-->
+	<resultMap id="menuResultTran" type="menu">
+		<result property="menucode" column="menucode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="menuname" column="menuname"/>
+		<result property="funcentry" column="funcentry"/>
+		<result property="menulevel" column="menulevel"/>
+		<result property="parentmenucode" column="parentmenucode"/>
+		<result property="menufullcode" column="menufullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+			<result property="menuTypeCode" column="menuTypeCode"/>
+		<result property="menuTypeName" column="menuTypeName"/>
+		<result property="parentmenuname" column="parentmenuname"/>
+	</resultMap>
+	<!--菜单(t_menu)-->
+	<resultMap id="menuListResult" type="menu">
+		<result property="menucode" column="menucode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="menuname" column="menuname"/>
+		<result property="funcentry" column="funcentry"/>
+		<result property="menulevel" column="menulevel"/>
+		<result property="parentmenucode" column="parentmenucode"/>
+		<result property="menufullcode" column="menufullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+			<result property="menuTypeCode" column="menuTypeCode"/>
+		<result property="menuTypeName" column="menuTypeName"/>
+	</resultMap>
+	<!--菜单(t_menu)sql翻译-->
+	<resultMap id="menuListResultTran" type="menu">
+		<result property="menucode" column="menucode"/>
+		<result property="systemcode" column="systemcode"/>
+		<result property="menuname" column="menuname"/>
+		<result property="funcentry" column="funcentry"/>
+		<result property="menulevel" column="menulevel"/>
+		<result property="parentmenucode" column="parentmenucode"/>
+		<result property="menufullcode" column="menufullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+			<result property="menuTypeCode" column="menuTypeCode"/>
+		<result property="menuTypeName" column="menuTypeName"/>
+		<result property="parentmenuname" column="parentmenuname"/>
+	</resultMap>
+	<!--菜单(t_menu)-->
+	<resultMap id="menuNodeorderResult" type="menu">
+		<result property="nodeorder" column="nodeorder"/>
+	</resultMap>
+	<sql id="t_menuWhere">
+			<if test="menucode != null and menucode != ''">and
+				a.menucode=#{menucode}
+			</if>
+			<if test="systemcode != null and systemcode != ''">and
+				a.systemcode=#{systemcode}
+			</if>
+	</sql>
+	<sql id="t_menuPageWhere">
+		<include refid="t_menuWhere"/>
+			<if test="parentmenucode != null and parentmenucode != ''">and
+				a.parentmenucode=#{parentmenucode}
+			</if>
+			</sql>
+	<sql id="t_menuListWhere">
+		<include refid="t_menuWhere"/>	</sql>
+	<sql id="t_menuSelectWhere">
+		<include refid="t_menuWhere"/>	</sql>
+	<!--菜单(t_menu)-->
+	<insert id="insertMenu" parameterType="menu">
+		insert into t_menu (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--菜单(t_menu)-->
+	<update id="updateMenu" parameterType="menu">
+		update t_menu a set menucode=menucode
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--菜单(t_menu)-->
+	<delete id="deleteMenu" parameterType="menu">
+	    begin
+  delete from t_role_menu where menuCode in (select menuCode from t_menu where MenuFullCode like '${menufullcode}%');
+    delete from t_menu where MenuFullCode like '${menufullcode}%';
+    end;
+	</delete>
+	
+		
+	<!--菜单(t_menu)-->
+	<select id="getMenuList" parameterType="map" resultMap="menuListResultTran">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,
+		a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,
+		a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName,
+    		nvl(b.menuname,'顶级') parentmenuname
+    	from t_menu a,(select menucode,menuname from t_menu t )b
+    	where a.parentmenucode=b.menucode(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--菜单(t_menu)-->
+	<select id="getMenuListCount" parameterType="map" resultType="int">
+		select count(1) a from t_menu a,(select menucode,menuname from t_menu t )b
+    	where a.parentmenucode=b.menucode(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--菜单(t_menu)-->
+	<select id="getMenuListNoPage" parameterType="menu" resultMap="menuListResult">
+		select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf
+		,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.menucode,a.systemcode
+	</select>
+	<!--菜单(t_menu)-->
+	<select id="getMenu" parameterType="menu" resultMap="menuResultTran">
+		select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,
+			a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,
+			a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName,
+    		nvl(b.menuname,'顶级') parentmenuname
+    	from t_menu a,(select menucode,menuname from t_menu t )b
+    	where a.parentmenucode=b.menucode(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.menucode,a.systemcode
+	</select>
+	<!--取子菜单(t_menu)-->
+		<select id="getChildMenu" parameterType="menu" resultMap="menuResult">
+   select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf
+		,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a
+		where  a.parentmenucode = #{menucode} 
+   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+     order by nodeorder
+  </select>
+   <select id="getOwnMenu" parameterType="menu" resultMap="menuResult">
+		 select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,
+				 a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,
+				 a.nodeorder nodeorder,a.isleaf isleaf ,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		 from t_menu a , (select t.nodeorder, t.menucode from t_menu t) b
+		 where a.parentmenucode = b.menucode(+) and a.menucode 
+		 	in (select menucode from t_role_menu where roleid in 
+		 				(select roleid from t_user_role where userid =#{userid}))
+		<!--
+		Sorry, I can`t migrate	and
+		See console output for further details 
+	--><!-- 排序规则为：父节点排序号+该节点排序号 -->
+	   order by nvl(b.nodeorder, 0) + nodeOrder asc
+	</select>
+    <select id="checkMenu" parameterType="menu" resultType="int">
+select count(1) from t_role_menu where roleid in (select roleid from t_user_role where userid =#{userid}) and menucode = #{menucode}
+</select>
+
+  <!--  checkChildMenu  -->
+   <select id="checkChildMenu" parameterType="menu" resultType="int">
+    select  count(1) from t_menu  where parentmenucode = #{parentmenucode}
+  </select>
+
+  <select id="getParentMenu" parameterType="menu" resultMap="menuResult">
+   select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf
+	,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a
+	 where menucode= #{parentmenucode}
+  </select>
+
+  <select id="getAllChildMenu" parameterType="menu" resultMap="menuResult">
+        select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf
+		,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a
+    where menufullcode like '%#{menucode}%' and  menucode &lt;&gt; #{menucode}
+     order by nodeorder
+  </select>
+ <select id="getAllMenu" parameterType="menu" resultMap="menuResult">
+    select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf
+		,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a order by nodeOrder
+  </select>
+   <select id="getMenuBySystem" parameterType="map" resultMap="menuResult">
+    select a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,a.isleaf isleaf
+		,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a
+    where systemcode=#{systemcode} order by nodeOrder
+  </select>
+	<!--  获得所有兄弟节点最大排序号+1  -->
+  <select id="getNextMenuNodeorder" parameterType="menu" resultMap="menuNodeorderResult">
+    	select nvl((max(a.nodeorder)+1),0) nodeorder from t_menu a
+    	 where 1=1 
+    	 <if test="parentmenucode != null and parentmenucode != ''">and
+			a.parentmenucode = #{parentmenucode}
+		</if>
+		<if test="systemcode != null and systemcode != ''">and
+			a.systemcode = #{systemcode}
+		</if>
+  </select>
+
+	<!-- 当前用户所拥有的菜单 -->
+	<select id="getTheUserChildMenu" parameterType="menu" resultMap="menuResult">
+		select distinct a.menucode menucode,a.systemcode systemcode,a.menuname menuname,a.funcentry funcentry,
+		a.menulevel menulevel,a.parentmenucode parentmenucode,a.menufullcode menufullcode,a.nodeorder nodeorder,
+		a.isleaf isleaf,a.menuTypeCode menuTypeCode,a.menuTypeName menuTypeName
+		from t_menu a,t_user b,t_user_role c,t_role_menu d
+		where b.userid = c.userid
+		and c.roleid = d.roleid
+		and a.menucode = d.menucode
+		and a.parentmenucode = #{menucode} 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by nodeorder
+	</select>
+		
+	<select id="getRoleCheckedMenuList" parameterType="menu" resultType="menu">
+		${pageSort}
+	</select>
+</mapper>

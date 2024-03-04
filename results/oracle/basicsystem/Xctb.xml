@@ -1,0 +1,368 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	xctb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	gxdwForTree
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--协查通报(t_xctb)-->
+	<resultMap id="xctbResult" type="xctb">
+		<result property="tbid" column="tbid"/>
+		<result property="bt" column="bt"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="fbnr" column="fbnr"/>
+		<result property="fbr" column="fbr"/>
+		<result property="fbdw" column="fbdw"/>
+		<result property="jzrq" column="jzrq"/>
+		<result property="gqbs" column="gqbs"/>
+		<result property="fbdwbm" column="fbdwbm"/>
+		<result property="sxhylbdm" column="sxhylbdm"/>
+		<result property="sxhylbmc" column="sxhylbmc"/>
+	</resultMap>
+	<!--协查通报(t_xctb)-->
+	<resultMap id="xctbListResult" type="xctb">
+		<result property="tbid" column="tbid"/>
+		<result property="bt" column="bt"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="fbnr" column="fbnr"/>
+		<result property="fbr" column="fbr"/>
+		<result property="fbdw" column="fbdw"/>
+		<result property="jzrq" column="jzrq"/>
+		<result property="gqbs" column="gqbs"/>
+		<result property="fbdwbm" column="fbdwbm"/>
+		<result property="sxhylbdm" column="sxhylbdm"/>
+		<result property="sxhylbmc" column="sxhylbmc"/>
+	</resultMap>
+	
+	<!--协查通报(t_xctb)-->
+	<resultMap id="xctbListResult2" type="xctb">
+	    <result property="rowno" column="rowno"/>
+		<result property="tbid" column="tbid"/>
+		<result property="bt" column="bt"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="fbnr" column="fbnr"/>
+		<result property="fbr" column="fbr"/>
+		<result property="fbdw" column="fbdw"/>
+		<result property="jzrq" column="jzrq"/>
+		<result property="gqbs" column="gqbs"/>
+		<result property="fbdwbm" column="fbdwbm"/>
+		<result property="sxhylbdm" column="sxhylbdm"/>
+		<result property="sxhylbmc" column="sxhylbmc"/>
+	</resultMap>
+	<!--协查通报(t_xctb)-->
+	<resultMap id="xctbWydListResult" type="xctb">
+		<result property="tbid" column="tbid"/>
+		<result property="bt" column="bt"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="jsdwid" column="jsdwid"/>
+	</resultMap>
+	
+	<sql id="t_xctbWhere">
+			<if test="tbid != null and tbid != ''">and
+				a.tbid=#{tbid}
+			</if>
+	</sql>
+	<sql id="t_xctbPageWhere">
+		<include refid="t_xctbWhere"/>
+		<if test="fbkssj != null and fbkssj != ''">and
+				fbsj&gt;=#{fbkssj,jdbcType=TIMESTAMP}
+		</if>
+		<if test="fbjssj != null and fbjssj != ''">and
+				fbsj&lt;=#{fbjssj,jdbcType=TIMESTAMP}
+		</if>
+		<if test="bt != null and bt != ''">and
+				bt like '%${bt}%'
+		</if>
+		<if test="fbdw != null and fbdw != ''">and
+				fbdw=#{fbdw}
+		</if>
+		<if test="fbr != null and fbr != ''">and
+				fbr=#{fbr}
+		</if>
+		<if test="gqbs != null and gqbs != ''">and
+				gqbs=#{gqbs}
+		</if>
+		<if test="csid != null and csid != ''">and
+                a.tbid in(select t.tbid from t_csxx_xctb t where csid=#{csid})			
+		</if>
+		<if test="fbdwbm != null and fbdwbm != ''">and
+				fbdwbm like '${fbdwbm}%'
+		</if>
+		<if test="fbdwbm2 != null and fbdwbm2 != ''">and
+				fbdwbm = #{fbdwbm2}
+		</if>
+		<if test="sxhylbdm != null and sxhylbdm != ''">and
+				sxhylbdm like '%${sxhylbdm}%'
+		</if>	
+		<if test="sxhylbdms != null and sxhylbdms != ''">and
+				sxhylbdm in (#{sxhylbdm})
+		</if>
+	</sql>
+	<sql id="t_xctbListWhere">
+		<include refid="t_xctbWhere"/>
+		<if test="jsdwbm != null and jsdwbm != ''">and
+				w.jsdwbm = #{jsdwbm}
+		</if>	
+		<if test="fbdwbmforIn != null and fbdwbmforIn != ''">and
+				a.fbdwbm in(#{fbdwbmforIn}) 
+		</if>
+	</sql>
+	<sql id="t_xctbSelectWhere">
+		<include refid="t_xctbWhere"/>	</sql>
+	<!--协查通报(t_xctb)-->
+	<insert id="insertXctb" parameterType="xctb">
+		insert into t_xctb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--协查通报(t_xctb)-->
+	<update id="updateXctb" parameterType="xctb">
+		update t_xctb a set a.tbid=a.tbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--协查通报(t_xctb)-->
+	<delete id="deleteXctb" parameterType="xctb">
+		delete from t_xctb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--协查通报(t_xctb)-->
+	<select id="getXctbList" parameterType="map" resultMap="xctbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tbid tbid,a.bt bt,a.fbsj fbsj,a.fbnr fbnr,a.fbr fbr,a.fbdw fbdw,a.jzrq jzrq,a.gqbs gqbs, a.fbdwbm fbdwbm,a.sxhylbdm sxhylbdm, a.sxhylbmc sxhylbmc
+		from t_xctb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		union
+        select  a.tbid     tbid,
+                a.bt       bt,
+                a.fbsj     fbsj,
+                a.fbnr     fbnr,
+                a.fbr      fbr,
+                a.fbdw     fbdw,
+                a.jzrq     jzrq,
+                a.gqbs     gqbs,
+                a.fbdwbm   fbdwbm,
+                a.sxhylbdm sxhylbdm,
+                a.sxhylbmc sxhylbmc
+          from t_xctb a, t_xctbjsdw b
+          where a.tbid = b.tbid
+		  <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		  <if test="fbdwbm != null and fbdwbm != ''">and
+				b.gxdwbm like '${fbdwbm}%'
+		  </if>		
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--协查通报(t_xctb)-->
+	<select id="getXctbListCount" parameterType="map" resultType="int">
+		select count(1) a
+  from (select a.tbid     tbid,
+                a.bt       bt,
+                a.fbsj     fbsj,
+                a.fbnr     fbnr,
+                a.fbr      fbr,
+                a.fbdw     fbdw,
+                a.jzrq     jzrq,
+                a.gqbs     gqbs,
+                a.fbdwbm   fbdwbm,
+                a.sxhylbdm sxhylbdm,
+                a.sxhylbmc sxhylbmc
+         from t_xctb a
+         where 1 = 1
+         <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+         union
+         select a.tbid     tbid,
+                a.bt       bt,
+                a.fbsj     fbsj,
+                a.fbnr     fbnr,
+                a.fbr      fbr,
+                a.fbdw     fbdw,
+                a.jzrq     jzrq,
+                a.gqbs     gqbs,
+                a.fbdwbm   fbdwbm,
+                a.sxhylbdm sxhylbdm,
+                a.sxhylbmc sxhylbmc
+          from t_xctb a, t_xctbjsdw b
+          where a.tbid = b.tbid
+		  <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+          <if test="fbdwbm != null and fbdwbm != ''">and
+				b.gxdwbm like '${fbdwbm}%'
+		  </if>	
+	)	
+	</select>
+	<!--协查通报(t_xctb)-->
+	<select id="getXctbListNoPage" parameterType="xctb" resultMap="xctbListResult2">
+		select  rownum rowno,a.tbid tbid,a.bt bt,a.fbsj fbsj,a.fbnr fbnr,a.fbr fbr,a.fbdw fbdw,a.jzrq jzrq,a.gqbs gqbs,a.fbdwbm fbdwbm,a.sxhylbdm sxhylbdm, a.sxhylbmc sxhylbmc
+		from t_xctb a, t_xctbjsdw w
+		where a.tbid = w.tbid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid
+	</select>
+	<select id="getXctbListForBt" parameterType="map" resultMap="xctbListResult2">
+		select  rownum rowno,a.tbid tbid,a.bt bt,a.fbsj fbsj,a.fbnr fbnr,a.fbr fbr,a.fbdw fbdw,a.jzrq jzrq,a.gqbs gqbs,a.fbdwbm fbdwbm,a.sxhylbdm sxhylbdm, a.sxhylbmc sxhylbmc
+		from t_xctb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.FBSJ desc
+	</select>
+	<!--协查通报(t_xctb)-->
+	<select id="getXctb" parameterType="xctb" resultMap="xctbResult">
+		select a.tbid tbid,a.bt bt,a.fbsj fbsj,a.fbnr fbnr,a.fbr fbr,a.fbdw fbdw,a.jzrq jzrq,a.gqbs gqbs,a.fbdwbm fbdwbm,a.sxhylbdm sxhylbdm, a.sxhylbmc sxhylbmc
+		from t_xctb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid
+	</select>
+	
+	<!--协查通报(t_xctb)-->
+	<select id="getXctbcsList" parameterType="map" resultMap="xctbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tbid tbid,a.bt bt,a.fbsj fbsj,a.fbnr fbnr,a.fbr fbr,a.fbdw fbdw,a.jzrq jzrq,a.gqbs gqbs, a.fbdwbm fbdwbm,a.sxhylbdm sxhylbdm, a.sxhylbmc sxhylbmc
+		from t_xctb a, t_xctbjsdw w
+		where a.tbid = w.tbid and w.jsdwbm = #{jsdwbm}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--协查通报(t_xctb)-->
+	<select id="getXctbcsListCount" parameterType="map" resultType="int">
+		select count(1) a from t_xctb a, t_xctbjsdw w
+		where  a.tbid = w.tbid and w.jsdwbm = #{jsdwbm}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--查询未阅读的协查通报-->
+	<select id="getXctbWydList" parameterType="xctb" resultMap="xctbWydListResult">
+		select  a.tbid tbid,a.bt bt,a.fbsj fbsj,b.jsdwid
+		from t_xctb a, t_xctbjsdw b
+		where a.tbid = b.tbid
+		and a.gqbs = '0'
+		and b.sqsj is null and b.jsdwbm=#{jsdwbm}
+		order by a.fbsj
+		  
+	</select>
+	<!--协查通报(t_xctb)-->
+	<resultMap id="xctbQydwListResult" type="gxdwForTree">
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>	
+	<!--企业查询-->
+	<select id="getXctbQydwList" parameterType="map" resultMap="xctbQydwListResult">
+		select x.* from (
+			select rownum rowno,z.* from ( 
+			<if test="yuju != null and yuju != ''">
+		 		${yuju} 
+			</if> 
+			order by ${pageSort}) z) x 
+		where rowno &gt;${beginRow} and rowno &lt;= ${endRow}
+	</select>
+	<select id="getXctbQydwListCount" parameterType="map" resultType="int">
+		select count(1) a from (
+		<if test="yuju != null and yuju != ''">
+		 	${yuju} 
+		</if>
+		)
+	</select>
+	<!--协查通报(t_xctb)-->
+	<resultMap id="qydwListResult" type="gxdwForTree">
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="hylbbm" column="hylbbm"/>
+		<result property="hylbmc" column="hylbmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	<!--企业列表查询-->
+	<select id="getQydwList" parameterType="map" resultMap="qydwListResult">
+		<if test="yuju != null and yuju != ''">
+		 	${yuju} 
+		</if>
+	</select>
+</mapper>

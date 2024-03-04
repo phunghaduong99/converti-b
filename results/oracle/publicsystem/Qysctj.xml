@@ -1,0 +1,578 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qysctj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业上传统计表(t_qysctj)-->
+	<resultMap id="qysctjResult" type="qysctj">
+		<result property="qysctjid" column="qysctjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="sfdb" column="sfdb"/>
+		<result property="zrs" column="zrs"/>
+		<result property="gzrs" column="gzrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="zdskb" column="zdskb"/>
+		<result property="ycskrs" column="ycskrs"/>
+		<result property="dcskrs" column="dcskrs"/>
+		<result property="bcsskrs" column="bcsskrs"/>
+		<result property="ztskrs" column="ztskrs"/>
+		<result property="zskb" column="zskb"/>
+		<result property="ycskb" column="ycskb"/>
+		<result property="dcskb" column="dcskb"/>
+	</resultMap>
+	<!--企业上传统计表(t_qysctj)-->
+	<resultMap id="qysctjListResult" type="qysctj">
+		<result property="qysctjid" column="qysctjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="sfdb" column="sfdb"/>
+		<result property="zrs" column="zrs"/>
+		<result property="gzrs" column="gzrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="zdskb" column="zdskb"/>
+		<result property="ycskrs" column="ycskrs"/>
+		<result property="dcskrs" column="dcskrs"/>
+		<result property="bcsskrs" column="bcsskrs"/>
+		<result property="ztskrs" column="ztskrs"/>
+		<result property="zskb" column="zskb"/>
+		<result property="ycskb" column="ycskb"/>
+		<result property="dcskb" column="dcskb"/>
+	</resultMap>
+	<sql id="t_qysctjWhere">
+			<if test="qysctjid != null and qysctjid != ''">and
+				a.qysctjid=#{qysctjid}
+			</if>
+	</sql>
+	<sql id="t_qysctjPageWhere">
+		<include refid="t_qysctjWhere"/>	</sql>
+	<sql id="t_qysctjListWhere">
+		<include refid="t_qysctjWhere"/>	</sql>
+	<sql id="t_qysctjSelectWhere">
+		<include refid="t_qysctjWhere"/>	</sql>
+	<!--企业上传统计表(t_qysctj)-->
+	<insert id="insertQysctj" parameterType="qysctj">
+		insert into t_qysctj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业上传统计表(t_qysctj)-->
+	<update id="updateQysctj" parameterType="qysctj">
+		update t_qysctj a set a.qysctjid=a.qysctjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业上传统计表(t_qysctj)-->
+	<delete id="deleteQysctj" parameterType="qysctj">
+		delete from t_qysctj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业上传统计表(t_qysctj)-->
+	<select id="getQysctjList" parameterType="map" resultMap="qysctjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qysctjid qysctjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.qybm qybm,a.qymc qymc,a.lxdh lxdh,a.sfdb sfdb,a.zrs zrs,a.gzrs gzrs,a.sskrs sskrs,a.zdskb zdskb,a.ycskrs ycskrs,a.dcskrs dcskrs,a.bcsskrs bcsskrs,a.ztskrs ztskrs,a.zskb zskb,a.ycskb ycskb,a.dcskb dcskb
+		from t_qysctj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业上传统计表(t_qysctj)-->
+	<select id="getQysctjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qysctj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业上传统计表(t_qysctj)-->
+	<select id="getQysctjListNoPage" parameterType="qysctj" resultMap="qysctjListResult">
+		select a.qysctjid qysctjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.qybm qybm,a.qymc qymc,a.lxdh lxdh,a.sfdb sfdb,a.zrs zrs,a.gzrs gzrs,a.sskrs sskrs,a.zdskb zdskb,a.ycskrs ycskrs,a.dcskrs dcskrs,a.bcsskrs bcsskrs,a.ztskrs ztskrs,a.zskb zskb,a.ycskb ycskb,a.dcskb dcskb
+		from t_qysctj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qysctjid
+	</select>
+	<!--企业上传统计表(t_qysctj)-->
+	<select id="getQysctj" parameterType="qysctj" resultMap="qysctjResult">
+		select a.qysctjid qysctjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.qybm qybm,a.qymc qymc,a.lxdh lxdh,a.sfdb sfdb,a.zrs zrs,a.gzrs gzrs,a.sskrs sskrs,a.zdskb zdskb,a.ycskrs ycskrs,a.dcskrs dcskrs,a.bcsskrs bcsskrs,a.ztskrs ztskrs,a.zskb zskb,a.ycskb ycskb,a.dcskb dcskb
+		from t_qysctj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qysctjid
+	</select>
+	
+	
+	
+	
+		<!--刷卡统计()-->
+	<resultMap id="sktjListResult" type="qysctj">
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="sfdb" column="sfdb"/>
+		<result property="zrs" column="zrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="zdskb" column="zdskb"/>
+
+		<result property="ycskrs" column="ycskrs"/>
+		<result property="dcskrs" column="dcskrs"/>
+		<result property="bcsskrs" column="bcsskrs"/>
+		<result property="ztskrs" column="ztskrs"/>
+		<result property="zskbstring" column="zskb"/>
+		<result property="ycskbstring" column="ycskb"/>
+		<result property="dcskbstring" column="dcskb"/>
+		<result property="gzrs" column="gzrs"/>
+		
+	</resultMap>
+	
+	<!--刷卡统计()-->
+	<resultMap id="sktjxxListResult" type="qysctj">
+	    <result property="tjrq" column="tjrq"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="sfdb" column="sfdb"/>
+		<result property="zrs" column="zrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="zdskb" column="zdskb"/>
+
+		<result property="ycskrs" column="ycskrs"/>
+		<result property="dcskrs" column="dcskrs"/>
+		<result property="bcsskrs" column="bcsskrs"/>
+		<result property="ztskrs" column="ztskrs"/>
+		<result property="zskbstring" column="zskb"/>
+		<result property="ycskbstring" column="ycskb"/>
+		<result property="dcskbstring" column="dcskb"/>
+		<result property="gzrs" column="gzrs"/>
+		
+	</resultMap>
+	
+		<sql id="t_sktjWhere">
+		
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+		   </if>
+		
+		<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>	
+			<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+			
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			
+			<if test="qsrq != null and qsrq != ''">and
+			
+ 				a.tjrq &gt;= #qsrq:DATE#
+ 			
+		</if>
+		<if test="jzrq != null and jzrq != ''">and
+			
+ 				a.tjrq &lt; #jzrq:DATE#+1
+ 			
+		</if>
+		  <if test="shenheFlagCx != null and shenheFlagCx != ''">and
+				( b.zt='1' or b.zt='2'
+				<if test="sftjyg == 1">or <!-- 是否统计异构，1统计，0不统计9-16 添加 -->
+					to_number(b.zt)  &gt;= 90
+				</if>
+				) 
+		    </if>
+		     <if test="scbzFlagCx != null and scbzFlagCx != ''">and
+				b.scbz=0
+		    </if>
+		         <if test="yyzt != null and yyzt != ''">and
+				b.zjztdm='1'
+		    </if>
+		    	
+	</sql>
+	
+	<sql id="t_sktjPageHaving">
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</sql>
+	
+		<!--企业刷卡信息统计(t_qysctj)-->
+	<select id="getSktjList" parameterType="map" resultMap="sktjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select zrs,sskrs,zdskb,ycskrs,dcskrs,bcsskrs,ztskrs,
+               zskb,ycskb,dcskb,gzrs,dsjgdm,dsjgmc,fxjdm,fxjmc,
+               gxdwdm,gxdwmc,qybm,qymc,hylbdm,hylb,lxdh,sfdb from 
+   					(select sum(a.zrs) zrs,sum(a.sskrs) sskrs,sum(a.zdskb) zdskb,sum(a.ycskrs) ycskrs,
+   					sum(a.dcskrs) dcskrs,sum(a.bcsskrs) bcsskrs,sum(a.ztskrs) ztskrs,case when sum(a.gzrs) !=0 then round(sum(a.bcsskrs)/sum(a.gzrs)*100,2) else 0 end zskb,
+					case when sum(a.gzrs) !=0 then round(sum(a.ycskrs)/sum(a.gzrs)*100,2) else 0 end ycskb,case when sum(a.gzrs) !=0 then round(sum(a.dcskrs)/sum(a.gzrs)*100,2) else 0 end dcskb , nvl(sum(a.gzrs),0)  gzrs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		
+	   from t_qysctj a ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+	   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>)where 1=1
+		<include refid="t_sktjPageHaving"/>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业刷卡信息统计(t_qysctj)-->
+	<select id="getSktjListCount" parameterType="map" resultType="int">
+		select count(1) a from 
+		(select zrs,sskrs,zdskb,ycskrs,dcskrs,bcsskrs,ztskrs,
+               zskb,ycskb,dcskb,gzrs,dsjgdm,dsjgmc,fxjdm,fxjmc,
+               gxdwdm,gxdwmc,qybm,qymc,hylbdm,hylb,lxdh,sfdb from 
+   					(
+		select  sum(a.zrs) zrs,sum(a.sskrs) sskrs,sum(a.zdskb) zdskb,sum(a.ycskrs) ycskrs,
+   sum(a.dcskrs) dcskrs,sum(a.bcsskrs) bcsskrs,sum(a.ztskrs) ztskrs,case when sum(a.gzrs) !=0 then round(sum(a.bcsskrs)/sum(a.gzrs)*100,2) else 0 end zskb,
+   case when sum(a.gzrs) !=0 then round(sum(a.ycskrs)/sum(a.gzrs)*100,2) else 0 end ycskb,case when sum(a.gzrs) !=0 then round(sum(a.dcskrs)/sum(a.gzrs)*100,2) else 0 end dcskb , nvl(sum(a.gzrs),0)  gzrs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+	   from t_qysctj a ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+	   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>)where 1=1
+		<include refid="t_sktjPageHaving"/>
+		  )   where 1=1
+	</select>
+	
+		<!--企业刷卡详细信息统计(t_qysctj)-->
+	<select id="getSktjxxList" parameterType="map" resultMap="sktjxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+		select sum(a.zrs) zrs,sum(a.sskrs) sskrs,sum(a.zdskb) zdskb,sum(a.ycskrs) ycskrs,
+   sum(a.dcskrs) dcskrs,sum(a.bcsskrs) bcsskrs,sum(a.ztskrs) ztskrs,case when sum(a.gzrs) !=0 then round(sum(a.bcsskrs)/sum(a.gzrs)*100,2) else 0 end zskb,
+case when sum(a.gzrs) !=0 then round(sum(a.ycskrs)/sum(a.gzrs)*100,2) else 0 end ycskb,case when sum(a.gzrs) !=0 then round(sum(a.dcskrs)/sum(a.gzrs)*100,2) else 0 end dcskb , nvl(sum(a.gzrs),0)  gzrs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		
+	   from t_qysctj a ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+	   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by a.tjrq desc
+		
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业刷卡详细信息统计(t_qysctj)-->
+	<select id="getSktjxxListCount" parameterType="map" resultType="int">
+		select count(1) a from 
+		(
+		select sum(a.zrs) zrs,sum(a.sskrs) sskrs,sum(a.zdskb) zdskb,sum(a.ycskrs) ycskrs,
+   sum(a.dcskrs) dcskrs,sum(a.bcsskrs) bcsskrs,sum(a.ztskrs) ztskrs,case when sum(a.gzrs) !=0 then round(sum(a.bcsskrs)/sum(a.gzrs)*100,2) else 0 end zskb,
+case when sum(a.gzrs) !=0 then round(sum(a.ycskrs)/sum(a.gzrs)*100,2) else 0 end ycskb,case when sum(a.gzrs) !=0 then round(sum(a.dcskrs)/sum(a.gzrs)*100,2) else 0 end dcskb , nvl(sum(a.gzrs),0)  gzrs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+	   from t_qysctj a ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+	   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by a.tjrq desc
+		  )   where 1=1
+	</select>
+	
+	
+		<!--走台人员信息-->
+		
+	
+		<resultMap id="ztryxxListResult" type="qysctj">
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssqyid" column="ssqyid"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="xm" column="xm"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="ryid" column="ryid"/>
+	   <result property="cyrylbdm" column="cyrylbdm"/>
+	   <result property="qybm" column="qybm"/>
+    	<result property="qymc" column="qymc"/>
+	   <result property="sksj" column="sksj"/>
+	    <result property="zjhm" column="zjhm"/>
+	</resultMap>
+	
+	
+	<sql id="t_ztryxxPageWhere">
+			<if test="zttjrq != null and zttjrq != ''">and
+				
+					a.tjrq=#zttjrq:DATE#
+					
+			</if>
+				<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+				
+			
+			
+			<if test="truefalg != null and truefalg != ''">
+			
+			 <if test="truefalg == 1">
+			      <if test="gxdwdm != null and gxdwdm != ''">and
+						a.gxdwbm like '${gxdwdm}%' 
+					</if>
+			 </if>
+			<if test="truefalg == 0">
+					      <if test="gxdwdm != null and gxdwdm != ''">and
+								a.gxdwbm = '${gxdwdm}' 
+							</if>
+			 </if>	
+					
+					
+				</if>
+			
+				<if test="qsrq != null and qsrq != ''">and
+				
+					a.tjrq&gt;=#qsrq:DATE#
+					
+			</if>
+			<if test="jzrq != null and jzrq != ''">and
+				
+					 a.tjrq &lt; #jzrq:DATE#+1
+					
+			</if>
+			
+			
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			
+			 <if test="shenheFlagCx != null and shenheFlagCx != ''">and
+				( b.zt='1' or b.zt='2') 
+		    </if>
+		     <if test="scbzFlagCx != null and scbzFlagCx != ''">and
+				b.scbz=0
+		    </if>
+		         
+		         <if test="yyzt != null and yyzt != ''">and
+				b.yyztdm='1'
+		    </if>
+		    	
+			
+		</sql>
+	
+		
+	<select id="getZttjxxList" parameterType="map" resultMap="ztryxxListResult">
+	 select * from	 ( select rownum rowno,z.* from 
+		(
+		select 
+		   a.ssqygxdwmc as gxdwmc,a.ssqyid as ssqyid,a.ssqymc as ssqymc,a.xm,a.cyrybh,a.ryid,a.cyrylbdm,a.qybm,a.qymc,a.sksj,a.zjhm
+		from t_ztryskxxtj a   ,t_qyjbxx b
+			where 1=1   and a.qybm=b.qybm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		 ) 
+	 z ) where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--走台人员信息-->
+	<select id="getZttjxxListCount" parameterType="map" resultType="int">
+	select count(1) from (
+	select  a.ssqygxdwmc as gxdwmc,a.ssqyid as ssqyid,a.ssqymc as ssqymc,a.xm,a.cyrybh,a.ryid,a.cyrylbdm,a.qybm,a.qymc,a.sksj,a.zjhm
+		from t_ztryskxxtj  a    ,t_qyjbxx b
+			where 1=1   and a.qybm=b.qybm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		 ) c
+  
+	</select>
+	
+	<!--一次/多次刷卡人员信息-->
+	<resultMap id="ycskxxListResult" type="qysctj">
+		<result property="ryid" column="ryid"/>
+		<result property="xm" column="xm"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="qybm" column="qybm"/>
+    	<result property="qymc" column="qymc"/>
+		<result property="ssqyid" column="ssqyid"/>
+		<result property="ssqybm" column="ssqybm"/>
+		<result property="ssqymc" column="ssqymc"/>
+	   	<result property="sksj" column="sksj"/>
+	   	<result property="skcs" column="skcs"/>
+	    
+	</resultMap>
+	<select id="getYcskxxList" parameterType="map" resultMap="ycskxxListResult">
+	 select * from	 ( select rownum rowno,z.* from (
+		select ryid,xm,cyrybh,zjhm,qybm,qymc,ssqyid,ssqybm,ssqymc,sksj,count(1) skcs from (
+		select 
+		   a.ryid,a.xm,a.cyrybh,a.zjhm,a.qybm,a.qymc,a.ssqyid,a.ssqybm,a.ssqymc,trunc(a.sksj) sksj
+		from t_qyryskxxtj a ,t_qyjbxx b
+			where a.qybm=b.qybm and b.scbz=0 and b.zjztdm='1' and (b.zt in ('1','2') or to_number(b.zt)&gt;=90) and b.yyztdm='1' and a.qybm = a.ssqybm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) t group by ryid,xm,cyrybh,zjhm,qybm,qymc,ssqyid,ssqybm,ssqymc,sksj
+		<if test="skcs != null and skcs != ''">having
+				<if test="skcs == 1"> 
+					count(1) = 1
+				</if>
+				<if test="skcs == 2"> 
+					count(1)  &gt; 1
+				</if>
+		</if>
+		order by sksj desc
+	) z ) where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	
+	<select id="getYcskxxListCount" parameterType="map" resultType="int">
+	select count(1) from (
+		select ryid,xm,cyrybh,zjhm,qybm,qymc,ssqyid,ssqybm,ssqymc,sksj,count(1) skcs from (
+		select 
+		   a.ryid,a.xm,a.cyrybh,a.zjhm,a.qybm,a.qymc,a.ssqyid,a.ssqybm,a.ssqymc,trunc(a.sksj) sksj
+		from t_qyryskxxtj a ,t_qyjbxx b
+			where a.qybm=b.qybm and b.scbz=0 and b.zjztdm='1' and (b.zt in ('1','2') or to_number(b.zt)&gt;=90) and b.yyztdm='1' and a.qybm = a.ssqybm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) t group by ryid,xm,cyrybh,zjhm,qybm,qymc,ssqyid,ssqybm,ssqymc,sksj
+		<if test="skcs != null and skcs != ''">having
+				<if test="skcs == 1"> 
+					count(1) = 1
+				</if>
+				<if test="skcs == 2"> 
+					count(1)  &gt; 1
+				</if>
+		</if>
+		order by sksj desc
+	) c
+	</select>
+	
+</mapper>

@@ -1,0 +1,136 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aisino2.icksystem.domain.SendIckInfoWs">
+	<!--
+		Sorry, I can`t migrate	sendIckInfoWs
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--放送信息Result-->
+	<resultMap id="sendIckInfoWsResult" type="sendIckInfoWs">
+		<result property="ickslid" column="ickslid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="ryid" column="ryid"/>
+		<result property="cjdbm" column="cjdbm"/>
+		<result property="cjdmc" column="cjdmc"/>
+		<result property="cjr" column="cjr"/>
+		<result property="ickslh" column="ickslh"/>
+		<result property="xingming" column="xingming"/>
+		<result property="xb" column="xb"/>
+		<result property="ywm" column="ywm"/>
+		<result property="ywx" column="ywx"/>
+		<result property="csrq" column="csrq"/>
+		<result property="wjnr" column="wjnr"/>
+		<result property="gj" column="gj"/>
+		<result property="minzu" column="minzu"/>
+		<result property="hjsx" column="hjsx"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zzzhm" column="zzzhm"/>
+		<result property="xzd" column="xzd"/>
+		<result property="wgrjyxkz" column="wgrjyxkz"/>
+		<result property="cyrylb" column="cyrylb"/>
+		<result property="yxsksrq" column="yxsksrq"/>
+		<result property="yxqhzrq" column="yxqhzrq"/>
+		<result property="beizhu" column="beizhu"/>
+		<result property="cyrybh" column="cyrybh"/>
+	</resultMap>
+	<!--发送信息-->
+	<select id="getSendIckInfoWsListNoPage" parameterType="sendIckInfoWs" resultMap="sendIckInfoWsResult">
+select a.qyid,
+	   a.ryid,	
+	   b.ickslid,
+       a.cjdbm,
+       a.cjdmc,
+       a.cjr,
+       b.kh ickslh,
+       a.xm xingming,
+       a.xbdm xb,
+       case
+         when instr(a.xm, ' ') &gt; 0 then
+          substr(a.xm, instr(a.xm, ' '), length(a.xm))
+         else
+          ''
+       end ywx,
+       case
+         when instr(a.xm, ' ') &gt; 0 then
+          substr(a.xm, 1, instr(a.xm, ' '))
+         else
+          ''
+       end ywm,
+       a.csrq csrq,
+       e.tpnr wjnr,
+       a.gjdm gj,
+       a.mzdm minzu,
+       a.hjdxzqhdm hjsx,
+       a.hjdxz hjdxz,
+       a.zjhm zjhm,
+       a.zzzhm zzzhm,
+       a.zzdz xzd,
+       f.wgrjyxkz wgrjyxkz,
+       a.cylbdm cyrylbdm,
+       b.yxsksrq,
+       b.yxqhzrq,
+       a.bz beizhu,
+       a.cyrybh
+  from t_qyryxx a, t_icksl b, t_qyry_zp e, t_wgcyryxx f
+ where a.ryid = b.ryid
+   and a.ryid = e.ryid
+   and a.ryid = f.ryid(+)
+   and a.scbz = 0
+   and a.zxbz = 0
+   <if test="beizhu != null and beizhu != ''">
+             <if test="beizhu == 0"> 
+				and (b.zkztbs = 1 or b.zkztbs=0)
+				</if>
+				<if test="beizhu == 1"> 
+					and  b.zkztbs = 1 
+				</if>
+  
+			</if>
+
+	</select>
+
+
+	<!--发送信息-->
+	<update id="updateSendIckInfoWs" parameterType="sendIckInfoWs">
+      update t_icksl set zkztbs =#{zkztbs}  where ickslid=#{ickslid} 
+	</update>
+</mapper>

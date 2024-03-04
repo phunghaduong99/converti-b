@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+ 
+<sqlMap>
+
+	<typeAlias type="com.apress.prospring.ch12.domain.Account" alias="account"/>
+
+	<resultMap class="account" id="result">
+		<result property="accountId" column="AccountId"/>
+		<result property="number" column="AccountNumber"/>
+		<result property="sortCode" column="SortCode"/>
+		<result property="balance" column="Balance"/>
+	</resultMap>
+	
+	<select id="getAccountById" resultMap="result" parameterClass="int">
+		select * from Accounts where AccountId=#value#
+	</select>
+	
+	<insert id="insertAccount" parameterClass="account">
+		<selectKey keyProperty="accountId" resultClass="int">
+			select Accounts_AccountId_Seq.nextval from dual
+		</selectKey>
+		insert into Accounts (AccountId, AccountNumber, SortCode, Balance) 
+			values (#accountId#, #number#, #sortCode#, #balance#)
+	</insert>
+	
+	<update id="updateAccountBalance" parameterClass="map">
+		update Accounts set Balance = Balance + #delta# where AccountId=#accountId#
+	</update>
+	
+	<select id="getAccountCount" resultClass="int">
+		select count(*) from Accounts
+	</select>
+
+</sqlMap>

@@ -1,0 +1,157 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:24 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	icksl_lsb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<resultMap id="icksl_lsbResult" type="icksl_lsb">
+		<result property="ickhold" column="ickhold"/>
+		<result property="ickhnew" column="ickhnew"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="clsj" column="clsj"/>
+		<result property="clbz" column="clbz"/>
+	</resultMap>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<resultMap id="icksl_lsbListResult" type="icksl_lsb">
+		<result property="ickhold" column="ickhold"/>
+		<result property="ickhnew" column="ickhnew"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="clsj" column="clsj"/>
+		<result property="clbz" column="clbz"/>
+	</resultMap>
+	<sql id="t_icksl_lsbWhere">
+			<if test="clbz != null and clbz != ''">and
+				a.clbz=#{clbz}
+			</if>
+			<if test="ickhnew != null and ickhnew != ''">and
+				a.ickhnew=#{ickhnew}
+			</if>
+			<if test="ickhold != null and ickhold != ''">and
+				a.ickhold=#{ickhold}
+			</if>
+	</sql>
+	<sql id="t_icksl_lsbPageWhere">
+		<include refid="t_icksl_lsbWhere"/>	</sql>
+	<sql id="t_icksl_lsbListWhere">
+		<include refid="t_icksl_lsbWhere"/>	</sql>
+	<sql id="t_icksl_lsbSelectWhere">
+		<include refid="t_icksl_lsbWhere"/>	</sql>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<insert id="insertIcksl_lsb" parameterType="icksl_lsb">
+		insert into t_icksl_lsb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<update id="updateIcksl_lsb" parameterType="icksl_lsb">
+		update t_icksl_lsb a set a.ickhold=a.ickhold
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<delete id="deleteIcksl_lsb" parameterType="icksl_lsb">
+		delete from t_icksl_lsb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<select id="getIcksl_lsbList" parameterType="map" resultMap="icksl_lsbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.ickhold ickhold,a.ickhnew ickhnew,a.lrsj lrsj,a.clsj clsj,a.clbz clbz
+		from t_icksl_lsb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<select id="getIcksl_lsbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_icksl_lsb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<select id="getIcksl_lsbListNoPage" parameterType="icksl_lsb" resultMap="icksl_lsbListResult">
+		select a.ickhold ickhold,a.ickhnew ickhnew,a.lrsj lrsj,a.clsj clsj,a.clbz clbz
+		from t_icksl_lsb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ickhold
+	</select>
+	<!--IC卡受理临时表(t_icksl_lsb)-->
+	<select id="getIcksl_lsb" parameterType="icksl_lsb" resultMap="icksl_lsbResult">
+		select a.ickhold ickhold,a.ickhnew ickhnew,a.lrsj lrsj,a.clsj clsj,a.clbz clbz
+		from t_icksl_lsb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

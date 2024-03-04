@@ -1,0 +1,172 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	dtcxtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--动态查询条件(t_dtcxtj)-->
+	<resultMap id="dtcxtjResult" type="dtcxtj">
+		<result property="dtcxtjid" column="dtcxtjid"/>
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="sjbm" column="sjbm"/>
+		<result property="zdm" column="zdm"/>
+		<result property="zdzwm" column="zdzwm"/>
+		<result property="zdlx" column="zdlx"/>
+		<result property="zdz" column="zdz"/>
+		<result property="xsz" column="xsz"/>
+		<result property="ppf" column="ppf"/>
+		<result property="kskh" column="kskh"/>
+		<result property="jskh" column="jskh"/>
+		<result property="gxf" column="gxf"/>
+	</resultMap>
+	<!--动态查询条件(t_dtcxtj)-->
+	<resultMap id="dtcxtjListResult" type="dtcxtj">
+		<result property="dtcxtjid" column="dtcxtjid"/>
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="sjbjgid" column="sjbjgid"/>
+		<result property="xlknr" column="xlknr"/>
+		<result property="sjbm" column="sjbm"/>
+		<result property="sjbzwm" column="sjbzwm"/>
+		<result property="zdm" column="zdm"/>
+		<result property="zdzwm" column="zdzwm"/>
+		<result property="zdlx" column="zdlx"/>
+		<result property="zdz" column="zdz"/>
+		<result property="xsz" column="xsz"/>
+		<result property="ppf" column="ppf"/>
+		<result property="kskh" column="kskh"/>
+		<result property="jskh" column="jskh"/>
+		<result property="gxf" column="gxf"/>
+	</resultMap>
+	<sql id="t_dtcxtjWhere">
+			<if test="dtcxtjid != null and dtcxtjid != ''">and
+				a.dtcxtjid=#{dtcxtjid}
+			</if>
+			<if test="gjcxfaid != null and gjcxfaid != ''">and
+				a.gjcxfaid=#{gjcxfaid}
+			</if>
+	</sql>
+	<sql id="t_dtcxtjPageWhere">
+		<include refid="t_dtcxtjWhere"/>	</sql>
+	<sql id="t_dtcxtjListWhere">
+		<include refid="t_dtcxtjWhere"/>	</sql>
+	<sql id="t_dtcxtjSelectWhere">
+		<include refid="t_dtcxtjWhere"/>	</sql>
+	<!--动态查询条件(t_dtcxtj)-->
+	<insert id="insertDtcxtj" parameterType="dtcxtj">
+		insert into t_dtcxtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--动态查询条件(t_dtcxtj)-->
+	<update id="updateDtcxtj" parameterType="dtcxtj">
+		update t_dtcxtj a set a.gjcxfaid=a.gjcxfaid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--动态查询条件(t_dtcxtj)-->
+	<delete id="deleteDtcxtj" parameterType="dtcxtj">
+		delete from t_dtcxtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--动态查询条件(t_dtcxtj)-->
+	<select id="getDtcxtjList" parameterType="map" resultMap="dtcxtjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.dtcxtjid dtcxtjid,a.gjcxfaid gjcxfaid,a.sjbm sjbm,a.zdm zdm,a.zdzwm zdzwm,a.zdlx zdlx,a.zdz zdz,a.xsz xsz,a.ppf ppf,a.kskh kskh,a.jskh jskh,a.gxf gxf
+		from t_dtcxtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--动态查询条件(t_dtcxtj)-->
+	<select id="getDtcxtjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_dtcxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--动态查询条件(t_dtcxtj)-->
+	<select id="getDtcxtjListNoPage" parameterType="dtcxtj" resultMap="dtcxtjListResult">
+		select s.sjbzwm,g.sjbjgid,g.xlknr,a.dtcxtjid dtcxtjid,a.gjcxfaid gjcxfaid,a.sjbm sjbm,a.zdm zdm,a.zdzwm zdzwm,a.zdlx zdlx,a.zdz zdz,a.xsz xsz,a.ppf ppf,a.kskh kskh,a.jskh jskh,a.gxf gxf
+		from t_dtcxtj a,t_sjb s,t_sjbjg g 
+		where 1=1 and a.sjbm = s.sjbm and g.sjbid = s.sjbid and g.zdm = a.zdm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dtcxtjid,a.gjcxfaid
+	</select>
+	<!--动态查询条件(t_dtcxtj)-->
+	<select id="getDtcxtj" parameterType="dtcxtj" resultMap="dtcxtjResult">
+		select a.dtcxtjid dtcxtjid,a.gjcxfaid gjcxfaid,a.sjbm sjbm,a.zdm zdm,a.zdzwm zdzwm,a.zdlx zdlx,a.zdz zdz,a.xsz xsz,a.ppf ppf,a.kskh kskh,a.jskh jskh,a.gxf gxf
+		from t_dtcxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dtcxtjid,a.gjcxfaid
+	</select>
+</mapper>

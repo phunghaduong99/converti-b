@@ -1,0 +1,153 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	zdycxtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--自定义查询条件(t_zdycxtj)-->
+	<resultMap id="zdycxtjResult" type="zdycxtj">
+		<result property="zdycxtjid" column="zdycxtjid"/>
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="cxtj" column="cxtj"/>
+		<result property="cxpx" column="cxpx"/>
+	</resultMap>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<resultMap id="zdycxtjListResult" type="zdycxtj">
+		<result property="zdycxtjid" column="zdycxtjid"/>
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="cxtj" column="cxtj"/>
+		<result property="cxpx" column="cxpx"/>
+	</resultMap>
+	<sql id="t_zdycxtjWhere">
+			<if test="zdycxtjid != null and zdycxtjid != ''">and
+				a.zdycxtjid=#{zdycxtjid}
+			</if>
+			<if test="gjcxfaid != null and gjcxfaid != ''">and
+				a.gjcxfaid=#{gjcxfaid}
+			</if>
+	</sql>
+	<sql id="t_zdycxtjPageWhere">
+		<include refid="t_zdycxtjWhere"/>	</sql>
+	<sql id="t_zdycxtjListWhere">
+		<include refid="t_zdycxtjWhere"/>	</sql>
+	<sql id="t_zdycxtjSelectWhere">
+		<include refid="t_zdycxtjWhere"/>	</sql>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<insert id="insertZdycxtj" parameterType="zdycxtj">
+		insert into t_zdycxtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<update id="updateZdycxtj" parameterType="zdycxtj">
+		update t_zdycxtj a set a.gjcxfaid=a.gjcxfaid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<delete id="deleteZdycxtj" parameterType="zdycxtj">
+		delete from t_zdycxtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<select id="getZdycxtjList" parameterType="map" resultMap="zdycxtjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.zdycxtjid zdycxtjid,a.gjcxfaid gjcxfaid,a.cxtj cxtj,a.cxpx cxpx
+		from t_zdycxtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<select id="getZdycxtjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_zdycxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<select id="getZdycxtjListNoPage" parameterType="zdycxtj" resultMap="zdycxtjListResult">
+		select a.zdycxtjid zdycxtjid,a.gjcxfaid gjcxfaid,a.cxtj cxtj,a.cxpx cxpx
+		from t_zdycxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zdycxtjid,a.gjcxfaid
+	</select>
+	<!--自定义查询条件(t_zdycxtj)-->
+	<select id="getZdycxtj" parameterType="zdycxtj" resultMap="zdycxtjResult">
+		select a.zdycxtjid zdycxtjid,a.gjcxfaid gjcxfaid,a.cxtj cxtj,a.cxpx cxpx
+		from t_zdycxtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zdycxtjid,a.gjcxfaid
+	</select>
+</mapper>

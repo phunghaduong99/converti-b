@@ -1,0 +1,159 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	dtcxpx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--动态查询排序(t_dtcxpx)-->
+	<resultMap id="dtcxpxResult" type="dtcxpx">
+		<result property="dtcxpxid" column="dtcxpxid"/>
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="sjbm" column="sjbm"/>
+		<result property="zdm" column="zdm"/>
+		<result property="zdzwm" column="zdzwm"/>
+		<result property="pxfs" column="pxfs"/>
+	</resultMap>
+	<!--动态查询排序(t_dtcxpx)-->
+	<resultMap id="dtcxpxListResult" type="dtcxpx">
+		<result property="dtcxpxid" column="dtcxpxid"/>
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="sjbjgid" column="sjbjgid"/>
+		<result property="sjbzwm" column="sjbzwm"/>
+		<result property="sjbm" column="sjbm"/>
+		<result property="zdm" column="zdm"/>
+		<result property="zdzwm" column="zdzwm"/>
+		<result property="pxfs" column="pxfs"/>
+	</resultMap>
+	<sql id="t_dtcxpxWhere">
+			<if test="dtcxpxid != null and dtcxpxid != ''">and
+				a.dtcxpxid=#{dtcxpxid}
+			</if>
+			<if test="gjcxfaid != null and gjcxfaid != ''">and
+				a.gjcxfaid=#{gjcxfaid}
+			</if>
+	</sql>
+	<sql id="t_dtcxpxPageWhere">
+		<include refid="t_dtcxpxWhere"/>	</sql>
+	<sql id="t_dtcxpxListWhere">
+		<include refid="t_dtcxpxWhere"/>	</sql>
+	<sql id="t_dtcxpxSelectWhere">
+		<include refid="t_dtcxpxWhere"/>	</sql>
+	<!--动态查询排序(t_dtcxpx)-->
+	<insert id="insertDtcxpx" parameterType="dtcxpx">
+		insert into t_dtcxpx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--动态查询排序(t_dtcxpx)-->
+	<update id="updateDtcxpx" parameterType="dtcxpx">
+		update t_dtcxpx a set a.gjcxfaid=a.gjcxfaid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--动态查询排序(t_dtcxpx)-->
+	<delete id="deleteDtcxpx" parameterType="dtcxpx">
+		delete from t_dtcxpx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--动态查询排序(t_dtcxpx)-->
+	<select id="getDtcxpxList" parameterType="map" resultMap="dtcxpxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.dtcxpxid dtcxpxid,a.gjcxfaid gjcxfaid,a.sjbm sjbm,a.zdm zdm,a.zdzwm zdzwm,a.pxfs pxfs
+		from t_dtcxpx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--动态查询排序(t_dtcxpx)-->
+	<select id="getDtcxpxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_dtcxpx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--动态查询排序(t_dtcxpx)-->
+	<select id="getDtcxpxListNoPage" parameterType="dtcxpx" resultMap="dtcxpxListResult">
+		select s.sjbzwm,g.sjbjgid,a.dtcxpxid dtcxpxid,a.gjcxfaid gjcxfaid,a.sjbm sjbm,a.zdm zdm,a.zdzwm zdzwm,a.pxfs pxfs
+		from t_dtcxpx a,t_sjb s,t_sjbjg g
+		where 1=1 and a.sjbm = s.sjbm and g.sjbid = s.sjbid and g.zdm = a.zdm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dtcxpxid,a.gjcxfaid
+	</select>
+	<!--动态查询排序(t_dtcxpx)-->
+	<select id="getDtcxpx" parameterType="dtcxpx" resultMap="dtcxpxResult">
+		select a.dtcxpxid dtcxpxid,a.gjcxfaid gjcxfaid,a.sjbm sjbm,a.zdm zdm,a.zdzwm zdzwm,a.pxfs pxfs
+		from t_dtcxpx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.dtcxpxid,a.gjcxfaid
+	</select>
+</mapper>

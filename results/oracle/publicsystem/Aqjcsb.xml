@@ -1,0 +1,281 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	aqjcsb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--安全检查设备(t_aqjcsb)-->
+	<resultMap id="aqjcsbResult" type="aqjcsb">
+		<result property="qyid" column="qyid"/>
+		<result property="anjcsbid" column="anjcsbid"/>
+		<result property="aqjcsbzlbm" column="aqjcsbzlbm"/>
+		<result property="aqjcsbzlmc" column="aqjcsbzlmc"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="azsl" column="azsl"/>
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	<!--安全检查设备(t_aqjcsb)-->
+	<resultMap id="aqjcsbListResult" type="aqjcsb">
+		<result property="qyid" column="qyid"/>
+		<result property="anjcsbid" column="anjcsbid"/>
+		<result property="aqjcsbzlbm" column="aqjcsbzlbm"/>
+		<result property="aqjcsbzlmc" column="aqjcsbzlmc"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="azsl" column="azsl"/>
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	<!--安全检查设备(t_aqjcsb) 公安端安全检查设备信息查询-->
+	<resultMap id="aqjcsbGadListResult" type="aqjcsb">
+		<result property="qyid" column="qyid"/>
+		<result property="anjcsbid" column="anjcsbid"/>
+		<result property="aqjcsbzlbm" column="aqjcsbzlbm"/>
+		<result property="aqjcsbzlmc" column="aqjcsbzlmc"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="azsl" column="azsl"/>
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	
+	<!--安全检查设备(t_aqjcsb) 公安端安全检查设备信息查询-->
+	<resultMap id="jfsbGadListResult" type="aqjcsb">
+		<result property="qyid" column="qyid"/>
+		<result property="anjcsbid" column="anjcsbid"/>
+		<result property="aqjcsbzlbm" column="aqjcsbzlbm"/>
+		<result property="aqjcsbzlmc" column="aqjcsbzlmc"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="azsl" column="azsl"/>
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	<sql id="t_aqjcsbWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="anjcsbid != null and anjcsbid != ''">and
+				a.anjcsbid=#{anjcsbid}
+			</if>
+	</sql>
+	<sql id="t_aqjcsbPageWhere">
+		<include refid="t_aqjcsbWhere"/>	</sql>
+	<sql id="t_aqjcsbListWhere">
+		<include refid="t_aqjcsbWhere"/>	</sql>
+	<sql id="t_aqjcsbSelectWhere">
+		<include refid="t_aqjcsbWhere"/>	</sql>
+	<!--安全检查设备(t_aqjcsb)-->
+	<insert id="insertAqjcsb" parameterType="aqjcsb">
+		insert into t_aqjcsb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--安全检查设备(t_aqjcsb)-->
+	<update id="updateAqjcsb" parameterType="aqjcsb">
+		update t_aqjcsb a set a.anjcsbid=a.anjcsbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--安全检查设备(t_aqjcsb)-->
+	<delete id="deleteAqjcsb" parameterType="aqjcsb">
+		delete from t_aqjcsb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--安全检查设备(t_aqjcsb)-->
+	<select id="getAqjcsbList" parameterType="map" resultMap="jfsbGadListResult">
+		select x.* from ( select rownum rowno,z.* from  (
+		select a.qyid qyid,a.anjcsbid anjcsbid,a.aqjcsbzlbm aqjcsbzlbm,a.aqjcsbzlmc aqjcsbzlmc,
+				a.sbxh sbxh,a.ggxh ggxh,a.sbmc sbmc,a.azsl azsl,
+				a.zt zt,a.tyyy tyyy,a.tysj tysj,a.bz bz,a.lrr lrr ,a.lrsj lrsj,
+				b.qybm,b.qymc,b.qyzflbm,b.qyzflmc,b.hylbdm hylbdm,b.hylb hylb
+		from t_aqjcsb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--安全检查设备(t_aqjcsb)-->
+	<select id="getAqjcsbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_aqjcsb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--安全检查设备(t_aqjcsb)-->
+	<select id="getAqjcsbListNoPage" parameterType="aqjcsb" resultMap="aqjcsbListResult">
+		select a.qyid qyid,a.anjcsbid anjcsbid,a.aqjcsbzlbm aqjcsbzlbm,a.aqjcsbzlmc aqjcsbzlmc,a.sbxh sbxh,a.ggxh ggxh,a.sbmc sbmc,a.azsl azsl
+		,a.zt zt,a.tyyy tyyy,a.tysj tysj,a.bz bz,a.lrr lrr ,a.lrsj lrsj
+		from t_aqjcsb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.anjcsbid
+	</select>
+	<!--安全检查设备(t_aqjcsb)-->
+	<select id="getAqjcsb" parameterType="aqjcsb" resultMap="aqjcsbResult">
+		select a.qyid qyid,a.anjcsbid anjcsbid,a.aqjcsbzlbm aqjcsbzlbm,a.aqjcsbzlmc aqjcsbzlmc,a.sbxh sbxh,a.ggxh ggxh,a.sbmc sbmc,a.azsl azsl
+		,a.zt zt,a.tyyy tyyy,a.tysj tysj,a.bz bz,a.lrr lrr ,a.lrsj lrsj
+		from t_aqjcsb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.anjcsbid
+	</select>
+	<!--安全检查设备(t_aqjcsb) 安全检查设备信息查询-->
+	<select id="getAqjcsbGadList" parameterType="map" resultMap="aqjcsbGadListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.anjcsbid anjcsbid,a.aqjcsbzlbm aqjcsbzlbm,a.aqjcsbzlmc aqjcsbzlmc,a.sbxh sbxh,a.ggxh ggxh,a.sbmc sbmc,a.azsl azsl,
+				b.qybm,b.qymc,b.qyzflbm,b.qyzflmc,a.zt zt,a.tyyy tyyy,a.tysj tysj,a.bz bz,a.lrr lrr ,a.lrsj lrsj
+		from t_aqjcsb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--安全检查设备(t_aqjcsb)-->
+	<select id="getAqjcsbGadListCount" parameterType="map" resultType="int">
+		select count(1) a from t_aqjcsb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 公共 技防设备 公安端 分页查询 -->
+	<select id="getJfsbGadList" parameterType="map" resultMap="jfsbGadListResult">
+		select x.* from (　select rownum rowno,z.* from　(
+		select a.qyid qyid,a.anjcsbid anjcsbid,a.aqjcsbzlbm aqjcsbzlbm,a.aqjcsbzlmc aqjcsbzlmc,
+				a.sbxh sbxh,a.ggxh ggxh,a.sbmc sbmc,a.azsl azsl,
+				a.zt zt,a.tyyy tyyy,a.tysj tysj,a.bz bz,a.lrr lrr ,a.lrsj lrsj,
+				b.qybm,b.qymc,b.qyzflbm,b.qyzflmc,b.hylbdm hylbdm,b.hylb hylb
+		from t_aqjcsb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	
+	<!-- 公共 技防设备 公安端 分页查询 数量 -->
+	<select id="getJfsbGadListCount" parameterType="map" resultType="int">
+		select count(1) a from t_aqjcsb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!-- 技防设备数量查询 -->
+	<select id="getJfsbCount" parameterType="aqjcsb" resultType="int">
+		select NVL(sum(a.azsl), 0) azsl from t_aqjcsb a
+		where a.zt=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

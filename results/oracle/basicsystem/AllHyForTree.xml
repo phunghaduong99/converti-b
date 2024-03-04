@@ -1,0 +1,108 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	ylcsjbxxForTree
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	departmentForTree
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	
+	<!--娱乐场所基本信息(t_ylcsjbxx) 生成娱乐场所树，用于跨工程调用-->
+	<resultMap id="ylcsjbxxTreeResult" type="ylcsjbxxForTree">
+		<result property="csid" column="csid"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		<result property="hylxbm" column="hylxbm"/>
+		<result property="hylxmc" column="hylxmc"/>
+		<result property="isAllGxdwbm" column="isAllGxdwbm"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	<resultMap id="ylcsjbxxJlTreeResult" type="ylcsjbxxForTree">
+		<result property="csid" column="csid"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	<!--机构(t_department)-->
+	<resultMap id="departmentListResult" type="departmentForTree">
+		<result property="departid" column="departid"/>
+		<result property="departcode" column="departcode"/>
+		<result property="departname" column="departname"/>
+		<result property="departlevel" column="departlevel"/>
+		<result property="parentdepartid" column="parentdepartid"/>
+		<result property="departfullcode" column="departfullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="departsimplepin" column="departsimplepin"/>
+		<result property="departallpin" column="departallpin"/>
+	</resultMap>
+	<!--企业基本基本信息(旅馆业) 用于跨工程调用-->
+	<select id="getQiyeTreeListNoPage" parameterType="map" resultMap="ylcsjbxxTreeResult">
+		${yuju}
+	</select>
+	<select id="getQiyeJlTreeListNoPage" parameterType="map" resultMap="ylcsjbxxJlTreeResult">
+		${yuju}
+	</select>
+	 <!-- 获得指定级别的机构下所有子机构，并且该子机构拥有场所 -->
+  	<select id="getChildDepartmentQiyeForTree" parameterType="departmentForTree" resultMap="departmentListResult">
+	  	 select a.departid        departid,
+		       a.departcode      departcode,
+		       a.departname      departname,
+		       a.departlevel     departlevel,
+		       a.parentdepartid  parentdepartid,
+		       a.departfullcode  departfullcode,
+		       a.nodeorder       nodeorder,
+		       a.isleaf          isleaf,
+		       a.departsimplepin departsimplepin,
+		       a.departallpin    departallpin
+		  from t_department a
+		 where a.parentdepartid = #{departid}
+	    <if test="departcode != null and departcode != ''">and
+	    	${departcode}
+	    </if>
+    	order by nodeorder
+  	</select>
+</mapper>

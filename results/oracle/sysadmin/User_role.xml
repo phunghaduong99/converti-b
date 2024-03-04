@@ -1,0 +1,197 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	user_role
+		See console output for further details 
+	-->
+	  <!--
+		Sorry, I can`t migrate	role
+		See console output for further details 
+	-->
+  <!--
+		Sorry, I can`t migrate	user
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--用户角色(t_user_role)-->
+	<resultMap id="user_roleResult" type="user_role">
+		<result property="roleid" column="roleid"/>
+		<result property="userid" column="userid"/>
+	</resultMap>
+	<!--用户角色(t_user_role)-->
+	<resultMap id="user_roleListResult" type="user_role">
+		<result property="roleid" column="roleid"/>
+		<result property="userid" column="userid"/>
+	</resultMap>
+	<!--用户角色(t_user_role)-->
+	<resultMap id="user_roleListNoPageResult" type="user_role">
+		<result property="roleid" column="roleid"/>
+		<result property="userid" column="userid"/>
+		<result property="useraccount" column="useraccount"/>
+		<result property="username" column="username"/>
+		<result property="password" column="password"/>
+		<result property="userorder" column="userorder"/>
+		<result property="isvalid" column="isvalid"/>
+		<result property="usertype" column="usertype"/>
+	</resultMap>
+	<!--用户角色(t_user_role)-->
+	<resultMap id="user_roleByUseridResult" type="user_role">
+		<result property="roleid" column="roleid"/>
+		<result property="userid" column="userid"/>
+		<result property="rolename" column="rolename"/>
+		<result property="departid" column="departid"/>
+		<result property="roledescription" column="roledescription"/>
+		<result property="roletype" column="roletype"/>
+	</resultMap>
+	<sql id="t_user_roleWhere">
+			<if test="roleid != null and roleid != ''">and
+				a.roleid=#{roleid}
+			</if>
+			<if test="userid != null and userid != ''">and
+				a.userid=#{userid}
+			</if>
+	</sql>
+	<sql id="t_user_rolePageWhere">
+		<include refid="t_user_roleWhere"/>	</sql>
+	<sql id="t_user_roleListWhere">
+		<include refid="t_user_roleWhere"/>	</sql>
+	<sql id="t_user_roleSelectWhere">
+		<include refid="t_user_roleWhere"/>	</sql>
+	<!--用户角色(t_user_role)-->
+	<insert id="insertUser_role" parameterType="user_role">
+		insert into t_user_role (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--用户角色(t_user_role)-->
+	<update id="updateUser_role" parameterType="user_role">
+		update t_user_role a set roleid=roleid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--用户角色(t_user_role)-->
+	<delete id="deleteUser_role" parameterType="user_role">
+		delete from t_user_role a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--用户角色(t_user_role)-->
+	<select id="getUser_roleList" parameterType="map" resultMap="user_roleListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.roleid roleid,a.userid userid
+		from t_user_role a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--用户角色(t_user_role)-->
+	<select id="getUser_roleListCount" parameterType="map" resultType="int">
+		select count(1) a from t_user_role a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--用户角色(t_user_role)-->
+	<select id="getUser_roleListNoPage" parameterType="user_role" resultMap="user_roleListNoPageResult">
+		select a.roleid roleid,a.userid userid,
+			b.useraccount useraccount,b.username username,b.password password,b.userorder userorder,
+			b.isvalid isvalid,b.usertype usertype
+		from t_user_role a,t_user b
+		where 1=1 and a.userid=b.userid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid,a.userid
+	</select>
+	<!--用户角色(t_user_role)-->
+	<select id="getUser_role" parameterType="user_role" resultMap="user_roleResult">
+		select a.roleid roleid,a.userid userid
+		from t_user_role a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid,a.userid
+	</select>
+	<!--用户角色(t_user_role)-->
+	<select id="getUser_roleListByUserid" parameterType="user_role" resultMap="user_roleByUseridResult">
+		select a.roleid roleid,a.userid userid,b.rolename rolename,b.departid,b.roledescription,b.roletype
+		from t_user_role a,t_role b
+		where 1=1 and a.roleid=b.roleid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid
+	</select>
+	
+	  <delete id="deleteRoleUserByUser" parameterType="user">
+    delete from t_user_role where userid=#{userid}
+  </delete>
+    <delete id="deleteRoleUserByRole" parameterType="role">
+    delete from t_user_role where roleid=#{roleid}
+  </delete>
+</mapper>

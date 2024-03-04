@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Tue Mar 05 00:00:44 KST 2024-->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration><settings>
+		<setting name="cacheEnabled" value="true"/>
+			<setting name="lazyLoadingEnabled" value="false"/>
+			</settings>
+	<typeAliases>
+		</typeAliases>
+	
+	<typeHandlers>
+		</typeHandlers>
+	
+	<mappers>
+		<mapper resource="com/aisino2/core/dao/Sequence.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyjbxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyzjb.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Bafwht.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyryxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Wgtzrxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Ryxxczrz.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyxxczrz.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyryxx_lsxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyffl.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyfltj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyryxxtj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qysctj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Pmt.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Rylbtj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyscbcf.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Wscqy.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Bldsjksb.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Aqjcsb.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyjbxx_ls.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyry_tjxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyjcxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Ryjcxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qybaxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qybcbaxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Tjclxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Zjb_ls.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyryxxhc.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Garkktbsj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyryjctj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qysh.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyrysh.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Wgcyryxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyry_zp.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Rcjc.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Kyqk.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Lhjc.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyzhtb.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Khxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Wgkhxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/QyZrsProc.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Cljbxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Clxx_zp.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Clxxry_zp.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Clxxwgryxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/GgQyyh.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyyyrz.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyyyrztj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qybgxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyrygzrz.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyyyzttj.xml"/>
+			<mapper resource="config/ibatis/oracle/tjfx/Tjfx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Kycl.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyzlxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Qyzlxxfj.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Baryxx.xml"/>
+			<mapper resource="config/ibatis/oracle/publicsystem/Bwryxx.xml"/>
+			</mappers>
+	</configuration>

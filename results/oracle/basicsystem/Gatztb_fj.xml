@@ -1,0 +1,156 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	gatztb_fj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<resultMap id="gatztb_fjResult" type="gatztb_fj">
+		<result property="gatbid" column="gatbid"/>
+		<result property="gafjid" column="gafjid"/>
+		<result property="fjmc" column="fjmc"/>
+		<result property="fjlx" column="fjlx"/>
+		<result property="fjnr" column="fjnr"/>
+		<result property="fjxh" column="fjxh"/>
+	</resultMap>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<resultMap id="gatztb_fjListResult" type="gatztb_fj">
+		<result property="gatbid" column="gatbid"/>
+		<result property="gafjid" column="gafjid"/>
+		<result property="fjmc" column="fjmc"/>
+		<result property="fjlx" column="fjlx"/>
+		<result property="fjxh" column="fjxh"/>
+	</resultMap>
+	<sql id="t_gatztb_fjWhere">
+			<if test="gatbid != null and gatbid != ''">and
+				a.gatbid=#{gatbid}
+			</if>
+			<if test="gafjid != null and gafjid != ''">and
+				a.gafjid=#{gafjid}
+			</if>
+	</sql>
+	<sql id="t_gatztb_fjPageWhere">
+		<include refid="t_gatztb_fjWhere"/>	</sql>
+	<sql id="t_gatztb_fjListWhere">
+		<include refid="t_gatztb_fjWhere"/>	</sql>
+	<sql id="t_gatztb_fjSelectWhere">
+		<include refid="t_gatztb_fjWhere"/>	</sql>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<insert id="insertGatztb_fj" parameterType="gatztb_fj">
+		insert into t_gatztb_fj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<update id="updateGatztb_fj" parameterType="gatztb_fj">
+		update t_gatztb_fj a set a.gafjid=a.gafjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<delete id="deleteGatztb_fj" parameterType="gatztb_fj">
+		delete from t_gatztb_fj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<select id="getGatztb_fjList" parameterType="map" resultMap="gatztb_fjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.gatbid gatbid,a.gafjid gafjid,a.fjmc fjmc,a.fjlx fjlx,a.fjnr fjnr,a.fjxh fjxh
+		from t_gatztb_fj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<select id="getGatztb_fjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_gatztb_fj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<select id="getGatztb_fjListNoPage" parameterType="gatztb_fj" resultMap="gatztb_fjListResult">
+		select a.gatbid gatbid,a.gafjid gafjid,a.fjmc fjmc,a.fjlx fjlx,a.fjnr fjnr,a.fjxh fjxh
+		from t_gatztb_fj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gatbid,a.gafjid
+	</select>
+	<!--公安通知通报_附件(t_gatztb_fj)-->
+	<select id="getGatztb_fj" parameterType="gatztb_fj" resultMap="gatztb_fjResult">
+		select a.gatbid gatbid,a.gafjid gafjid,a.fjmc fjmc,a.fjlx fjlx,a.fjnr fjnr,a.fjxh fjxh
+		from t_gatztb_fj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gatbid,a.gafjid
+	</select>
+</mapper>

@@ -1,0 +1,193 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	sjbdqxxkz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<resultMap id="sjbdqxxkzResult" type="sjbdqxxkz">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="sjbdqxxkzid" column="sjbdqxxkzid"/>
+		<result property="xzqhbm" column="xzqhbm"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="sjch" column="sjch"/>
+		<result property="pp" column="pp"/>
+		<result property="xh" column="xh"/>
+		<result property="ys" column="ys"/>
+		<result property="ajjbbm" column="ajjbbm"/>
+		<result property="ajjb" column="ajjb"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="djrq" column="djrq"/>
+		<result property="djr" column="djr"/>
+		<result property="ladqbm" column="ladqbm"/>
+		<result property="ladq" column="ladq"/>
+		<result property="badwbm" column="badwbm"/>
+		<result property="badw" column="badw"/>
+		<result property="tbr" column="tbr"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+		<result property="lxrsfhm" column="lxrsfhm"/>
+	</resultMap>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<resultMap id="sjbdqxxkzListResult" type="sjbdqxxkz">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="sjbdqxxkzid" column="sjbdqxxkzid"/>
+		<result property="xzqhbm" column="xzqhbm"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="sjch" column="sjch"/>
+		<result property="pp" column="pp"/>
+		<result property="xh" column="xh"/>
+		<result property="ys" column="ys"/>
+		<result property="ajjbbm" column="ajjbbm"/>
+		<result property="ajjb" column="ajjb"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="djrq" column="djrq"/>
+		<result property="djr" column="djr"/>
+		<result property="ladqbm" column="ladqbm"/>
+		<result property="ladq" column="ladq"/>
+		<result property="badwbm" column="badwbm"/>
+		<result property="badw" column="badw"/>
+		<result property="tbr" column="tbr"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+		<result property="lxrsfhm" column="lxrsfhm"/>
+	</resultMap>
+	<sql id="t_sjbdqxxkzWhere">
+			<if test="bjxxid2 != null and bjxxid2 != ''">and
+				a.bjxxid2=#{bjxxid2}
+			</if>
+			<if test="sjbdqxxkzid != null and sjbdqxxkzid != ''">and
+				a.sjbdqxxkzid=#{sjbdqxxkzid}
+			</if>
+	</sql>
+	<sql id="t_sjbdqxxkzPageWhere">
+		<include refid="t_sjbdqxxkzWhere"/>	</sql>
+	<sql id="t_sjbdqxxkzListWhere">
+		<include refid="t_sjbdqxxkzWhere"/>	</sql>
+	<sql id="t_sjbdqxxkzSelectWhere">
+		<include refid="t_sjbdqxxkzWhere"/>	</sql>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<insert id="insertSjbdqxxkz" parameterType="sjbdqxxkz">
+		insert into t_sjbdqxxkz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<update id="updateSjbdqxxkz" parameterType="sjbdqxxkz">
+		update t_sjbdqxxkz a set a.sjbdqxxkzid=a.sjbdqxxkzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<delete id="deleteSjbdqxxkz" parameterType="sjbdqxxkz">
+		delete from t_sjbdqxxkz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<select id="getSjbdqxxkzList" parameterType="map" resultMap="sjbdqxxkzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.sjbdqxxkzid sjbdqxxkzid,a.xzqhbm xzqhbm,a.xzqh xzqh,a.sjch sjch,a.pp pp,a.xh xh,a.ys ys,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs,a.lxrsfhm lxrsfhm
+		from t_sjbdqxxkz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<select id="getSjbdqxxkzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_sjbdqxxkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<select id="getSjbdqxxkzListNoPage" parameterType="sjbdqxxkz" resultMap="sjbdqxxkzListResult">
+		select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.sjbdqxxkzid sjbdqxxkzid,a.xzqhbm xzqhbm,a.xzqh xzqh,a.sjch sjch,a.pp pp,a.xh xh,a.ys ys,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs,a.lxrsfhm lxrsfhm
+		from t_sjbdqxxkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2,a.sjbdqxxkzid
+	</select>
+	<!--手机被盗抢信息_快照(t_sjbdqxxkz)-->
+	<select id="getSjbdqxxkz" parameterType="sjbdqxxkz" resultMap="sjbdqxxkzResult">
+		select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.sjbdqxxkzid sjbdqxxkzid,a.xzqhbm xzqhbm,a.xzqh xzqh,a.sjch sjch,a.pp pp,a.xh xh,a.ys ys,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs,a.lxrsfhm lxrsfhm
+		from t_sjbdqxxkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2,a.sjbdqxxkzid
+	</select>
+</mapper>

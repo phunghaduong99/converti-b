@@ -1,0 +1,243 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bdbjtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--比对报警统计表(t_bdbjtj)-->
+	<resultMap id="bdbjtjResult" type="bdbjtj">
+		<result property="bdbjtjid" column="bdbjtjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		<result property="clbjcs" column="clbjcs"/>
+		<result property="cyrybjcs" column="cyrybjcs"/>
+		<result property="scrybjcs" column="scrybjcs"/>
+		<result property="kyclbjcs" column="kyclbjcs"/>
+	</resultMap>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<resultMap id="bdbjtjListResult" type="bdbjtj">
+		<result property="bdbjtjid" column="bdbjtjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		<result property="clbjcs" column="clbjcs"/>
+		<result property="cyrybjcs" column="cyrybjcs"/>
+		<result property="scrybjcs" column="scrybjcs"/>
+		<result property="kyclbjcs" column="kyclbjcs"/>
+	</resultMap>
+	
+	
+	
+	<!--比对报警统计表(t_bdbjtj)-->
+	<resultMap id="bdbjtjListResultTj" type="bdbjtj">
+	
+     	<result property="clbjcs" column="clbjcs"/>
+		<result property="cyrybjcs" column="cyrybjcs"/>
+		<result property="scrybjcs" column="scrybjcs"/>
+		<result property="kyclbjcs" column="kyclbjcs"/>
+		<result property="xiaoji" column="xiaoji"/>
+	
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		
+	</resultMap>
+	
+	<sql id="t_bdbjtjTongjiPageWhere">
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="csbm != null and csbm != ''">and
+				a.csbm=#{csbm}
+			</if>
+			
+			<if test="tjrq != null and tjrq != ''">and
+				a.tjrq &gt;=#tjrq:DATE#
+			</if>
+			<if test="tjrqzhi != null and tjrqzhi != ''">and
+				a.tjrq &lt; #tjrqzhi:DATE#+1
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			
+	</sql>
+	
+	
+	
+	
+	
+	<sql id="t_bdbjtjWhere">
+			<if test="bdbjtjid != null and bdbjtjid != ''">and
+				a.bdbjtjid=#{bdbjtjid}
+			</if>
+	</sql>
+	<sql id="t_bdbjtjPageWhere">
+		<include refid="t_bdbjtjWhere"/>	</sql>
+	<sql id="t_bdbjtjListWhere">
+		<include refid="t_bdbjtjWhere"/>	</sql>
+	<sql id="t_bdbjtjSelectWhere">
+		<include refid="t_bdbjtjWhere"/>	</sql>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<insert id="insertBdbjtj" parameterType="bdbjtj">
+		insert into t_bdbjtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<update id="updateBdbjtj" parameterType="bdbjtj">
+		update t_bdbjtj a set a.bdbjtjid=a.bdbjtjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<delete id="deleteBdbjtj" parameterType="bdbjtj">
+		delete from t_bdbjtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<select id="getBdbjtjList" parameterType="map" resultMap="bdbjtjListResultTj">
+		select m.* from (select rownum rowno, x.* from (
+		select z.* from 
+		(select 
+		  sum(a.clbjcs) clbjcs,
+	      sum(a.cyrybjcs) cyrybjcs,
+	        sum(a.scrybjcs) scrybjcs,
+		    sum(a.kyclbjcs) kyclbjcs,
+		         sum(a.clbjcs+a.cyrybjcs+a.scrybjcs+a.kyclbjcs) xiaoji
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_bdbjtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)  z order by ${pageSort} ) x ) m where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<select id="getBdbjtjListCount" parameterType="map" resultType="int">
+			select count(1) from (
+		select count(1)  from t_bdbjtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)
+	</select>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<select id="getBdbjtjListNoPage" parameterType="bdbjtj" resultMap="bdbjtjListResult">
+		select a.bdbjtjid bdbjtjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.csbm csbm,a.csmc csmc,a.clbjcs clbjcs,a.cyrybjcs cyrybjcs,a.scrybjcs scrybjcs,a.kyclbjcs kyclbjcs
+		from t_bdbjtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bdbjtjid
+	</select>
+	<!--比对报警统计表(t_bdbjtj)-->
+	<select id="getBdbjtj" parameterType="bdbjtj" resultMap="bdbjtjResult">
+		select a.bdbjtjid bdbjtjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.csbm csbm,a.csmc csmc,a.clbjcs clbjcs,a.cyrybjcs cyrybjcs,a.scrybjcs scrybjcs,a.kyclbjcs kyclbjcs
+		from t_bdbjtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bdbjtjid
+	</select>
+</mapper>

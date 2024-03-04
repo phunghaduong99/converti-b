@@ -1,0 +1,155 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	ycskqy
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	skxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--日常检查统计(t_rcjctj)-->
+	<resultMap id="YcskqyResult" type="ycskqy">
+		<!--  <result property="rcjctjid" column="rcjctjid" />-->
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="yyztdm" column="yyztdm"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="dwfzr" column="dwfzr"/>
+		<result property="dwfzrlxfs" column="dwfzrlxfs"/>
+	</resultMap>
+	
+	<resultMap id="SkxxResult" type="skxx">
+		<result property="xm" column="xm"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+	</resultMap>
+	
+
+	
+	<sql id="t_YcskqyWhere">
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>
+			<if test="qssj != null and qssj != ''">and
+				a.ycskrq &gt;=TO_DATE(#{qssj},'yyyy-mm-dd')
+			</if>
+			<if test="jzsj != null and jzsj != ''">and
+				a.ycskrq &lt;=TO_DATE(#{jzsj},'yyyy-mm-dd')
+			</if>
+	</sql>
+	
+	<sql id="t_SkxxWhere">
+			<if test="qybm != null and qybm != ''">and
+				a.ssqybm=#{qybm}
+			</if>
+			<if test="qssj != null and qssj != ''">and
+				a.sksj &gt;=to_date(#{qssj},'yyyy-mm-dd')
+			</if>
+			<if test="jzsj != null and jzsj != ''">and
+				a.sksj &lt;=to_date(#{jzsj},'yyyy-mm-dd')
+			</if>
+	</sql>
+	
+	
+	<select id="getYcskqyList" parameterType="map" resultMap="YcskqyResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select distinct a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qymc qymc,a.qybm qybm,a.yyztdm yyztdm,a.yyztmc yyztmc,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs
+		 from t_ycskqy a
+		 where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->	
+		 order by ${pageSort})  z where rownum &lt;= ${endRow}) x where rowno &gt;${beginRow} 
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getYcskqyListCount" parameterType="map" resultType="int">
+		select count(1) from 
+		(select distinct a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qymc qymc,a.qybm qybm,a.yyztdm yyztdm,a.yyztmc yyztmc,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs
+		 from t_ycskqy a
+		 where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->)
+	</select>
+	
+	
+	<select id="getSkxxList" parameterType="map" resultMap="SkxxResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select xm,cyrybh,sksj,scsj
+		from t_skxxtjmx a
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by sksj desc)  z where rownum &lt;= ${endRow}) x where rowno &gt;${beginRow} 
+	</select>
+	
+	<select id="getSkxxListCount" parameterType="map" resultType="int">
+		select count(1) from  t_skxxtjmx a
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+	</select>
+	
+</mapper>

@@ -1,0 +1,119 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	asjtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--案事件管理(t_asjgl)-->
+	<resultMap id="asjtjResult" type="asjtj">
+	    <result property="xsajs" column="xsajs"/>
+		<result property="zzajs" column="zzajs"/>
+		<result property="fazs" column="fazs"/>
+		<result property="xsajsT" column="xsajsT"/>
+		<result property="zzajsT" column="zzajsT"/>
+		<result property="fazsT" column="fazsT"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	
+	<sql id="t_asjtjWhere">
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+		</if>
+		<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>	
+			<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+	</sql>
+	<select id="getAsjtjList" parameterType="map" resultMap="asjtjResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select 
+		  NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then (a.xsajs+a.zzajs) end),'0') as fazsT,
+		  NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.xsajs end),'0') as xsajsT,
+		  NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.zzajs end),'0') as zzajsT,
+		  NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.xsajs+a.zzajs) end),'0') as fazs,
+		  NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.xsajs end),'0') as xsajs,
+		  NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.zzajs end),'0') as zzajs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_asjtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by ${pageSort})  z where rownum &lt;= ${endRow}) x where rowno &gt;${beginRow}
+	</select>
+	<select id="getAsjtjListCount" parameterType="map" resultType="int">
+		select count(1) from 
+		(select sum(xsajs) from t_asjtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>)
+	</select>
+</mapper>

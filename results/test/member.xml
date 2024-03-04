@@ -1,0 +1,116 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!-- namespace속성 : 아래에서 작성한 SQL을 호출할 때 같이 사용된다. --><!--Converted at: Mon Mar 04 23:51:59 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="member">
+	<!-- 
+		이 영역에 sql문에 맞는 태그를 사용하여 SQL문을 기술한다.
+		
+		사용할 수 있는 기본적인 태그들
+		<select> ~~~ </select>
+		<insert> ~~~ </insert>
+		<update> ~~~ </update>
+		<delete> ~~~ </delete>
+	 
+	 위 태그에서 사용되는 속성들
+	 1) id 속성 : 해당 태그를 호출할 때 <SqlMap> 태그의 namespace와 연결하여 사용하는 이름
+	 
+	 2) parameterClass 속성 : sql문에 사용될 데이터가 들어있는 객체를 지정한다.
+	 				 	     (보통은 VO클래스, 자바의 자료형 이름 등이 사용된다)
+	 				 	     (typeAlias로 지정한 alias명을 사용할 수 있다.)
+	 				 	     
+	 3) resultClass 속성 : select 문을 실행한 결과를 닫을 객체를 지정한다.
+	                     (보통 VO클래스나 자바의 자료형 이름을 사용한다.) 				 	     
+	 
+	 -->
+
+	<resultMap id="memberMap" type="memVO">
+		<result property="memId" column="mem_id"/>
+		<result property="memName" column="mem_name"/>
+		<result property="memTel" column="mem_tel"/>
+		<result property="memAddr" column="mem_addr"/>
+	</resultMap>
+
+
+
+
+	<insert id="insertMember" parameterType="kr.or.ddit.member.vo.MemberVO">
+		INSERT INTO  MYMEMBER
+		(MEM_ID,MEM_NAME,MEM_TEL,MEM_ADDR)
+		VALUES (#{memId}, #{memName}, #{memTel}, #{memAddr})
+	</insert>
+
+	<update id="updateMember">
+		UPDATE MYMEMBER
+		SET MEM_NAME = #{memName} ,  MEM_TEL = #{memTel} , MEM_ADDR = #{memAddr}
+		WHERE MEM_ID = #{memId}
+	</update>
+
+	<delete id="deleteMember" parameterType="String">
+		DELETE FROM MYMEMBER
+		WHERE MEM_ID = #{memId}
+	</delete>
+
+	<select id="getMemberAll" resultMap="memberMap">
+		select * from mymember
+	</select>
+
+	<select id="getMember" resultMap="memberMap">
+		select * from mymember where MEM_ID = #{memId}
+	</select>
+
+	<select id="getSearchMember" resultMap="memberMap">
+
+		SELECT * FROM MYMEMBER WHERE 1=1
+
+		<if test="memId != null and memId != ''">
+			AND MEM_ID = #{memId}
+		</if>
+
+		<if test="memName != null and memName != ''">
+			AND MEM_NAME = #{memName}
+		</if>
+
+		<if test="memTel != null and memTel != ''">
+			AND MEM_TEL = #{memTel}
+		</if>
+
+		<if test="memAddr != null and memAddr != ''">
+			AND MEM_ADDR LIKE '%' || #{memAddr} || '%'
+		</if>
+
+	</select>
+
+</mapper>

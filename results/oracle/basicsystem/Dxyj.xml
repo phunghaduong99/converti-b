@@ -1,0 +1,166 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	dxyj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--短信预警(t_dxyj)-->
+	<resultMap id="dxyjResult" type="dxyj">
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="yjxxid" column="yjxxid"/>
+		<result property="dxyjid" column="dxyjid"/>
+		<result property="dxhm" column="dxhm"/>
+		<result property="dycfssj" column="dycfssj"/>
+		<result property="zhycfssj" column="zhycfssj"/>
+		<result property="fscs" column="fscs"/>
+		<result property="dxzt" column="dxzt"/>
+		<result property="dxnr" column="dxnr"/>
+	</resultMap>
+	<!--短信预警(t_dxyj)-->
+	<resultMap id="dxyjListResult" type="dxyj">
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="yjxxid" column="yjxxid"/>
+		<result property="dxyjid" column="dxyjid"/>
+		<result property="dxhm" column="dxhm"/>
+		<result property="dycfssj" column="dycfssj"/>
+		<result property="zhycfssj" column="zhycfssj"/>
+		<result property="fscs" column="fscs"/>
+		<result property="dxzt" column="dxzt"/>
+		<result property="dxnr" column="dxnr"/>
+	</resultMap>
+	<sql id="t_dxyjWhere">
+			<if test="yjgzid != null and yjgzid != ''">and
+				a.yjgzid=#{yjgzid}
+			</if>
+			<if test="yjxxid != null and yjxxid != ''">and
+				a.yjxxid=#{yjxxid}
+			</if>
+			<if test="dxyjid != null and dxyjid != ''">and
+				a.dxyjid=#{dxyjid}
+			</if>
+	</sql>
+	<sql id="t_dxyjPageWhere">
+		<include refid="t_dxyjWhere"/>	</sql>
+	<sql id="t_dxyjListWhere">
+		<include refid="t_dxyjWhere"/>	</sql>
+	<sql id="t_dxyjSelectWhere">
+		<include refid="t_dxyjWhere"/>	</sql>
+	<!--短信预警(t_dxyj)-->
+	<insert id="insertDxyj" parameterType="dxyj">
+		insert into t_dxyj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--短信预警(t_dxyj)-->
+	<update id="updateDxyj" parameterType="dxyj">
+		update t_dxyj a set a.dxyjid=a.dxyjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--短信预警(t_dxyj)-->
+	<delete id="deleteDxyj" parameterType="dxyj">
+		delete from t_dxyj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--短信预警(t_dxyj)-->
+	<select id="getDxyjList" parameterType="map" resultMap="dxyjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.yjgzid yjgzid,a.yjxxid yjxxid,a.dxyjid dxyjid,a.dxhm dxhm,a.dycfssj dycfssj,a.zhycfssj zhycfssj,a.fscs fscs,a.dxzt dxzt,a.dxnr dxnr
+		from t_dxyj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--短信预警(t_dxyj)-->
+	<select id="getDxyjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_dxyj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--短信预警(t_dxyj)-->
+	<select id="getDxyjListNoPage" parameterType="dxyj" resultMap="dxyjListResult">
+		select a.yjgzid yjgzid,a.yjxxid yjxxid,a.dxyjid dxyjid,a.dxhm dxhm,a.dycfssj dycfssj,a.zhycfssj zhycfssj,a.fscs fscs,a.dxzt dxzt,a.dxnr dxnr
+		from t_dxyj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.yjgzid,a.yjxxid,a.dxyjid
+	</select>
+	<!--短信预警(t_dxyj)-->
+	<select id="getDxyj" parameterType="dxyj" resultMap="dxyjResult">
+		select a.yjgzid yjgzid,a.yjxxid yjxxid,a.dxyjid dxyjid,a.dxhm dxhm,a.dycfssj dycfssj,a.zhycfssj zhycfssj,a.fscs fscs,a.dxzt dxzt,a.dxnr dxnr
+		from t_dxyj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.yjgzid,a.yjxxid,a.dxyjid
+	</select>
+</mapper>

@@ -1,0 +1,207 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	kyqk
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--可疑情况(t_kyqk)-->
+	<resultMap id="kyqkResult" type="kyqk">
+		<result property="qyid" column="qyid"/>
+		<result property="kyqkid" column="kyqkid"/>
+		<result property="kyqkdjxh" column="kyqkdjxh"/>
+		<result property="kyqklxbm" column="kyqklxbm"/>
+		<result property="kyqklx" column="kyqklx"/>
+		<result property="ydxxms" column="ydxxms"/>
+		<result property="tbrbh" column="tbrbh"/>
+		<result property="tbrxm" column="tbrxm"/>
+		<result property="tbsj" column="tbsj"/>
+		<result property="jjsj" column="jjsj"/>
+		<result property="jjrxm" column="jjrxm"/>
+		<result property="jjcljg" column="jjcljg"/>
+	</resultMap>
+	<!--可疑情况(t_kyqk)-->
+	<resultMap id="kyqkListResult" type="kyqk">
+		<result property="qyid" column="qyid"/>
+		<result property="qymc" column="qymc"/>
+		<result property="kyqkid" column="kyqkid"/>
+		<result property="kyqkdjxh" column="kyqkdjxh"/>
+		<result property="kyqklxbm" column="kyqklxbm"/>
+		<result property="kyqklx" column="kyqklx"/>
+		<result property="ydxxms" column="ydxxms"/>
+		<result property="tbrbh" column="tbrbh"/>
+		<result property="tbrxm" column="tbrxm"/>
+		<result property="tbsj" column="tbsj"/>
+		<result property="jjsj" column="jjsj"/>
+		<result property="jjrxm" column="jjrxm"/>
+		<result property="jjcljg" column="jjcljg"/>
+	</resultMap>
+	<sql id="t_kyqkWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="kyqkid != null and kyqkid != ''">and
+				a.kyqkid=#{kyqkid}
+			</if>
+	</sql>
+	<sql id="t_kyqkPageWhere">
+		<include refid="t_kyqkWhere"/>	
+		<if test="tbrxm != null and tbrxm != ''">and
+				a.tbrxm like '%${tbrxm}%'
+	    </if>
+	    <if test="tbsj != null and tbsj != ''">and
+				to_char(a.tbsj,'yyyy-MM-dd') &gt;=to_char(#{tbsj,jdbcType=TIMESTAMP},'yyyy-MM-dd')		
+		</if>
+		<if test="tbsjzhi != null and tbsjzhi != ''">and
+			to_char(a.tbsj,'yyyy-MM-dd') &lt;=to_char(#{tbsjzhi,jdbcType=TIMESTAMP},'yyyy-MM-dd')||' 23:59:59'
+		</if>	
+	    <if test="kyqklxbm != null and kyqklxbm != ''">and
+				a.kyqklxbm=#{kyqklxbm}
+	    </if>
+	    <if test="gxdwbh != null and gxdwbh != ''">and
+				t.gxdwbm like '%${gxdwbh}%'
+	    </if>
+	    <if test="qymc != null and qymc != ''">and
+				t.qymc like '%${qymc}%'
+	    </if>
+	    <if test="hylbdm != null and hylbdm != ''">and
+				t.hylbdm=#{hylbdm}
+	    </if>
+	    <if test="qybm != null and qybm != ''">and
+				t.qybm like '%${qybm}%'
+	    </if>
+	    <if test="jjrxm != null and jjrxm != ''">and
+				a.jjrxm is null
+	    </if>
+	</sql>
+	<sql id="t_kyqkListWhere">
+		<include refid="t_kyqkWhere"/>	</sql>
+	<sql id="t_kyqkSelectWhere">
+		<include refid="t_kyqkWhere"/>	</sql>
+	<!--可疑情况(t_kyqk)-->
+	<insert id="insertKyqk" parameterType="kyqk">
+		insert into t_kyqk (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--可疑情况(t_kyqk)-->
+	<update id="updateKyqk" parameterType="kyqk">
+		update t_kyqk a set a.kyqkid=a.kyqkid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--可疑情况(t_kyqk)-->
+	<delete id="deleteKyqk" parameterType="kyqk">
+		update t_kyqk a set a.scbz=1 where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--可疑情况(t_kyqk)-->
+	<select id="getKyqkList" parameterType="map" resultMap="kyqkListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select t.qymc qymc,a.qyid qyid,a.kyqkid kyqkid,a.kyqkdjxh kyqkdjxh,a.kyqklxbm kyqklxbm,a.kyqklx kyqklx,a.ydxxms ydxxms,a.tbrbh tbrbh,a.tbrxm tbrxm,a.tbsj tbsj,a.jjsj jjsj,a.jjrxm jjrxm,a.jjcljg jjcljg
+		from t_kyqk a ,t_qyjbxx t
+		where a.scbz=0 and a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--可疑情况(t_kyqk)-->
+	<select id="getKyqkListCount" parameterType="map" resultType="int">
+		select count(1) a from t_kyqk a ,t_qyjbxx t
+		where a.scbz=0  and a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--可疑情况(t_kyqk)-->
+	<select id="getKyqkListNoPage" parameterType="kyqk" resultMap="kyqkListResult">
+		select t.qymc qymc,a.qyid qyid,a.kyqkid kyqkid,a.kyqkdjxh kyqkdjxh,a.kyqklxbm kyqklxbm,a.kyqklx kyqklx,a.ydxxms ydxxms,a.tbrbh tbrbh,a.tbrxm tbrxm,a.tbsj tbsj,a.jjsj jjsj,a.jjrxm jjrxm,a.jjcljg jjcljg
+		from t_kyqk a
+		where a.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.kyqkid
+	</select>
+	<!--可疑情况(t_kyqk)-->
+	<select id="getKyqk" parameterType="kyqk" resultMap="kyqkResult">
+		select a.qyid qyid,a.kyqkid kyqkid,a.kyqkdjxh kyqkdjxh,a.kyqklxbm kyqklxbm,a.kyqklx kyqklx,a.ydxxms ydxxms,a.tbrbh tbrbh,a.tbrxm tbrxm,a.tbsj tbsj,a.jjsj jjsj,a.jjrxm jjrxm,a.jjcljg jjcljg
+		from t_kyqk a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.kyqkid
+	</select>
+	<!--待处理可疑情况(t_kyqk)-->
+	<select id="getDCLKyqkListCount" parameterType="map" resultType="int">
+		select count(1) a from t_kyqk a ,t_qyjbxx t
+		where a.qyid=t.qyid and a.scbz=0  and a.jjrxm is null
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

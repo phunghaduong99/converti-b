@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Tue Mar 05 00:00:44 KST 2024-->
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD SQL Map Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration><settings>
+		<setting name="cacheEnabled" value="true"/>
+			<setting name="lazyLoadingEnabled" value="false"/>
+			</settings>
+	<typeAliases>
+		</typeAliases>
+	
+	<typeHandlers>
+		</typeHandlers>
+	
+	<mappers>
+		<mapper resource="com/aisino2/core/dao/Sequence.xml"/>
+			<mapper resource="config/ibatis/oracle/sysadmin/Operatelog.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Scbm.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Qgztjx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bkry.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Asjgl.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Qycf.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Xctb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Xctb_fj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Xctbjsdw.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Xctbhf.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Dxyj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gzdx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bjgz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bjbdtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bjjsx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bjxxb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Qgztjx_kz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bkry_kz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gzdx_kz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Dxbj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Yjbdtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Yjxxb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Yjgz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Ztxx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Cjtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Sjb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Sjbjg.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gjcxfa.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Dtcxtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Dtcxpx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Zdycxtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Dpy.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Asjtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bdqclxx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bdqclxxkz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bkcl.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bkclkz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bdqclxxlsb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bksjkz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bksj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bkwpkbxxkz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bkwpkbxx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Sjbdqxx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Sjbdqxxkz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Wpbjbdtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Wpbjgz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Wpbjxxb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Wbjkdyczrz.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Wbjkczrzmx.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/AllHyForTree.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Qycftj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Bdbjtj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Jqhzlgy.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/QyxxExpImp.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gatztb.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gatztb_fj.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gatztbhf.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Gatztbjsdw.xml"/>
+			<mapper resource="config/ibatis/oracle/basicsystem/Clyjxx.xml"/>
+			</mappers>
+	</configuration>

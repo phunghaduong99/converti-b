@@ -1,0 +1,426 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:56 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	SupportTicket
+		See console output for further details 
+	-->
+	
+	<!-- <resultMap class="SupportTicket" id="SupportTicketResult">
+		<result property="stNo" column="ST_NO" />
+		
+		申请人
+		<result property="applicant.userid" column="APPLICANT" />
+		<result property="applicant.username" column="APPLICANT_NAME"/>
+		<result property="applicant.mobilephone" column="APPLICANT_MOBILEPHONE"/>
+		<result property="applicantName" column="APPLICANT_NAME"/>
+		
+		<result property="supportContent" column="SUPPORT_CONTENT" />
+		技术支持人信息
+		<result property="supportLeader.userid" column="SUPPORT_LEADER" />
+		<result property="supportLeader.username" column="SUPPORT_LEADER_NAME" />
+		<result property="supportLeader.mobilephone" column="SUPPORT_LEADER_MOBILEPHONE"/>
+		 总工审批标识
+		<result property="ceApprovalCode" column="CE_APPROVAL_CODE" />
+		产品方案部审批标识
+		<result property="psgApprovalCode" column="PSG_APPROVAL_CODE" />
+		技术开发部审批标识
+		<result property="devApprovalCode" column="DEV_APPROVAL_CODE" />
+		单位
+		<result property="supportDeptList" column="ID" select="SupportDept.queryDepartmentByStId" />
+		<result property="supportDept.departid" column="SUPPORT_DEPT_ID" />
+		<result property="supportDept.departname" column="SUPPORT_DEPT_NAME" />
+		
+		<result property="devScheDate" column="DEV_SCHE_DATE" />
+		<result property="psgScheDate" column="PSG_SCHE_DATE" />
+		<result property="stStatus" column="ST_STATUS" />
+		<result property="region" column="REGION" />
+		<result property="serialNumber" column="SERIAL_NUMBER" />
+		<result property="id" column="ID" />
+		<result property="devDsScheDate" column="DEV_DS_SCHE_DATE" />
+		<result property="devDdScheDate" column="DEV_DD_SCHE_DATE" />
+		<result property="psgDsScheDate" column="PSG_DS_SCHE_DATE" />
+		<result property="psgIsScheDate" column="PSG_IS_SCHE_DATE" />
+
+		<result property="psgCompDate" column="PSG_COMP_DATE" />
+		<result property="devCompDate" column="DEV_COMP_DATE" />
+		<result property="psgDsCompDate" column="PSG_DS_COMP_DATE" />
+		<result property="psgIsCompDate" column="PSG_IS_COMP_DATE" />
+		<result property="psgIsCompDate" column="DEV_DS_COMP_DATE" />
+		<result property="devDdCompDate" column="DEV_DD_COMP_DATE" />
+		<result property="applyingFeedbackDate" column="APPLYING_FEEDBACK_DATE" />
+
+		<result property="feedbackConfirmDate" column="FEEDBACK_CONFIRM_DATE" />
+
+		<result property="comments" column="COMMENTS" />
+		<result property="archiveDate" column="ARCHIVE_DATE" />
+		<result property="archiveUser.userid" column="ARCHIVE_USERID" />
+		
+	</resultMap> -->
+
+	
+	<resultMap id="SupportTicketResultGetList" type="SupportTicket">
+		<result property="stNo" column="ST_NO"/>
+		
+		<!-- 申请人 -->
+		<association property="applicant" select="SupportTicket.getUserById" column="APPLICANT"/>
+		<result property="supportContent" column="SUPPORT_CONTENT"/>
+		<!-- 技术支持人信息 -->
+		<association property="lstSupportLeaders" select="SupportLeaderRelation.querySupportLeaderByStId" column="ID"/>
+		<!-- 单位 -->
+		<association property="supportDeptList" select="SupportDept.queryDepartmentByStId" column="ID"/>
+		
+		<result property="devScheDate" column="DEV_SCHE_DATE"/>
+		<result property="psgScheDate" column="PSG_SCHE_DATE"/>
+		<result property="stStatus" column="ST_STATUS"/>
+		<result property="region" column="REGION"/>
+		<result property="serialNumber" column="SERIAL_NUMBER"/>
+		<result property="id" column="ID"/>
+		<result property="devDsScheDate" column="DEV_DS_SCHE_DATE"/>
+		<result property="devDdScheDate" column="DEV_DD_SCHE_DATE"/>
+		<result property="devDtScheDate" column="DEV_DT_SCHE_DATE"/>
+		<result property="psgDsScheDate" column="PSG_DS_SCHE_DATE"/>
+		<result property="psgIsScheDate" column="PSG_IS_SCHE_DATE"/>
+
+		<result property="psgCompDate" column="PSG_COMP_DATE"/>
+		<result property="devCompDate" column="DEV_COMP_DATE"/>
+		<result property="psgDsCompDate" column="PSG_DS_COMP_DATE"/>
+		<result property="psgIsCompDate" column="PSG_IS_COMP_DATE"/>
+		<result property="devDsCompDate" column="DEV_DS_COMP_DATE"/>
+		<result property="devDdCompDate" column="DEV_DD_COMP_DATE"/>
+		<result property="devDtCompDate" column="DEV_DT_COMP_DATE"/>
+		<result property="applyingFeedbackDate" column="APPLYING_FEEDBACK_DATE"/>
+
+		<result property="feedbackConfirmDate" column="FEEDBACK_CONFIRM_DATE"/>
+
+		<result property="comments" column="COMMENTS"/>
+		<result property="archiveDate" column="ARCHIVE_DATE"/>
+		<result property="archiveUser.userid" column="ARCHIVE_USERID"/>
+		<result property="lastUpdateDate" column="last_update_date"/>
+		<result property="archive_code" column="archive_code"/>
+		<result property="applyDate" column="apply_date"/>
+	</resultMap>
+	
+	
+	<select id="SupportTicket.getUserById" parameterType="Integer" resultMap="userResult">
+		select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		,a.jzlbmc,a.jzlbdm	
+		from t_user a,t_department d 
+		where  d.departid=a.departid
+		and a.userid=#{value}
+		order by a.userid,a.departid
+	</select>
+	
+	<!-- 支持单插入 -->
+	<insert id="SupportTicket.insert" parameterType="SupportTicket">
+		insert into
+		T_TS_TECH_SUPPORT
+		(
+		<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+
+
+		)
+		values (
+		<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+
+		)
+	</insert>
+
+	<!-- 支持单修改 -->
+	<update id="SupportTicket.update" parameterType="SupportTicket">
+		update
+		T_TS_TECH_SUPPORT set ID=id 
+
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+
+		where ID = #{id}
+	</update>
+
+	<!-- 删除单个支持单 -->
+	<delete id="SupportTicket.delete" parameterType="SupportTicket">
+		delete from
+		T_TS_TECH_SUPPORT where ID = #{id}
+	</delete>
+	
+	<sql id="SupportTicketWhere">
+	
+		<if test="region != null and region != ''">and
+			t.region=#{region}
+		</if>
+		<!-- 默认地区范围 -->
+		<if test="region == null or region == ''">and
+			<!--
+		Sorry, I can`t migrate	user_region_list
+		See console output for further details 
+	-->
+			
+		</if>
+		
+		<if test="stStatus != null and stStatus != ''">and
+			t.ST_STATUS=#{stStatus}
+		</if>
+		<if test="id != null and id != ''">and
+			t.id=#{id}
+		</if>
+		<if test="stNo != null and stNo != ''">and
+			t.ST_NO like '${stNo}%'
+		</if>
+		
+	</sql>
+	<sql id="SupportTicketPageWhere">
+		<include refid="SupportTicketWhere"/>
+		
+<!-- 	 	<isNotEmpty prepend="and" property="supportLeader.userid" > -->
+<!-- 	 		 u.userid = t.SUPPORT_LEADER -->
+<!-- 	 	</isNotEmpty> -->
+	 	 
+<!-- 	 	<isNotEmpty prepend="and" property="applicant.userid"> -->
+<!-- 	 		 a.userid = t.APPLICANT -->
+<!-- 	 	</isNotEmpty> -->
+	 	
+		
+		<if test="trackDateFrom != null and trackDateFrom != ''">and
+			tr.tracking_Date &gt;= #{trackDateFrom}
+		</if>
+		<if test="trackDateTo != null and trackDateTo != ''">and
+			tr.tracking_Date &lt;= #{trackDateTo}
+		</if>
+		<if test="type != null and type != ''">and
+			tr.type = #{type} and tr.st_id = t.id
+		</if>
+		<if test="applyDateFrom != null and applyDateFrom != ''">and
+			trunc(apply_date,'dd') &gt;= #{applyDateFrom}
+		</if>
+		<if test="applyDateTo != null and applyDateTo != ''">and
+			trunc(apply_date,'dd') &lt;= #{applyDateTo}
+		</if>
+		<if test="lstSupportLeaders != null and lstSupportLeaders != ''">and
+			ssmap.ST_ID=t.id
+			<if test="lstSupportLeaders != null and lstSupportLeaders != ''">and
+				
+					ssmap.SL_ID in  <foreach collection="lstSupportLeaders" item="item" close=")" open="(">
+						#{item.userid}
+					</foreach>
+			</if>
+		</if>
+		
+<!-- 		<isNotEmpty prepend="and" property="limitUserDeparement"> -->
+<!-- 			a.userid=ssmap.sl_id -->
+<!-- 			and  -->
+<!-- 			a.departid=#{limitDeparement} -->
+<!-- 		</isNotEmpty> -->
+		<if test="limitUserDeparement != null and limitUserDeparement != ''">and
+			std.st_id = t.id
+			and
+			std.DEPT_ID= d.departid
+			and d.departcode = #{limitDeparement}
+		</if>
+		<if test="applicant != null and applicant.userid != null and applicant.userid != ''">and
+			t.applicant=#{applicant.userid}
+			<if test="tracking_person != null and tracking_person != ''"> or
+				tr.processor = #{tracking_person}
+			</if>
+		</if>
+		<!-- ++ 意见回复人 -->
+		<if test="tracking_person != null and tracking_person != ''">and
+			tr.processor = #{tracking_person}
+			<if test="applicant != null and applicant.userid != null and applicant.userid != ''"> or
+				t.applicant=#{applicant.userid}
+			</if>
+		</if>
+		<!-- __ 意见回复人 -->
+		<!-- ++ 使用最后修改时间 -->
+		<if test="use_last_update_day != null and use_last_update_day != ''">and
+			<if test="last_update_day != null and last_update_day != ''">
+				t.last_update_date &lt;= sysdate - #{last_update_day}
+			</if>
+		</if>
+		<!-- __ 使用最后修改时间 -->
+	</sql>
+
+	<sql id="SupportTicketFrom">
+		<if test="join_tracking != null and join_tracking != ''">,
+		 		T_TS_TRACKING tr
+		 </if>
+		 
+		 <if test="lstSupportLeaders != null and lstSupportLeaders != ''">,
+		 	T_TS_STSL_MAP ssmap
+		 </if>
+		 <if test="limitUserDeparement != null and limitUserDeparement != ''">,
+<!-- 		 	t_user a -->
+<!-- 	 	<isEmpty prepend="," property="lstSupportLeaders"> -->
+<!-- 		 	T_TS_STSL_MAP ssmap -->
+<!-- 		 </isEmpty> -->
+			T_TS_STDEPT_MAPPING std,
+			t_department d
+		 </if>
+	</sql>
+	<!-- 获取支持单列表 不分页 -->
+	<select id="SupportTicket.getList" parameterType="SupportTicket" resultMap="SupportTicketResultGetList">
+		select t.*
+		 from T_TS_TECH_SUPPORT t 
+		where 1=1
+		
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+
+	<!-- 获取单个支持单 -->
+	<select id="SupportTicket.get" parameterType="SupportTicket" resultMap="SupportTicketResultGetList">
+		select t.*
+		 from T_TS_TECH_SUPPORT t
+		  where t.id=#{id}
+	</select>
+
+<!-- 	获取支持单列表 分页 -->
+	<select id="SupportTicket.getListForPage" parameterType="map" resultMap="SupportTicketResultGetList">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select distinct 
+				t.ST_NO,
+
+				t.APPLICANT,
+				
+				dbms_lob.substr(t.SUPPORT_CONTENT,10000) SUPPORT_CONTENT,
+				
+				t.SUPPORT_LEADER,
+				
+				t.DEV_SCHE_DATE,
+				
+				t.PSG_SCHE_DATE,
+				
+				t.ST_STATUS,
+				
+				t.REGION,
+				
+				t.SERIAL_NUMBER,
+				
+				t.ID,
+				
+				t.DEV_DS_SCHE_DATE,
+				
+				t.DEV_DD_SCHE_DATE,
+				t.DEV_DT_SCHE_DATE,
+				
+				t.PSG_DS_SCHE_DATE,
+				
+				t.PSG_IS_SCHE_DATE,
+				
+				t.PSG_COMP_DATE,
+				
+				t.DEV_COMP_DATE,
+				
+				
+				t.APPLYING_FEEDBACK_DATE,
+				
+				t.PSG_DS_COMP_DATE,
+				
+				t.PSG_IS_COMP_DATE,
+				
+				t.DEV_DS_COMP_DATE,
+				
+				t.DEV_DD_COMP_DATE,
+				t.DEV_DT_COMP_DATE, 
+				t.FEEDBACK_CONFIRM_DATE,
+				
+				t.COMMENTS,
+				
+				t.ARCHIVE_DATE,
+				
+				t.ARCHIVE_USERID,
+				t.last_update_date,
+				t.archive_code,
+				t.apply_date
+
+
+<!-- 		, -->
+<!-- 			<isNotEmpty property="supportLeader.userid"> -->
+<!-- 			u.username  SUPPORT_LEADER_NAME , -->
+<!-- 			u.mobilephone SUPPORT_LEADER_MOBILEPHONE, -->
+<!-- 		</isNotEmpty> -->
+<!-- 		<isEmpty property="supportLeader.userid"> -->
+<!-- 			'' SUPPORT_LEADER_NAME , -->
+<!-- 			'' SUPPORT_LEADER_MOBILEPHONE, -->
+<!-- 		</isEmpty> -->
+<!-- 		<isNotEmpty property="applicant.userid"> -->
+<!-- 			a.username  APPLICANT_NAME, -->
+<!-- 			a.mobilephone APPLICANT_MOBILEPHONE -->
+<!-- 		</isNotEmpty> -->
+<!-- 		<isEmpty property="applicant.userid"> -->
+<!-- 			''  APPLICANT_NAME, -->
+<!-- 			'' APPLICANT_MOBILEPHONE -->
+<!-- 		</isEmpty> -->
+		 from T_TS_TECH_SUPPORT t 
+		
+		 <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	
+	<select id="SupportTicket.getListForPageCount" parameterType="map" resultType="Integer">
+		select count(distinct t.st_no) from T_TS_TECH_SUPPORT t
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

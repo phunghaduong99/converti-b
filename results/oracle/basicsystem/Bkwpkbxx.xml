@@ -1,0 +1,331 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bkwpkbxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<resultMap id="bkwpkbxxResult" type="bkwpkbxx">
+		<result property="bkwpjbxxid" column="bkwpjbxxid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="bkwplxdm" column="bkwplxdm"/>
+		<result property="bkwplx" column="bkwplx"/>
+		<result property="bkwpmc" column="bkwpmc"/>
+		<result property="bkwpms" column="bkwpms"/>
+		<result property="fwdw" column="fwdw"/>
+		<result property="fwdwbm" column="fwdwbm"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="tbbh" column="tbbh"/>
+		<result property="tbsj2" column="tbsj2"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="cljg" column="cljg"/>
+		<result property="bkr" column="bkr"/>
+		<result property="bkczy" column="bkczy"/>
+		<result property="bkczsj" column="bkczsj"/>
+		<result property="bkdqsj" column="bkdqsj"/>
+		<result property="bkfwbm" column="bkfwbm"/>
+		<result property="bkfw" column="bkfw"/>
+		<result property="bkspyj" column="bkspyj"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+		<result property="sftyfb" column="sftyfb"/>
+		<result property="spdw" column="spdw"/>
+		<result property="spr2" column="spr2"/>
+		<result property="sprq" column="sprq"/>
+		<result property="qqckbs" column="qqckbs"/>
+		<result property="ckbs" column="ckbs"/>
+		<result property="ckyy" column="ckyy"/>
+		<result property="cksj" column="cksj"/>
+		<result property="ckr" column="ckr"/>
+		<result property="ckczy" column="ckczy"/>
+		<result property="ckczsj" column="ckczsj"/>
+		<result property="ckbmbm" column="ckbmbm"/>
+		<result property="ckbmmc" column="ckbmmc"/>
+		<result property="ckspdw" column="ckspdw"/>
+		<result property="ckspr" column="ckspr"/>
+		<result property="ckspyj" column="ckspyj"/>
+		<result property="cksprq" column="cksprq"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="fsbs" column="fsbs"/>
+		<result property="bkdxzp" column="bkdxzp"/>
+		<result property="wpjp" column="wpjp"/>
+		
+		<result property="bkcl.bkclid" column="bkclid"/>
+		<result property="bkcl.cllxdm" column="cllxdm"/>
+		<result property="bkcl.cllx" column="cllx"/>
+		<result property="bkcl.clpp" column="clpp"/>
+		<result property="bkcl.clxh" column="clxh"/>
+		<result property="bkcl.hpzldm" column="hpzldm"/>
+		<result property="bkcl.hpzl" column="hpzl"/>
+		<result property="bkcl.hphm" column="hphm"/>
+		<result property="bkcl.csys" column="csys"/>
+		<result property="bkcl.syr" column="syr"/>
+		<result property="bkcl.ccdjrq" column="ccdjrq"/>
+		<result property="bkcl.fdjh" column="fdjh"/>
+		<result property="bkcl.clsbdh" column="clsbdh"/>
+		<result property="bkcl.cjh" column="cjh"/>
+		
+		<result property="bksj.bksjid" column="bksjid"/>
+		<result property="bksj.sjch" column="sjch"/>
+		<result property="bksj.pp" column="pp"/>
+		<result property="bksj.xh" column="xh"/>
+		<result property="bksj.ys" column="ys"/>
+		
+		<result property="shjg" column="shjg"/>
+		<result property="shyj" column="shyj"/>
+		
+		
+	</resultMap>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<resultMap id="bkwpkbxxListResult" type="bkwpkbxx">
+		<result property="bkwpjbxxid" column="bkwpjbxxid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="bkwplxdm" column="bkwplxdm"/>
+		<result property="bkwplx" column="bkwplx"/>
+		<result property="bkwpmc" column="bkwpmc"/>
+		<result property="bkwpms" column="bkwpms"/>
+		<result property="fwdw" column="fwdw"/>
+		<result property="fwdwbm" column="fwdwbm"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="tbbh" column="tbbh"/>
+		<result property="tbsj2" column="tbsj2"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="cljg" column="cljg"/>
+		<result property="bkr" column="bkr"/>
+		<result property="bkczy" column="bkczy"/>
+		<result property="bkczsj" column="bkczsj"/>
+		<result property="bkdqsj" column="bkdqsj"/>
+		<result property="bkfwbm" column="bkfwbm"/>
+		<result property="bkfw" column="bkfw"/>
+		<result property="bkspyj" column="bkspyj"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+		<result property="sftyfb" column="sftyfb"/>
+		<result property="spdw" column="spdw"/>
+		<result property="spr2" column="spr2"/>
+		<result property="sprq" column="sprq"/>
+		<result property="qqckbs" column="qqckbs"/>
+		<result property="ckbs" column="ckbs"/>
+		<result property="ckyy" column="ckyy"/>
+		<result property="cksj" column="cksj"/>
+		<result property="ckr" column="ckr"/>
+		<result property="ckczy" column="ckczy"/>
+		<result property="ckczsj" column="ckczsj"/>
+		<result property="ckbmbm" column="ckbmbm"/>
+		<result property="ckbmmc" column="ckbmmc"/>
+		<result property="ckspdw" column="ckspdw"/>
+		<result property="ckspr" column="ckspr"/>
+		<result property="ckspyj" column="ckspyj"/>
+		<result property="cksprq" column="cksprq"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="fsbs" column="fsbs"/>
+	</resultMap>
+	<sql id="t_bkwpjbxxWhere">
+			<if test="bkwpjbxxid != null and bkwpjbxxid != ''">and
+				a.bkwpjbxxid=#{bkwpjbxxid}
+			</if>
+	</sql>
+	<sql id="t_bkwpjbxxPageWhere">
+	    <if test="bkwpmc != null and bkwpmc != ''">and 
+			a.bkwpmc like '%${bkwpmc}%'
+		</if>
+		<if test="wpjp != null and wpjp != ''">and 
+			a.wpjp like '%${wpjp}%'
+		</if>
+		<if test="bkwplxdm != null and bkwplxdm != ''">and 
+			a.bkwplxdm =#{bkwplxdm}
+		</if>
+		<if test="bkczsjks != null and bkczsjks != ''">and 
+			a.bkczsj &gt;=#{bkczsjks,jdbcType=TIMESTAMP}
+		</if>
+		<if test="bkczsjjs != null and bkczsjjs != ''">and 
+			a.bkczsj &lt;#bkczsjjs:DATE#+1
+		</if>
+		<if test="bkfwbm != null and bkfwbm != ''">and 
+			a.bkfwbm =#{bkfwbm}
+		</if>
+		<if test="clpp != null and clpp != ''">and 
+			b.clpp=#{clpp}
+		</if>
+		<if test="clxh != null and clxh != ''">and 
+			b.clxh like '%${clxh}%'
+		</if>
+		<if test="hphm != null and hphm != ''">and 
+			b.hphm like '%${hphm}%'
+		</if>
+		<if test="fdjh != null and fdjh != ''">and 
+			b.fdjh like '%${fdjh}%'
+		</if>
+		<if test="cjh != null and cjh != ''">and 
+			b.cjh like '%${cjh}%'
+		</if>
+		<if test="pp != null and pp != ''">and 
+			s.pp =#{pp}
+		</if>
+		<if test="xh != null and xh != ''">and 
+			s.xh like '%${xh}%'
+		</if>
+		<if test="sjch != null and sjch != ''">and 
+			s.sjch like '%${sjch}%'
+		</if>
+		<if test="fwdwbm1 != null and fwdwbm1 != ''">and 
+			a.fwdwbm like '${fwdwbm1}%'
+		</if>
+		<if test="fwdwbm != null and fwdwbm != ''">and 
+			a.fwdwbm = #{fwdwbm}
+		</if>
+		<if test="shjg != null and shjg != ''">and 
+			a.shjg =#{shjg}
+		</if>
+		<if test="ckbs != null and ckbs != ''">and 
+			a.ckbs =#{ckbs}
+		</if>
+		<if test="wpqp != null and wpqp != ''">and 
+			a.wpqp like '%${wpqp}%'
+		</if>
+		<if test="hylbdm != null and hylbdm != ''">and 
+			a.hylbdm = #{hylbdm}
+		</if>
+		<include refid="t_bkwpjbxxWhere"/>	
+	</sql>
+	<sql id="t_bkwpjbxxListWhere">
+		<include refid="t_bkwpjbxxWhere"/>	</sql>
+	<sql id="t_bkwpjbxxSelectWhere">
+		<include refid="t_bkwpjbxxWhere"/>	</sql>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<insert id="insertBkwpkbxx" parameterType="bkwpkbxx">
+		insert into t_bkwpjbxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<update id="updateBkwpkbxx" parameterType="bkwpkbxx">
+		update t_bkwpjbxx a set a.bkwpjbxxid=a.bkwpjbxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<delete id="deleteBkwpkbxx" parameterType="bkwpkbxx">
+		delete from t_bkwpjbxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<select id="getBkwpkbxxList" parameterType="map" resultMap="bkwpkbxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bkwpjbxxid bkwpjbxxid,a.hylbdm hylbdm,a.hylb hylb,a.bkwplxdm bkwplxdm,a.bkwplx bkwplx,a.bkwpmc bkwpmc,a.bkwpms bkwpms,
+		a.fwdw fwdw,a.fwdwbm fwdwbm,a.ajlbbm ajlbbm,a.ajlb ajlb,a.tbbh tbbh,a.tbsj2 tbsj2,a.jyaq jyaq,a.cljg cljg,a.bkr bkr,a.bkczy bkczy,
+		a.bkczsj bkczsj,a.bkdqsj bkdqsj,a.bkfwbm bkfwbm,a.bkfw bkfw,a.bkspyj bkspyj,a.lxr lxr,a.lxfs lxfs,a.sftyfb sftyfb,a.spdw spdw,
+		a.spr2 spr2,a.sprq sprq,a.qqckbs qqckbs,a.ckbs ckbs,a.ckyy ckyy,a.cksj cksj,a.ckr ckr,a.ckczy ckczy,a.ckczsj ckczsj,
+		a.ckbmbm ckbmbm,a.ckbmmc ckbmmc,a.ckspdw ckspdw,a.ckspr ckspr,a.ckspyj ckspyj,a.cksprq cksprq,a.xzqh xzqh,a.fsbs fsbs
+		from t_bkwpjbxx a,t_bkcl b, t_bksj s
+		where a.bkwpjbxxid = b.bkwpjbxxid(+)  and a.bkwpjbxxid = s.bkwpjbxxid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<select id="getBkwpkbxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bkwpjbxx a,t_bkcl b, t_bksj s
+		where  a.bkwpjbxxid = b.bkwpjbxxid(+)  and a.bkwpjbxxid = s.bkwpjbxxid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<select id="getBkwpkbxxListNoPage" parameterType="bkwpkbxx" resultMap="bkwpkbxxListResult">
+		select a.bkwpjbxxid bkwpjbxxid,a.hylbdm hylbdm,a.hylb hylb,a.bkwplxdm bkwplxdm,a.bkwplx bkwplx,a.bkwpmc bkwpmc,a.bkwpms bkwpms,a.fwdw fwdw,a.fwdwbm fwdwbm,a.ajlbbm ajlbbm,a.ajlb ajlb,a.tbbh tbbh,a.tbsj2 tbsj2,a.jyaq jyaq,a.cljg cljg,a.bkr bkr,a.bkczy bkczy,a.bkczsj bkczsj,a.bkdqsj bkdqsj,a.bkfwbm bkfwbm,a.bkfw bkfw,a.bkspyj bkspyj,a.lxr lxr,a.lxfs lxfs,a.sftyfb sftyfb,a.spdw spdw,a.spr2 spr2,a.sprq sprq,a.qqckbs qqckbs,a.ckbs ckbs,a.ckyy ckyy,a.cksj cksj,a.ckr ckr,a.ckczy ckczy,a.ckczsj ckczsj,a.ckbmbm ckbmbm,a.ckbmmc ckbmmc,a.ckspdw ckspdw,a.ckspr ckspr,
+		a.ckspyj ckspyj,a.cksprq cksprq,a.xzqh xzqh,a.fsbs fsbs
+		from t_bkwpjbxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bkwpjbxxid
+	</select>
+	<!--布控物品基本信息(t_bkwpjbxx)-->
+	<select id="getBkwpkbxx" parameterType="bkwpkbxx" resultMap="bkwpkbxxResult">
+		select a.bkwpjbxxid bkwpjbxxid,a.hylbdm hylbdm,a.hylb hylb,a.bkwplxdm bkwplxdm,a.bkwplx bkwplx,a.bkwpmc bkwpmc,a.bkwpms bkwpms,
+		a.fwdw fwdw,a.fwdwbm fwdwbm,a.ajlbbm ajlbbm,a.ajlb ajlb,a.tbbh tbbh,a.tbsj2 tbsj2,a.jyaq jyaq,a.cljg cljg,a.bkr bkr,a.bkczy bkczy,
+		a.bkczsj bkczsj,a.bkdqsj bkdqsj,a.bkfwbm bkfwbm,a.bkfw bkfw,a.bkspyj bkspyj,a.lxr lxr,a.lxfs lxfs,a.sftyfb sftyfb,a.spdw spdw,
+		a.spr2 spr2,a.sprq sprq,a.qqckbs qqckbs,a.ckbs ckbs,a.ckyy ckyy,a.cksj cksj,a.ckr ckr,a.ckczy ckczy,a.ckczsj ckczsj,
+		a.ckbmbm ckbmbm,a.ckbmmc ckbmmc,a.ckspdw ckspdw,a.ckspr ckspr,a.ckspyj ckspyj,a.cksprq cksprq,a.xzqh xzqh,a.fsbs fsbs,
+		a.bkdxzp bkdxzp,a.wpjp wpjp,
+		b.bkclid bkclid, b.cllxdm cllxdm, b.cllx cllx, b.clpp clpp, b.clxh clxh, b.hpzldm hpzldm, b.hpzl hpzl, b.hphm hphm, b.csys csys,
+		b.syr syr, b.ccdjrq ccdjrq, b.fdjh fdjh, b.clsbdh clsbdh, b.cjh cjh,
+		s.bksjid bksjid, s.sjch sjch, s.pp pp, s.xh xh, s.ys ys,
+		a.shjg shjg, a.shyj shyj
+		from t_bkwpjbxx a,t_bkcl b, t_bksj s
+		where a.bkwpjbxxid = b.bkwpjbxxid(+)  and a.bkwpjbxxid = s.bkwpjbxxid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bkwpjbxxid
+	</select>
+</mapper>

@@ -1,0 +1,176 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bafwht
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--保安服务合同(t_bafwht)-->
+	<resultMap id="bafwhtResult" type="bafwht">
+		<result property="bafwhtid" column="bafwhtid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="bafwgsmc" column="bafwgsmc"/>
+		<result property="baryzgzsmc" column="baryzgzsmc"/>
+		<result property="barypxjsrq" column="barypxjsrq"/>
+		<result property="htbh" column="htbh"/>
+		<result property="qdrq" column="qdrq"/>
+		<result property="jsrq" column="jsrq"/>
+		<result property="htyxq" column="htyxq"/>
+		<result property="barypxnr" column="barypxnr"/>
+		
+		<result property="balxdm" column="balxdm"/>
+		<result property="balxmc" column="balxmc"/>
+		<result property="fzjgmc" column="fzjgmc"/>
+	</resultMap>
+	<!--保安服务合同(t_bafwht)-->
+	<resultMap id="bafwhtListResult" type="bafwht">
+		<result property="bafwhtid" column="bafwhtid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="bafwgsmc" column="bafwgsmc"/>
+		<result property="baryzgzsmc" column="baryzgzsmc"/>
+		<result property="barypxjsrq" column="barypxjsrq"/>
+		<result property="htbh" column="htbh"/>
+		<result property="qdrq" column="qdrq"/>
+		<result property="jsrq" column="jsrq"/>
+		<result property="htyxq" column="htyxq"/>
+		<result property="barypxnr" column="barypxnr"/>
+		
+		<result property="balxdm" column="balxdm"/>
+		<result property="balxmc" column="balxmc"/>
+		<result property="fzjgmc" column="fzjgmc"/>
+	</resultMap>
+	<sql id="t_bafwhtWhere">
+			<if test="bafwhtid != null and bafwhtid != ''">and
+				a.bafwhtid=#{bafwhtid}
+			</if>
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+	</sql>
+	<sql id="t_bafwhtPageWhere">
+		<include refid="t_bafwhtWhere"/>	</sql>
+	<sql id="t_bafwhtListWhere">
+		<include refid="t_bafwhtWhere"/>	</sql>
+	<sql id="t_bafwhtSelectWhere">
+		<include refid="t_bafwhtWhere"/>	</sql>
+	<!--保安服务合同(t_bafwht)-->
+	<insert id="insertBafwht" parameterType="bafwht">
+		insert into t_bafwht (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--保安服务合同(t_bafwht)-->
+	<update id="updateBafwht" parameterType="bafwht">
+		update t_bafwht a set a.bafwhtid=a.bafwhtid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--保安服务合同(t_bafwht)-->
+	<delete id="deleteBafwht" parameterType="bafwht">
+		delete from t_bafwht a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--保安服务合同(t_bafwht)-->
+	<select id="getBafwhtList" parameterType="map" resultMap="bafwhtListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bafwhtid bafwhtid,a.qyid qyid,a.bafwgsmc bafwgsmc,a.baryzgzsmc baryzgzsmc,a.barypxjsrq barypxjsrq,a.htbh htbh,a.qdrq qdrq,a.jsrq jsrq,a.htyxq htyxq,a.barypxnr barypxnr,
+		a.balxdm balxdm, a.balxmc balxmc, a.fzjgmc fzjgmc
+		from t_bafwht a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--保安服务合同(t_bafwht)-->
+	<select id="getBafwhtListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bafwht a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--保安服务合同(t_bafwht)-->
+	<select id="getBafwhtListNoPage" parameterType="bafwht" resultMap="bafwhtListResult">
+		select a.bafwhtid bafwhtid,a.qyid qyid,a.bafwgsmc bafwgsmc,a.baryzgzsmc baryzgzsmc,a.barypxjsrq barypxjsrq,a.htbh htbh,a.qdrq qdrq,a.jsrq jsrq,a.htyxq htyxq,a.barypxnr barypxnr,
+		a.balxdm balxdm, a.balxmc balxmc, a.fzjgmc fzjgmc
+		from t_bafwht a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bafwhtid,a.qyid
+	</select>
+	<!--保安服务合同(t_bafwht)-->
+	<select id="getBafwht" parameterType="bafwht" resultMap="bafwhtResult">
+		select a.bafwhtid bafwhtid,a.qyid qyid,a.bafwgsmc bafwgsmc,a.baryzgzsmc baryzgzsmc,a.barypxjsrq barypxjsrq,a.htbh htbh,a.qdrq qdrq,a.jsrq jsrq,a.htyxq htyxq,a.barypxnr barypxnr,
+		a.balxdm balxdm, a.balxmc balxmc, a.fzjgmc fzjgmc
+		from t_bafwht a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bafwhtid,a.qyid
+	</select>
+</mapper>

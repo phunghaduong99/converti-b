@@ -1,0 +1,193 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	khxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--客户信息表(t_khxx)-->
+	<resultMap id="khxxResult" type="khxx">
+		<result property="khxxid" column="khxxid"/>
+		<result property="xm" column="xm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="gjdm" column="gjdm"/>
+		<result property="gj" column="gj"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="cyzjdm" column="cyzjdm"/>
+		<result property="cyzj" column="cyzj"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="biduiflag" column="biduiflag"/>
+		<result property="zt" column="zt"/>
+	</resultMap>
+	<!--客户信息表(t_khxx)-->
+	<resultMap id="khxxListResult" type="khxx">
+		<result property="khxxid" column="khxxid"/>
+		<result property="xm" column="xm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="gjdm" column="gjdm"/>
+		<result property="gj" column="gj"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="cyzjdm" column="cyzjdm"/>
+		<result property="cyzj" column="cyzj"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="biduiflag" column="biduiflag"/>
+		<result property="zt" column="zt"/>
+	</resultMap>
+	<sql id="t_khxxWhere">
+		<if test="khxxid != null and khxxid != ''">and
+			a.khxxid=#{khxxid}
+		</if>
+		<if test="zjhm != null and zjhm != ''">and
+			a.zjhm=#{zjhm}
+		</if>
+	</sql>
+	<sql id="t_khxxPageWhere">
+		<include refid="t_khxxWhere"/>	</sql>
+	<sql id="t_khxxListWhere">
+		<include refid="t_khxxWhere"/>	</sql>
+	<sql id="t_khxxSelectWhere">
+		<include refid="t_khxxWhere"/>	</sql>
+	<!--客户信息表(t_khxx)-->
+	<insert id="insertKhxx" parameterType="khxx">
+		insert into t_khxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--客户信息表(t_khxx)-->
+	<update id="updateKhxx" parameterType="khxx">
+		update t_khxx a set a.khxxid=a.khxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--客户信息表(t_khxx)-->
+	<delete id="deleteKhxx" parameterType="khxx">
+		delete from t_khxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--客户信息表(t_khxx)-->
+	<select id="getKhxxList" parameterType="map" resultMap="khxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.khxxid khxxid,a.xm xm,a.lxdh lxdh,a.mzdm mzdm,a.minzu minzu,a.gjdm gjdm,a.gj gj,a.xbdm xbdm,a.xb xb,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.biduiflag biduiflag,a.zt zt
+		from t_khxx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--客户信息表(t_khxx)-->
+	<select id="getKhxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_khxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--客户信息表(t_khxx)-->
+	<select id="getKhxxListNoPage" parameterType="khxx" resultMap="khxxListResult">
+		select a.khxxid khxxid,a.xm xm,a.lxdh lxdh,a.mzdm mzdm,a.minzu minzu,a.gjdm gjdm,a.gj gj,a.xbdm xbdm,a.xb xb,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.biduiflag biduiflag,a.zt zt
+		from t_khxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.khxxid
+	</select>
+	<!--客户信息表(t_khxx)判断客户是否存在 -->
+	<select id="isKhxxExist" parameterType="khxx" resultMap="khxxListResult">
+		select a.khxxid khxxid,a.xm xm,a.lxdh lxdh,a.mzdm mzdm,a.minzu minzu,a.gjdm gjdm,a.gj gj,a.xbdm xbdm,a.xb xb,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.biduiflag biduiflag,a.zt zt
+		from t_khxx a
+		where 1=1 and a.zjhm=#{zjhm}
+	</select>
+	<!--客户信息表(t_khxx)-->
+	<select id="getKhxx" parameterType="khxx" resultMap="khxxResult">
+		select a.khxxid khxxid,a.xm xm,a.lxdh lxdh,a.mzdm mzdm,a.minzu minzu,a.gjdm gjdm,a.gj gj,a.xbdm xbdm,a.xb xb,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.biduiflag biduiflag,a.zt zt
+		from t_khxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--客户信息表(t_khxx)获得证件号码及国籍代码相同的客户信息中最新一条信息-->
+	<select id="getLatestKhxx" parameterType="khxx" resultMap="khxxResult">
+		select a.khxxid khxxid,a.xm xm,a.lxdh lxdh,a.mzdm mzdm,a.minzu minzu,a.gjdm gjdm,a.gj gj,a.xbdm xbdm,a.xb xb,a.hjdxz hjdxz,a.cyzjdm cyzjdm,a.cyzj cyzj,a.zjhm zjhm,a.biduiflag biduiflag,a.zt zt
+		from t_khxx a,
+			       (select max(t.khxxid) khxxid, t.zjhm, t.gjdm
+			          from t_khxx t
+			         group by t.zjhm, t.gjdm) b
+ 		where a.khxxid = b.khxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

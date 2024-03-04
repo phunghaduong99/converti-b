@@ -1,0 +1,180 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	zktjyb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--制卡统计月报(t_zktjyb)-->
+	<resultMap id="zktjybResult" type="zktjyb">
+		<result property="zktjybid" column="zktjybid"/>
+		<result property="cjdtjrq" column="cjdtjrq"/>
+		<result property="cjdbm" column="cjdbm"/>
+		<result property="cjdmc" column="cjdmc"/>
+		<result property="zkzxbm" column="zkzxbm"/>
+		<result property="zkzxmc" column="zkzxmc"/>
+		<result property="zks" column="zks"/>
+		<result property="yss" column="yss"/>
+		<result property="cys" column="cys"/>
+		<result property="dycws" column="dycws"/>
+		<result property="sfcws" column="sfcws"/>
+		<result property="ckcws" column="ckcws"/>
+		<result property="kpshs" column="kpshs"/>
+		<result property="wnjss" column="wnjss"/>
+		<result property="qt" column="qt"/>
+		<result property="dxrcws" column="dxrcws"/>
+		<result property="pjzkl" column="pjzkl"/>
+		<result property="pjfkl" column="pjfkl"/>
+		<result property="fkl" column="fkl"/>
+	</resultMap>
+	<!--制卡统计月报(t_zktjyb)-->
+	<resultMap id="zktjybListResult" type="zktjyb">
+		<result property="zktjybid" column="zktjybid"/>
+		<result property="cjdtjrq" column="cjdtjrq"/>
+		<result property="cjdbm" column="cjdbm"/>
+		<result property="cjdmc" column="cjdmc"/>
+		<result property="zkzxbm" column="zkzxbm"/>
+		<result property="zkzxmc" column="zkzxmc"/>
+		<result property="zks" column="zks"/>
+		<result property="yss" column="yss"/>
+		<result property="cys" column="cys"/>
+		<result property="dycws" column="dycws"/>
+		<result property="sfcws" column="sfcws"/>
+		<result property="ckcws" column="ckcws"/>
+		<result property="kpshs" column="kpshs"/>
+		<result property="wnjss" column="wnjss"/>
+		<result property="qt" column="qt"/>
+		<result property="dxrcws" column="dxrcws"/>
+		<result property="pjzkl" column="pjzkl"/>
+		<result property="pjfkl" column="pjfkl"/>
+		<result property="fkl" column="fkl"/>
+	</resultMap>
+	<sql id="t_zktjybWhere">
+			<if test="zktjybid != null and zktjybid != ''">and
+				a.zktjybid=#{zktjybid}
+			</if>
+	</sql>
+	<sql id="t_zktjybPageWhere">
+		<include refid="t_zktjybWhere"/>	</sql>
+	<sql id="t_zktjybListWhere">
+		<include refid="t_zktjybWhere"/>	</sql>
+	<sql id="t_zktjybSelectWhere">
+		<include refid="t_zktjybWhere"/>	</sql>
+	<!--制卡统计月报(t_zktjyb)-->
+	<insert id="insertZktjyb" parameterType="zktjyb">
+		insert into t_zktjyb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--制卡统计月报(t_zktjyb)-->
+	<update id="updateZktjyb" parameterType="zktjyb">
+		update t_zktjyb a set a.zktjybid=a.zktjybid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--制卡统计月报(t_zktjyb)-->
+	<delete id="deleteZktjyb" parameterType="zktjyb">
+		delete from t_zktjyb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--制卡统计月报(t_zktjyb)-->
+	<select id="getZktjybList" parameterType="map" resultMap="zktjybListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.zktjybid zktjybid,a.cjdtjrq cjdtjrq,a.cjdbm cjdbm,a.cjdmc cjdmc,a.zkzxbm zkzxbm,a.zkzxmc zkzxmc,a.zks zks,a.yss yss,a.cys cys,a.dycws dycws,a.sfcws sfcws,a.ckcws ckcws,a.kpshs kpshs,a.wnjss wnjss,a.qt qt,a.dxrcws dxrcws,a.pjzkl pjzkl,a.pjfkl pjfkl,a.fkl fkl
+		from t_zktjyb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--制卡统计月报(t_zktjyb)-->
+	<select id="getZktjybListCount" parameterType="map" resultType="int">
+		select count(1) a from t_zktjyb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--制卡统计月报(t_zktjyb)-->
+	<select id="getZktjybListNoPage" parameterType="zktjyb" resultMap="zktjybListResult">
+		select a.zktjybid zktjybid,a.cjdtjrq cjdtjrq,a.cjdbm cjdbm,a.cjdmc cjdmc,a.zkzxbm zkzxbm,a.zkzxmc zkzxmc,a.zks zks,a.yss yss,a.cys cys,a.dycws dycws,a.sfcws sfcws,a.ckcws ckcws,a.kpshs kpshs,a.wnjss wnjss,a.qt qt,a.dxrcws dxrcws,a.pjzkl pjzkl,a.pjfkl pjfkl,a.fkl fkl
+		from t_zktjyb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zktjybid
+	</select>
+	<!--制卡统计月报(t_zktjyb)-->
+	<select id="getZktjyb" parameterType="zktjyb" resultMap="zktjybResult">
+		select a.zktjybid zktjybid,a.cjdtjrq cjdtjrq,a.cjdbm cjdbm,a.cjdmc cjdmc,a.zkzxbm zkzxbm,a.zkzxmc zkzxmc,a.zks zks,a.yss yss,a.cys cys,a.dycws dycws,a.sfcws sfcws,a.ckcws ckcws,a.kpshs kpshs,a.wnjss wnjss,a.qt qt,a.dxrcws dxrcws,a.pjzkl pjzkl,a.pjfkl pjfkl,a.fkl fkl
+		from t_zktjyb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zktjybid
+	</select>
+</mapper>

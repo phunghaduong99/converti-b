@@ -1,0 +1,357 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	user
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--用户(t_user)-->
+	<resultMap id="userResult" type="user">
+		<result property="userid" column="userid"/>
+		<result property="departid" column="departid"/>
+		<result property="useraccount" column="useraccount"/>
+		<result property="username" column="username"/>
+		<result property="password" column="password"/>
+		<result property="userorder" column="userorder"/>
+		<result property="isvalid" column="isvalid"/>
+		<result property="usertype" column="usertype"/>
+		<result property="idnum" column="idnum"/>
+		<result property="mobilephone" column="mobilephone"/>
+		<result property="department.departname" column="departname"/>
+        <result property="department.departcode" column="departcode"/>
+        <result property="department.departfullcode" column="departfullcode"/>
+        <result property="department.parentdepartid" column="parentdepartid"/>
+        <result property="jzlbdm" column="jzlbdm"/>
+        <result property="jzlbmc" column="jzlbmc"/>
+	</resultMap>
+	<resultMap id="CAuserResult" type="user">
+		<result property="userid" column="userid"/>
+		<result property="departid" column="departid"/>
+		<result property="useraccount" column="useraccount"/>
+		<result property="username" column="username"/>
+		<result property="password" column="password"/>
+		<result property="userorder" column="userorder"/>
+		<result property="isvalid" column="isvalid"/>
+		<result property="usertype" column="usertype"/>
+		<result property="idnum" column="idnum"/>
+		<result property="mobilephone" column="mobilephone"/>
+		<result property="department.departname" column="departname"/>
+        <result property="department.departcode" column="departcode"/>
+        <result property="department.departfullcode" column="departfullcode"/>
+        <result property="department.parentdepartid" column="parentdepartid"/>
+        <result property="jzlbdm" column="jzlbdm"/>
+        <result property="jzlbmc" column="jzlbmc"/>
+        <result property="zsyxrq" column="zsyxrq"/>
+        <result property="zssqrq" column="zssqrq"/>
+        <result property="xm_syr" column="xm_syr"/>
+        <result property="ukeyid" column="ukeyid"/>
+        <result property="ssdwbm" column="ssdwbm"/>
+        <result property="ssdwmc" column="ssdwmc"/>
+        <result property="cyrybh" column="cyrybh"/>
+	</resultMap>
+	
+	<resultMap id="getPasswordByUseraccountResult" type="user">
+		<result property="password" column="password"/>
+	</resultMap>
+	<!--用户(t_user)-->
+	<resultMap id="userListResult" type="user">
+		<result property="userid" column="userid"/>
+		<result property="departid" column="departid"/>
+		<result property="useraccount" column="useraccount"/>
+		<result property="username" column="username"/>
+		<result property="password" column="password"/>
+		<result property="userorder" column="userorder"/>
+		<result property="isvalid" column="isvalid"/>
+		<result property="usertype" column="usertype"/>
+		<result property="idnum" column="idnum"/>
+		<result property="mobilephone" column="mobilephone"/>
+		<result property="department.departname" column="departname"/>
+        <result property="department.departcode" column="departcode"/>
+        <result property="department.departfullcode" column="departfullcode"/>
+        <result property="department.parentdepartid" column="parentdepartid"/>
+	</resultMap>
+	
+	<!--用户(t_user) 获得下一个排序号-->
+	<resultMap id="userorderResult" type="user">
+		<result property="userorder" column="userorder"/>
+	</resultMap>
+	
+	<resultMap id="getQybmByCyrybhResult" type="user">
+		<result property="ssdwbm" column="ssdwbm"/>
+		<result property="ssdwmc" column="ssdwmc"/>
+	</resultMap>
+	<sql id="t_userWhere">
+			<if test="userid != null and userid != ''">and
+				a.userid=#{userid}
+			</if>
+			<if test="departid != null and departid != ''">and
+				a.departid=#{departid}
+			</if>
+	</sql>
+	<sql id="t_userPageWhere">
+		<include refid="t_userWhere"/>	
+		<if test="username != null and username != ''">and
+		     a.username like  '%${username}%'
+		</if>
+		<if test="useraccount != null and useraccount != ''">and
+		     a.useraccount like  '%${useraccount}%'
+		</if>
+		<if test="usertype != null and usertype != ''">and
+		     a.userType =#{usertype}
+		</if>
+		<if test="jzlbdm != null and jzlbdm != ''">and
+		     a.jzlbdm =#{jzlbdm}
+		</if>
+		<!-- 角色名称筛选 -->
+		<if test="userRoles != null and userRoles != ''">and
+			exists (select ur.userid from t_user_role ur,t_role r 
+			where ur.userid = a.userid and r.roleid = ur.roleid and r.rolename in  <foreach collection="userRoles" item="item" separator="," close=")" open="(">
+				#{item}
+			</foreach>)
+		</if>
+		
+		<!-- ++ 按照多个单位代码筛选 -->
+		<if test="departcodes != null and departcodes != ''">and
+			<if test="is_recursive == &quot;true&quot;">
+				 <foreach collection="departcodes" item="item" separator="or">
+					d.departfullcode like '${item}%'
+				</foreach>
+			</if>
+			
+			<if test="is_recursive == &quot;false&quot;">
+				 <foreach collection="departcodes" item="item">
+					d.departcode = #{item}
+				</foreach>
+			</if>
+		</if>
+		<!-- __ 按照多个单位代码筛选  -->
+		</sql>
+	<sql id="t_userListWhere">
+		<include refid="t_userWhere"/>	</sql>
+	<sql id="t_userSelectWhere">
+		<include refid="t_userWhere"/>	
+		<if test="usertype != null and usertype != ''">and
+		     a.usertype=#{usertype}
+		</if>
+	</sql>
+	<!--用户(t_user)-->
+	<insert id="insertUser" parameterType="user">
+		insert into t_user (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--用户(t_user)-->
+	<update id="updateUser" parameterType="user">
+		update t_user a set userid=userid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--用户(t_user)-->
+	<delete id="deleteUser" parameterType="user">
+		delete from t_user a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--用户(t_user)-->
+	<select id="getUserList" parameterType="map" resultMap="userListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		( select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		from t_user a,t_department d 
+		where  d.departid=a.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--用户(t_user)-->
+	<select id="getUserListCount" parameterType="map" resultType="int">
+		select count(1) a from t_user a,t_department d 
+		where 1=1 and d.departid=a.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--用户(t_user)-->
+	<select id="getUserListNoPage" parameterType="user" resultMap="userListResult">
+		  select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		from t_user a,t_department d 
+		where  d.departid=a.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.userorder
+	</select>
+	<!--用户(t_user)-->
+	<select id="getUser" parameterType="user" resultMap="userResult">
+		select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		,a.jzlbmc,a.jzlbdm	
+		from t_user a,t_department d 
+		where  d.departid=a.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.userid,a.departid
+	</select>
+	<!--用户(t_user)-->
+	<select id="getPasswordByUseraccount" parameterType="user" resultMap="getPasswordByUseraccountResult">
+		select a.password password
+		from t_user a
+		where  1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!-- 根据账户取得用户 -->
+ <select id="checkUser" parameterType="user" resultMap="userResult">
+      select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		,a.jzlbmc,a.jzlbdm		
+		from t_user a,t_department d 
+		where  d.departid=a.departid and  a.useraccount= #{useraccount} 
+   </select>
+   <select id="checkCAUser" parameterType="user" resultMap="CAuserResult">
+      select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		,a.jzlbmc,a.jzlbdm,c.zsyxrq zsyxrq,c.zssqrq zssqrq,c.xm_syr xm_syr,c.ukeyid ukeyid,c.qybm ssdwbm,c.qymc ssdwmc,c.cyrybh cyrybh		
+		from t_user a,t_department d,t_ukey c 
+		where  d.departid=a.departid and  a.userid=c.userid and c.ukeyid=#{ukeyid} and c.zt='02'
+   </select>
+	<!--  获得所有兄弟节点最大排序号+1  -->
+  <select id="getNextUserorder" parameterType="user" resultMap="userorderResult">
+    	select nvl((max(a.userorder)+1),0) userorder from t_user a
+    	 where 1=1 
+    	 <if test="departid != null and departid != ''">and
+			a.departid = #{departid}
+		</if>
+  </select>
+  
+  <!--执行sql-->
+ <select id="getQybmByCyrybh" parameterType="user" resultMap="getQybmByCyrybhResult">
+		${ssdwbm}
+	</select>
+	<select id="getQymcByQybm" parameterType="user" resultMap="getQybmByCyrybhResult">
+		select  a.qymc ssdwmc,a.qybm ssdwbm from t_qyjbxx a
+    	 where 1=1 
+    	 <if test="ssdwbm != null and ssdwbm != ''">and
+			a.qybm = #{ssdwbm}
+		</if>
+	</select>
+	<!--用户(t_user)-->
+	<update id="updateUkeyUser" parameterType="user">
+		update t_user a set userid=userid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<sql id="t_userQyPageWhere">
+		<include refid="t_userWhere"/>	
+		<if test="usertype != null and usertype != ''">and
+		     ${usertype}
+		</if>
+		<if test="username != null and username != ''">and
+		     instr(a.username,#{username})&gt;0
+		</if>
+		<if test="useraccount != null and useraccount != ''">and
+		     instr(a.useraccount,#{useraccount})&gt;0
+		</if>
+		<if test="jzlbdm != null and jzlbdm != ''">and
+		     a.jzlbdm =#{jzlbdm}
+		</if>
+		</sql>
+	
+	<!--企业用户(t_user)-->
+	<select id="getUserQyOrGaList" parameterType="map" resultMap="userListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.userid userid,a.departid departid,a.useraccount useraccount,a.username username,a.password password,a.idnum idnum,a.mobilephone mobilephone,a.userorder userorder,a.isvalid isvalid,a.usertype usertype
+		,d.departname as departname,d.departcode as departcode , d.departfullcode as departfullcode,d.parentdepartid as parentdepartid
+		from t_user a,t_department d 
+		where  d.departid=a.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z 
+		) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业用户(t_user)-->
+	<select id="getUserQyOrGaListCount" parameterType="map" resultType="int">
+		select count(1) from t_user a,t_department d 
+		where  d.departid=a.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+</mapper>

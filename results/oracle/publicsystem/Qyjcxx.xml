@@ -1,0 +1,258 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyjcxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<resultMap id="qyjcxxResult" type="qyjcxx">
+		<result property="qyid" column="qyid"/>
+		<result property="qycfid" column="qycfid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qyjcrq" column="qyjcrq"/>
+		<result property="cfdjxh" column="cfdjxh"/>
+		<result property="cflbbm" column="cflbbm"/>
+		<result property="cflb" column="cflb"/>
+		<result property="jcmxlbdm" column="jcmxlbdm"/>
+		<result property="jcmxlb" column="jcmxlb"/>
+		<result property="xzcfpzwh" column="xzcfpzwh"/>
+		<result property="pzjgdm" column="pzjgdm"/>
+		<result property="pzjg" column="pzjg"/>
+		<result property="pzrbh" column="pzrbh"/>
+		<result property="pzrxm" column="pzrxm"/>
+		<result property="pzrq" column="pzrq"/>
+		<result property="zxrbh" column="zxrbh"/>
+		<result property="zxrxm" column="zxrxm"/>
+		<result property="zxrq" column="zxrq"/>
+		<result property="qkms" column="qkms"/>
+		<result property="yjly" column="yjly"/>
+		<result property="jcfd" column="jcfd"/>
+		<result property="bjcr" column="bjcr"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="scbz" column="scbz"/>
+	</resultMap>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<resultMap id="qyjcxxListResult" type="qyjcxx">
+		<result property="qymc" column="qymc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qyid" column="qyid"/>
+		<result property="qycfid" column="qycfid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qyjcrq" column="qyjcrq"/>
+		<result property="cfdjxh" column="cfdjxh"/>
+		<result property="cflbbm" column="cflbbm"/>
+		<result property="cflb" column="cflb"/>
+		<result property="jcmxlbdm" column="jcmxlbdm"/>
+		<result property="jcmxlb" column="jcmxlb"/>
+		<result property="xzcfpzwh" column="xzcfpzwh"/>
+		<result property="pzjgdm" column="pzjgdm"/>
+		<result property="pzjg" column="pzjg"/>
+		<result property="pzrbh" column="pzrbh"/>
+		<result property="pzrxm" column="pzrxm"/>
+		<result property="pzrq" column="pzrq"/>
+		<result property="zxrbh" column="zxrbh"/>
+		<result property="zxrxm" column="zxrxm"/>
+		<result property="zxrq" column="zxrq"/>
+		<result property="qkms" column="qkms"/>
+		<result property="yjly" column="yjly"/>
+		<result property="jcfd" column="jcfd"/>
+		<result property="bjcr" column="bjcr"/>
+		<result property="scbz" column="scbz"/>
+	</resultMap>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<resultMap id="qyjcxxListNoPageResult" type="qyjcxx">
+		<result property="qyid" column="qyid"/>
+		<result property="qycfid" column="qycfid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qyjcrq" column="qyjcrq"/>
+		<result property="cfdjxh" column="cfdjxh"/>
+		<result property="cflbbm" column="cflbbm"/>
+		<result property="cflb" column="cflb"/>
+		<result property="jcmxlbdm" column="jcmxlbdm"/>
+		<result property="jcmxlb" column="jcmxlb"/>
+		<result property="xzcfpzwh" column="xzcfpzwh"/>
+		<result property="pzjgdm" column="pzjgdm"/>
+		<result property="pzjg" column="pzjg"/>
+		<result property="pzrbh" column="pzrbh"/>
+		<result property="pzrxm" column="pzrxm"/>
+		<result property="pzrq" column="pzrq"/>
+		<result property="zxrbh" column="zxrbh"/>
+		<result property="zxrxm" column="zxrxm"/>
+		<result property="zxrq" column="zxrq"/>
+		<result property="qkms" column="qkms"/>
+		<result property="yjly" column="yjly"/>
+		<result property="jcfd" column="jcfd"/>
+		<result property="bjcr" column="bjcr"/>
+	</resultMap>
+	<sql id="t_qyjcxxWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="zxbz != null and zxbz != ''">and
+				t.zxbz=#{zxbz}
+			</if>
+			<if test="qycfid != null and qycfid != ''">and
+				a.qycfid=#{qycfid}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			<if test="qymc != null and qymc != ''">and
+				t.qymc like '%${qymc}%'
+			</if>
+			<if test="cflbbm != null and cflbbm != ''">and
+				a.cflbbm=#{cflbbm}
+			</if>
+			<if test="jcmxlbdm != null and jcmxlbdm != ''">and
+				a.jcmxlbdm=#{jcmxlbdm}
+			</if>
+			<if test="pzjgdm != null and pzjgdm != ''">and
+				a.pzjgdm like '%${pzjgdm}%'
+			</if>
+			<if test="cfdjxh != null and cfdjxh != ''">and
+				a.cfdjxh=#{cfdjxh}
+			</if>
+			<if test="xzcfpzwh != null and xzcfpzwh != ''">and
+				a.xzcfpzwh=#{xzcfpzwh}
+			</if>
+			<if test="qyjcrq != null and qyjcrq != ''">and
+					to_char(a.qyjcrq,'yyyy-MM-dd') &gt;=to_char(#{qyjcrq,jdbcType=TIMESTAMP},'yyyy-MM-dd')
+			</if>
+			<if test="qyjcrqzhi != null and qyjcrqzhi != ''">and
+				to_char(a.qyjcrq,'yyyy-MM-dd') &lt;=to_char(#{qyjcrqzhi,jdbcType=TIMESTAMP},'yyyy-MM-dd')||' 23:59:59'
+			</if>
+			
+	</sql>
+	<sql id="t_qyjcxxPageWhere">
+		<include refid="t_qyjcxxWhere"/>	</sql>
+	<sql id="t_qyjcxxListWhere">
+		<include refid="t_qyjcxxWhere"/>	</sql>
+	<sql id="t_qyjcxxSelectWhere">
+		<include refid="t_qyjcxxWhere"/>	</sql>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<insert id="insertQyjcxx" parameterType="qyjcxx">
+		insert into t_qyjcxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<update id="updateQyjcxx" parameterType="qyjcxx">
+		update t_qyjcxx a set a.qycfid=a.qycfid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<if test="qycfid != null">and
+				a.qycfid=#{qycfid}
+			</if>
+		<!--  
+		<dynamic prepend="">
+			<include refid="t_qyjcxxWhere" />
+		</dynamic>
+		-->
+	</update>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<delete id="deleteQyjcxx" parameterType="qyjcxx">
+		update t_qyjcxx a set a.scbz=1 where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<select id="getQyjcxxList" parameterType="map" resultMap="qyjcxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select t.qymc qymc,t.qybm qybm,a.scbz scbz,a.qyid qyid,a.qycfid qycfid,a.hylbdm hylbdm,a.hylb hylb,a.qyjcrq qyjcrq,a.cfdjxh cfdjxh,a.cflbbm cflbbm,a.cflb cflb,a.jcmxlbdm jcmxlbdm,a.jcmxlb jcmxlb,a.xzcfpzwh xzcfpzwh,a.pzjgdm pzjgdm,a.pzjg pzjg,a.pzrbh pzrbh,a.pzrxm pzrxm,a.pzrq pzrq,a.zxrbh zxrbh,a.zxrxm zxrxm,a.zxrq zxrq,a.qkms qkms,a.yjly yjly,a.jcfd jcfd,a.bjcr bjcr
+		from t_qyjcxx a ,t_qyjbxx t
+		where a.qyid=t.qyid and a.scbz=0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<select id="getQyjcxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjcxx a ,t_qyjbxx t
+		where a.qyid=t.qyid and a.scbz=0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<select id="getQyjcxxListNoPage" parameterType="qyjcxx" resultMap="qyjcxxListNoPageResult">
+		select a.qyid qyid,a.qycfid qycfid,a.hylbdm hylbdm,a.hylb hylb,a.qyjcrq qyjcrq,a.cfdjxh cfdjxh,a.cflbbm cflbbm,a.cflb cflb,a.jcmxlbdm jcmxlbdm,a.jcmxlb jcmxlb,a.xzcfpzwh xzcfpzwh,a.pzjgdm pzjgdm,a.pzjg pzjg,a.pzrbh pzrbh,a.pzrxm pzrxm,a.pzrq pzrq,a.zxrbh zxrbh,a.zxrxm zxrxm,a.zxrq zxrq,a.qkms qkms,a.yjly yjly,a.jcfd jcfd,a.bjcr bjcr
+		from t_qyjcxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qycfid
+	</select>
+	<!--企业奖惩信息(t_qyjcxx)-->
+	<select id="getQyjcxx" parameterType="qyjcxx" resultMap="qyjcxxResult">
+		select t.qymc qymc,t.qybm qybm,a.scbz scbz,a.qyid qyid,a.qycfid qycfid,a.hylbdm hylbdm,a.hylb hylb,a.qyjcrq qyjcrq,a.cfdjxh cfdjxh,a.cflbbm cflbbm,a.cflb cflb,a.jcmxlbdm jcmxlbdm,a.jcmxlb jcmxlb,a.xzcfpzwh xzcfpzwh,a.pzjgdm pzjgdm,a.pzjg pzjg,a.pzrbh pzrbh,a.pzrxm pzrxm,a.pzrq pzrq,a.zxrbh zxrbh,a.zxrxm zxrxm,a.zxrq zxrq,a.qkms qkms,a.yjly yjly,a.jcfd jcfd,a.bjcr bjcr
+		from t_qyjcxx a ,t_qyjbxx t
+		where a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qycfid
+	</select>
+</mapper>

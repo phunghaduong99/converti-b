@@ -1,0 +1,270 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	system
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--系统(t_system)-->
+	<resultMap id="systemResult" type="system">
+		<result property="systemcode" column="systemcode"/>
+		<result property="systemname" column="systemname"/>
+		<result property="systemdefine" column="systemdefine"/>
+		<result property="picturepath" column="picturepath"/>
+		<result property="parentsystemcode" column="parentsystemcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="fullcode" column="fullcode"/>
+	</resultMap>
+	<!--系统(t_system)sql翻译-->
+	<resultMap id="systemResultTran" type="system">
+		<result property="systemcode" column="systemcode"/>
+		<result property="systemname" column="systemname"/>
+		<result property="systemdefine" column="systemdefine"/>
+		<result property="picturepath" column="picturepath"/>
+		<result property="parentsystemcode" column="parentsystemcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="fullcode" column="fullcode"/>
+		<result property="parentsystemname" column="parentsystemname"/>
+	</resultMap>
+	<!--系统(t_system)-->
+	<resultMap id="systemListResult" type="system">
+		<result property="systemcode" column="systemcode"/>
+		<result property="systemname" column="systemname"/>
+		<result property="systemdefine" column="systemdefine"/>
+		<result property="picturepath" column="picturepath"/>
+		<result property="parentsystemcode" column="parentsystemcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="fullcode" column="fullcode"/>
+	</resultMap>
+	<!--系统(t_system)sql翻译-->
+	<resultMap id="systemListResultTran" type="system">
+		<result property="systemcode" column="systemcode"/>
+		<result property="systemname" column="systemname"/>
+		<result property="systemdefine" column="systemdefine"/>
+		<result property="picturepath" column="picturepath"/>
+		<result property="parentsystemcode" column="parentsystemcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="fullcode" column="fullcode"/>
+		<result property="parentsystemname" column="parentsystemname"/>
+	</resultMap>
+	<!--系统(t_system) 获得下一个排序号-->
+	<resultMap id="systemNodeorderResult" type="system">
+		<result property="nodeorder" column="nodeorder"/>
+	</resultMap>
+	<sql id="t_systemWhere">
+			<if test="systemcode != null and systemcode != ''">and
+				a.systemcode=#{systemcode}
+			</if>
+	</sql>
+	<sql id="t_systemPageWhere">
+		<include refid="t_systemWhere"/>	
+			<if test="parentsystemcode != null and parentsystemcode != ''">and
+				a.parentsystemcode=#{parentsystemcode}
+			</if>
+		</sql>
+	<sql id="t_systemListWhere">
+		<include refid="t_systemWhere"/>	</sql>
+	<sql id="t_systemSelectWhere">
+		<include refid="t_systemWhere"/>	</sql>
+	<!--系统(t_system)-->
+	<insert id="insertSystem" parameterType="system">
+		insert into t_system (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--系统(t_system)-->
+	<update id="updateSystem" parameterType="system">
+		update t_system a set systemcode=systemcode
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--系统(t_system)-->
+	<delete id="deleteSystem" parameterType="system">
+		  begin
+  delete from t_role_menu trm where trm.menuCode in (select MenuCode from t_menu tm where tm.SystemCode in (select systemcode from t_system where fullcode like '${fullcode}%'));
+   delete from t_role_Func trf where trf.funcCode in (select  funccode from t_function tf where tf.systemcode in (select systemcode from t_system where fullcode like '${fullcode}%'));
+    delete from t_menu tm where tm.SystemCode in (select systemcode from t_system where fullcode like '${fullcode}%') ;
+    delete from  t_Function  tf  where tf.systemcode in (select systemcode from t_system where fullcode like '${fullcode}%');
+    delete from t_system where fullCode like '${fullcode}%';
+  end;
+	</delete>
+	<!--系统(t_system)-->
+	<select id="getSystemList" parameterType="map" resultMap="systemListResultTran">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,
+		a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,
+		a.isleaf isleaf,a.fullcode fullcode,nvl(b.systemname,'顶级') parentsystemname
+	    from t_system a,(select systemcode ,systemname from t_system )b
+	    where a.parentsystemcode=b.systemcode(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--系统(t_system)-->
+	<select id="getSystemListCount" parameterType="map" resultType="int">
+		select count(1) a from t_system a,(select systemcode ,systemname from t_system )b
+	    where a.parentsystemcode=b.systemcode(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--系统(t_system)-->
+	<select id="getSystemListNoPage" parameterType="system" resultMap="systemListResult">
+		select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,a.isleaf isleaf,a.fullcode fullcode
+		from t_system a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.systemcode
+	</select>
+	<!--系统(t_system)-->
+	<select id="getSystem" parameterType="system" resultMap="systemResultTran">
+		select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,
+		a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,
+		a.isleaf isleaf,a.fullcode fullcode,nvl(b.systemname,'顶级') parentsystemname
+	    from t_system a,(select systemcode ,systemname from t_system )b
+	    where a.parentsystemcode=b.systemcode(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.systemcode
+	</select>
+		<!--取得树子系统(t_system)-->
+		  <select id="getChildSystem" parameterType="system" resultMap="systemResult">
+   select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,a.isleaf isleaf,a.fullcode fullcode
+		from t_system a
+		where ParentSystemCode = #{systemcode}
+    order by nodeorder
+  </select>
+  <!--取得父系统(t_system)-->
+    <select id="getParentSystem" parameterType="system" resultMap="systemResult">
+     select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,a.isleaf isleaf,a.fullcode fullcode
+		from t_system a where a.systemcode= #{parentsystemcode}
+  </select>
+    <!--取得所有子系统(t_system)-->
+    <select id="getAllChildSystem" parameterType="system" resultMap="systemResult">
+     select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,a.isleaf isleaf,a.fullcode fullcode
+		from t_system a where a.fullcode like '%#{systemcode}%'
+    order by a.nodeorder
+  </select>
+    <!--取得将新增的代码或名字是否存在(t_system)-->
+  
+	 <select id="isExit" parameterType="map" resultType="java.util.HashMap">
+    select 1 from  ${tableName}  where 1=1  
+      <!--
+		Sorry, I can`t migrate	and
+		See console output for further details 
+	-->
+  </select>
+  
+  
+ <select id="getSystemByUserID" parameterType="system" resultMap="systemResult">
+ select m.*  from(
+    select d.*
+	  from t_system d
+	 where 1 = 1
+	   and d.systemcode in
+	       (select distinct c.systemcode
+	          from t_menu c
+	         where c.menucode in
+	               (select distinct b.menucode
+	                  from t_role_menu b
+	                 where b.roleid in (select distinct a.roleid
+	                                      from t_user_role a
+	                                     where a.userid = #{userid})))
+	 order by d.nodeorder asc) m where m.parentsystemcode='zkdxt' or m.parentsystemcode='0'
+	 
+  </select>
+  
+    <!--  checkChildSystem  -->
+   <select id="checkChildSystem" parameterType="system" resultType="int">
+    select  count(1) from t_system  where parentsystemcode = #{parentsystemcode}
+  </select>
+  <!--  获得所有兄弟节点最大排序号+1  -->
+  <select id="getNextSystemNodeorder" parameterType="system" resultMap="systemNodeorderResult">
+    	select nvl((max(a.nodeorder)+1),0) nodeorder from t_system a
+    	 where 1=1 
+    	 <if test="parentsystemcode != null and parentsystemcode != ''">and
+			a.parentsystemcode = #{parentsystemcode}
+		</if>
+  </select>
+  
+	<!-- 当前用户所拥有的菜单 -->
+	<select id="getTheUserChildSystem" parameterType="system" resultMap="systemResult">
+		select a.systemcode systemcode,a.systemname systemname,a.systemdefine systemdefine,a.picturepath picturepath,a.parentsystemcode parentsystemcode,a.nodeorder nodeorder,a.isleaf isleaf,a.fullcode fullcode
+		from t_system a
+		where ParentSystemCode = #{systemcode}
+		and systemcode in (
+			select distinct a.systemcode systemcode      
+			from t_menu a,t_user b,t_user_role c,t_role_menu d
+			where b.userid = c.userid
+			and c.roleid = d.roleid
+			and a.menucode = d.menucode
+			and b.userid = #{userid} )
+		order by nodeorder
+	</select>
+</mapper>

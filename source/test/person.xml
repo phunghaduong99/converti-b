@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+
+<!DOCTYPE sqlMap
+		PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN"
+		"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="person">
+	<resultMap id="result" class="com.komamitsu.addressbook.domain.Person">
+		<result property="id" column="id" columnIndex="1"/>
+		<result property="name" column="name" columnIndex="2"/>
+		<result property="address" column="address" columnIndex="3"/>
+		<result property="postcode" column="postcode" columnIndex="4"/>
+	</resultMap>
+
+	<select id="selectAll" resultMap="result">
+		SELECT p.id, p.name, p.address, p.postcode
+		FROM person p
+	</select>
+
+	<select id="selectById" resultMap="result">
+		SELECT p.id, p.name, p.address, p.postcode
+		FROM person p
+		WHERE id = #id#
+	</select>
+
+	<insert id="insert">
+		INSERT INTO person (name, address, postcode) values (#name#, #address#, #postcode#)
+		<selectKey resultClass="Long" keyProperty="id">
+			SELECT LAST_INSERT_ID() as id
+		</selectKey>
+	</insert>
+
+	<update id="update">
+		UPDATE person
+		SET name = #name#, address = #address#, postcode = #postcode#
+		WHERE id = #id#
+	</update>
+
+	<delete id="delete">
+		DELETE FROM person WHERE id = #id#
+	</delete>
+</sqlMap>

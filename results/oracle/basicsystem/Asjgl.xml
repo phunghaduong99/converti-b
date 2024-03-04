@@ -1,0 +1,248 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	asjgl
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--案事件管理(t_asjgl)-->
+	<resultMap id="asjglResult" type="asjgl">
+		<result property="asjglid" column="asjglid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="ajbh" column="ajbh"/>
+		<result property="fasj" column="fasj"/>
+		<result property="fadd" column="fadd"/>
+		<result property="qkms" column="qkms"/>
+		<result property="ssdwbm" column="ssdwbm"/>
+		<result property="ssdwmc" column="ssdwmc"/>
+		<result property="qysalx" column="qysalx"/>
+		<result property="djr" column="djr"/>
+		<result property="djdwbm" column="djdwbm"/>
+		<result property="djdwmc" column="djdwmc"/>
+		<result property="djsj" column="djsj"/>
+		
+		
+		<result property="ajlydm" column="ajlydm"/>
+		<result property="ajly" column="ajly"/>
+		<result property="hylb" column="hylb"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="ajxz" column="ajxz"/>
+		<result property="ajxzdm" column="ajxzdm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="ajlbdm" column="ajlbdm"/>
+		<result property="ladw" column="ladw"/>
+		<result property="ladwbm" column="ladwbm"/>
+		<result property="larq" column="larq"/>
+		<result property="parq" column="parq"/>
+		<result property="qyzr" column="qyzr"/>
+		<result property="qyzrdm" column="qyzrdm"/>
+		<result property="qyryjs" column="qyryjs"/>
+		<result property="qyryjsdm" column="qyryjsdm"/>
+		
+	</resultMap>
+	<!--案事件管理(t_asjgl)-->
+	<resultMap id="asjglListResult" type="asjgl">
+		<result property="asjglid" column="asjglid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="ajbh" column="ajbh"/>
+		<result property="fasj" column="fasj"/>
+		<result property="fadd" column="fadd"/>
+		<result property="qkms" column="qkms"/>
+		<result property="ssdwbm" column="ssdwbm"/>
+		<result property="ssdwmc" column="ssdwmc"/>
+		<result property="qysalx" column="qysalx"/>
+		<result property="djr" column="djr"/>
+		<result property="djdwbm" column="djdwbm"/>
+		<result property="djdwmc" column="djdwmc"/>
+		<result property="djsj" column="djsj"/>
+		
+		
+		<result property="ajlydm" column="ajlydm"/>
+		<result property="ajly" column="ajly"/>
+		<result property="hylb" column="hylb"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="ajxz" column="ajxz"/>
+		<result property="ajxzdm" column="ajxzdm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="ajlbdm" column="ajlbdm"/>
+		<result property="ladw" column="ladw"/>
+		<result property="ladwbm" column="ladwbm"/>
+		<result property="larq" column="larq"/>
+		<result property="parq" column="parq"/>
+		<result property="qyzr" column="qyzr"/>
+		<result property="qyzrdm" column="qyzrdm"/>
+		<result property="qyryjs" column="qyryjs"/>
+		<result property="qyryjsdm" column="qyryjsdm"/>
+	</resultMap>
+	<sql id="t_asjglWhere">
+			<if test="asjglid != null and asjglid != ''">and
+				a.asjglid=#{asjglid}
+			</if>
+	</sql>
+	<sql id="t_asjglQueryWhere">
+			<if test="asjglid != null and asjglid != ''">and
+				a.asjglid=#{asjglid}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			<if test="qymc != null and qymc != ''">and
+				a.qymc like '%'||#{qymc}||'%'
+			</if>
+			<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+			<if test="ssdwbm != null and ssdwbm != ''">and
+				a.ssdwbm like  '%'||#{ssdwbm}||'%'
+			</if>
+			<if test="ajxzdm != null and ajxzdm != ''">and
+				a.ajxzdm=#{ajxzdm}
+			</if>
+			<if test="ajlbdm != null and ajlbdm != ''">and
+				a.ajlbdm=#{ajlbdm}
+			</if>
+			<if test="fasj != null and fasj != ''">and
+				a.fasj&gt;=#{fasj,jdbcType=TIMESTAMP}
+			</if>
+			<if test="fasj2 != null and fasj2 != ''">and
+				a.fasj&lt;=#{fasj2,jdbcType=TIMESTAMP}
+			</if>
+	</sql>
+	<sql id="t_asjglPageWhere">
+		<include refid="t_asjglWhere"/>	</sql>
+	<sql id="t_asjglListWhere">
+		<include refid="t_asjglWhere"/>	</sql>
+	<sql id="t_asjglSelectWhere">
+		<include refid="t_asjglWhere"/>	</sql>
+	<!--案事件管理(t_asjgl)-->
+	<insert id="insertAsjgl" parameterType="asjgl">
+		insert into t_asjgl (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--案事件管理(t_asjgl)-->
+	<update id="updateAsjgl" parameterType="asjgl">
+		update t_asjgl a set a.asjglid=a.asjglid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--案事件管理(t_asjgl)-->
+	<delete id="deleteAsjgl" parameterType="asjgl">
+		delete from t_asjgl a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--案事件管理(t_asjgl)-->
+	<select id="getAsjglList" parameterType="map" resultMap="asjglListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.asjglid asjglid,a.qybm qybm,a.qymc qymc,a.ajbh ajbh,a.fasj fasj,a.fadd fadd,a.qkms qkms,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.qysalx qysalx,a.djr djr,a.djdwbm djdwbm,a.djdwmc djdwmc,a.djsj djsj,a.ajlydm ajlydm,a.ajly ajly,a.hylb hylb,a.hylbdm hylbdm,a.ajxz ajxz,a.ajxzdm ajxzdm,a.ajlb ajlb,a.ajlbdm ajlbdm,a.ladw ladw,a.ladwbm ladwbm,a.larq larq,a.parq parq, a.qyzr qyzr, a.qyzrdm qyzrdm,a.qyryjs qyryjs, a.qyryjsdm qyryjsdm
+		from t_asjgl a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--案事件管理(t_asjgl)-->
+	<select id="getAsjglListCount" parameterType="map" resultType="int">
+		select count(1) a from t_asjgl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--案事件管理(t_asjgl)-->
+	<select id="getAsjglListNoPage" parameterType="asjgl" resultMap="asjglListResult">
+		select a.asjglid asjglid,a.qybm qybm,a.qymc qymc,a.ajbh ajbh,a.fasj fasj,a.fadd fadd,a.qkms qkms,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.qysalx qysalx,a.djr djr,a.djdwbm djdwbm,a.djdwmc djdwmc,a.djsj djsj,a.ajlydm ajlydm,a.ajly ajly,a.hylb hylb,a.hylbdm hylbdm,a.ajxz ajxz,a.ajxzdm ajxzdm,a.ajlb ajlb,a.ajlbdm ajlbdm,a.ladw ladw,a.ladwbm ladwbm,a.larq larq,a.parq parq, a.qyzr qyzr, a.qyzrdm qyzrdm,a.qyryjs qyryjs, a.qyryjsdm qyryjsdm
+		from t_asjgl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.asjglid
+	</select>
+	<!--案事件管理(t_asjgl)-->
+	<select id="getAsjgl" parameterType="asjgl" resultMap="asjglResult">
+		select a.asjglid asjglid,a.qybm qybm,a.qymc qymc,a.ajbh ajbh,a.fasj fasj,a.fadd fadd,a.qkms qkms,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.qysalx qysalx,a.djr djr,a.djdwbm djdwbm,a.djdwmc djdwmc,a.djsj djsj,a.ajlydm ajlydm,a.ajly ajly,a.hylb hylb,a.hylbdm hylbdm,a.ajxz ajxz,a.ajxzdm ajxzdm,a.ajlb ajlb,a.ajlbdm ajlbdm,a.ladw ladw,a.ladwbm ladwbm,a.larq larq,a.parq parq, a.qyzr qyzr, a.qyzrdm qyzrdm,a.qyryjs qyryjs, a.qyryjsdm qyryjsdm
+		from t_asjgl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.asjglid
+	</select>
+	
+	<!--  导出-->
+	<select id="getAsjglListExcel" parameterType="map" resultMap="asjglListResult">
+		select a.asjglid asjglid,a.qybm qybm,a.qymc qymc,a.ajbh ajbh,a.fasj fasj,a.fadd fadd,a.qkms qkms,a.ssdwbm ssdwbm,a.ssdwmc ssdwmc,a.qysalx qysalx,a.djr djr,a.djdwbm djdwbm,a.djdwmc djdwmc,a.djsj djsj,a.ajlydm ajlydm,a.ajly ajly,a.hylb hylb,a.hylbdm hylbdm,a.ajxz ajxz,a.ajxzdm ajxzdm,a.ajlb ajlb,a.ajlbdm ajlbdm,a.ladw ladw,a.ladwbm ladwbm,a.larq larq,a.parq parq, a.qyzr qyzr, a.qyzrdm qyzrdm,a.qyryjs qyryjs, a.qyryjsdm qyryjsdm
+		from t_asjgl a  
+  		where  rownum &lt;= ${endRow}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort}
+	</select>
+</mapper>

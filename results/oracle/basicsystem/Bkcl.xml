@@ -1,0 +1,175 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bkcl
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--布控车辆(t_bkcl)-->
+	<resultMap id="bkclResult" type="bkcl">
+		<result property="bkwpjbxxid" column="bkwpjbxxid"/>
+		<result property="bkclid" column="bkclid"/>
+		<result property="cllxdm" column="cllxdm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clpp" column="clpp"/>
+		<result property="clxh" column="clxh"/>
+		<result property="hpzldm" column="hpzldm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="hphm" column="hphm"/>
+		<result property="csys" column="csys"/>
+		<result property="syr" column="syr"/>
+		<result property="ccdjrq" column="ccdjrq"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="clsbdh" column="clsbdh"/>
+		<result property="cjh" column="cjh"/>
+	</resultMap>
+	<!--布控车辆(t_bkcl)-->
+	<resultMap id="bkclListResult" type="bkcl">
+		<result property="bkwpjbxxid" column="bkwpjbxxid"/>
+		<result property="bkclid" column="bkclid"/>
+		<result property="cllxdm" column="cllxdm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clpp" column="clpp"/>
+		<result property="clxh" column="clxh"/>
+		<result property="hpzldm" column="hpzldm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="hphm" column="hphm"/>
+		<result property="csys" column="csys"/>
+		<result property="syr" column="syr"/>
+		<result property="ccdjrq" column="ccdjrq"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="clsbdh" column="clsbdh"/>
+		<result property="cjh" column="cjh"/>
+	</resultMap>
+	<sql id="t_bkclWhere">
+			<if test="bkwpjbxxid != null and bkwpjbxxid != ''">and
+				a.bkwpjbxxid=#{bkwpjbxxid}
+			</if>
+			<if test="bkclid != null and bkclid != ''">and
+				a.bkclid=#{bkclid}
+			</if>
+	</sql>
+	<sql id="t_bkclPageWhere">
+		<include refid="t_bkclWhere"/>	</sql>
+	<sql id="t_bkclListWhere">
+		<include refid="t_bkclWhere"/>	</sql>
+	<sql id="t_bkclSelectWhere">
+		<include refid="t_bkclWhere"/>	</sql>
+	<!--布控车辆(t_bkcl)-->
+	<insert id="insertBkcl" parameterType="bkcl">
+		insert into t_bkcl (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--布控车辆(t_bkcl)-->
+	<update id="updateBkcl" parameterType="bkcl">
+		update t_bkcl a set a.bkclid=a.bkclid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--布控车辆(t_bkcl)-->
+	<delete id="deleteBkcl" parameterType="bkcl">
+		delete from t_bkcl a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--布控车辆(t_bkcl)-->
+	<select id="getBkclList" parameterType="map" resultMap="bkclListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bkwpjbxxid bkwpjbxxid,a.bkclid bkclid,a.cllxdm cllxdm,a.cllx cllx,a.clpp clpp,a.clxh clxh,a.hpzldm hpzldm,a.hpzl hpzl,a.hphm hphm,a.csys csys,a.syr syr,a.ccdjrq ccdjrq,a.fdjh fdjh,a.clsbdh clsbdh,a.cjh cjh
+		from t_bkcl a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--布控车辆(t_bkcl)-->
+	<select id="getBkclListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bkcl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--布控车辆(t_bkcl)-->
+	<select id="getBkclListNoPage" parameterType="bkcl" resultMap="bkclListResult">
+		select a.bkwpjbxxid bkwpjbxxid,a.bkclid bkclid,a.cllxdm cllxdm,a.cllx cllx,a.clpp clpp,a.clxh clxh,a.hpzldm hpzldm,a.hpzl hpzl,a.hphm hphm,a.csys csys,a.syr syr,a.ccdjrq ccdjrq,a.fdjh fdjh,a.clsbdh clsbdh,a.cjh cjh
+		from t_bkcl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bkwpjbxxid,a.bkclid
+	</select>
+	<!--布控车辆(t_bkcl)-->
+	<select id="getBkcl" parameterType="bkcl" resultMap="bkclResult">
+		select a.bkwpjbxxid bkwpjbxxid,a.bkclid bkclid,a.cllxdm cllxdm,a.cllx cllx,a.clpp clpp,a.clxh clxh,a.hpzldm hpzldm,a.hpzl hpzl,a.hphm hphm,a.csys csys,a.syr syr,a.ccdjrq ccdjrq,a.fdjh fdjh,a.clsbdh clsbdh,a.cjh cjh
+		from t_bkcl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bkwpjbxxid,a.bkclid
+	</select>
+</mapper>

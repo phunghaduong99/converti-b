@@ -1,0 +1,165 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bjbdtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--报警比对条件(t_bjbdtj)-->
+	<resultMap id="bjbdtjResult" type="bjbdtj">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="bjbdtjid" column="bjbdtjid"/>
+		<result property="tjlx" column="tjlx"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdgx" column="bdgx"/>
+		<result property="gxc" column="gxc"/>
+		<result property="zxsx" column="zxsx"/>
+		<result property="ljgx" column="ljgx"/>
+		<result property="jibie" column="jibie"/>
+	</resultMap>
+	<!--报警比对条件(t_bjbdtj)-->
+	<resultMap id="bjbdtjListResult" type="bjbdtj">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="bjbdtjid" column="bjbdtjid"/>
+		<result property="tjlx" column="tjlx"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdgx" column="bdgx"/>
+		<result property="gxc" column="gxc"/>
+		<result property="zxsx" column="zxsx"/>
+		<result property="ljgx" column="ljgx"/>
+		<result property="jibie" column="jibie"/>
+	</resultMap>
+	<sql id="t_bjbdtjWhere">
+			<if test="bjgzid != null and bjgzid != ''">and
+				a.bjgzid=#{bjgzid}
+			</if>
+			<if test="bjbdtjid != null and bjbdtjid != ''">and
+				a.bjbdtjid=#{bjbdtjid}
+			</if>
+	</sql>
+	<sql id="t_bjbdtjPageWhere">
+		<include refid="t_bjbdtjWhere"/>	</sql>
+	<sql id="t_bjbdtjListWhere">
+		<include refid="t_bjbdtjWhere"/>	</sql>
+	<sql id="t_bjbdtjSelectWhere">
+		<include refid="t_bjbdtjWhere"/>	</sql>
+	<!--报警比对条件(t_bjbdtj)-->
+	<insert id="insertBjbdtj" parameterType="bjbdtj">
+		insert into t_bjbdtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--报警比对条件(t_bjbdtj)-->
+	<update id="updateBjbdtj" parameterType="bjbdtj">
+		update t_bjbdtj a set a.bjbdtjid=a.bjbdtjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--报警比对条件(t_bjbdtj)-->
+	<delete id="deleteBjbdtj" parameterType="bjbdtj">
+		delete from t_bjbdtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--报警比对条件(t_bjbdtj)-->
+	<select id="getBjbdtjList" parameterType="map" resultMap="bjbdtjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bjgzid bjgzid,a.bjbdtjid bjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_bjbdtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--报警比对条件(t_bjbdtj)-->
+	<select id="getBjbdtjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bjbdtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--报警比对条件(t_bjbdtj)-->
+	<select id="getBjbdtjListNoPage" parameterType="bjbdtj" resultMap="bjbdtjListResult">
+		select a.bjgzid bjgzid,a.bjbdtjid bjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_bjbdtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid,a.bjbdtjid
+	</select>
+	<!--报警比对条件(t_bjbdtj)-->
+	<select id="getBjbdtj" parameterType="bjbdtj" resultMap="bjbdtjResult">
+		select a.bjgzid bjgzid,a.bjbdtjid bjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_bjbdtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid,a.bjbdtjid
+	</select>
+</mapper>

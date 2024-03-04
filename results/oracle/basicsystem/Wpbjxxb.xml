@@ -1,0 +1,308 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	wpbjxxb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	bjtemp
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<resultMap id="wpbjxxbResult" type="wpbjxxb">
+	
+	    <result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="ssqydz" column="ssqydz"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="bjlxdm" column="bjlxdm"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="bjsj" column="bjsj"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="ladwbm" column="ladwbm"/>
+		<result property="ladwmc" column="ladwmc"/>
+		<result property="gxbbh" column="gxbbh"/>
+		<result property="ywlbdm" column="ywlbdm"/>
+		<result property="ywlb" column="ywlb"/>
+		<result property="pjbmbm" column="pjbmbm"/>
+		<result property="pjbmmc" column="pjbmmc"/>
+		<result property="pjr" column="pjr"/>
+		<result property="pjsj" column="pjsj"/>
+		<result property="jqztdm" column="jqztdm"/>
+		<result property="jqzt" column="jqzt"/>
+		<result property="cjbmbm" column="cjbmbm"/>
+		<result property="cjbm" column="cjbm"/>
+		<result property="chjsj" column="chjsj"/>
+		<result property="cjfzr" column="cjfzr"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="cjfklbdm" column="cjfklbdm"/>
+		<result property="cjfklb" column="cjfklb"/>
+		<result property="cjfkbz" column="cjfkbz"/>
+		<result property="fkdwbm" column="fkdwbm"/>
+		<result property="fkdw" column="fkdw"/>
+		<result property="fkrq" column="fkrq"/>
+		<result property="cjjg" column="cjjg"/>
+		<result property="cjjgdm" column="cjjgdm"/>
+		<result property="chjjg" column="chjjg"/>
+		<result property="zhsj" column="zhsj"/>
+		<result property="wxyydm" column="wxyydm"/>
+		<result property="wxyy" column="wxyy"/>
+		<result property="sfyxbjdm" column="sfyxbjdm"/>
+		<result property="sfyxbj" column="sfyxbj"/>
+		<result property="fkr" column="fkr"/>
+		<result property="ywbzj" column="ywbzj"/>
+		<result property="bdbzj" column="bdbzj"/>
+		<result property="wpmc" column="wpmc"/>
+	</resultMap>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<resultMap id="wpbjxxbListResult" type="wpbjxxb">
+	    <result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="ssqydz" column="ssqydz"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="bjlxdm" column="bjlxdm"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="bjsj" column="bjsj"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="ladwbm" column="ladwbm"/>
+		<result property="ladwmc" column="ladwmc"/>
+		<result property="gxbbh" column="gxbbh"/>
+		<result property="ywlbdm" column="ywlbdm"/>
+		<result property="ywlb" column="ywlb"/>
+		<result property="pjbmbm" column="pjbmbm"/>
+		<result property="pjbmmc" column="pjbmmc"/>
+		<result property="pjr" column="pjr"/>
+		<result property="pjsj" column="pjsj"/>
+		<result property="jqztdm" column="jqztdm"/>
+		<result property="jqzt" column="jqzt"/>
+		<result property="cjbmbm" column="cjbmbm"/>
+		<result property="cjbm" column="cjbm"/>
+		<result property="chjsj" column="chjsj"/>
+		<result property="cjfzr" column="cjfzr"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="cjfklbdm" column="cjfklbdm"/>
+		<result property="cjfklb" column="cjfklb"/>
+		<result property="cjfkbz" column="cjfkbz"/>
+		<result property="fkdwbm" column="fkdwbm"/>
+		<result property="fkdw" column="fkdw"/>
+		<result property="fkrq" column="fkrq"/>
+		<result property="cjjg" column="cjjg"/>
+		<result property="cjjgdm" column="cjjgdm"/>
+		<result property="chjjg" column="chjjg"/>
+		<result property="zhsj" column="zhsj"/>
+		<result property="wxyydm" column="wxyydm"/>
+		<result property="wxyy" column="wxyy"/>
+		<result property="sfyxbjdm" column="sfyxbjdm"/>
+		<result property="sfyxbj" column="sfyxbj"/>
+		<result property="fkr" column="fkr"/>
+		<result property="ywbzj" column="ywbzj"/>
+		<result property="bdbzj" column="bdbzj"/>
+		<result property="wpmc" column="wpmc"/>
+	</resultMap>
+	
+	<resultMap id="wpbjxxbListResult1" type="wpbjxxb">
+	  <result property="wpbjgzid" column="wpbjgzid"/>
+	  <result property="bjxxid2" column="bjxxid2"/>
+	  <result property="wpmc" column="wpmc"/>
+	  <result property="ssqymc" column="ssqymc"/>
+	  <result property="gxdwbm" column="gxdwbm"/>
+	  <result property="gxdwmc" column="gxdwmc"/>
+	  <result property="bjsj" column="bjsj"/>
+	  <result property="bjlxdm" column="bjlxdm"/>
+	   <result property="bjlx" column="bjlx"/>
+	  <result property="jqztdm" column="jqztdm"/>
+	  <result property="jqzt" column="jqzt"/>
+	  <result property="chjjg" column="chjjg"/>
+	  <result property="cjjgdm" column="cjjgdm"/>
+	  <result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	
+	<resultMap id="wpbjxxbJBResult" type="wpbjxxb">
+	     <result property="wpbjgzid" column="wpbjgzid"/>
+		 <result property="ssqymc" column="ssqymc"/>
+		 <result property="ssqydz" column="ssqydz"/>
+		 <result property="gxdwbm" column="gxdwbm"/>
+		 <result property="gxdwmc" column="gxdwmc"/>
+		 <result property="bjlxdm" column="bjlxdm"/>
+		 <result property="bjlx" column="bjlx"/>
+		 <result property="bdbm" column="bdbm"/>
+		 <result property="ywbm" column="ywbm"/>
+		 <result property="hylb" column="hylb"/>
+		 <result property="hylbdm" column="hylbdm"/> 
+		 <result property="ladwbm" column="ladwbm"/>
+		 <result property="ladwmc" column="ladwmc"/>
+		 <result property="ywbzj" column="ywbzj"/>
+		 <result property="bdbzj" column="bdbzj"/>
+		 <result property="wpmc" column="wpmc"/>
+		 <result property="wpjp" column="wpjp"/>
+		 <result property="wpqp" column="wpqp"/>
+	</resultMap>
+	<!--报警临时表(t_baojingtemp)-->
+	<resultMap id="bjtempListResult" type="bjtemp">
+		<result property="ywb" column="ywb"/>
+		<result property="ywbzjzd" column="ywbzjzd"/>
+		<result property="ywbzj" column="ywbzj"/>
+	</resultMap>
+	
+	<sql id="t_wpbjxxbWhere">
+			<if test="bjxxid2 != null and bjxxid2 != ''">and
+				a.bjxxid2=#{bjxxid2}
+			</if>
+	</sql>
+	<sql id="t_wpbjxxbPageWhere">
+		<include refid="t_wpbjxxbWhere"/>
+	</sql>
+	<sql id="t_wpbjxxbListWhere">
+		<include refid="t_wpbjxxbWhere"/>	</sql>
+	<sql id="t_wpbjxxbSelectWhere">
+		<include refid="t_wpbjxxbWhere"/>	</sql>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<insert id="insertWpbjxxb" parameterType="wpbjxxb">
+		insert into t_wpbjxxb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<update id="updateWpbjxxb" parameterType="wpbjxxb">
+		update t_wpbjxxb a set a.bjxxid2=a.bjxxid2,gxbbh=SEQ_WPBJXXXUHAO.NEXTVAL
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<delete id="deleteWpbjxxb" parameterType="wpbjxxb">
+		delete from t_wpbjxxb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<select id="getWpbjxxbList" parameterType="map" resultMap="wpbjxxbListResult1">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.wpbjgzid, a.bjxxid2, a.wpmc, a.ssqymc , a.gxdwbm ,a.gxdwmc, a.bjsj, a.bjlxdm, a.bjlx,
+		a.jqztdm, a.jqzt,a.cjjgdm cjjgdm,  a.chjjg, a.hylbdm
+		from t_wpbjxxb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<select id="getWpbjxxbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wpbjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<select id="getWpbjxxbListNoPage" parameterType="wpbjxxb" resultMap="wpbjxxbListResult">
+		select a.wpbjgzid wpbjgzid, a.bjxxid2 bjxxid2,a.ssqymc ssqymc,a.ssqydz ssqydz,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.bjlxdm bjlxdm,
+		a.bjlx bjlx,a.bjsj bjsj,a.bdbm bdbm,a.ywbm ywbm,a.hylbdm hylbdm,a.hylb hylb,a.jyaq jyaq,a.ladwbm ladwbm,a.ladwmc ladwmc,
+		a.gxbbh gxbbh,a.ywlbdm ywlbdm,a.ywlb ywlb,a.pjbmbm pjbmbm,a.pjbmmc pjbmmc,a.pjr pjr,a.pjsj pjsj,a.jqztdm jqztdm,a.jqzt jqzt,
+		a.cjbmbm cjbmbm,a.cjbm cjbm,a.chjsj chjsj,a.cjfzr cjfzr,a.lxdh lxdh,a.cjfklbdm cjfklbdm,a.cjfklb cjfklb,a.cjfkbz cjfkbz,
+		a.fkdwbm fkdwbm,a.fkdw fkdw,a.fkrq fkrq,a.cjjg cjjg,a.cjjgdm cjjgdm,a.chjjg chjjg,a.zhsj zhsj,a.wxyydm wxyydm,a.wxyy wxyy,
+		a.sfyxbjdm sfyxbjdm,a.sfyxbj sfyxbj,a.fkr fkr,a.ywbzj ywbzj,a.bdbzj bdbzj,a.wpmc wpmc
+		from t_wpbjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2
+	</select>
+	<!--物品报警信息表(t_wpbjxxb)-->
+	<select id="getWpbjxxb" parameterType="wpbjxxb" resultMap="wpbjxxbResult">
+		select a.wpbjgzid wpbjgzid, a.bjxxid2 bjxxid2,a.ssqymc ssqymc,a.ssqydz ssqydz,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.bjlxdm bjlxdm,
+		a.bjlx bjlx,a.bjsj bjsj,a.bdbm bdbm,a.ywbm ywbm,a.hylbdm hylbdm,a.hylb hylb,a.jyaq jyaq,a.ladwbm ladwbm,a.ladwmc ladwmc,
+		a.gxbbh gxbbh,a.ywlbdm ywlbdm,a.ywlb ywlb,a.pjbmbm pjbmbm,a.pjbmmc pjbmmc,a.pjr pjr,a.pjsj pjsj,a.jqztdm jqztdm,a.jqzt jqzt,
+		a.cjbmbm cjbmbm,a.cjbm cjbm,a.chjsj chjsj,a.cjfzr cjfzr,a.lxdh lxdh,a.cjfklbdm cjfklbdm,a.cjfklb cjfklb,a.cjfkbz cjfkbz,
+		a.fkdwbm fkdwbm,a.fkdw fkdw,a.fkrq fkrq,a.cjjg cjjg,a.cjjgdm cjjgdm,a.chjjg chjjg,a.zhsj zhsj,a.wxyydm wxyydm,a.wxyy wxyy,
+		a.sfyxbjdm sfyxbjdm,a.sfyxbj sfyxbj,a.fkr fkr,a.ywbzj ywbzj,a.bdbzj bdbzj,a.wpmc wpmc
+		from t_wpbjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2
+	</select>
+	<!--ByTy 查询业务表，中间处理过程-->
+	<select id="getWpbaojingTempList" parameterType="bjtemp" resultMap="bjtempListResult">
+		${tempSql}
+	</select>
+	<!--ByTy 按照比对规则SQL执行查询，返回报警信息-->
+	<select id="getWpbjxxByBdtjSql" parameterType="wpbjxxb" resultMap="wpbjxxbJBResult">
+		${bdtjSql}
+	</select>
+</mapper>

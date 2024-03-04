@@ -1,0 +1,195 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	xctbjsdw
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<resultMap id="xctbjsdwResult" type="xctbjsdw">
+		<result property="tbid" column="tbid"/>
+		<result property="jsdwid" column="jsdwid"/>
+		<result property="jsdwbm" column="jsdwbm"/>
+		<result property="jsdwmc" column="jsdwmc"/>
+		<result property="sqsj" column="sqsj"/>
+		<result property="hylxdm" column="hylxdm"/>
+		<result property="hylx" column="hylx"/>
+	</resultMap>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<resultMap id="xctbjsdwListResult" type="xctbjsdw">
+		<result property="tbid" column="tbid"/>
+		<result property="jsdwid" column="jsdwid"/>
+		<result property="jsdwbm" column="jsdwbm"/>
+		<result property="jsdwmc" column="jsdwmc"/>
+		<result property="sqsj" column="sqsj"/>
+		<result property="hylxdm" column="hylxdm"/>
+		<result property="hylx" column="hylx"/>
+		<result property="bt" column="bt"/>
+		<result property="fbsj" column="fbsj"/>
+		<result property="fbdwbm" column="fbdwbm"/>
+		<result property="fbdw" column="fbdw"/>
+	</resultMap>
+		
+	<sql id="t_xctbjsdwWhere">
+			<if test="tbid != null and tbid != ''">and
+				a.tbid=#{tbid}
+			</if>
+			<if test="jsdwid != null and jsdwid != ''">and
+				a.jsdwid=#{jsdwid}
+			</if>
+	</sql>
+	<sql id="t_xctbjsdwPageWhere">
+		<include refid="t_xctbjsdwWhere"/>	</sql>
+	<sql id="t_xctbjsdwListWhere">
+		<include refid="t_xctbjsdwWhere"/>	</sql>
+	<sql id="t_xctbjsdwSelectWhere">
+		<include refid="t_xctbjsdwWhere"/>
+		<if test="jsdwbm != null and jsdwbm != ''">and
+				a.jsdwbm=#{jsdwbm}
+		</if>	
+	</sql>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<insert id="insertXctbjsdw" parameterType="xctbjsdw">
+		insert into t_xctbjsdw (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<update id="updateXctbjsdw" parameterType="xctbjsdw">
+		update t_xctbjsdw a set a.jsdwid=a.jsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<delete id="deleteXctbjsdw" parameterType="xctbjsdw">
+		delete from t_xctbjsdw a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<select id="getXctbjsdwList" parameterType="map" resultMap="xctbjsdwListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tbid tbid,a.jsdwid jsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,a.sqsj sqsj,
+		a.hylxdm hylxdm,a.hylx hylx,b.bt bt,b.fbsj fbsj,b.fbdwbm fbdwbm,b.fbdw fbdw
+		from t_xctbjsdw a, t_xctb b
+		where a.tbid = b.tbid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<select id="getXctbjsdwListCount" parameterType="map" resultType="int">
+		select count(1) a from t_xctbjsdw a, t_xctb b
+		where a.tbid = b.tbid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<select id="getXctbjsdwListNoPage" parameterType="xctbjsdw" resultMap="xctbjsdwListResult">
+		select a.tbid tbid,a.jsdwid jsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,a.sqsj sqsj,a.hylxdm hylxdm,
+		a.hylx hylx,b.bt bt,b.fbsj fbsj,b.fbdwbm fbdwbm,b.fbdw fbdw
+		from t_xctbjsdw a, t_xctb b
+		where  a.tbid = b.tbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid,a.jsdwid
+	</select>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<select id="getXctbjsdw" parameterType="xctbjsdw" resultMap="xctbjsdwResult">
+		select a.tbid tbid,a.jsdwid jsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,a.sqsj sqsj,a.hylxdm hylxdm,a.hylx hylx
+		from t_xctbjsdw a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid,a.jsdwid
+	</select>
+	
+	<!--协查通报接收单位(t_xctbjsdw) 回复-->
+	<select id="getXctbjsdwHfList" parameterType="map" resultMap="xctbjsdwListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tbid tbid,a.jsdwid jsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,c.hfsj sqsj,
+		a.hylxdm hylxdm,a.hylx hylx,b.bt bt,b.fbsj fbsj,b.fbdwbm fbdwbm,b.fbdw fbdw
+		from t_xctbjsdw a, t_xctb b, t_xctbhf c   
+		where a.tbid = b.tbid  and a.jsdwid = c.jsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--协查通报接收单位(t_xctbjsdw)-->
+	<select id="getXctbjsdwHfListCount" parameterType="map" resultType="int">
+		select count(1) a from t_xctbjsdw a, t_xctb b , t_xctbhf c   
+		where a.tbid = b.tbid  and a.jsdwid = c.jsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+</mapper>

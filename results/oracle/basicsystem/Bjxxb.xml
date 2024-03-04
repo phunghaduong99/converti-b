@@ -1,0 +1,691 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bjxxb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--报警信息表(t_bjxxb)-->
+	<resultMap id="bjxxbResult" type="bjxxb">
+	  <result property="bjgzid" column="bjgzid"/>
+	  <result property="bjxxid" column="bjxxid"/>
+	  <result property="ssqymc" column="ssqymc"/>
+	  <result property="ssqydz" column="ssqydz"/>
+	  <result property="gxdwbm" column="gxdwbm"/>
+	  <result property="gxdwmc" column="gxdwmc"/>
+	  <result property="bjlxdm" column="bjlxdm"/>
+	  <result property="bjlx" column="bjlx"/>
+	  <result property="bjsj" column="bjsj"/>
+	  <result property="bdbm" column="bdbm"/>
+	  <result property="ywbm" column="ywbm"/>
+	  <result property="hylbdm" column="hylbdm"/>
+	  <result property="hylb" column="hylb"/>
+	  <result property="xm" column="xm"/>
+	  <result property="gmsfhm" column="gmsfhm"/>
+	  <result property="jyaq" column="jyaq"/>
+	  <result property="ladwbm" column="ladwbm"/>
+	  <result property="ladwmc" column="ladwmc"/>
+	  <result property="gxbbh" column="gxbbh"/>
+	  <result property="ywlbdm" column="ywlbdm"/>
+	  <result property="ywlb" column="ywlb"/>
+	  <result property="pjbmbm" column="pjbmbm"/>
+	  <result property="pjbmmc" column="pjbmmc"/>
+	  <result property="pjr" column="pjr"/>
+	  <result property="pjsj" column="pjsj"/>
+	  <result property="jqztdm" column="jqztdm"/>
+	  <result property="jqzt" column="jqzt"/>
+	  <result property="cjbmbm" column="cjbmbm"/>
+	  <result property="cjbm" column="cjbm"/>
+	  <result property="chjsj" column="chjsj"/>
+	  <result property="cjfzr" column="cjfzr"/>
+	  <result property="lxdh" column="lxdh"/>
+	  <result property="cjfklbdm" column="cjfklbdm"/>
+	  <result property="cjfklb" column="cjfklb"/>
+	  <result property="cjfkbz" column="cjfkbz"/>
+	  <result property="fkdwbm" column="fkdwbm"/>
+	  <result property="fkdw" column="fkdw"/>
+	  <result property="fkrq" column="fkrq"/>
+	  <result property="fkr" column="fkr"/>
+	  <result property="cjjg" column="cjjg"/>
+	  <result property="cjjgdm" column="cjjgdm"/>
+	  <result property="chjjg" column="chjjg"/>
+	  <result property="zhsj" column="zhsj"/>
+	  <result property="wxyy" column="wxyy"/>
+	  <result property="wxyydm" column="wxyydm"/>
+	  <result property="sfyxbjdm" column="sfyxbjdm"/>
+	  <result property="sfyxbj" column="sfyxbj"/>
+	  <result property="ywbzj" column="ywbzj"/>
+	  <result property="fjh" column="fjh"/>
+	  <result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	<!--报警信息表(t_bjxxb)-->
+	<resultMap id="bjxxbListResult" type="bjxxb">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="bjxxid" column="bjxxid"/>
+		<result property="xm" column="xm"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="bjsj" column="bjsj"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="sfyxbj" column="sfyxbj"/>
+		<result property="jqzt" column="jqzt"/>
+		<result property="chjjg" column="chjjg"/>
+		<result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	<!--报警信息表(t_bjxxb)导出结果-->
+	<resultMap id="bjxxbExcelListResult" type="bjxxb">
+		<result property="xm" column="xm"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="bjsj" column="bjsj"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="sfyxbj" column="sfyxbj"/>
+		<result property="jqzt" column="jqzt"/>
+		<result property="chjjg" column="chjjg"/>
+	</resultMap>
+	<!--报警信息表 主页面(t_bjxxb)-->
+	<resultMap id="bjxxmainbListResult" type="bjxxb">
+		<result property="bjxxid" column="bjxxid"/>
+		<result property="xm" column="xm"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="bjsj" column="bjsj"/>
+		<result property="bjlx" column="bjlx"/>
+		
+		<result property="sfyxbj" column="sfyxbj"/>
+		<result property="cjjg" column="cjjg"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="hylbdm" column="hylbdm"/>
+	</resultMap>
+	
+	<!--报警信息表 客户端页面(t_bjxxb)-->
+	<resultMap id="bjxxbclientListResult" type="bjxxb">
+		<result property="bjxxid" column="bjxxid"/>
+		<result property="xm" column="xm"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="bjsj" column="bjsj"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="jqztdm" column="jqztdm"/>
+		<result property="jqzt" column="jqzt"/>
+		<result property="sfyxbj" column="sfyxbj"/>
+	</resultMap>
+	
+	<!--取得快照表名称(t_bjxxb)-->
+	<resultMap id="kzbmcResult" type="java.util.HashMap">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="bjxxid" column="bjxxid"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="ywbm" column="ywbm"/>
+	</resultMap>
+	
+	<!--报警信息表(t_bjxxb)报警基本信息-->
+	<resultMap id="bjxxbJBResult" type="bjxxb">
+		 <result property="bjgzid" column="bjgzid"/>
+		 <result property="ssqymc" column="ssqymc"/>
+		 <result property="ssqydz" column="ssqydz"/>
+		 <result property="gxdwbm" column="gxdwbm"/>
+		 <result property="gxdwmc" column="gxdwmc"/>
+		 <result property="bjlxdm" column="bjlxdm"/>
+		 <result property="bjlx" column="bjlx"/>
+		 <result property="bdbm" column="bdbm"/>
+		 <result property="ywbm" column="ywbm"/>
+		 <result property="hylb" column="hylb"/>
+		 <result property="hylbdm" column="hylbdm"/> 
+		 <result property="xm" column="xm"/>
+		 <result property="gmsfhm" column="gmsfhm"/>
+		 <result property="jyaq" column="jyaq"/>
+		 <result property="ladwbm" column="ladwbm"/>
+		 <result property="ladwmc" column="ladwmc"/>
+		 <result property="ywlb" column="ywlb"/>
+		 <result property="ywlbdm" column="ywlbdm"/>
+		 <result property="ywbzj" column="ywbzj"/>
+		 <result property="bdbzj" column="bdbzj"/>
+		 <result property="y_gxdwbm" column="y_gxdwbm"/>
+		 <result property="y_gxdwmc" column="y_gxdwmc"/>
+	</resultMap>
+	<sql id="t_bjxxbWhere">
+			
+			<if test="deptCode != null and deptCode != ''">and
+				a.gxdwbm like #{deptCode}
+			</if>
+			<if test="xm != null and xm != ''">and
+				a.xm=#{xm}
+			</if>
+			<if test="gmsfhm != null and gmsfhm != ''">and
+				a.gmsfhm=#{gmsfhm}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+			<if test="hylbdms != null and hylbdms != ''">and
+				a.hylbdm in (#{hylbdms})
+			</if>
+			<if test="ywlbdm != null and ywlbdm != ''">and
+				a.ywlbdm=#{ywlbdm}
+			</if>
+			<if test="ssqymc != null and ssqymc != ''">and
+				a.ssqymc=#{ssqymc}
+			</if>
+			<if test="gxdwbm != null and gxdwbm != ''">and
+				a.gxdwbm like #{gxdwbm}
+			</if>
+			<if test="gxdwbm_full != null and gxdwbm_full != ''">and
+				a.gxdwbm != #{gxdwbm_full}
+			</if>
+			<if test="bjsj1 != null and bjsj1 != ''">and
+				a.bjsj&gt;=#{bjsj1,jdbcType=TIMESTAMP}
+			</if>
+			<if test="bjsj2 != null and bjsj2 != ''">and
+				a.bjsj&lt;=#{bjsj2,jdbcType=TIMESTAMP}
+			</if>
+			<if test="cjjgdm != null and cjjgdm != ''">and
+				a.cjjgdm=#{cjjgdm}
+			</if>
+			<if test="bjlxdm != null and bjlxdm != ''">and
+				a.bjlxdm=#{bjlxdm}
+			</if>
+			<if test="cjbmbm != null and cjbmbm != ''">and
+				a.cjbmbm=#{cjbmbm}
+			</if>
+			<if test="pjbmbm != null and pjbmbm != ''">and
+				a.pjbmbm=#{pjbmbm}
+			</if>
+			<if test="jqztdm != null and jqztdm != ''">and
+				a.jqztdm=#{jqztdm}
+			</if>
+			<if test="sfyxbj != null and sfyxbj != ''">and
+				sfyxbj=#{sfyxbj}
+			</if>
+			<if test="sfyxbjdm != null and sfyxbjdm != ''">and
+				sfyxbjdm=#{sfyxbjdm}
+			</if>
+			<if test="cjjgdm != null and cjjgdm != ''">and
+				cjjgdm=#{cjjgdm}
+			</if>
+			<if test="tjlx != null and tjlx != ''">and
+				<if test="tjlx == &quot;ljzt&quot;">
+					a.zhsj between #{zhsj1,jdbcType=TIMESTAMP} and #{zhsj2,jdbcType=TIMESTAMP}
+					and a.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;dyzt&quot;">
+					to_char(a.zhsj, 'yyyymm') = to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyymm')
+			        and a.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;jnzt&quot;">
+					
+			           to_char(a.zhsj, 'yyyymmdd') &gt;= to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyy') || '0101'
+			           and to_char(a.zhsj, 'yyyymmdd') &lt;= to_char(#{zhsj2,jdbcType=TIMESTAMP}, 'yyyymmdd')
+			           
+			           and a.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;zhccic&quot;">
+					
+			           to_char(a.zhsj, 'yyyymmdd') &gt;= to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyy') || '0101'
+			           and to_char(a.zhsj, 'yyyymmdd') &lt;= to_char(#{zhsj2,jdbcType=TIMESTAMP}, 'yyyymmdd')
+			           
+			           and a.cjjgdm = '1'
+			           and a.bjlxdm = '1'
+				</if>
+			</if>
+			<if test="sfyxbjdm2 != null and sfyxbjdm2 != ''">and
+				(sfyxbjdm is null or  sfyxbjdm = '1')
+			</if>
+	</sql>
+		<sql id="t_bjxxbPage1Where">
+			
+			<!--  <isNotEmpty prepend="and" property="deptCode">
+				a.gxdwbm like #{deptCode}
+			</isNotEmpty>-->
+			<if test="xm != null and xm != ''">and
+				c.xm=#{xm}
+			</if>
+			<if test="gmsfhm != null and gmsfhm != ''">and
+				c.gmsfhm=#{gmsfhm}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				c.hylbdm=#{hylbdm}
+			</if>
+			<if test="ywlbdm != null and ywlbdm != ''">and
+				<if test="hylbdm == &quot;N&quot;">
+					c.ywlbdm like 'N${ywlbdm}%'
+				</if>
+				<if test="hylbdm != &quot;N&quot;">
+					c.ywlbdm=#{ywlbdm}
+				</if>
+			</if>
+			<if test="ssqymc != null and ssqymc != ''">and
+				c.ssqymc=#{ssqymc}
+			</if>
+			<if test="gxdwbm != null and gxdwbm != ''">and
+				c.gxdwbm like #{gxdwbm}
+			</if>
+			<if test="gxdwbm_full != null and gxdwbm_full != ''">and
+				c.gxdwbm != #{gxdwbm_full}
+			</if>
+			<if test="bjsj1 != null and bjsj1 != ''">and
+				c.bjsj&gt;=#{bjsj1,jdbcType=TIMESTAMP}
+			</if>
+			<if test="bjsj2 != null and bjsj2 != ''">and
+				c.bjsj&lt;=#{bjsj2,jdbcType=TIMESTAMP}
+			</if>
+			<if test="cjjgdm != null and cjjgdm != ''">and
+				c.cjjgdm=#{cjjgdm}
+			</if>
+			<if test="bjlxdm != null and bjlxdm != ''">and
+				c.bjlxdm=#{bjlxdm}
+			</if>
+			<if test="cjbmbm != null and cjbmbm != ''">and
+				c.cjbmbm=#{cjbmbm}
+			</if>
+			<if test="pjbmbm != null and pjbmbm != ''">and
+				c.pjbmbm=#{pjbmbm}
+			</if>
+			<if test="jqztdm != null and jqztdm != ''">and
+				c.jqztdm=#{jqztdm}
+			</if>
+			<if test="sfyxbj != null and sfyxbj != ''">and
+				c.sfyxbj=#{sfyxbj}
+			</if>
+			<if test="sfyxbjdm != null and sfyxbjdm != ''">and
+				c.sfyxbjdm=#{sfyxbjdm}
+			</if>
+			<if test="cjjgdm != null and cjjgdm != ''">and
+				c.cjjgdm=#{cjjgdm}
+			</if>
+			<if test="tjlx != null and tjlx != ''">and
+				<if test="tjlx == &quot;ljzt&quot;">
+					c.zhsj between #{zhsj1,jdbcType=TIMESTAMP} and #{zhsj2,jdbcType=TIMESTAMP}
+					and c.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;dyzt&quot;">
+					to_char(c.zhsj, 'yyyymm') = to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyymm')
+			        and c.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;jnzt&quot;">
+					
+			           to_char(c.zhsj, 'yyyymmdd') &gt;= to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyy') || '0101'
+			           and to_char(c.zhsj, 'yyyymmdd') &lt;= to_char(#{zhsj2,jdbcType=TIMESTAMP}, 'yyyymmdd')
+			           
+			           and c.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;zhccic&quot;">
+					
+			           to_char(c.zhsj, 'yyyymmdd') &gt;= to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyy') || '0101'
+			           and to_char(c.zhsj, 'yyyymmdd') &lt;= to_char(#{zhsj2,jdbcType=TIMESTAMP}, 'yyyymmdd')
+			           
+			           and c.cjjgdm = '1'
+			           and c.bjlxdm = '1'
+				</if>
+			</if>
+			<if test="sfyxbjdm2 != null and sfyxbjdm2 != ''">and
+				(c.sfyxbjdm is null or  c.sfyxbjdm = '1')
+			</if>
+	</sql>
+			<sql id="t_bjxxbPage2Where">
+			
+			<!--  <isNotEmpty prepend="and" property="deptCode">
+				a.gxdwbm like #{deptCode}
+			</isNotEmpty>-->
+			<if test="xm != null and xm != ''">and
+				b.xm=#{xm}
+			</if>
+			<if test="gmsfhm != null and gmsfhm != ''">and
+				b.gmsfhm=#{gmsfhm}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				b.hylbdm=#{hylbdm}
+			</if>
+			<if test="ywlbdm != null and ywlbdm != ''">and
+				<if test="hylbdm == &quot;N&quot;">
+					b.ywlbdm like 'N${ywlbdm}%'
+				</if>
+				<if test="hylbdm != &quot;N&quot;">
+					b.ywlbdm=#{ywlbdm}
+				</if>
+			</if>
+			<if test="ssqymc != null and ssqymc != ''">and
+				b.ssqymc=#{ssqymc}
+			</if>
+			<if test="gxdwbm != null and gxdwbm != ''">and
+				b.gxdwbm like #{gxdwbm}
+			</if>
+			<if test="gxdwbm_full != null and gxdwbm_full != ''">and
+				b.gxdwbm != #{gxdwbm_full}
+			</if>
+			<if test="bjsj1 != null and bjsj1 != ''">and
+				b.bjsj&gt;=#{bjsj1,jdbcType=TIMESTAMP}
+			</if>
+			<if test="bjsj2 != null and bjsj2 != ''">and
+				b.bjsj&lt;=#{bjsj2,jdbcType=TIMESTAMP}
+			</if>
+			<if test="cjjgdm != null and cjjgdm != ''">and
+				b.cjjgdm=#{cjjgdm}
+			</if>
+			<if test="bjlxdm != null and bjlxdm != ''">and
+				b.bjlxdm=#{bjlxdm}
+			</if>
+			<if test="cjbmbm != null and cjbmbm != ''">and
+				b.cjbmbm=#{cjbmbm}
+			</if>
+			<if test="pjbmbm != null and pjbmbm != ''">and
+				b.pjbmbm=#{pjbmbm}
+			</if>
+			<if test="jqztdm != null and jqztdm != ''">and
+				b.jqztdm=#{jqztdm}
+			</if>
+			<if test="sfyxbj != null and sfyxbj != ''">and
+				b.sfyxbj=#{sfyxbj}
+			</if>
+			<if test="sfyxbjdm != null and sfyxbjdm != ''">and
+				b.sfyxbjdm=#{sfyxbjdm}
+			</if>
+			<if test="cjjgdm != null and cjjgdm != ''">and
+				b.cjjgdm=#{cjjgdm}
+			</if>
+			<if test="tjlx != null and tjlx != ''">and
+				<if test="tjlx == &quot;ljzt&quot;">
+					b.zhsj between #{zhsj1,jdbcType=TIMESTAMP} and #{zhsj2,jdbcType=TIMESTAMP}
+					and b.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;dyzt&quot;">
+					to_char(b.zhsj, 'yyyymm') = to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyymm')
+			        and b.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;jnzt&quot;">
+					
+			           to_char(b.zhsj, 'yyyymmdd') &gt;= to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyy') || '0101'
+			           and to_char(b.zhsj, 'yyyymmdd') &lt;= to_char(#{zhsj2,jdbcType=TIMESTAMP}, 'yyyymmdd')
+			           
+			           and b.cjjgdm = '1'
+				</if>
+				<if test="tjlx == &quot;zhccic&quot;">
+					
+			           to_char(b.zhsj, 'yyyymmdd') &gt;= to_char(#{zhsj1,jdbcType=TIMESTAMP}, 'yyyy') || '0101'
+			           and to_char(b.zhsj, 'yyyymmdd') &lt;= to_char(#{zhsj2,jdbcType=TIMESTAMP}, 'yyyymmdd')
+			           
+			           and b.cjjgdm = '1'
+			           and b.bjlxdm = '1'
+				</if>
+			</if>
+			<if test="sfyxbjdm2 != null and sfyxbjdm2 != ''">and
+				(b.sfyxbjdm is null or  b.sfyxbjdm = '1')
+			</if>
+	</sql>
+	<sql id="t_bjxxbPageWhere">
+		<include refid="t_bjxxbWhere"/>	</sql>
+	<sql id="t_bjxxbListWhere">
+		<include refid="t_bjxxbWhere"/>	</sql>
+	<sql id="t_bjxxbSelectWhere">
+		<include refid="t_bjxxbWhere"/>	</sql>
+	<!--报警信息表(t_bjxxb)-->
+	<insert id="insertBjxxb" parameterType="bjxxb">
+		insert into t_bjxxb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--报警信息表(t_bjxxb)-->
+	<update id="updateBjxxb" parameterType="bjxxb">
+		update t_bjxxb a set a.bjxxid=a.bjxxid,gxbbh=SEQ_GENGXINXUHAO.NEXTVAL,zhsj=#{zhsj,jdbcType=TIMESTAMP}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		and a.bjxxid=#{bjxxid}
+	</update>
+	<!--报警信息表(t_bjxxb)-->
+	<delete id="deleteBjxxb" parameterType="bjxxb">
+		delete from t_bjxxb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbList" parameterType="map" resultMap="bjxxbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+		select * from (
+		select c.bjgzid,c.bjxxid,c.xm,c.gmsfhm,c.ssqymc,c.gxdwmc,c.gxdwbm,c.bjsj,c.bjlx,c.bjlxdm,c.sfyxbj,c.sfyxbjdm,c.jqzt,c.jqztdm,c.chjjg,c.cjjgdm,c.hylbdm
+		from t_bjxxb c, t_department d where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		union
+		(select b.bjgzid,b.bjxxid,b.xm,b.gmsfhm,b.ssqymc,b.gxdwmc,b.gxdwbm,b.bjsj,b.bjlx,b.bjlxdm,b.sfyxbj,b.sfyxbjdm,b.jqzt,b.jqztdm,b.chjjg,b.cjjgdm,b.hylbdm
+		from t_bjxxb b,t_bkry_kz e, t_department d
+		where 1=1 and b.bjxxid=e.bjxxid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+		) a 
+		order by ${pageSort})  z where rownum &lt;= ${endRow}) x where rowno &gt;${beginRow}  
+	</select>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbListCount" parameterType="map" resultType="int">
+		select count(1) from (
+		select c.bjgzid,c.bjxxid,c.xm,c.gmsfhm,c.ssqymc,c.gxdwmc,c.gxdwbm,c.bjsj,c.bjlx,c.bjlxdm,c.sfyxbj,c.sfyxbjdm,c.jqzt,c.jqztdm,c.chjjg,c.cjjgdm,c.hylbdm
+		from t_bjxxb c, t_department d where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		union
+		(select b.bjgzid,b.bjxxid,b.xm,b.gmsfhm,b.ssqymc,b.gxdwmc,b.gxdwbm,b.bjsj,b.bjlx,b.bjlxdm,b.sfyxbj,b.sfyxbjdm,b.jqzt,b.jqztdm,b.chjjg,b.cjjgdm,b.hylbdm
+		from t_bjxxb b,t_bkry_kz e, t_department d
+		where 1=1 and b.bjxxid=e.bjxxid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+		) a	
+	</select>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbListNoPage" parameterType="bjxxb" resultMap="bjxxbListResult">
+		select a.bjgzid bjgzid,a.bjxxid bjxxid,a.ssqymc ssqymc,a.ssqydz ssqydz,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.bjlx bjlx,a.bjsj bjsj,a.bdbm bdbm,a.ywbm ywbm,a.hylb hylb,a.xm xm,a.gmsfhm gmsfhm,a.jyaq jyaq,a.ladwbm ladwbm,a.ladwmc ladwmc,a.gxbbh gxbbh,a.ywlb ywlb,a.pjbmbm pjbmbm,a.pjbmmc pjbmmc,a.pjr pjr,a.pjsj pjsj,a.jqzt jqzt,a.cjbm cjbm,a.cjbmbm cjbmbm,a.chjsj chjsj,a.cjfzr cjfzr,a.lxdh lxdh,a.cjfklb cjfklb,a.cjfkbz cjfkbz,a.fkdw fkdw,a.fkdwbm fkdwbm,a.fkrq fkrq,a.cjjg cjjg,a.chjjg chjjg,a.zhsj zhsj,a.wxyy wxyy,a.hylbdm hylbdm
+		from t_bjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid,a.bjxxid
+	</select>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxb" parameterType="bjxxb" resultMap="bjxxbResult">
+		select 
+		   a.bjgzid bjgzid,
+	       a.bjxxid bjxxid,
+	       a.ssqymc ssqymc,
+	       a.ssqydz ssqydz,
+	       a.gxdwbm gxdwbm,
+	       a.gxdwmc gxdwmc,
+	       a.bjlxdm bjlxdm,
+	       a.bjlx bjlx,
+	       a.bjsj bjsj,
+	       a.bdbm bdbm,
+	       a.ywbm ywbm,
+	       a.hylbdm hylbdm,
+	       a.hylb hylb,
+	       a.xm xm,
+	       a.gmsfhm gmsfhm,
+	       a.jyaq jyaq,
+	       a.ladwbm ladwbm,
+	       a.ladwmc ladwmc,
+	       a.gxbbh gxbbh,
+	       a.ywlbdm ywlbdm,
+	       a.ywlb ywlb,
+	       a.pjbmbm pjbmbm,
+	       a.pjbmmc pjbmmc,
+	       a.pjr pjr,
+	       a.pjsj pjsj,
+	       a.jqztdm jqztdm,
+	       a.jqzt jqzt,
+	       a.cjbmbm cjbmbm,
+	       a.cjbm cjbm,
+	       a.chjsj chjsj,
+	       a.cjfzr cjfzr,
+	       a.lxdh lxdh,
+	       a.cjfklbdm cjfklbdm,
+	       a.cjfklb cjfklb,
+	       a.cjfkbz cjfkbz,
+	       a.fkdwbm fkdwbm,
+	       a.fkdw fkdw,
+	       a.fkrq fkrq,
+	       a.fkr fkr,
+	       a.cjjg cjjg,
+	       a.cjjgdm cjjgdm,
+	       a.chjjg chjjg,
+	       a.zhsj zhsj,
+	       a.wxyy wxyy,
+	       a.wxyydm wxyydm,
+	       a.sfyxbjdm sfyxbjdm,
+	       a.sfyxbj sfyxbj,
+	       a.cjbmbm cjbmbm,
+	       a.cjbm cjbm,
+	       a.chjsj chjsj,
+	       a.cjfzr cjfzr,
+	       a.lxdh lxdh,
+	       a.cjfklbdm cjfklbdm,
+	       a.cjfklb cjfklb,
+	       a.cjfkbz cjfkbz,
+	       a.fkdwbm fkdwbm,
+	       a.cjjg cjjg,
+	       a.cjjgdm cjjgdm,
+	       a.chjjg chjjg,
+	       a.zhsj zhsj,
+	       a.wxyy wxyy,
+	       a.wxyydm wxyydm,
+	       a.sfyxbjdm sfyxbjdm,
+	       a.sfyxbj sfyxbj,
+	       a.ywbzj ywbzj,
+	       a.fjh fjh,
+	       a.hylbdm hylbdm
+		from t_bjxxb a
+		where a.bjxxid = #{bjxxid}
+	</select>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbmainList" parameterType="map" resultMap="bjxxmainbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+	    (select a.bjxxid,a.xm,a.ssqymc,a.gxdwmc,a.bjsj,a.bjlx,a.sfyxbj,a.cjjg,a.hylbdm,a.gmsfhm
+		from t_bjxxb a 
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbmainListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bjxxb a
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--报警信息表(t_bjxxb)导出-->
+	<select id="getListExportBjxxb" parameterType="map" resultMap="bjxxbExcelListResult">
+		select a.xm xm,a.gmsfhm gmsfhm,a.ssqymc ssqymc,a.gxdwmc gxdwmc,a.bjsj bjsj,a.bjlx bjlx,a.sfyxbj sfyxbj,a.jqzt jqzt,a.chjjg chjjg
+		from t_bjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort}
+	</select>
+	
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbClientList" parameterType="map" resultMap="bjxxbclientListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+	    (select a.bjxxid, a.xm, a.ssqymc, a.gxdwmc, a.bjsj, a.bjlx, a.jqztdm, a.jqzt, a.sfyxbj
+		from t_bjxxb a 
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbClientListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bjxxb a
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getBjxxbCount" parameterType="map" resultType="int">
+		select count(1) a from t_bjxxb a
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--ByTy 按照比对规则SQL执行查询，返回报警信息-->
+	<select id="getBjxxByBdtjSql" parameterType="bjxxb" resultMap="bjxxbJBResult">
+		${bdtjSql}
+	</select>
+</mapper>

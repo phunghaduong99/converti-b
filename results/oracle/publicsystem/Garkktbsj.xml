@@ -1,0 +1,162 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	garkktbsj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<resultMap id="garkktbsjResult" type="garkktbsj">
+		<result property="garkktbsjid" column="garkktbsjid"/>
+		<result property="gmsfzhm" column="gmsfzhm"/>
+		<result property="xm" column="xm"/>
+		<result property="xb" column="xb"/>
+		<result property="mz" column="mz"/>
+		<result property="hyzk" column="hyzk"/>
+		<result property="hjsx" column="hjsx"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="csrq" column="csrq"/>
+		<result property="zp" column="zp"/>
+	</resultMap>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<resultMap id="garkktbsjListResult" type="garkktbsj">
+		<result property="garkktbsjid" column="garkktbsjid"/>
+		<result property="gmsfzhm" column="gmsfzhm"/>
+		<result property="xm" column="xm"/>
+		<result property="xb" column="xb"/>
+		<result property="mz" column="mz"/>
+		<result property="hyzk" column="hyzk"/>
+		<result property="hjsx" column="hjsx"/>
+		<result property="hjdxz" column="hjdxz"/>
+		<result property="csrq" column="csrq"/>
+		<result property="zp" column="zp"/>
+	</resultMap>
+	<sql id="t_garkktbsjWhere">
+			<if test="garkktbsjid != null and garkktbsjid != ''">and
+				a.garkktbsjid=#{garkktbsjid}
+			</if>
+	</sql>
+	<sql id="t_garkktbsjPageWhere">
+		<include refid="t_garkktbsjWhere"/>	</sql>
+	<sql id="t_garkktbsjListWhere">
+		<include refid="t_garkktbsjWhere"/>	</sql>
+	<sql id="t_garkktbsjSelectWhere">
+		<include refid="t_garkktbsjWhere"/>	</sql>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<insert id="insertGarkktbsj" parameterType="garkktbsj">
+		insert into t_garkktbsj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<update id="updateGarkktbsj" parameterType="garkktbsj">
+		update t_garkktbsj a set a.garkktbsjid=a.garkktbsjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<delete id="deleteGarkktbsj" parameterType="garkktbsj">
+		delete from t_garkktbsj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<select id="getGarkktbsjList" parameterType="map" resultMap="garkktbsjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.garkktbsjid garkktbsjid,a.gmsfzhm gmsfzhm,a.xm xm,a.xb xb,a.mz mz,a.hyzk hyzk,a.hjsx hjsx,a.hjdxz hjdxz,a.csrq csrq,a.zp zp
+		from t_garkktbsj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<select id="getGarkktbsjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_garkktbsj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<select id="getGarkktbsjListNoPage" parameterType="garkktbsj" resultMap="garkktbsjListResult">
+		select a.garkktbsjid garkktbsjid,a.gmsfzhm gmsfzhm,a.xm xm,a.xb xb,a.mz mz,a.hyzk hyzk,a.hjsx hjsx,a.hjdxz hjdxz,a.csrq csrq,a.zp zp
+		from t_garkktbsj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.garkktbsjid
+	</select>
+	<!--公安人口库同步数据(t_garkktbsj)-->
+	<select id="getGarkktbsj" parameterType="garkktbsj" resultMap="garkktbsjResult">
+		select a.garkktbsjid garkktbsjid,a.gmsfzhm gmsfzhm,a.xm xm,a.xb xb,a.mz mz,a.hyzk hyzk,a.hjsx hjsx,a.hjdxz hjdxz,a.csrq csrq,a.zp zp
+		from t_garkktbsj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.garkktbsjid
+	</select>
+</mapper>

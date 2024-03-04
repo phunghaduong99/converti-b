@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+ 
+<sqlMap>
+	
+	<typeAlias type="com.apress.prospring.ch10.domain.Customer" alias="customer"/>
+	<typeAlias type="com.apress.prospring.ch10.domain.CustomerDetail" alias="customerDetail"/>
+	
+	<resultMap class="customer" id="result">
+		<result property="customerId" column="CustomerId"/>
+		<result property="firstName" column="FirstName"/>
+		<result property="lastName" column="LastName"/>
+	</resultMap>
+	
+	<resultMap class="customerDetail" id="gossipResult">
+		<result property="customerDetailId" column="CustomerDetailId"/>
+		<result property="data" column="Data"/>
+	</resultMap>
+
+	<resultMap class="customer" id="resultDetail" extends="result">
+		<result property="customerDetail.customerDetailId" column="CustomerDetailId" nullValue="0"/>
+		<result property="customerDetail.data" column="CustomerDetailData"/>
+		<result property="customerGossip" select="getCustomerGossipById" column="CustomerGossip"/>
+	</resultMap>	
+	
+	<select id="getCustomerById" resultMap="resultDetail" parameterClass="int">
+		select 
+			c.CustomerId as CustomerId,
+			c.FirstName as FirstName,
+			c.LastName as LastName,
+			c.CustomerDetail as CustomerDetail,
+			c.CustomerGossip as CustomerGossip,
+			cd.CustomerDetailId as CustomerDetailId,
+			cd.Data as CustomerDetailData
+		from 
+			Customers c inner join CustomerDetails cd on c.CustomerDetail = cd.CustomerDetailId 
+		where
+			c.CustomerId=#value#
+	</select>
+	
+	<select id="getCustomerGossipById" resultMap="gossipResult" parameterClass="int">
+		select * from CustomerDetails where CustomerDetailId=#value#
+	</select>
+
+</sqlMap>

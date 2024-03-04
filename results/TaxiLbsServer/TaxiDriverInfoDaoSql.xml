@@ -1,0 +1,165 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:53:46 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	long
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	hsahmap
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	string
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	driverInfo
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	diverApply
+		See console output for further details 
+	-->
+
+	<select id="getDriverList" parameterType="driverInfo" resultType="driverInfo">
+		select t.*,s.phoneNumber,s.loginName from t_taxiclient_driverinfoapply
+		t
+		left join
+		t_taxiserver_taxiuser s on t.uid=s.uid where isTrue!=0 and
+		isTrue!=1
+		<if test="driverName != null">and
+			t.driverName like
+			'%${driverName}%'
+		</if>
+		<if test="driverCompany != null">and
+			t.driverCompany like
+			'%${driverCompany}%'
+		</if>
+		<if test="plateNumber != null">and
+			t.plateNumber like
+			'%${plateNumber}%'
+		</if>
+	</select>
+	<select id="CountDriverList" parameterType="driverInfo" resultType="long">
+		select count(*) from t_taxiclient_driverinfoapply
+		t
+		left join
+		t_taxiserver_taxiuser s on t.uid=s.uid where isTrue!=0 and
+		isTrue!=1
+		<if test="driverName != null">and
+			t.driverName like
+			'%${driverName}%'
+		</if>
+		<if test="driverCompany != null">and
+			t.driverCompany like
+			'%${driverCompany}%'
+		</if>
+		<if test="plateNumber != null">and
+			t.plateNumber like
+			'%${plateNumber}%'
+		</if>
+	</select>
+
+	<select id="getApplyDriverList" parameterType="diverApply" resultType="diverApply">
+		select t.*,s.loginName from t_taxiclient_driverinfoapply t left join
+		t_taxiserver_taxiuser s on t.uid=s.uid where isTrue=0
+		<if test="driverName != null">and
+			t.driverName like
+			'%${driverName}%'
+		</if>
+		<if test="driverCompany != null">and
+			t.driverCompany like
+			'%${driverCompany}%'
+		</if>
+		<if test="plateNumber != null">and
+			t.plateNumber like
+			'%${plateNumber}%'
+		</if>
+	</select>
+	<select id="CountApplyDriverList" parameterType="diverApply" resultType="long">
+		select count(*) from t_taxiclient_driverinfoapply t left join
+		t_taxiserver_taxiuser s on t.uid=s.uid where isTrue=0
+		<if test="driverName != null">and
+			t.driverName like
+			'%${driverName}%'
+		</if>
+		<if test="driverCompany != null">and
+			t.driverCompany like
+			'%${driverCompany}%'
+		</if>
+		<if test="plateNumber != null">and
+			t.plateNumber like
+			'%${plateNumber}%'
+		</if>
+	</select>
+	<select id="getApplyDriverObj" parameterType="long" resultType="diverApply">
+		select t.*,s.loginName from t_taxiclient_driverinfoapply t
+		left join
+		t_taxiserver_taxiuser s on t.uid=s.uid where t.id=#{id}
+	</select>
+	<update id="updateApplyDriver" parameterType="diverApply">
+		update
+		t_taxiclient_driverinfoapply set isTrue=#{isTrue} where id=#{id}
+	</update>
+
+	<select id="getDriverInfoObject" parameterType="long" resultType="driverInfo">
+		select * from t_taxi_serverDriverinfo where id=#{id}
+	</select>
+
+	<select id="getDriverInfoObjectForUid" parameterType="long" resultType="driverInfo">
+		select * from t_taxiserver_driverinfo where uid=#{uid}
+	</select>
+
+	<insert id="isAddDriver" parameterType="driverInfo">
+		insert into
+		t_taxiserver_driverinfo(uid,driverCompany,driverName,driverCity,plateNumber,companyNo,taobaoLoginName,isTrue)
+		values(#{uid},#{driverName},#{driverCompany},#{driverCity},#{plateNumber},#{companyNo},#{taobaoLoginName},#{isTrue})
+	</insert>
+
+	<update id="isUpdateDriver" parameterType="driverInfo">
+		update
+		t_taxiserver_driverinfo set
+		uid=#{uid},driverCompany=#{driverCompany},driverName=#{driverName},driverCity=#{driverCity},plateNumber=#{plateNumber},companyNo=#{companyNo},taobaoLoginName=#{taobaoLoginName},isTrue=#{isTrue}
+		where id=#{id}
+	</update>
+
+	<delete id="isDeleteDriver" parameterType="long">
+		delete from
+		t_taxiclient_driverinfoapply where id=#{id}
+	</delete>
+</mapper>

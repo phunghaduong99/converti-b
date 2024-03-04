@@ -1,0 +1,286 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyryjctj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<resultMap id="qyryjctjResult" type="qyryjctj">
+		<result property="qyryjctjid" column="qyryjctjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="cyrylbmc" column="cyrylbmc"/>
+		<result property="xm" column="xm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="jg" column="jg"/>
+		<result property="fk" column="fk"/>
+		<result property="jl" column="jl"/>
+		<result property="jlbfk" column="jlbfk"/>
+		<result property="zjxszr" column="zjxszr"/>
+		<result property="xqcjhqzcj" column="xqcjhqzcj"/>
+		<result property="qtfklx" column="qtfklx"/>
+		<result property="xj" column="xj"/>
+	</resultMap>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<resultMap id="qyryjctjListResult" type="qyryjctj">
+		<result property="qyryjctjid" column="qyryjctjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="cyrylbmc" column="cyrylbmc"/>
+		<result property="xm" column="xm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="jg" column="jg"/>
+		<result property="fk" column="fk"/>
+		<result property="jl" column="jl"/>
+		<result property="jlbfk" column="jlbfk"/>
+		<result property="zjxszr" column="zjxszr"/>
+		<result property="xqcjhqzcj" column="xqcjhqzcj"/>
+		<result property="qtfklx" column="qtfklx"/>
+		<result property="xj" column="xj"/>
+		
+		<result property="tbbycs" column="tbbycs"/>
+		<result property="wzjlcs" column="wzjlcs"/>
+		<result property="qtjlcs" column="qtjlcs"/>
+		<result property="jzrqJczs" column="jzrqJczs"/>
+		<result property="jzrqCfzs" column="jzrqCfzs"/>
+		<result property="jzrqJlzs" column="jzrqJlzs"/>
+		<result property="zqnJczs" column="zqnJczs"/>
+		<result property="zqnCfzs" column="zqnCfzs"/>
+		<result property="zqnJlzs" column="zqnJlzs"/>
+	</resultMap>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<resultMap id="qyryjctjListResultTJ" type="qyryjctj">
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="jg" column="jg"/>
+		<result property="fk" column="fk"/>
+		<result property="jl" column="jl"/>
+		<result property="jlbfk" column="jlbfk"/>
+		<result property="zjxszr" column="zjxszr"/>
+		<result property="xqcjhqzcj" column="xqcjhqzcj"/>
+		<result property="qtfklx" column="qtfklx"/>
+		
+		<result property="tbbycs" column="tbbycs"/>
+		<result property="wzjlcs" column="wzjlcs"/>
+		<result property="qtjlcs" column="qtjlcs"/>
+		<result property="jzrqJczs" column="jzrqJczs"/>
+		<result property="jzrqCfzs" column="jzrqCfzs"/>
+		<result property="jzrqJlzs" column="jzrqJlzs"/>
+		<result property="zqnJczs" column="zqnJczs"/>
+		<result property="zqnCfzs" column="zqnCfzs"/>
+		<result property="zqnJlzs" column="zqnJlzs"/>
+	</resultMap>
+	<sql id="t_qyryjctjWhere">
+			<if test="qyryjctjid != null and qyryjctjid != ''">and
+				a.qyryjctjid=#{qyryjctjid}
+			</if>
+	</sql>
+	<sql id="t_qyryjctjPageWhere">
+		<include refid="t_qyryjctjWhere"/>	
+            <if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+		    </if>
+    </sql>
+    <sql id="zhouqiWhere">
+		b.tjrq &gt;=#qsrq:DATE# and b.tjrq &lt; #jzrq:DATE#+1
+		<if test="dsjgdm != null and dsjgdm != ''">and
+				b.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				b.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				b.gxdwdm=#{gxdwdm}
+			</if>
+	</sql>
+	<sql id="zjzrq">
+		b.tjrq &lt; #jzrq:DATE#+1
+		<if test="dsjgdm != null and dsjgdm != ''">and
+				b.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				b.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				b.gxdwdm=#{gxdwdm}
+			</if>
+	</sql>
+	<sql id="t_qyryjctjListWhere">
+		<include refid="t_qyryjctjWhere"/>	</sql>
+	<sql id="t_qyryjctjSelectWhere">
+		<include refid="t_qyryjctjWhere"/>	</sql>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<insert id="insertQyryjctj" parameterType="qyryjctj">
+		insert into t_qyryjctj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<update id="updateQyryjctj" parameterType="qyryjctj">
+		update t_qyryjctj a set a.qyryjctjid=a.qyryjctjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<delete id="deleteQyryjctj" parameterType="qyryjctj">
+		delete from t_qyryjctj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<select id="getQyryjctjList" parameterType="map" resultMap="qyryjctjListResultTJ">
+		select x.* from ( 
+		select rownum rowno,z.* from (
+		select 
+		NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then (a.cfcsxj+a.jlcsxj) end),'0') as jzrqJczs,
+		NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then (a.cfcsxj) end),'0') jzrqCfzs,
+		NVL(sum(case when a.tjrq &lt; #jzrq:DATE#+1 then (a.jlcsxj) end),'0') jzrqJlzs,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.cfcsxj+a.jlcsxj) end),'0') zqnJczs,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.cfcsxj) end),'0') zqnCfzs,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.jg) end),'0') jg,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.fk) end),'0') fk,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.jl) end),'0') jl,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.jlbfk) end),'0') jlbfk,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.zjxszr) end),'0') zjxszr,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.xqcjhqzcj) end),'0') xqcjhqzcj,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.qtfklx) end),'0') qtfklx,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.jlcsxj) end),'0') zqnJlzs,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.tbbycs) end),'0') tbbycs,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.wzjlcs) end),'0') wzjlcs,
+		NVL(sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then (a.qtjlcs) end),'0') qtjlcs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_qyryjctj a 
+		where 1=1 
+		<include refid="t_qyryjctjPageWhere"/>
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<select id="getQyryjctjListCount" parameterType="map" resultType="int">
+	select count(1) from (
+		select count(1) a from t_qyryjctj a
+		where 1=1 
+		<include refid="t_qyryjctjPageWhere"/>
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)
+	</select>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<select id="getQyryjctjListNoPage" parameterType="qyryjctj" resultMap="qyryjctjListResult">
+		select a.qyryjctjid qyryjctjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.cyrybh cyrybh,a.cyrylbdm cyrylbdm,a.cyrylbmc cyrylbmc,a.xm xm,a.zjhm zjhm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.dsjgdm dsjgdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qymc qymc,a.qybm qybm,a.jg jg,a.fk fk,a.jl jl,a.jlbfk jlbfk,a.zjxszr zjxszr,a.xqcjhqzcj xqcjhqzcj,a.qtfklx qtfklx,a.xj xj
+		from t_qyryjctj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyryjctjid
+	</select>
+	<!--企业人员奖惩统计表(t_qyryjctj)-->
+	<select id="getQyryjctj" parameterType="qyryjctj" resultMap="qyryjctjResult">
+		select a.qyryjctjid qyryjctjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.cyrybh cyrybh,a.cyrylbdm cyrylbdm,a.cyrylbmc cyrylbmc,a.xm xm,a.zjhm zjhm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.dsjgdm dsjgdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qymc qymc,a.qybm qybm,a.jg jg,a.fk fk,a.jl jl,a.jlbfk jlbfk,a.zjxszr zjxszr,a.xqcjhqzcj xqcjhqzcj,a.qtfklx qtfklx,a.xj xj
+		from t_qyryjctj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyryjctjid
+	</select>
+</mapper>

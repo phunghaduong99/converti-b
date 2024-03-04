@@ -1,0 +1,160 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:24 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	ickrzjl
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<resultMap id="ickrzjlResult" type="ickrzjl">
+		<result property="rzbh" column="rzbh"/>
+		<result property="pch" column="pch"/>
+		<result property="glbh" column="glbh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="czlb" column="czlb"/>
+		<result property="czyy" column="czyy"/>
+		<result property="czr" column="czr"/>
+		<result property="czsj" column="czsj"/>
+	</resultMap>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<resultMap id="ickrzjlListResult" type="ickrzjl">
+		<result property="rzbh" column="rzbh"/>
+		<result property="pch" column="pch"/>
+		<result property="glbh" column="glbh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="czlb" column="czlb"/>
+		<result property="czyy" column="czyy"/>
+		<result property="czr" column="czr"/>
+		<result property="czsj" column="czsj"/>
+		<result property="xm" column="xm"/>
+	</resultMap>
+	<sql id="t_ickrzjlWhere">
+			<if test="rzbh != null and rzbh != ''">and
+				a.rzbh=#{rzbh}
+			</if>
+	</sql>
+	<sql id="t_ickrzjlPageWhere">
+		<include refid="t_ickrzjlWhere"/>	</sql>
+	<sql id="t_ickrzjlListWhere">
+		<include refid="t_ickrzjlWhere"/>	</sql>
+	<sql id="t_ickrzjlSelectWhere">
+		<include refid="t_ickrzjlWhere"/>	</sql>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<insert id="insertIckrzjl" parameterType="ickrzjl">
+		insert into t_ickrzjl (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<update id="updateIckrzjl" parameterType="ickrzjl">
+		update t_ickrzjl a set a.rzbh=a.rzbh
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<delete id="deleteIckrzjl" parameterType="ickrzjl">
+		delete from t_ickrzjl a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<select id="getIckrzjlList" parameterType="map" resultMap="ickrzjlListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.rzbh rzbh,a.pch pch,a.glbh glbh,a.cyrybh cyrybh,a.czlb czlb,a.czyy czyy,
+		a.czr czr,a.czsj czsj ,b.xm xm
+		from t_ickrzjl a ,t_qyryxx b
+		where 1=1 and a.cyrybh=b.cyrybh
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<select id="getIckrzjlListCount" parameterType="map" resultType="int">
+		select count(1) a from t_ickrzjl a ,t_qyryxx b
+		where 1=1 and a.cyrybh=b.cyrybh
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<select id="getIckrzjlListNoPage" parameterType="ickrzjl" resultMap="ickrzjlListResult">
+		select a.rzbh rzbh,a.pch pch,a.glbh glbh,a.cyrybh cyrybh,a.czlb czlb,a.czyy czyy,a.czr czr,a.czsj czsj
+		from t_ickrzjl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.rzbh
+	</select>
+	<!--IC卡日志记录(t_ickrzjl)-->
+	<select id="getIckrzjl" parameterType="ickrzjl" resultMap="ickrzjlResult">
+		select a.rzbh rzbh,a.pch pch,a.glbh glbh,a.cyrybh cyrybh,a.czlb czlb,a.czyy czyy,a.czr czr,a.czsj czsj
+		from t_ickrzjl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.rzbh
+	</select>
+</mapper>

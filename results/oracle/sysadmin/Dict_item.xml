@@ -1,0 +1,279 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	dict_item
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	dict
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--字典项(t_dict_item)-->
+	<resultMap id="dict_itemResult" type="dict_item">
+		<result property="item_id" column="item_id"/>
+		<result property="dict_code" column="dict_code"/>
+		<result property="display_name" column="display_name"/>
+		<result property="fact_value" column="fact_value"/>
+		<result property="append_value" column="append_value"/>
+		<result property="super_item_id" column="super_item_id"/>
+		<result property="sib_order" column="sib_order"/>
+		<result property="leaf_flag" column="leaf_flag"/>
+		<result property="display_flag" column="display_flag"/>
+		<result property="valid_flag" column="valid_flag"/>
+		<result property="item_simplepin" column="item_simplepin"/>
+		<result property="item_allpin" column="item_allpin"/>
+	</resultMap>
+	<!--字典项(t_dict_item)-->
+	<resultMap id="dict_itemListResult" type="dict_item">
+		<result property="item_id" column="item_id"/>
+		<result property="dict_code" column="dict_code"/>
+		<result property="display_name" column="display_name"/>
+		<result property="fact_value" column="fact_value"/>
+		<result property="append_value" column="append_value"/>
+		<result property="super_item_id" column="super_item_id"/>
+		<result property="sib_order" column="sib_order"/>
+		<result property="leaf_flag" column="leaf_flag"/>
+		<result property="display_flag" column="display_flag"/>
+		<result property="valid_flag" column="valid_flag"/>
+		<result property="item_simplepin" column="item_simplepin"/>
+		<result property="item_allpin" column="item_allpin"/>
+	</resultMap>
+	<!--字典项(t_dict_item) 获得下一个排序号-->
+	<resultMap id="sib_orderResult" type="dict_item">
+		<result property="sib_order" column="sib_order"/>
+	</resultMap>
+	<sql id="t_dict_itemWhereForUpdate">
+		<if test="item_id != null and item_id != ''">and
+				a.item_id=#{item_id}
+			</if>
+	</sql>
+	<sql id="t_dict_itemWhere">
+			<if test="item_id != null and item_id != ''">and
+				a.item_id=#{item_id}
+			</if>
+			<if test="dict_code != null and dict_code != ''">and
+				a.dict_code=#{dict_code}
+			</if>
+			<if test="display_name != null and display_name != ''">and
+				a.display_name=#{display_name}
+			</if>
+			<if test="fact_value != null and fact_value != ''">and
+				a.fact_value=#{fact_value}
+			</if>
+	</sql>
+	<sql id="t_dict_itemPageWhere">
+		<include refid="t_dict_itemWhere"/>	
+			<if test="display_name != null and display_name != ''">
+			   and a.display_name like '%${display_name}%'
+			</if>
+			<if test="super_item_id != null and super_item_id != ''">
+			   and a.super_item_id='${super_item_id}'
+			</if>
+		</sql>
+	<sql id="t_dict_itemListWhere">
+		<include refid="t_dict_itemWhere"/>		
+		
+	</sql>
+	<sql id="t_dict_itemSelectWhere">
+		<include refid="t_dict_itemWhere"/>	</sql>
+	<!--字典项(t_dict_item)-->
+	<insert id="insertDict_item" parameterType="dict_item">
+		insert into t_dict_item (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--字典项(t_dict_item)-->
+	<update id="updateDict_item" parameterType="dict_item">
+		update t_dict_item a set item_id=item_id
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--字典项(t_dict_item)-->
+	<delete id="deleteDict_item" parameterType="dict_item">
+		delete from t_dict_item a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--字典项(t_dict_item)-->
+	<select id="getDict_itemList" parameterType="map" resultMap="dict_itemListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--字典项(t_dict_item)-->
+	<select id="getDict_itemListCount" parameterType="map" resultType="int">
+		select count(1) a from t_dict_item a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--字典项(t_dict_item),实现按实际值、显示值、简拼、全拼及append_value字段筛选，实现按父节点查询-->
+	<select id="getDict_itemListNoPage" parameterType="dict_item" resultMap="dict_itemListResult">
+		select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+	</select>
+	<!--字典项(t_dict_item),实现按实际值、显示值、简拼、全拼及append_value字段筛选，实现按父节点查询-->
+	<select id="getDict_itemListOffline" parameterType="dict" resultMap="dict_itemListResult">
+		select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a,t_dict b
+		where 1=1 and a.dict_code=b.dict_code
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.fact_value
+	</select>
+	<!--字典项(t_dict_item)-->
+	<select id="getDict_item" parameterType="dict_item" resultMap="dict_itemResult">
+		select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.item_id,a.dict_code
+	</select>
+	
+	<!--取子字典项(t_dict_item)-->
+		<select id="getChildDict_itemListByItemIDAndDictCode" parameterType="dict_item" resultMap="dict_itemResult">
+		select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,'' as append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a
+		where 1=1 and a.dict_code= #{dict_code} 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by sib_order
+	</select>
+	
+	<select id="getDictionaryItemByDictCodeAndFactValue" parameterType="dict_item" resultMap="dict_itemResult">
+		select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a where dict_code= #{dict_code} and fact_value= #{fact_value}
+	</select>
+	
+	<select id="getParentDictionaryItemBySuperItemID" parameterType="dict_item" resultMap="dict_itemResult">
+			select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a where item_id= #{super_item_id}
+	</select>
+	<select id="getParentDictionaryItemListByDictCode" parameterType="dict_item" resultMap="dict_itemResult">
+			select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		from t_dict_item a where dict_code= #{dict_code} order by sib_order  
+	</select>
+	<select id="getChildDictionaryItemListByItemID" parameterType="dict_item" resultMap="dict_itemResult">
+			select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		 from t_dict_item  a where dict_code= #{dict_code} 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by sib_order
+	</select>
+	
+	<select id="getDictItemNameByDcFv" parameterType="dict_item" resultType="string">
+		select display_name  from t_dict_item where fact_value= #{fact_value} and  dict_code = #{dict_code} 
+	</select>
+	<select id="getDictItemCode" parameterType="dict_item" resultType="string">
+		select fact_value  from t_dict_item where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->		
+		
+	</select>
+	<select id="getDictionaryItemListByDictID" parameterType="dict_item" resultMap="dict_itemResult">
+			select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		 from t_dict_item  a where dict_code=(select dict_code from t_dict where dict_id = #{dict_id})
+	</select>
+	<select id="getDictItemNameListByDcFv" parameterType="dict_item" resultMap="dict_itemResult">
+			select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		 from t_dict_item a where  fact_value= #{fact_value} and  dict_code = #{dict_code}
+	</select>
+	<select id="getDictionaryItemByDcAndFvAndSuperII" parameterType="dict_item" resultMap="dict_itemResult">
+			select a.item_id item_id,a.dict_code dict_code,a.display_name display_name,a.fact_value fact_value,a.append_value append_value,a.super_item_id super_item_id,a.sib_order sib_order,a.leaf_flag leaf_flag,a.display_flag display_flag,a.valid_flag valid_flag,a.item_simplepin item_simplepin,a.item_allpin item_allpin
+		 from t_dict_item a where dict_code= #{dict_code} and fact_value= #{fact_value} and super_item_id = #{super_item_id}
+	</select>
+	<!--  获得所有兄弟节点最大排序号+1  -->
+	<select id="getNextSib_order" parameterType="dict_item" resultMap="sib_orderResult">
+	    	select nvl((max(a.sib_order) + 1), 0) sib_order
+			  from t_dict_item a
+			 where 1 = 1
+	    	 <if test="super_item_id != null and super_item_id != ''">and
+				a.super_item_id = #{super_item_id}
+			</if>
+			<if test="dict_code != null and dict_code != ''">and
+				a.dict_code = #{dict_code}
+			</if>
+	</select>
+</mapper>

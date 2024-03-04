@@ -1,0 +1,160 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	gatztbhf
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<resultMap id="gatztbhfResult" type="gatztbhf">
+		<result property="gatbid" column="gatbid"/>
+		<result property="gajsdwid" column="gajsdwid"/>
+		<result property="gatztbhfid" column="gatztbhfid"/>
+		<result property="hfsj" column="hfsj"/>
+		<result property="hfnr" column="hfnr"/>
+		<result property="hfr" column="hfr"/>
+	</resultMap>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<resultMap id="gatztbhfListResult" type="gatztbhf">
+		<result property="gatbid" column="gatbid"/>
+		<result property="gajsdwid" column="gajsdwid"/>
+		<result property="gatztbhfid" column="gatztbhfid"/>
+		<result property="hfsj" column="hfsj"/>
+		<result property="hfnr" column="hfnr"/>
+		<result property="hfr" column="hfr"/>
+	</resultMap>
+	<sql id="t_gatztbhfWhere">
+			<if test="gatbid != null and gatbid != ''">and
+				a.gatbid=#{gatbid}
+			</if>
+			<if test="gajsdwid != null and gajsdwid != ''">and
+				a.gajsdwid=#{gajsdwid}
+			</if>
+			<if test="gatztbhfid != null and gatztbhfid != ''">and
+				a.gatztbhfid=#{gatztbhfid}
+			</if>
+	</sql>
+	<sql id="t_gatztbhfPageWhere">
+		<include refid="t_gatztbhfWhere"/>	</sql>
+	<sql id="t_gatztbhfListWhere">
+		<include refid="t_gatztbhfWhere"/>	</sql>
+	<sql id="t_gatztbhfSelectWhere">
+		<include refid="t_gatztbhfWhere"/>	</sql>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<insert id="insertGatztbhf" parameterType="gatztbhf">
+		insert into t_gatztbhf (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<update id="updateGatztbhf" parameterType="gatztbhf">
+		update t_gatztbhf a set a.gatztbhfid=a.gatztbhfid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<delete id="deleteGatztbhf" parameterType="gatztbhf">
+		delete from t_gatztbhf a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<select id="getGatztbhfList" parameterType="map" resultMap="gatztbhfListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.gatbid gatbid,a.gajsdwid gajsdwid,a.gatztbhfid gatztbhfid,a.hfsj hfsj,a.hfnr hfnr,a.hfr hfr
+		from t_gatztbhf a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<select id="getGatztbhfListCount" parameterType="map" resultType="int">
+		select count(1) a from t_gatztbhf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<select id="getGatztbhfListNoPage" parameterType="gatztbhf" resultMap="gatztbhfListResult">
+		select a.gatbid gatbid,a.gajsdwid gajsdwid,a.gatztbhfid gatztbhfid,a.hfsj hfsj,a.hfnr hfnr,a.hfr hfr
+		from t_gatztbhf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gatbid,a.gajsdwid,a.gatztbhfid
+	</select>
+	<!--公安通知通报回复(t_gatztbhf)-->
+	<select id="getGatztbhf" parameterType="gatztbhf" resultMap="gatztbhfResult">
+		select a.gatbid gatbid,a.gajsdwid gajsdwid,a.gatztbhfid gatztbhfid,a.hfsj hfsj,a.hfnr hfnr,a.hfr hfr
+		from t_gatztbhf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gatbid,a.gajsdwid,a.gatztbhfid
+	</select>
+</mapper>

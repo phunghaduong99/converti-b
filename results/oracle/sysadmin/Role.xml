@@ -1,0 +1,217 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	role
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--角色(t_role)-->
+	<resultMap id="roleResult" type="role">
+		<result property="roleid" column="roleid"/>
+		<result property="departid" column="departid"/>
+		<result property="rolename" column="rolename"/>
+		<result property="roledescription" column="roledescription"/>
+		<result property="roletype" column="roletype"/>
+		<result property="jzlbdm" column="jzlbdm"/>
+        <result property="jzlbmc" column="jzlbmc"/>
+	</resultMap>
+	<!--角色(t_role)-->
+	<resultMap id="roleListResult" type="role">
+		<result property="roleid" column="roleid"/>
+		<result property="departid" column="departid"/>
+		<result property="rolename" column="rolename"/>
+		<result property="roledescription" column="roledescription"/>
+		<result property="roletype" column="roletype"/>
+	</resultMap>
+	<!--角色(t_role)-->
+	<resultMap id="roleListNoPageResult" type="role">
+		<result property="roleid" column="roleid"/>
+		<result property="departid" column="departid"/>
+		<result property="rolename" column="rolename"/>
+		<result property="roledescription" column="roledescription"/>
+		<result property="roletype" column="roletype"/>
+		<result property="departname" column="departname"/>
+	</resultMap>
+
+	  <resultMap id="useRoleResult" type="role">
+    <result property="roleid" column="roleid"/>
+    <result property="rolename" column="rolename"/>
+    <result property="departid" column="departid"/>
+    <result property="department.departname" column="departname"/>
+  </resultMap>
+	
+
+	
+	<sql id="t_roleWhere">
+			<if test="roleid != null and roleid != ''">and
+				a.roleid=#{roleid}
+			</if>
+			<if test="departid != null and departid != ''">and
+				a.departid=#{departid}
+			</if>
+			<if test="jzlbdm != null and jzlbdm != ''">and
+		    	 a.jzlbdm =#{jzlbdm}
+			</if>
+	</sql>
+	<sql id="t_rolePageWhere">
+		<include refid="t_roleWhere"/>	
+			
+		</sql>
+	<sql id="t_roleListWhere">
+		<include refid="t_roleWhere"/>	</sql>
+	<sql id="t_roleSelectWhere">
+		<include refid="t_roleWhere"/>	</sql>
+	<!--角色(t_role)-->
+	<insert id="insertRole" parameterType="role">
+		insert into t_role (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--角色(t_role)-->
+	<update id="updateRole" parameterType="role">
+		update t_role a set  roleid=roleid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--角色(t_role)-->
+	<delete id="deleteRole" parameterType="role">
+		delete from t_role a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--角色(t_role)-->
+	<select id="getRoleList" parameterType="map" resultMap="roleListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.roleid roleid,a.departid departid,a.rolename rolename,a.roledescription roledescription,a.roletype roletype
+		from t_role a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--角色(t_role)-->
+	<select id="getRoleListCount" parameterType="map" resultType="int">
+		select count(1) a from t_role a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--角色(t_role)-->
+	<select id="getRoleListNoPage" parameterType="role" resultMap="roleListNoPageResult">
+		select a.roleid roleid,a.departid departid,a.rolename rolename,a.roledescription roledescription,
+		a.roletype roletype,b.departname departname
+		from t_role a,t_department b
+		where 1=1 and a.departid=b.departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid,a.departid
+	</select>
+	<!--角色(t_role)-->
+	<select id="getRole" parameterType="role" resultMap="roleResult">
+		select a.roleid roleid,a.departid departid,a.rolename rolename,a.roledescription roledescription,a.roletype roletype
+		,a.jzlbmc,a.jzlbdm	
+		from t_role a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.roleid,a.departid
+	</select>
+	
+		 <select id="getRolesByUser" parameterType="user" resultMap="useRoleResult">
+	  select b.roleid,rolename,c.departid,departname  from t_user_role a,t_role b,t_department c
+	  where a.roleid=b.roleid and b.departid=c.departid and a.userid=#{userid}
+	  </select>
+	  
+	 <select id="getOptionRolesForUser" parameterType="user" resultMap="roleResult">
+		select a.roleid roleid,a.departid departid,a.rolename rolename,a.roledescription roledescription,a.roletype roletype
+		,a.jzlbmc,a.jzlbdm	
+		from t_role a
+  		where a.roleid not in(select roleid  from t_user_role where a.roleid=roleid and userid=#{userid})
+		<!--
+		Sorry, I can`t migrate	and 
+		See console output for further details 
+	-->
+	</select>
+
+  
+<select id="getloginUserRoleOutDeptList" parameterType="user" resultMap="roleListNoPageResult">
+select m.* from 
+  (select tr.roleid  roleid ,#{departid} as departid ,tr.rolename rolename ,tr.roledescription  roledescription ,tr.roletype roletype,
+  
+  
+  
+  de.departname from  t_user_role t, t_role tr,t_department de   where  de.departid=tr.departid and t.userid=#{userid} and tr.roleid = t.roleid ) m 
+where m.roleid not in
+   (select r.roleid from  t_department d , t_role r  where d.departid=r.departid  and  d.departfullcode like '${departcode}%')  
+	</select>
+	
+	<select id="getDeptRoleList" parameterType="user" resultMap="roleListNoPageResult">
+select r.roleid  roleid ,r.departid departid ,r.rolename rolename ,r.roledescription  roledescription ,r.roletype roletype,
+  d.departname from 
+    t_department d , t_role r  where d.departid=r.departid   and  d.departfullcode like '${departcode}%' 
+	</select>
+</mapper>

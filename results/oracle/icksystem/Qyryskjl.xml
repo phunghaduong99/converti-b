@@ -1,0 +1,438 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:24 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyryskjl
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<resultMap id="qyryskjlResult" type="qyryskjl">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="skid" column="skid"/>
+		<result property="ickh" column="ickh"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="kh" column="kh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="icksllsh" column="icksllsh"/>
+	</resultMap>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<resultMap id="qyryskjlListResult" type="qyryskjl">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="skid" column="skid"/>
+		<result property="ickh" column="ickh"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="kh" column="kh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="icksllsh" column="icksllsh"/>
+		<result property="sfzt" column="sfzt"/>
+		<result property="xm" column="xm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zhiwu" column="zhiwu"/>
+		<result property="ryid" column="ryid"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<resultMap id="qyryskjlListResultOne" type="qyryskjl">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="skid" column="skid"/>
+		<result property="ickh" column="ickh"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="kh" column="kh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="icksllsh" column="icksllsh"/>
+		<result property="sfzt" column="sfzt"/>
+		<result property="xm" column="xm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zhiwu" column="zhiwu"/>
+		<result property="ryid" column="ryid"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	
+	<!--场所人员刷卡记录(t_qyryskjl) 公安端场所刷卡记录-->
+	<resultMap id="qyryskjlGadListResult" type="qyryskjl">
+		<result property="qyid" column="qyid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="skid" column="skid"/>
+		<result property="ickh" column="ickh"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="kh" column="kh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="icksllsh" column="icksllsh"/>
+		<result property="xmzc" column="xmzc"/>
+		<result property="xmfzc" column="xmfzc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="shouji" column="shouji"/>
+	</resultMap>
+	<!--场所人员刷卡记录(t_qyryskjl) 公安端场人员工作日志-->
+	<resultMap id="cyrygzrzListResult" type="qyryskjl">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="skid" column="skid"/>
+		<result property="ickh" column="ickh"/>
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="kh" column="kh"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="icksllsh" column="icksllsh"/>
+		<result property="xm" column="xm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+		<result property="zhiwu" column="zhiwu"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="ryid" column="ryid"/>
+	</resultMap>
+	<!--场所人员刷卡记录(t_qyryskjl) 频繁刷卡-->
+	<resultMap id="pfskListResult" type="qyryskjl">
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="ryid" column="ryid"/>
+		<result property="cyrybh" column="cyrybh"/>
+		<result property="xm" column="xm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="skcs" column="skcs"/>
+		<result property="cyrylbdm" column="cyrylbdm"/>
+	</resultMap>
+	<!--场所人员刷卡记录(t_qyryskjl) 频繁刷卡轨迹-->
+	<resultMap id="pfskGjResult" type="qyryskjl">
+		<result property="sksj" column="sksj"/>
+		<result property="scsj" column="scsj"/>
+		<result property="qymc" column="qymc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	<sql id="t_qyryskjlWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="skid != null and skid != ''">and
+				a.skid=#{skid}
+			</if>
+	</sql>
+	<sql id="t_qyryskjlPageWhere">
+		<include refid="t_qyryskjlWhere"/>	</sql>
+	<sql id="t_qyryskjlListWhere">
+		<include refid="t_qyryskjlWhere"/>	</sql>
+	<sql id="t_qyryskjlSelectWhere">
+		<include refid="t_qyryskjlWhere"/>	</sql>
+	<sql id="t_pfskPageWhere">
+		<if test="sksjf != null and sksjf != ''">and
+			
+ 				a.sksj&gt;=trunc(#{sksjf})+6/24
+ 			
+		</if>
+		<if test="sksjt != null and sksjt != ''">and
+			
+ 				a.sksj&lt;trunc(#{sksjt})+1+6/24
+ 			
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			c.gxdwbm  like '${gxdwbm}%' 
+		   </if>	
+		<if test="deptCode != null and deptCode != ''">and
+			c.gxdwbm like '${deptCode}%'
+		</if>	
+		<if test="hylbdm != null and hylbdm != ''">and
+			c.hylbdm =#{hylbdm}
+		</if>	
+	</sql>	
+	<sql id="t_pfskSelectWhere">
+		<if test="skcs != null">
+			<if test="bds == 1">and
+				
+ 					a.skcs&gt;#{skcs}
+ 				
+			</if>
+			<if test="bds == -1">and
+				
+ 					a.skcs&lt;#{skcs}
+ 				
+			</if>
+			<if test="bds == 0">and
+				
+ 					a.skcs=#{skcs}
+ 				
+			</if>
+		</if>
+	</sql>
+	<sql id="t_pfskGjWhere">
+			<if test="cyrybh != null and cyrybh != ''">and
+				a.cyrybh=#{cyrybh}
+			</if>
+			<if test="sksjf != null and sksjf != ''">and
+				a.sksj &gt;=trunc(#sksjf:DATE#)+6/24
+			</if>
+			<if test="sksjt != null and sksjt != ''">and
+				a.sksj &lt;trunc(#sksjt:DATE#)+1+6/24
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				c.hylbdm=#{hylbdm}
+			</if>
+	</sql>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<insert id="insertQyryskjl" parameterType="qyryskjl">
+		insert into t_qyryskjl (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<update id="updateQyryskjl" parameterType="qyryskjl">
+		update t_qyryskjl a set a.skid=a.skid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<delete id="deleteQyryskjl" parameterType="qyryskjl">
+		delete from t_qyryskjl a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--场所人员刷卡记录(t_qyryskjl) 场所端人员工作日志-->
+	<select id="getQyryskjlList" parameterType="map" resultMap="qyryskjlListResultOne">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.qybm qybm,a.hylbdm hylbdm,a.hylb hylb,a.skid skid,a.ickh ickh,a.sksj sksj,a.scsj scsj,
+			a.kh kh,a.cyrybh cyrybh,a.icksllsh icksllsh,
+			(case when a.qyid = b.qyid then '0' else '1' end) sfzt,
+			b.xm xm,b.zjhm zjhm,b.zhiwu zhiwu,b.ryid ryid,b.cyrylbdm cyrylbdm,c.qymc
+		from t_qyryskjl a ,t_qyryxx b,t_qyjbxx c
+		where 1=1 and a.cyrybh=b.cyrybh and a.qyid=c.qyid and b.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<select id="getQyryskjlListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyryskjl a ,t_qyryxx b,t_qyjbxx c
+		where 1=1 and a.cyrybh=b.cyrybh and a.qyid=c.qyid and b.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<select id="getQyryskjlListNoPage" parameterType="qyryskjl" resultMap="qyryskjlListResult">
+	select a.qyid qyid,a.qybm qybm,a.hylbdm hylbdm,a.hylb hylb,a.skid skid,a.ickh ickh,a.sksj sksj,a.scsj scsj,
+			a.kh kh,a.cyrybh cyrybh,a.icksllsh icksllsh,
+			(case when a.qyid = b.qyid then '0' else '1' end) sfzt,
+			b.xm xm,b.zjhm zjhm,b.zhiwu zhiwu,b.ryid ryid,b.cyrylbdm cyrylbdm,c.qymc
+		from t_qyryskjl a ,t_qyryxx b,t_qyjbxx c
+		where 1=1 and a.cyrybh=b.cyrybh and a.qyid=c.qyid and b.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.skid
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<select id="getQyryskjl" parameterType="qyryskjl" resultMap="qyryskjlResult">
+		select a.qyid qyid,a.qybm qybm,a.hylbdm hylbdm,a.hylb hylb,a.skid skid,a.ickh ickh,a.sksj sksj,a.scsj scsj,a.kh kh,a.cyrybh cyrybh,a.icksllsh icksllsh
+		from t_qyryskjl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.skid
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)公安端场所刷卡记录查询-->
+	<select id="getQyryskjlGadList" parameterType="map" resultMap="qyryskjlGadListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,b.hylbdm ,b.hylb,a.skid skid,a.ickh ickh,a.sksj sksj,a.scsj scsj,
+			a.kh kh,a.cyrybh cyrybh,a.icksllsh icksllsh,
+			(case   when a.qyid = b.qyid then  b.xm   else  ''   end) xmzc,
+       		(case   when a.qyid &lt;&gt; b.qyid then   b.xm    else   ''  end) xmfzc,
+       		b.lxdh,b.shouji
+		from t_qyryskjl a, t_qyryxx b
+		 where 1 = 1
+		   and a.cyrybh = b.cyrybh
+		   and b.scbz = 0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<select id="getQyryskjlGadListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyryskjl a, t_qyryxx b
+		 where 1 = 1
+		   and a.cyrybh = b.cyrybh
+		   and b.scbz = 0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)公安端从业人员工作日志-->
+	<select id="getCyrygzrzList" parameterType="map" resultMap="cyrygzrzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.qybm qybm,a.hylbdm hylbdm,a.hylb hylb,a.skid skid,a.ickh ickh,a.sksj sksj,a.scsj scsj,
+			a.kh kh,a.cyrybh cyrybh,a.icksllsh icksllsh,
+			b.xm xm ,c.qymc qymc,c.gxdwbm gxdwbm,c.gxdwmc gxdwmc,b.cyrylbdm cyrylbdm,
+			b.zhiwu zhiwu,b.zjhm zjhm,b.ryid ryid
+		from t_qyryskjl a ,t_qyryxx b,t_qyjbxx c
+		where 1=1 and a.cyrybh=b.cyrybh and a.qyid=c.qyid and b.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--场所人员刷卡记录(t_qyryskjl)-->
+	<select id="getCyrygzrzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyryskjl a ,t_qyryxx b,t_qyjbxx c
+		where 1=1 and a.cyrybh=b.cyrybh and a.qyid=c.qyid and b.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--频繁刷卡-->
+	<select id="getPfskList" parameterType="map" resultMap="pfskListResult">
+		select x.* from (
+		select rownum rowno,z.* from (select a.ryid,a.hylbdm,a.cyrybh,a.xm,a.zjhm,a.cyrylbdm,a.skcs from
+		(select b.ryid,c.hylbdm,a.cyrybh,b.xm,b.zjhm,b.cyrylbdm,count(a.cyrybh) skcs 
+			from t_qyryskjl a,
+                 t_qyryxx   b,
+                 t_qyjbxx c
+            where a.cyrybh=b.cyrybh 
+                 and b.qyid = c.qyid
+                 and b.scbz=0
+                 and c.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		group by b.ryid,c.hylbdm,a.cyrybh,b.xm,b.zjhm,b.cyrylbdm) a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--频繁刷卡-->
+	<select id="getPfskListCount" parameterType="map" resultType="int">
+		select count(1) from (select b.ryid,c.hylbdm,a.cyrybh,b.xm,b.zjhm,b.cyrylbdm ,count(a.cyrybh) skcs 
+			from t_qyryskjl a,
+                 t_qyryxx   b,
+                 t_qyjbxx c
+            where a.cyrybh=b.cyrybh  
+                 and b.qyid = c.qyid
+                 and b.scbz=0
+                 and c.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		group by b.ryid,c.hylbdm,a.cyrybh,b.xm,b.zjhm,b.cyrylbdm) a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--频繁刷卡轨迹-->
+	<select id="getPfskGjList" parameterType="map" resultMap="pfskGjResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.sksj,a.scsj,(select qymc from t_qyjbxx where qybm=a.qybm ) qymc,c.gxdwmc
+		 from t_qyryskjl a,t_qyryxx b,t_qyjbxx c
+		where a.cyrybh=b.cyrybh and b.scbz=0 and c.scbz=0
+		and b.qyid=c.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)  z where rownum &lt;= ${endRow}) x where rowno &gt;${beginRow} 
+	</select>
+	<!--频繁刷卡轨迹-->
+	<select id="getPfskGjListCount" parameterType="map" resultType="int">
+		select count(1) from t_qyryskjl a,t_qyryxx b,t_qyjbxx c
+		where a.cyrybh=b.cyrybh and b.scbz=0 and c.scbz=0
+		and b.qyid=c.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+	</select>
+</mapper>

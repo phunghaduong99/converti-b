@@ -1,0 +1,182 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qybgxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业变更信息(t_qybgxx)-->
+	<resultMap id="qybgxxResult" type="qybgxx">
+		<result property="qyid" column="qyid"/>
+		<result property="qylsid" column="qylsid"/>
+		<result property="qybgxxid" column="qybgxxid"/>
+		<result property="bgdjxh" column="bgdjxh"/>
+		<result property="bglxdm" column="bglxdm"/>
+		<result property="bglx" column="bglx"/>
+		<result property="bgrq" column="bgrq"/>
+		<result property="bgyy" column="bgyy"/>
+		<result property="bgqnr" column="bgqnr"/>
+		<result property="bghnr" column="bghnr"/>
+		
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="yzbm" column="yzbm"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="jydz" column="jydz"/>
+	</resultMap>
+	<!--企业变更信息(t_qybgxx)-->
+	<resultMap id="qybgxxListResult" type="qybgxx">
+		<result property="qybgxxid" column="qybgxxid"/>
+		<result property="bgdjxh" column="bgdjxh"/>
+		<result property="bglx" column="bglx"/>
+		<result property="bgrq" column="bgrq"/>
+		<result property="bgyy" column="bgyy"/>
+		
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+	</resultMap>
+	<sql id="t_qybgxxWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="qylsid != null and qylsid != ''">and
+				a.qylsid=#{qylsid}
+			</if>
+			<if test="qybgxxid != null and qybgxxid != ''">and
+				a.qybgxxid=#{qybgxxid}
+			</if>
+	</sql>
+	<sql id="t_qybgxxPageWhere">
+		<include refid="t_qybgxxWhere"/>	</sql>
+	<sql id="t_qybgxxListWhere">
+		<include refid="t_qybgxxWhere"/>	</sql>
+	<sql id="t_qybgxxSelectWhere">
+		<include refid="t_qybgxxWhere"/>	</sql>
+	<!--企业变更信息(t_qybgxx)-->
+	<insert id="insertQybgxx" parameterType="qybgxx">
+		insert into t_qybgxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业变更信息(t_qybgxx)-->
+	<update id="updateQybgxx" parameterType="qybgxx">
+		update t_qybgxx a set a.qybgxxid=a.qybgxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业变更信息(t_qybgxx)-->
+	<delete id="deleteQybgxx" parameterType="qybgxx">
+		delete from t_qybgxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业变更信息(t_qybgxx)-->
+	<select id="getQybgxxList" parameterType="map" resultMap="qybgxxListResult">
+		select x.* from ( select rownum rowno,z.* from (
+		select 	b.qybm qybm, 		b.qymc qymc, 	b.qyzflmc qyzflmc,
+				a.bgdjxh bgdjxh, 	a.bglx bglx, 	a.bgyy bgyy,
+       			a.bgrq bgrq,		a.qybgxxid qybgxxid
+		from t_qybgxx a,t_qyjbxx b,(select distinct t.qyid,t.zjbh,t.qsrq from t_qyzjb t where t.zjfl ='营业执照') c
+		where a.qyid = b.qyid and a.qyid=c.qyid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业变更信息(t_qybgxx)-->
+	<select id="getQybgxxListCount" parameterType="map" resultType="int">
+		select count(1) a 
+		from t_qybgxx a,t_qyjbxx b,(select distinct t.qyid,t.zjbh,t.qsrq from t_qyzjb t where t.zjfl ='营业执照') c
+		where a.qyid = b.qyid and a.qyid=c.qyid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业变更信息(t_qybgxx)-->
+	<select id="getQybgxxListNoPage" parameterType="qybgxx" resultMap="qybgxxListResult">
+		select 	b.qybm qybm, 		b.qymc qymc, 	b.qyzflmc qyzflmc,
+				a.bgdjxh bgdjxh, 	a.bglx bglx, 	a.bgyy bgyy,
+       			a.bgrq bgrq,		a.qybgxxid qybgxxid
+		from t_qybgxx a,t_qyjbxx b
+		where a.qyid = b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qylsid,a.qybgxxid
+	</select>
+	<!--企业变更信息(t_qybgxx)-->
+	<select id="getQybgxx" parameterType="qybgxx" resultMap="qybgxxResult">
+		select 	a.qyid qyid,a.qylsid qylsid,a.qybgxxid qybgxxid,a.bgdjxh bgdjxh,a.bglxdm bglxdm,a.bglx bglx,a.bgrq bgrq,a.bgyy bgyy,a.bgqnr bgqnr,a.bghnr bghnr,
+				b.qybm qybm, b.qymc qymc, b.qyzflmc qyzflmc, b.gxdwmc gxdwmc, 
+				b.lxdh lxdh, b.yzbm yzbm, b.yyztmc yyztmc, b.jydz jydz
+		from t_qybgxx a,t_qyjbxx b
+		where a.qyid = b.qyid 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qylsid,a.qybgxxid
+	</select>
+</mapper>

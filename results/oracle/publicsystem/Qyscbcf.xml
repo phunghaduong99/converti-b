@@ -1,0 +1,380 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyscbcf
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业上传不充分(t_qyscbcf)-->
+	<resultMap id="qyscbcfResult" type="qyscbcf">
+		<result property="qyscbcfid" column="qyscbcfid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="wdbrq" column="wdbrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="zrs" column="zrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="hdskb" column="hdskb"/>
+		<result property="sjsrb" column="sjsrb"/>
+		<result property="ztdm" column="ztdm"/>
+		<result property="gzrs" column="gzrs"/>
+	</resultMap>
+	<!--企业上传不充分(t_qyscbcf)-->
+	<resultMap id="qyscbcfListResult" type="qyscbcf">
+		<result property="qyscbcfid" column="qyscbcfid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="wdbrq" column="wdbrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="zrs" column="zrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="hdskb" column="hdskb"/>
+		<result property="sjsrb" column="sjsrb"/>
+		<result property="ztdm" column="ztdm"/>
+		<result property="gzrs" column="gzrs"/>
+	</resultMap>
+	
+	<!--企业上传不充分(t_qyscbcf)-->
+	<resultMap id="qyscbcfListResultTwo" type="qyscbcf">
+		<result property="qyscbcfid" column="qyscbcfid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="wdbrq" column="wdbrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="zrs" column="zrs"/>
+		<result property="sskrs" column="sskrs"/>
+		<result property="hdskbstring" column="hdskb"/>
+		<result property="sjsrbstring" column="sjsrb"/>
+		<result property="ztdm" column="ztdm"/>
+		<result property="gzrs" column="gzrs"/>
+	</resultMap>
+	<sql id="t_qyscbcfWhere">
+			<if test="qyscbcfid != null and qyscbcfid != ''">and
+				a.qyscbcfid=#{qyscbcfid}
+			</if>
+	</sql>
+	<sql id="t_qyscbcfPageWhere">
+	
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+		   </if>
+		
+		<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>	
+			<if test="qybm != null and qybm != ''">and
+				a.qybm=#{qybm}
+			</if>
+			
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+		
+		
+		<if test="ztdm != null and ztdm != ''">and
+				a.ztdm=#{ztdm}
+			</if>
+		  <if test="shenheFlagCx != null and shenheFlagCx != ''">and
+				( b.zt='1' or b.zt='2'
+				<if test="sftjyg == 1">or <!-- 是否统计异构，1统计，0不统计9-16 添加 -->
+					to_number(b.zt)  &gt;= 90
+				</if>
+				) 
+		    </if>
+		     <if test="scbzFlagCx != null and scbzFlagCx != ''">and
+				b.scbz=0
+		    </if>
+		
+		         <if test="yyzt != null and yyzt != ''">and
+				b.yyztdm='1'
+		    </if>
+		    	
+		
+			</sql>
+		
+		
+		
+	<sql id="t_qyscbcfListWhere">
+		<include refid="t_qyscbcfWhere"/>	
+		
+		
+		
+		
+		</sql>
+	<sql id="t_qyscbcfSelectWhere">
+		<include refid="t_qyscbcfWhere"/>	</sql>
+	<!--企业上传不充分(t_qyscbcf)-->
+	<insert id="insertQyscbcf" parameterType="qyscbcf">
+		insert into t_qyscbcf (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业上传不充分(t_qyscbcf)-->
+	<update id="updateQyscbcf" parameterType="qyscbcf">
+		update t_qyscbcf a set a.qyscbcfid=a.qyscbcfid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业上传不充分(t_qyscbcf)-->
+	<delete id="deleteQyscbcf" parameterType="qyscbcf">
+		delete from t_qyscbcf a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	
+	
+	
+		<!--上传不充分统计()-->
+	<resultMap id="qyscbcfListResultPage" type="qyscbcf">
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="wdbts" column="wdbts"/>
+		<result property="yljts" column="yljts"/>
+		<result property="nljts" column="nljts"/>
+	</resultMap>
+	
+	
+	<!--企业上传不充分(t_qyscbcf)-->
+	<select id="getQyscbcfList" parameterType="map" resultMap="qyscbcfListResultPage">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+		select 
+		 count(case
+               when 1 = 1 
+               <if test="qsrq != null and qsrq != ''">and
+ 				 a.wdbrq  &gt;= #qsrq:DATE#
+ 			</if>
+             <if test="jzrq != null and jzrq != ''">and
+ 			     a.wdbrq  &lt;=  #jzrq:DATE#
+ 			</if>
+               then
+               a.wdbrq
+               else
+                null
+             end) wdbts,
+       count(case
+               when a.wdbrq &gt;= trunc(sysdate, 'mm') and a.wdbrq &lt;= sysdate then
+               a.qybm
+               else
+                null
+             end) yljts,
+       count(case
+               when a.wdbrq &gt;= trunc(sysdate, 'yyyy') and a.wdbrq &lt;= sysdate then
+               a.qybm
+               else
+                 null
+             end) nljts
+
+		
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		
+	   from t_qyscbcf a ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+	   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+	
+		
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+		
+		
+		
+	
+		
+		
+	</select>
+	<!--企业上传不充分(t_qyscbcf)-->
+	<select id="getQyscbcfListCount" parameterType="map" resultType="int">
+			select count(1) a from 
+		(
+	select 
+		 count(case
+               when 1 = 1 
+                   <if test="qsrq != null and qsrq != ''">and
+ 				 a.wdbrq  &gt;= #qsrq:DATE#
+ 			</if>
+             <if test="jzrq != null and jzrq != ''">and
+ 			     a.wdbrq  &lt;=  #jzrq:DATE#
+ 			</if>
+               then
+                a.wdbrq
+               else
+               null
+             end) wdbts,
+       count(case
+               when a.wdbrq &gt;= trunc(sysdate, 'mm') and a.wdbrq &lt;= sysdate then
+                a.qybm
+               else
+                null
+             end) yljts,
+       count(case
+               when a.wdbrq &gt;= trunc(sysdate, 'yyyy') and a.wdbrq &lt;= sysdate then
+               a.qybm
+               else
+               null
+             end) nljts
+
+		
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		
+	   from t_qyscbcf a ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+	   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+	
+		
+		  )   where 1=1
+	</select>
+	
+	
+	
+	<!--企业上传不充分(t_qyscbcf)-->
+
+  <select id="getQyscbcfXxList" parameterType="map" resultMap="qyscbcfListResultTwo">
+		select * from	( select rownum rowno,z.* from 
+		(select a.qyscbcfid qyscbcfid,a.hylbdm hylbdm,a.hylb hylb,a.wdbrq wdbrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qybm qybm,a.qymc qymc,a.lxdh lxdh,a.zrs zrs,a.sskrs sskrs,a.hdskb hdskb,a.sjsrb sjsrb,a.ztdm ztdm,a.gzrs gzrs
+		from t_qyscbcf a   ,t_qyjbxx b
+		where 1=1 and a.qybm=b.qybm
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wdbrq desc )  z ) where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+		<!--场所上传不充分(t_csscbcf)-->
+	<select id="getQyscbcfXxListCount" parameterType="map" resultType="int">
+		select count(1) a from  t_qyscbcf a   ,t_qyjbxx b
+			where 1=1 and a.qybm=b.qybm
+			<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!--企业上传不充分(t_qyscbcf)-->
+	<select id="getQyscbcfListNoPage" parameterType="qyscbcf" resultMap="qyscbcfListResult">
+		select a.qyscbcfid qyscbcfid,a.hylbdm hylbdm,a.hylb hylb,a.wdbrq wdbrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qybm qybm,a.qymc qymc,a.lxdh lxdh,a.zrs zrs,a.sskrs sskrs,a.hdskb hdskb,a.sjsrb sjsrb,a.ztdm ztdm,a.gzrs gzrs
+		from t_qyscbcf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyscbcfid
+	</select>
+	<!--企业上传不充分(t_qyscbcf)-->
+	<select id="getQyscbcf" parameterType="qyscbcf" resultMap="qyscbcfResult">
+		select a.qyscbcfid qyscbcfid,a.hylbdm hylbdm,a.hylb hylb,a.wdbrq wdbrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwdm gxdwdm,a.gxdwmc gxdwmc,a.qybm qybm,a.qymc qymc,a.lxdh lxdh,a.zrs zrs,a.sskrs sskrs,a.hdskb hdskb,a.sjsrb sjsrb,a.ztdm ztdm,a.gzrs gzrs
+		from t_qyscbcf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyscbcfid
+	</select>
+</mapper>

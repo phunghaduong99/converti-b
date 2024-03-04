@@ -1,0 +1,159 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:57:25 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	zzzxsc
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--制证中心上传(t_zzzxsc)-->
+	<resultMap id="zzzxscResult" type="zzzxsc">
+		<result property="ickslid" column="ickslid"/>
+		<result property="zzzxscid" column="zzzxscid"/>
+		<result property="sjscbz" column="sjscbz"/>
+		<result property="fssj" column="fssj"/>
+		<result property="hksj" column="hksj"/>
+		<result property="zzzxjlbh" column="zzzxjlbh"/>
+		<result property="zzcwyy" column="zzcwyy"/>
+	</resultMap>
+	<!--制证中心上传(t_zzzxsc)-->
+	<resultMap id="zzzxscListResult" type="zzzxsc">
+		<result property="ickslid" column="ickslid"/>
+		<result property="zzzxscid" column="zzzxscid"/>
+		<result property="sjscbz" column="sjscbz"/>
+		<result property="fssj" column="fssj"/>
+		<result property="hksj" column="hksj"/>
+		<result property="zzzxjlbh" column="zzzxjlbh"/>
+		<result property="zzcwyy" column="zzcwyy"/>
+	</resultMap>
+	<sql id="t_zzzxscWhere">
+			<if test="ickslid != null and ickslid != ''">and
+				a.ickslid=#{ickslid}
+			</if>
+			<if test="zzzxscid != null and zzzxscid != ''">and
+				a.zzzxscid=#{zzzxscid}
+			</if>
+	</sql>
+	<sql id="t_zzzxscPageWhere">
+		<include refid="t_zzzxscWhere"/>	</sql>
+	<sql id="t_zzzxscListWhere">
+		<include refid="t_zzzxscWhere"/>	</sql>
+	<sql id="t_zzzxscSelectWhere">
+		<include refid="t_zzzxscWhere"/>	</sql>
+	<!--制证中心上传(t_zzzxsc)-->
+	<insert id="insertZzzxsc" parameterType="zzzxsc">
+		insert into t_zzzxsc (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--制证中心上传(t_zzzxsc)-->
+	<update id="updateZzzxsc" parameterType="zzzxsc">
+		update t_zzzxsc a set a.zzzxscid=a.zzzxscid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--制证中心上传(t_zzzxsc)-->
+	<delete id="deleteZzzxsc" parameterType="zzzxsc">
+		delete from t_zzzxsc a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--制证中心上传(t_zzzxsc)-->
+	<select id="getZzzxscList" parameterType="map" resultMap="zzzxscListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.ickslid ickslid,a.zzzxscid zzzxscid,a.sjscbz sjscbz,a.fssj fssj,a.hksj hksj,a.zzzxjlbh zzzxjlbh,a.zzcwyy zzcwyy
+		from t_zzzxsc a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--制证中心上传(t_zzzxsc)-->
+	<select id="getZzzxscListCount" parameterType="map" resultType="int">
+		select count(1) a from t_zzzxsc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--制证中心上传(t_zzzxsc)-->
+	<select id="getZzzxscListNoPage" parameterType="zzzxsc" resultMap="zzzxscListResult">
+		select a.ickslid ickslid,a.zzzxscid zzzxscid,a.sjscbz sjscbz,a.fssj fssj,a.hksj hksj,a.zzzxjlbh zzzxjlbh,a.zzcwyy zzcwyy
+		from t_zzzxsc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ickslid,a.zzzxscid
+	</select>
+	<!--制证中心上传(t_zzzxsc)-->
+	<select id="getZzzxsc" parameterType="zzzxsc" resultMap="zzzxscResult">
+		select a.ickslid ickslid,a.zzzxscid zzzxscid,a.sjscbz sjscbz,a.fssj fssj,a.hksj hksj,a.zzzxjlbh zzzxjlbh,a.zzcwyy zzcwyy
+		from t_zzzxsc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ickslid,a.zzzxscid
+	</select>
+</mapper>

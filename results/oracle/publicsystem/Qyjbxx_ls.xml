@@ -1,0 +1,373 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyjbxx_ls
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<resultMap id="qyjbxx_lsResult" type="qyjbxx_ls">
+		<result property="qyid" column="qyid"/>
+		<result property="qylsid" column="qylsid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyqp" column="qyqp"/>
+		<result property="qyjp" column="qyjp"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="qyfflbm" column="qyfflbm"/>
+		<result property="qyfflmc" column="qyfflmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssdxjgajgdm" column="ssdxjgajgdm"/>
+		<result property="ssdxjgajgmc" column="ssdxjgajgmc"/>
+		<result property="ssddsjgdm" column="ssddsjgdm"/>
+		<result property="ssddsjgmc" column="ssddsjgmc"/>
+		<result property="qyzzjgdm" column="qyzzjgdm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="yzbm" column="yzbm"/>
+		<result property="chzh" column="chzh"/>
+		<result property="jwdzb" column="jwdzb"/>
+		<result property="jjlxbm" column="jjlxbm"/>
+		<result property="jjlxmc" column="jjlxmc"/>
+		<result property="jyfwzy" column="jyfwzy"/>
+		<result property="jyfwjy" column="jyfwjy"/>
+		<result property="zczj" column="zczj"/>
+		<result property="jymj" column="jymj"/>
+		<result property="zabdm" column="zabdm"/>
+		<result property="zajbmc" column="zajbmc"/>
+		<result property="yyztdm" column="yyztdm"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="frdb" column="frdb"/>
+		<result property="frdbzjlb" column="frdbzjlb"/>
+		<result property="frdbzjhm" column="frdbzjhm"/>
+		<result property="frdblxfs" column="frdblxfs"/>
+		<result property="kyrq" column="kyrq"/>
+		<result property="yysj" column="yysj"/>
+		<result property="babh" column="babh"/>
+		<result property="barq" column="barq"/>
+		<result property="tyrq" column="tyrq"/>
+		<result property="jyfs" column="jyfs"/>
+		<result property="jydz" column="jydz"/>
+		<result property="dwfzrzjlb" column="dwfzrzjlb"/>
+		<result property="dwfzrzjhm" column="dwfzrzjhm"/>
+		<result property="dwfzr" column="dwfzr"/>
+		<result property="dwfzrlxfs" column="dwfzrlxfs"/>
+		<result property="xfshdw" column="xfshdw"/>
+		<result property="xfhgzh" column="xfhgzh"/>
+		<result property="hcdw" column="hcdw"/>
+		<result property="hcr" column="hcr"/>
+		<result property="hcsj" column="hcsj"/>
+		<result property="gdxx" column="gdxx"/>
+		<result property="zrs" column="zrs"/>
+		<result property="hdrs" column="hdrs"/>
+		<result property="bagsmc" column="bagsmc"/>
+		<result property="bafzrgmsfhm" column="bafzrgmsfhm"/>
+		<result property="bafzrxm" column="bafzrxm"/>
+		<result property="bafzrdh" column="bafzrdh"/>
+		<result property="bars" column="bars"/>
+		<result property="jgpxrs" column="jgpxrs"/>
+		<result property="bagsyj" column="bagsyj"/>
+		<result property="cksl" column="cksl"/>
+		<result property="bxbjsl" column="bxbjsl"/>
+		<result property="bz" column="bz"/>
+		<result property="dcbs" column="dcbs"/>
+		<result property="dcsj" column="dcsj"/>
+		<result property="zt" column="zt"/>
+		<result property="ztgbrq" column="ztgbrq"/>
+		<result property="scbz" column="scbz"/>
+		<result property="jqbm" column="jqbm"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="zxyy" column="zxyy"/>
+		<result property="zdskb" column="zdskb"/>
+		<result property="bcsj" column="bcsj"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdwmc" column="lrdwmc"/>
+		<result property="czlx" column="czlx"/>
+		<result property="bgdjxh" column="bgdjxh"/>
+		<result property="bgyy" column="bgyy"/>
+		<result property="bglbdm" column="bglbdm"/>
+		<result property="bglb" column="bglb"/>
+		
+		<result property="bwbmdh" column="bwbmdh"/>
+		<result property="thbajgdm" column="thbajgdm"/>
+		<result property="thbajg" column="thbajg"/>
+		<result property="sfazsxt" column="sfazsxt"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+		<result property="nsrq" column="nsrq"/>
+		<result property="djrq" column="djrq"/>
+		
+		<result property="qyjc" column="qyjc"/>
+		<result property="qyjcjp" column="qyjcjp"/>
+		<result property="qyjcqp" column="qyjcqp"/>
+		
+		<result property="sgscxfjjs" column="sgscxfjjs"/>
+		<result property="jhltlxdm" column="jhltlxdm"/>
+		<result property="jhltlxmc" column="jhltlxmc"/>
+	</resultMap>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<resultMap id="qyjbxx_lsListResult" type="qyjbxx_ls">
+		<result property="qyid" column="qyid"/>
+		<result property="qylsid" column="qylsid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyqp" column="qyqp"/>
+		<result property="qyjp" column="qyjp"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="qyfflbm" column="qyfflbm"/>
+		<result property="qyfflmc" column="qyfflmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssdxjgajgdm" column="ssdxjgajgdm"/>
+		<result property="ssdxjgajgmc" column="ssdxjgajgmc"/>
+		<result property="ssddsjgdm" column="ssddsjgdm"/>
+		<result property="ssddsjgmc" column="ssddsjgmc"/>
+		<result property="qyzzjgdm" column="qyzzjgdm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="yzbm" column="yzbm"/>
+		<result property="chzh" column="chzh"/>
+		<result property="jwdzb" column="jwdzb"/>
+		<result property="jjlxbm" column="jjlxbm"/>
+		<result property="jjlxmc" column="jjlxmc"/>
+		<result property="jyfwzy" column="jyfwzy"/>
+		<result property="jyfwjy" column="jyfwjy"/>
+		<result property="zczj" column="zczj"/>
+		<result property="jymj" column="jymj"/>
+		<result property="zabdm" column="zabdm"/>
+		<result property="zajbmc" column="zajbmc"/>
+		<result property="yyztdm" column="yyztdm"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="frdb" column="frdb"/>
+		<result property="frdbzjlb" column="frdbzjlb"/>
+		<result property="frdbzjhm" column="frdbzjhm"/>
+		<result property="frdblxfs" column="frdblxfs"/>
+		<result property="kyrq" column="kyrq"/>
+		<result property="yysj" column="yysj"/>
+		<result property="babh" column="babh"/>
+		<result property="barq" column="barq"/>
+		<result property="tyrq" column="tyrq"/>
+		<result property="jyfs" column="jyfs"/>
+		<result property="jydz" column="jydz"/>
+		<result property="dwfzrzjlb" column="dwfzrzjlb"/>
+		<result property="dwfzrzjhm" column="dwfzrzjhm"/>
+		<result property="dwfzr" column="dwfzr"/>
+		<result property="dwfzrlxfs" column="dwfzrlxfs"/>
+		<result property="xfshdw" column="xfshdw"/>
+		<result property="xfhgzh" column="xfhgzh"/>
+		<result property="hcdw" column="hcdw"/>
+		<result property="hcr" column="hcr"/>
+		<result property="hcsj" column="hcsj"/>
+		<result property="gdxx" column="gdxx"/>
+		<result property="zrs" column="zrs"/>
+		<result property="hdrs" column="hdrs"/>
+		<result property="bagsmc" column="bagsmc"/>
+		<result property="bafzrgmsfhm" column="bafzrgmsfhm"/>
+		<result property="bafzrxm" column="bafzrxm"/>
+		<result property="bafzrdh" column="bafzrdh"/>
+		<result property="bars" column="bars"/>
+		<result property="jgpxrs" column="jgpxrs"/>
+		<result property="bagsyj" column="bagsyj"/>
+		<result property="cksl" column="cksl"/>
+		<result property="bxbjsl" column="bxbjsl"/>
+		<result property="bz" column="bz"/>
+		<result property="dcbs" column="dcbs"/>
+		<result property="dcsj" column="dcsj"/>
+		<result property="zt" column="zt"/>
+		<result property="ztgbrq" column="ztgbrq"/>
+		<result property="scbz" column="scbz"/>
+		<result property="jqbm" column="jqbm"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="zxyy" column="zxyy"/>
+		<result property="zdskb" column="zdskb"/>
+		<result property="bcsj" column="bcsj"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdwmc" column="lrdwmc"/>
+		<result property="czlx" column="czlx"/>
+		<result property="bgdjxh" column="bgdjxh"/>
+		<result property="bgyy" column="bgyy"/>
+		<result property="bglbdm" column="bglbdm"/>
+		<result property="bglb" column="bglb"/>
+		
+		<result property="bwbmdh" column="bwbmdh"/>
+		<result property="thbajgdm" column="thbajgdm"/>
+		<result property="thbajg" column="thbajg"/>
+		<result property="sfazsxt" column="sfazsxt"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+	</resultMap>
+	<sql id="t_qyjbxx_lsWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="qylsid != null and qylsid != ''">and
+				a.qylsid=#{qylsid}
+			</if>
+	</sql>
+	<sql id="t_qyjbxx_lsPageWhere">
+		<include refid="t_qyjbxx_lsWhere"/>	</sql>
+	<sql id="t_qyjbxx_lsListWhere">
+		<include refid="t_qyjbxx_lsWhere"/>	</sql>
+	<sql id="t_qyjbxx_lsSelectWhere">
+		<include refid="t_qyjbxx_lsWhere"/>	</sql>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<insert id="insertQyjbxx_ls" parameterType="qyjbxx_ls">
+		insert into t_qyjbxx_ls (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<update id="updateQyjbxx_ls" parameterType="qyjbxx_ls">
+		update t_qyjbxx_ls a set a.qylsid=a.qylsid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<delete id="deleteQyjbxx_ls" parameterType="qyjbxx_ls">
+		delete from t_qyjbxx_ls a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<select id="getQyjbxx_lsList" parameterType="map" resultMap="qyjbxx_lsListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.qylsid qylsid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.czlx czlx,a.bgdjxh bgdjxh, a.bgyy bgyy,a.bglbdm bglbdm,a.bglb bglb
+				,a.bwbmdh bwbmdh,a.thbajgdm thbajgdm,a.thbajg thbajg,a.sfazsxt sfazsxt,a.azsxtsl azsxtsl 
+		from t_qyjbxx_ls a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<select id="getQyjbxx_lsListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjbxx_ls a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<select id="getQyjbxx_lsListNoPage" parameterType="qyjbxx_ls" resultMap="qyjbxx_lsListResult">
+		select a.qyid qyid,a.qylsid qylsid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.czlx czlx,a.bgdjxh bgdjxh, a.bgyy bgyy,a.bglbdm bglbdm,a.bglb bglb
+			,a.bwbmdh bwbmdh,a.thbajgdm thbajgdm,a.thbajg thbajg,a.sfazsxt sfazsxt,a.azsxtsl azsxtsl
+		from t_qyjbxx_ls a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qylsid
+	</select>
+	<!--企业基本信息—历史(t_qyjbxx_ls)-->
+	<select id="getQyjbxx_ls" parameterType="qyjbxx_ls" resultMap="qyjbxx_lsResult">
+		select a.qyid qyid,a.qylsid qylsid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.czlx czlx,a.bgdjxh bgdjxh, a.bgyy bgyy,a.bglbdm bglbdm,a.bglb bglb
+		,a.bwbmdh bwbmdh,a.thbajgdm thbajgdm,a.thbajg thbajg,a.sfazsxt sfazsxt,a.azsxtsl azsxtsl,a.nsrq nsrq,a.djrq djrq,
+		a.qyjc qyjc,a.qyjcjp qyjcjp,a.qyjcqp qyjcqp,a.sgscxfjjs sgscxfjjs,a.jhltlxdm jhltlxdm,a.jhltlxmc jhltlxmc
+		from t_qyjbxx_ls a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qylsid
+	</select>
+	
+	<!--查询指定企业的操作类型为变更的最新一条历史记录-->
+	<select id="getLatestBgQyjbxx_ls" parameterType="qyjbxx_ls" resultMap="qyjbxx_lsResult">
+		select a.qyid qyid,a.qylsid qylsid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.czlx czlx,a.bgdjxh bgdjxh, a.bgyy bgyy,a.bglbdm bglbdm,a.bglb bglb
+		,a.bwbmdh bwbmdh,a.thbajgdm thbajgdm,a.thbajg thbajg,a.sfazsxt sfazsxt,a.azsxtsl azsxtsl,a.nsrq nsrq,a.djrq djrq,
+		a.qyjc qyjc,a.qyjcjp qyjcjp,a.qyjcqp qyjcqp,a.sgscxfjjs sgscxfjjs,a.jhltlxdm jhltlxdm,a.jhltlxmc jhltlxmc
+		from t_qyjbxx_ls a,
+       (select  max(qylsid) qylsid
+          from t_qyjbxx_ls t
+         where t.czlx='变更' and t.qyid = #{qyid}
+       ) b
+ 		where a.qylsid = b.qylsid
+ 		and a.qylsid=#{qylsid}
+	</select>
+	<!--查询指定企业且操作类型为变更的某条历史记录的下一条记录(即qylsid较大的一条)-->
+	<select id="getNextBgQyjbxx_ls" parameterType="qyjbxx_ls" resultMap="qyjbxx_lsResult">
+		select a.qyid qyid,a.qylsid qylsid,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc,a.czlx czlx,a.bgdjxh bgdjxh, a.bgyy bgyy,a.bglbdm bglbdm,a.bglb bglb
+		,a.bwbmdh bwbmdh,a.thbajgdm thbajgdm,a.thbajg thbajg,a.sfazsxt sfazsxt,a.azsxtsl azsxtsl,a.nsrq nsrq,a.djrq djrq,
+		a.qyjc qyjc,a.qyjcjp qyjcjp,a.qyjcqp qyjcqp,a.sgscxfjjs sgscxfjjs,a.jhltlxdm jhltlxdm,a.jhltlxmc jhltlxmc
+		from t_qyjbxx_ls a,
+       (select min(qylsid) qylsid
+          from t_qyjbxx_ls t,
+               (select qyid
+                  from t_qyjbxx_ls
+                 where czlx = '变更'
+                   and qylsid = #{qylsid}) t1
+         where t.qyid = t1.qyid
+           and t.qylsid &gt; #{qylsid}
+           and t.czlx = '变更'
+           ) b
+ 		where a.qylsid = b.qylsid
+	</select>
+</mapper>

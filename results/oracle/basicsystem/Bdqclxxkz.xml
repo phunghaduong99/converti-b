@@ -1,0 +1,253 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:04 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bdqclxxkz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<resultMap id="bdqclxxkzResult" type="bdqclxxkz">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="bdqclxxkzid" column="bdqclxxkzid"/>
+		<result property="id" column="id"/>
+		<result property="cllxdm" column="cllxdm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clpp" column="clpp"/>
+		<result property="clxh" column="clxh"/>
+		<result property="hpzldm" column="hpzldm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="hphm" column="hphm"/>
+		<result property="csys" column="csys"/>
+		<result property="syr" column="syr"/>
+		<result property="ccdjrq" column="ccdjrq"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="clsbdh" column="clsbdh"/>
+		<result property="cjh" column="cjh"/>
+		<result property="sfbx" column="sfbx"/>
+		<result property="bar" column="bar"/>
+		<result property="ladwqhbm" column="ladwqhbm"/>
+		<result property="ladwqh" column="ladwqh"/>
+		<result property="ladwbm" column="ladwbm"/>
+		<result property="ladwmc" column="ladwmc"/>
+		<result property="lasj" column="lasj"/>
+		<result property="lajbr" column="lajbr"/>
+		<result property="ladh" column="ladh"/>
+		<result property="sldwqhbm" column="sldwqhbm"/>
+		<result property="sldwqh" column="sldwqh"/>
+		<result property="sldwbm" column="sldwbm"/>
+		<result property="sldwmc" column="sldwmc"/>
+		<result property="slsj" column="slsj"/>
+		<result property="sljbr" column="sljbr"/>
+		<result property="sldh" column="sldh"/>
+		<result property="bz" column="bz"/>
+		<result property="tbdwqhbm" column="tbdwqhbm"/>
+		<result property="tbdwqh" column="tbdwqh"/>
+		<result property="tbdwbm" column="tbdwbm"/>
+		<result property="tbdwmc" column="tbdwmc"/>
+		<result property="tbtbr" column="tbtbr"/>
+		<result property="tbsj3" column="tbsj3"/>
+		<result property="zt" column="zt"/>
+		<result property="scbz" column="scbz"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdw" column="lrdw"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="xgdwbm" column="xgdwbm"/>
+		<result property="xgdw" column="xgdw"/>
+		<result property="xgr" column="xgr"/>
+		<result property="xgsj" column="xgsj"/>
+		<result property="spr3" column="spr3"/>
+		<result property="spyj" column="spyj"/>
+		<result property="sydwbm" column="sydwbm"/>
+		<result property="sydw" column="sydw"/>
+	</resultMap>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<resultMap id="bdqclxxkzListResult" type="bdqclxxkz">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="bdqclxxkzid" column="bdqclxxkzid"/>
+		<result property="id" column="id"/>
+		<result property="cllxdm" column="cllxdm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clpp" column="clpp"/>
+		<result property="clxh" column="clxh"/>
+		<result property="hpzldm" column="hpzldm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="hphm" column="hphm"/>
+		<result property="csys" column="csys"/>
+		<result property="syr" column="syr"/>
+		<result property="ccdjrq" column="ccdjrq"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="clsbdh" column="clsbdh"/>
+		<result property="cjh" column="cjh"/>
+		<result property="sfbx" column="sfbx"/>
+		<result property="bar" column="bar"/>
+		<result property="ladwqhbm" column="ladwqhbm"/>
+		<result property="ladwqh" column="ladwqh"/>
+		<result property="ladwbm" column="ladwbm"/>
+		<result property="ladwmc" column="ladwmc"/>
+		<result property="lasj" column="lasj"/>
+		<result property="lajbr" column="lajbr"/>
+		<result property="ladh" column="ladh"/>
+		<result property="sldwqhbm" column="sldwqhbm"/>
+		<result property="sldwqh" column="sldwqh"/>
+		<result property="sldwbm" column="sldwbm"/>
+		<result property="sldwmc" column="sldwmc"/>
+		<result property="slsj" column="slsj"/>
+		<result property="sljbr" column="sljbr"/>
+		<result property="sldh" column="sldh"/>
+		<result property="bz" column="bz"/>
+		<result property="tbdwqhbm" column="tbdwqhbm"/>
+		<result property="tbdwqh" column="tbdwqh"/>
+		<result property="tbdwbm" column="tbdwbm"/>
+		<result property="tbdwmc" column="tbdwmc"/>
+		<result property="tbtbr" column="tbtbr"/>
+		<result property="tbsj3" column="tbsj3"/>
+		<result property="zt" column="zt"/>
+		<result property="scbz" column="scbz"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdw" column="lrdw"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="xgdwbm" column="xgdwbm"/>
+		<result property="xgdw" column="xgdw"/>
+		<result property="xgr" column="xgr"/>
+		<result property="xgsj" column="xgsj"/>
+		<result property="spr3" column="spr3"/>
+		<result property="spyj" column="spyj"/>
+		<result property="sydwbm" column="sydwbm"/>
+		<result property="sydw" column="sydw"/>
+	</resultMap>
+	<sql id="t_bdqclxxkzWhere">
+			<if test="bjxxid2 != null and bjxxid2 != ''">and
+				a.bjxxid2=#{bjxxid2}
+			</if>
+			<if test="bdqclxxkzid != null and bdqclxxkzid != ''">and
+				a.bdqclxxkzid=#{bdqclxxkzid}
+			</if>
+	</sql>
+	<sql id="t_bdqclxxkzPageWhere">
+		<include refid="t_bdqclxxkzWhere"/>	</sql>
+	<sql id="t_bdqclxxkzListWhere">
+		<include refid="t_bdqclxxkzWhere"/>	</sql>
+	<sql id="t_bdqclxxkzSelectWhere">
+		<include refid="t_bdqclxxkzWhere"/>	</sql>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<insert id="insertBdqclxxkz" parameterType="bdqclxxkz">
+		insert into t_bdqclxxkz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<update id="updateBdqclxxkz" parameterType="bdqclxxkz">
+		update t_bdqclxxkz a set a.bdqclxxkzid=a.bdqclxxkzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<delete id="deleteBdqclxxkz" parameterType="bdqclxxkz">
+		delete from t_bdqclxxkz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<select id="getBdqclxxkzList" parameterType="map" resultMap="bdqclxxkzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.bdqclxxkzid bdqclxxkzid,a.id id,a.cllxdm cllxdm,a.cllx cllx,a.clpp clpp,a.clxh clxh,a.hpzldm hpzldm,a.hpzl hpzl,a.hphm hphm,a.csys csys,a.syr syr,a.ccdjrq ccdjrq,a.fdjh fdjh,a.clsbdh clsbdh,a.cjh cjh,a.sfbx sfbx,a.bar bar,a.ladwqhbm ladwqhbm,a.ladwqh ladwqh,a.ladwbm ladwbm,a.ladwmc ladwmc,a.lasj lasj,a.lajbr lajbr,a.ladh ladh,a.sldwqhbm sldwqhbm,a.sldwqh sldwqh,a.sldwbm sldwbm,a.sldwmc sldwmc,a.slsj slsj,a.sljbr sljbr,a.sldh sldh,a.bz bz,a.tbdwqhbm tbdwqhbm,a.tbdwqh tbdwqh,a.tbdwbm tbdwbm,a.tbdwmc tbdwmc,a.tbtbr tbtbr,a.tbsj3 tbsj3,a.zt zt,a.scbz scbz,a.lrdwbm lrdwbm,a.lrdw lrdw,a.lrr lrr,a.lrsj lrsj,a.xgdwbm xgdwbm,a.xgdw xgdw,a.xgr xgr,a.xgsj xgsj,a.spr3 spr3,a.spyj spyj,a.sydwbm sydwbm,a.sydw sydw
+		from t_bdqclxxkz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<select id="getBdqclxxkzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bdqclxxkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<select id="getBdqclxxkzListNoPage" parameterType="bdqclxxkz" resultMap="bdqclxxkzListResult">
+		select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.bdqclxxkzid bdqclxxkzid,a.id id,a.cllxdm cllxdm,a.cllx cllx,a.clpp clpp,a.clxh clxh,a.hpzldm hpzldm,a.hpzl hpzl,a.hphm hphm,a.csys csys,a.syr syr,a.ccdjrq ccdjrq,a.fdjh fdjh,a.clsbdh clsbdh,a.cjh cjh,a.sfbx sfbx,a.bar bar,a.ladwqhbm ladwqhbm,a.ladwqh ladwqh,a.ladwbm ladwbm,a.ladwmc ladwmc,a.lasj lasj,a.lajbr lajbr,a.ladh ladh,a.sldwqhbm sldwqhbm,a.sldwqh sldwqh,a.sldwbm sldwbm,a.sldwmc sldwmc,a.slsj slsj,a.sljbr sljbr,a.sldh sldh,a.bz bz,a.tbdwqhbm tbdwqhbm,a.tbdwqh tbdwqh,a.tbdwbm tbdwbm,a.tbdwmc tbdwmc,a.tbtbr tbtbr,a.tbsj3 tbsj3,a.zt zt,a.scbz scbz,a.lrdwbm lrdwbm,a.lrdw lrdw,a.lrr lrr,a.lrsj lrsj,a.xgdwbm xgdwbm,a.xgdw xgdw,a.xgr xgr,a.xgsj xgsj,a.spr3 spr3,a.spyj spyj,a.sydwbm sydwbm,a.sydw sydw
+		from t_bdqclxxkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2,a.bdqclxxkzid
+	</select>
+	<!--被盗抢车辆信息_快照(t_bdqclxxkz)-->
+	<select id="getBdqclxxkz" parameterType="bdqclxxkz" resultMap="bdqclxxkzResult">
+		select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.bdqclxxkzid bdqclxxkzid,a.id id,a.cllxdm cllxdm,a.cllx cllx,a.clpp clpp,a.clxh clxh,a.hpzldm hpzldm,a.hpzl hpzl,a.hphm hphm,a.csys csys,a.syr syr,a.ccdjrq ccdjrq,a.fdjh fdjh,a.clsbdh clsbdh,a.cjh cjh,a.sfbx sfbx,a.bar bar,a.ladwqhbm ladwqhbm,a.ladwqh ladwqh,a.ladwbm ladwbm,a.ladwmc ladwmc,a.lasj lasj,a.lajbr lajbr,a.ladh ladh,a.sldwqhbm sldwqhbm,a.sldwqh sldwqh,a.sldwbm sldwbm,a.sldwmc sldwmc,a.slsj slsj,a.sljbr sljbr,a.sldh sldh,a.bz bz,a.tbdwqhbm tbdwqhbm,a.tbdwqh tbdwqh,a.tbdwbm tbdwbm,a.tbdwmc tbdwmc,a.tbtbr tbtbr,a.tbsj3 tbsj3,a.zt zt,a.scbz scbz,a.lrdwbm lrdwbm,a.lrdw lrdw,a.lrr lrr,a.lrsj lrsj,a.xgdwbm xgdwbm,a.xgdw xgdw,a.xgr xgr,a.xgsj xgsj,a.spr3 spr3,a.spyj spyj,a.sydwbm sydwbm,a.sydw sydw
+		from t_bdqclxxkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2,a.bdqclxxkzid
+	</select>
+</mapper>

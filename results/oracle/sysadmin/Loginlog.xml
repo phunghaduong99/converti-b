@@ -1,0 +1,272 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	loginlog
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	dltj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--登录日志表(t_loginlog)-->
+	<resultMap id="loginlogResult" type="loginlog">
+		<result property="loginlogid" column="loginlogid"/>
+		<result property="loginuserid" column="loginuserid"/>
+		<result property="useraccount" column="useraccount"/>
+		<result property="username" column="username"/>
+		<result property="loginunitcode" column="loginunitcode"/>
+		<result property="loginunitname" column="loginunitname"/>
+		<result property="loginip" column="loginip"/>
+		<result property="loginmac" column="loginmac"/>
+		<result property="logintiime" column="logintiime"/>
+		<result property="quittime" column="quittime"/>
+	</resultMap>
+	<!--登录日志表(t_loginlog)-->
+	<resultMap id="loginlogListResult" type="loginlog">
+		<result property="loginlogid" column="loginlogid"/>
+		<result property="loginuserid" column="loginuserid"/>
+		<result property="useraccount" column="useraccount"/>
+		<result property="username" column="username"/>
+		<result property="loginunitcode" column="loginunitcode"/>
+		<result property="loginunitname" column="loginunitname"/>
+		<result property="loginip" column="loginip"/>
+		<result property="loginmac" column="loginmac"/>
+		<result property="logintiime" column="logintiime"/>
+		<result property="quittime" column="quittime"/>
+	</resultMap>
+	
+	<!--登录日志表统计(t_loginlog)-->
+	<resultMap id="dltjResult" type="dltj">
+		<result property="departbrevitycode" column="departbrevitycode"/>
+		<result property="departname" column="departname"/>
+		<result property="dlzs" column="dlzs"/>
+    </resultMap>
+	
+	<sql id="t_loginlogWhere">
+			<if test="loginlogid != null and loginlogid != ''">and
+				a.loginlogid=#{loginlogid}
+			</if>
+	</sql>
+	<sql id="t_loginlogPageWhere">
+		<include refid="t_loginlogWhere"/>
+	</sql>
+	<sql id="t_loginlogListWhere">
+		<include refid="t_loginlogWhere"/>	</sql>
+	<sql id="t_loginlogSelectWhere">
+		<include refid="t_loginlogWhere"/>	</sql>
+	<!--登录日志表(t_loginlog)-->
+	<insert id="insertLoginlog" parameterType="loginlog">
+		insert into t_loginlog (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--登录日志表(t_loginlog)-->
+	<update id="updateLoginlog" parameterType="loginlog">
+		update t_loginlog a set loginlogid=loginlogid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--登录日志表(t_loginlog)-->
+	<delete id="deleteLoginlog" parameterType="loginlog">
+		delete from t_loginlog a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--登录日志表(t_loginlog)-->
+	<select id="getLoginlogList" parameterType="map" resultMap="loginlogListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.loginlogid loginlogid,a.loginuserid loginuserid,a.useraccount useraccount,a.username username,a.loginunitcode loginunitcode,a.loginunitname loginunitname,a.loginip loginip,a.loginmac loginmac,a.logintiime logintiime,a.quittime quittime
+		from t_loginlog a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--登录日志表(t_loginlog)-->
+	<select id="getLoginlogListCount" parameterType="map" resultType="int">
+		select count(1) a from t_loginlog a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--登录日志表(t_loginlog)-->
+	<select id="getLoginlogListNoPage" parameterType="loginlog" resultMap="loginlogListResult">
+		select a.loginlogid loginlogid,a.loginuserid loginuserid,a.useraccount useraccount,a.username username,a.loginunitcode loginunitcode,a.loginunitname loginunitname,a.loginip loginip,a.loginmac loginmac,a.logintiime logintiime,a.quittime quittime
+		from t_loginlog a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.loginlogid
+	</select>
+	<!--登录日志表(t_loginlog)-->
+	<select id="getLoginlog" parameterType="loginlog" resultMap="loginlogResult">
+		select a.loginlogid loginlogid,a.loginuserid loginuserid,a.useraccount useraccount,a.username username,a.loginunitcode loginunitcode,a.loginunitname loginunitname,a.loginip loginip,a.loginmac loginmac,a.logintiime logintiime,a.quittime quittime
+		from t_loginlog a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.loginlogid
+	</select>
+	
+	<!--登录日志表(t_loginlog)-->
+	<select id="getLoginlogNum" parameterType="map" resultType="string">
+		select count(1)
+		from t_loginlog a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	
+	
+	<select id="getDltjList" parameterType="map" resultMap="dltjResult">
+	SELECT * FROM (
+	 SELECT A.*, ROWNUM RN 
+	 FROM (
+			SELECT PCS.DEPARTBREVITYCODE departbrevitycode,
+			       PCS.DEPARTNAME DEPARTNAME,
+			      NVL(loginlog.dlzs,'0') as dlzs
+			  FROM (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+			          FROM T_DEPARTMENT DEPT
+			         WHERE DEPT.DEPARTLEVEL = ((select t.departlevel from t_department t where t.departbrevitycode='${gxdwbm}')+1)
+			           AND DEPT.DEPARTCODE LIKE '${gxdwbm}%'
+			           order by DEPT.nodeorder
+			           ) PCS,
+			           
+			       (SELECT SUBSTR(log.LOGINUNITCODE, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               count(*) dlzs
+		               FROM t_loginlog log, T_DEPARTMENT DEPT
+		               WHERE DEPT.DEPARTLEVEL = ((select t.departlevel from t_department t where t.departbrevitycode='${gxdwbm}')+1)
+			           AND DEPT.DEPARTCODE LIKE '${gxdwbm}%'
+			           AND log.LOGINUNITCODE LIKE DEPT.DEPARTBREVITYCODE || '%'
+			           and log.LOGINTIIME &gt;= trunc(#kssj:DATE#)
+			           and log.LOGINTIIME &lt; trunc(#jssj:DATE#)+1
+			          GROUP BY SUBSTR(log.LOGINUNITCODE, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ) loginlog
+			         
+			 WHERE 
+			 PCS.DEPARTBREVITYCODE = loginlog.PAICHUSUOBM(+)
+			
+  		) A
+  		
+  		
+  		WHERE ROWNUM &lt;= #{endRow}
+		)
+		WHERE RN &gt; #{beginRow}
+		
+ 	 
+	</select>
+	
+	<!--错误数据 总数-->
+	<select id="getDltjListCount" parameterType="map" resultType="int">
+		
+		SELECT COUNT(*)
+			          FROM T_DEPARTMENT DEPT
+			         WHERE DEPT.DEPARTLEVEL = ((select t.departlevel from t_department t where t.departbrevitycode='${gxdwbm}')+1)
+			           AND DEPT.DEPARTCODE LIKE '${gxdwbm}%' 
+			           order by dept.nodeorder
+			          
+	</select>
+	
+	<select id="getDltjTotalNum" parameterType="map" resultMap="dltjResult">
+	     
+	        
+	 SELECT '${gxdwbm}' departbrevitycode,
+	        '合计' DEPARTNAME,
+	        NVL(sum(A.dlzs),'0') dlzs
+	        
+	     FROM (
+			SELECT PCS.DEPARTBREVITYCODE departbrevitycode,
+			       PCS.DEPARTNAME DEPARTNAME,
+			      NVL(loginlog.dlzs,'0') as dlzs
+			  FROM (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+			          FROM T_DEPARTMENT DEPT
+			         WHERE DEPT.DEPARTLEVEL = ((select t.departlevel from t_department t where t.departbrevitycode='${gxdwbm}')+1)
+			           AND DEPT.DEPARTCODE LIKE '${gxdwbm}%'
+			           order by DEPT.nodeorder
+			           ) PCS,
+			           
+			       (SELECT SUBSTR(log.LOGINUNITCODE, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               count(*) dlzs
+		               FROM t_loginlog log, T_DEPARTMENT DEPT
+		               WHERE DEPT.DEPARTLEVEL = ((select t.departlevel from t_department t where t.departbrevitycode='${gxdwbm}')+1)
+			           AND DEPT.DEPARTCODE LIKE '${gxdwbm}%'
+			           AND log.LOGINUNITCODE LIKE DEPT.DEPARTBREVITYCODE || '%'
+			           and log.LOGINTIIME &gt;= trunc(#kssj:DATE#)
+			           and log.LOGINTIIME &lt; trunc(#jssj:DATE#)+1
+			          GROUP BY SUBSTR(log.LOGINUNITCODE, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ) loginlog
+			          
+			 WHERE 
+			 PCS.DEPARTBREVITYCODE = loginlog.PAICHUSUOBM(+)
+			
+  		) A
+	     
+	</select>
+</mapper>

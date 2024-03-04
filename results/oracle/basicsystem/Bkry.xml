@@ -1,0 +1,412 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bkry
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--布控人员(t_bkry)-->
+	<resultMap id="bkryResult" type="bkry">
+		<result property="bkryid" column="bkryid"/>
+		<result property="tbbh" column="tbbh"/>
+		<result property="xm" column="xm"/>
+		<result property="cym" column="cym"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="jgdm" column="jgdm"/>
+		<result property="jg" column="jg"/>
+		<result property="csrq" column="csrq"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="kybm" column="kybm"/>
+		<result property="ky" column="ky"/>
+		<result property="shengao" column="shengao"/>
+		<result property="tzbm" column="tzbm"/>
+		<result property="tz" column="tz"/>
+		<result property="ttbm" column="ttbm"/>
+		<result property="tt" column="tt"/>
+		<result property="yz" column="yz"/>
+		<result property="zz" column="zz"/>
+		<result property="fwdw" column="fwdw"/>
+		<result property="fwdwbm" column="fwdwbm"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="tbsj" column="tbsj"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="cljg" column="cljg"/>
+		<result property="bkr" column="bkr"/>
+		<result property="bkczy" column="bkczy"/>
+		<result property="bkczsj" column="bkczsj"/>
+		<result property="bkdqsj" column="bkdqsj"/>
+		<result property="bkfwbm" column="bkfwbm"/>
+		<result property="bkfw" column="bkfw"/>
+		<result property="bkspyj" column="bkspyj"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+		<result property="sftyfb" column="sftyfb"/>
+		<result property="spdw" column="spdw"/>
+		<result property="spr" column="spr"/>
+		<result property="sprq" column="sprq"/>
+		<result property="qqckbs" column="qqckbs"/>
+		<result property="ckbs" column="ckbs"/>
+		<result property="ckyy" column="ckyy"/>
+		<result property="cksj" column="cksj"/>
+		<result property="ckr" column="ckr"/>
+		<result property="ckczy" column="ckczy"/>
+		<result property="ckczsj" column="ckczsj"/>
+		<result property="ckbmbm" column="ckbmbm"/>
+		<result property="ckbmmc" column="ckbmmc"/>
+		<result property="ckspdw" column="ckspdw"/>
+		<result property="ckspr" column="ckspr"/>
+		<result property="ckspyj" column="ckspyj"/>
+		<result property="cksprq" column="cksprq"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="fsbs" column="fsbs"/>
+		<result property="bkdxzp" column="bkdxzp"/>
+		<!-- 境外的 -->
+		<result property="ywm" column="ywm"/>
+		<result property="ywx" column="ywx"/>
+		<result property="zwm" column="zwm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zjlx" column="zjlx"/>
+		<result property="zjlxdm" column="zjlxdm"/>
+		<result property="bkrylx" column="bkrylx"/>
+		<result property="bkrylxdm" column="bkrylxdm"/>
+		<result property="gj" column="gj"/>
+		<result property="gjdm" column="gjdm"/>
+		
+		<result property="sfxysh" column="sfxysh"/>
+		<result property="shsftg" column="shsftg"/>
+	</resultMap>
+	<!--布控人员(t_bkry)-->
+	<resultMap id="bkryListResult" type="bkry">
+		<result property="bkryid" column="bkryid"/>
+		<result property="tbbh" column="tbbh"/>
+		<result property="xm" column="xm"/>
+		<result property="cym" column="cym"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="jgdm" column="jgdm"/>
+		<result property="jg" column="jg"/>
+		<result property="csrq" column="csrq"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="mzdm" column="mzdm"/>
+		<result property="minzu" column="minzu"/>
+		<result property="kybm" column="kybm"/>
+		<result property="ky" column="ky"/>
+		<result property="shengao" column="shengao"/>
+		<result property="tzbm" column="tzbm"/>
+		<result property="tz" column="tz"/>
+		<result property="ttbm" column="ttbm"/>
+		<result property="tt" column="tt"/>
+		<result property="yz" column="yz"/>
+		<result property="zz" column="zz"/>
+		<result property="fwdw" column="fwdw"/>
+		<result property="fwdwbm" column="fwdwbm"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="tbsj" column="tbsj"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="cljg" column="cljg"/>
+		<result property="bkr" column="bkr"/>
+		<result property="bkczy" column="bkczy"/>
+		<result property="bkczsj" column="bkczsj"/>
+		<result property="bkdqsj" column="bkdqsj"/>
+		<result property="bkfwbm" column="bkfwbm"/>
+		<result property="bkfw" column="bkfw"/>
+		<result property="bkspyj" column="bkspyj"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+		<result property="sftyfb" column="sftyfb"/>
+		<result property="spdw" column="spdw"/>
+		<result property="spr" column="spr"/>
+		<result property="sprq" column="sprq"/>
+		<result property="qqckbs" column="qqckbs"/>
+		<result property="ckbs" column="ckbs"/>
+		<result property="ckyy" column="ckyy"/>
+		<result property="cksj" column="cksj"/>
+		<result property="ckr" column="ckr"/>
+		<result property="ckczy" column="ckczy"/>
+		<result property="ckczsj" column="ckczsj"/>
+		<result property="ckbmbm" column="ckbmbm"/>
+		<result property="ckbmmc" column="ckbmmc"/>
+		<result property="ckspdw" column="ckspdw"/>
+		<result property="ckspr" column="ckspr"/>
+		<result property="ckspyj" column="ckspyj"/>
+		<result property="cksprq" column="cksprq"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="fsbs" column="fsbs"/>
+		
+		<!-- 境外的 -->
+		<result property="ywm" column="ywm"/>
+		<result property="ywx" column="ywx"/>
+		<result property="zwm" column="zwm"/>
+		<result property="zjhm" column="zjhm"/>
+		<result property="zjlx" column="zjlx"/>
+		<result property="zjlxdm" column="zjlxdm"/>
+		<result property="bkrylx" column="bkrylx"/>
+		<result property="bkrylxdm" column="bkrylxdm"/>
+		<result property="gj" column="gj"/>
+		<result property="gjdm" column="gjdm"/>
+	</resultMap>
+
+	<sql id="t_updateBkryWhere">
+		<if test="bkryid != null and bkryid != ''">and
+			a.bkryid=#{bkryid}
+		</if>
+	</sql>
+	<sql id="t_bkryWhere">
+		<if test="bkryid != null and bkryid != ''">and 
+			a.bkryid=#{bkryid}
+		</if>
+		<if test="fwdwbm != null and fwdwbm != ''">and 
+			a.fwdwbm=#{fwdwbm}
+		</if>
+		<if test="fwdwbmde != null and fwdwbmde != ''">and 
+			(a.fwdwbm like '${fwdwbmde}%' or a.bkfwbm ='2')
+		</if>
+		<if test="xm != null and xm != ''">and a.xm like '%${xm}%'</if>
+		<if test="xmpy != null and xmpy != ''">and 
+			a.xmpy like '%${xmpy}%'
+		</if>
+		<if test="gmsfhm != null and gmsfhm != ''">and 
+			a.gmsfhm=#{gmsfhm}
+		</if>
+		<if test="csrq != null and csrq != ''">and 
+			a.csrq &gt;=#{csrq,jdbcType=TIMESTAMP}
+		</if>
+		<if test="csrq2 != null and csrq2 != ''">and 
+			a.csrq &lt;=#{csrq2,jdbcType=TIMESTAMP}
+		</if>
+		<if test="jgdm != null and jgdm != ''">and 
+			a.jgdm =#{jgdm}
+		</if>
+		<if test="xbdm != null and xbdm != ''">and 
+			a.xbdm =#{xbdm}
+		</if>
+		<if test="bkczsj != null and bkczsj != ''">and 
+			a.bkczsj &gt;=#{bkczsj,jdbcType=TIMESTAMP}
+		</if>
+		<if test="bkczsj2 != null and bkczsj2 != ''">and 
+			a.bkczsj &lt;=#{bkczsj2,jdbcType=TIMESTAMP}
+		</if>
+		<if test="bkfwbm != null and bkfwbm != ''">and 
+			a.bkfwbm =#{bkfwbm}
+		</if>
+		<if test="ckbs != null and ckbs != ''">and 
+			a.ckbs =#{ckbs}
+		</if>
+		
+		<if test="hylbdm != null and hylbdm != ''">and 
+			a.hylbdm =#{hylbdm}
+		</if>
+		
+		<!-- 境外人员布控 -->
+		<if test="zwm != null and zwm != ''">and 
+			a.zwm =#{zwm}
+		</if>
+		<if test="ywm != null and ywm != ''">and 
+			a.ywm =#{ywm}
+		</if>
+		<if test="ywx != null and ywx != ''">and 
+			a.ywx =#{ywx}
+		</if>
+		<if test="zjhm != null and zjhm != ''">and 
+			a.zjhm =#{zjhm}
+		</if>
+		<if test="gjdm != null and gjdm != ''">and 
+			a.gjdm =#{gjdm}
+		</if>
+		<if test="bkrylxdm != null and bkrylxdm != ''">and 
+			a.bkrylxdm =#{bkrylxdm}
+		</if>
+		<if test="sfxysh != null and sfxysh != ''">and 
+			a.sfxysh =#{sfxysh}
+		</if>
+		<if test="shsftg != null and shsftg != ''">and 
+			a.shsftg =#{shsftg}
+		</if>
+	</sql>
+
+	<sql id="t_bkryPageWhere">
+	    <if test="shsftgQuery != null and shsftgQuery != ''">and 
+	      <if test="shsftgQuery == 1">
+			(a.sfxysh ='0' or (a.sfxysh ='1' and a.shsftg = '1'))
+		  </if>
+		   <if test="shsftgQuery == 0">
+			(a.sfxysh ='1' and a.shsftg = '0')
+		  </if>
+		</if>
+		<include refid="t_bkryWhere"/>
+	</sql>
+	<sql id="t_bkryListWhere">
+		<include refid="t_bkryWhere"/>
+	</sql>
+	<sql id="t_bkrySelectWhere">
+		<include refid="t_bkryWhere"/>
+	</sql>
+	<!--布控人员(t_bkry)-->
+	<insert id="insertBkry" parameterType="bkry">
+		insert into t_bkry (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--布控人员(t_bkry)-->
+	<update id="updateBkry" parameterType="bkry">
+		update t_bkry a set a.bkryid=a.bkryid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--布控人员(t_bkry)-->
+	<delete id="deleteBkry" parameterType="bkry">
+		delete from t_bkry a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--布控人员(t_bkry)-->
+	<select id="getBkryList" parameterType="map" resultMap="bkryListResult">
+		select x.* from ( select rownum rowno,z.* from (select a.bkryid
+		bkryid,a.tbbh tbbh,a.xm xm,a.cym cym,a.gmsfhm gmsfhm,a.xmpy
+		xmpy,a.jgdm jgdm,a.jg jg,a.csrq csrq,a.xbdm xbdm,a.xb xb,a.mzdm
+		mzdm,a.minzu minzu,a.kybm kybm,a.ky ky,a.shengao shengao,a.tzbm
+		tzbm,a.tz tz,a.ttbm ttbm,a.tt tt,a.yz yz,a.zz zz,a.fwdw
+		fwdw,a.fwdwbm fwdwbm,a.ajlbbm ajlbbm,a.ajlb ajlb,a.tbsj
+		tbsj,a.jyaq jyaq,a.cljg cljg,a.bkr bkr,a.bkczy bkczy,a.bkczsj
+		bkczsj,a.bkdqsj bkdqsj,a.bkfwbm bkfwbm,a.bkfw bkfw,a.bkspyj
+		bkspyj,a.lxr lxr,a.lxfs lxfs,a.sftyfb sftyfb,a.spdw spdw,a.spr
+		spr,a.sprq sprq,a.qqckbs qqckbs,a.ckbs ckbs,a.ckyy ckyy,a.cksj
+		cksj,a.ckr ckr,a.ckczy ckczy,a.ckczsj ckczsj,a.ckbmbm
+		ckbmbm,a.ckbmmc ckbmmc,a.ckspdw ckspdw,a.ckspr ckspr,a.ckspyj
+		ckspyj,a.cksprq cksprq,a.xzqh xzqh,a.fsbs fsbs,
+		a.zwm zwm,a.ywm ywm,a.ywx ywx,a.zjhm zjhm,a.zjlx zjlx,a.bkrylx bkrylx,
+		a.bkrylxdm bkrylxdm,a.gj gj,a.gjdm gjdm,a.zjlxdm zjlxdm
+		from t_bkry a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort}) z) x where rowno &gt;${beginRow} and rowno
+		&lt;= ${endRow}
+	</select>
+	<!--布控人员(t_bkry)-->
+	<select id="getBkryListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bkry a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--布控人员(t_bkry)-->
+	<select id="getBkryListNoPage" parameterType="bkry" resultMap="bkryListResult">
+		select a.bkryid bkryid,a.tbbh tbbh,a.xm xm,a.cym cym,a.gmsfhm
+		gmsfhm,a.xmpy xmpy,a.jgdm jgdm,a.jg jg,a.csrq csrq,a.xbdm
+		xbdm,a.xb xb,a.mzdm mzdm,a.minzu minzu,a.kybm kybm,a.ky
+		ky,a.shengao shengao,a.tzbm tzbm,a.tz tz,a.ttbm ttbm,a.tt
+		tt,a.yz yz,a.zz zz,a.fwdw fwdw,a.fwdwbm fwdwbm,a.ajlbbm
+		ajlbbm,a.ajlb ajlb,a.tbsj tbsj,a.jyaq jyaq,a.cljg cljg,a.bkr
+		bkr,a.bkczy bkczy,a.bkczsj bkczsj,a.bkdqsj bkdqsj,a.bkfwbm
+		bkfwbm,a.bkfw bkfw,a.bkspyj bkspyj,a.lxr lxr,a.lxfs
+		lxfs,a.sftyfb sftyfb,a.spdw spdw,a.spr spr,a.sprq sprq,a.qqckbs
+		qqckbs,a.ckbs ckbs,a.ckyy ckyy,a.cksj cksj,a.ckr ckr,a.ckczy
+		ckczy,a.ckczsj ckczsj,a.ckbmbm ckbmbm,a.ckbmmc ckbmmc,a.ckspdw
+		ckspdw,a.ckspr ckspr,a.ckspyj ckspyj,a.cksprq cksprq,a.xzqh
+		xzqh,a.fsbs fsbs, a.zwm zwm,a.ywm ywm,a.ywx ywx,a.zjhm zjhm,a.zjlx zjlx,a.bkrylx bkrylx,
+		a.bkrylxdm bkrylxdm,a.gj gj,a.gjdm gjdm,a.zjlxdm zjlxdm from t_bkry a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bkryid
+	</select>
+	<!--布控人员(t_bkry)-->
+	<select id="getBkry" parameterType="bkry" resultMap="bkryResult">
+		select a.bkryid bkryid,a.tbbh tbbh,a.xm xm,a.cym cym,a.gmsfhm
+		gmsfhm,a.xmpy xmpy,a.jgdm jgdm,a.jg jg,a.csrq csrq,a.xbdm
+		xbdm,a.xb xb,a.mzdm mzdm,a.minzu minzu,a.kybm kybm,a.ky
+		ky,a.shengao shengao,a.tzbm tzbm,a.tz tz,a.ttbm ttbm,a.tt
+		tt,a.yz yz,a.zz zz,a.fwdw fwdw,a.fwdwbm fwdwbm,a.ajlbbm
+		ajlbbm,a.ajlb ajlb,a.tbsj tbsj,a.jyaq jyaq,a.cljg cljg,a.bkr
+		bkr,a.bkczy bkczy,a.bkczsj bkczsj,a.bkdqsj bkdqsj,a.bkfwbm
+		bkfwbm,a.bkfw bkfw,a.bkspyj bkspyj,a.lxr lxr,a.lxfs
+		lxfs,a.sftyfb sftyfb,a.spdw spdw,a.spr spr,a.sprq sprq,a.qqckbs
+		qqckbs,a.ckbs ckbs,a.ckyy ckyy,a.cksj cksj,a.ckr ckr,a.ckczy
+		ckczy,a.ckczsj ckczsj,a.ckbmbm ckbmbm,a.ckbmmc ckbmmc,a.ckspdw
+		ckspdw,a.ckspr ckspr,a.ckspyj ckspyj,a.cksprq cksprq,a.xzqh
+		xzqh,a.fsbs fsbs,a.bkdxzp bkdxzp,a.zwm zwm,a.ywm ywm,a.ywx ywx,a.zjhm zjhm,a.zjlx zjlx,a.bkrylx bkrylx,
+		a.bkrylxdm bkrylxdm,a.gj gj,a.gjdm gjdm,a.zjlxdm zjlxdm,
+		(case when a.sfxysh='0' then '否' else '是' end) sfxysh,
+		(case when a.shsftg='0' then '否' else '是' end) shsftg
+		from t_bkry a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bkryid
+	</select>
+	<!-- 验证添加关注对象时身份证号码是否在布控表中存在 -->
+	<select id="validateGmsfhm" parameterType="bkry" resultType="int">
+		select count(1) from t_bkry a where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

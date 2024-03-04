@@ -1,0 +1,166 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	clxxry_zp
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<resultMap id="clxxry_zpResult" type="clxxry_zp">
+		<result property="cljbxxid" column="cljbxxid"/>
+		<result property="clxxryzpid" column="clxxryzpid"/>
+		<result property="tpmc" column="tpmc"/>
+		<result property="tplx" column="tplx"/>
+		<result property="tpnr" column="tpnr"/>
+	</resultMap>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<resultMap id="clxxry_zpListResult" type="clxxry_zp">
+		<result property="cljbxxid" column="cljbxxid"/>
+		<result property="clxxryzpid" column="clxxryzpid"/>
+		<result property="tpmc" column="tpmc"/>
+		<result property="tplx" column="tplx"/>
+		<result property="tpnr" column="tpnr"/>
+	</resultMap>
+	<sql id="t_clxxry_zpWhere">
+			<if test="cljbxxid != null and cljbxxid != ''">and
+				a.cljbxxid=#{cljbxxid}
+			</if>
+			<if test="clxxryzpid != null and clxxryzpid != ''">and
+				a.clxxryzpid=#{clxxryzpid}
+			</if>
+	</sql>
+	<sql id="t_clxxry_zpPageWhere">
+		<include refid="t_clxxry_zpWhere"/>	</sql>
+	<sql id="t_clxxry_zpListWhere">
+		<include refid="t_clxxry_zpWhere"/>	</sql>
+	<sql id="t_clxxry_zpSelectWhere">
+		<include refid="t_clxxry_zpWhere"/>	</sql>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<insert id="insertClxxry_zp" parameterType="clxxry_zp">
+		insert into t_clxxry_zp (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<update id="updateClxxry_zp" parameterType="clxxry_zp">
+		update t_clxxry_zp a set a.clxxryzpid=a.clxxryzpid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<delete id="deleteClxxry_zp" parameterType="clxxry_zp">
+		delete from t_clxxry_zp a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<select id="getClxxry_zpList" parameterType="map" resultMap="clxxry_zpListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.cljbxxid cljbxxid,a.clxxryzpid clxxryzpid,a.tpmc tpmc,a.tplx tplx,a.tpnr tpnr
+		from t_clxxry_zp a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<select id="getClxxry_zpListCount" parameterType="map" resultType="int">
+		select count(1) a from t_clxxry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<select id="getClxxry_zpListNoPage" parameterType="clxxry_zp" resultMap="clxxry_zpListResult">
+		select a.cljbxxid cljbxxid,a.clxxryzpid clxxryzpid,a.tpmc tpmc,a.tplx tplx,a.tpnr tpnr
+		from t_clxxry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.cljbxxid,a.clxxryzpid
+	</select>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<select id="getClxxry_zpNoZpListNoPage" parameterType="clxxry_zp" resultMap="clxxry_zpListResult">
+		select a.cljbxxid cljbxxid,a.clxxryzpid clxxryzpid,'' tpmc,'' tplx,'' tpnr
+		from t_clxxry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.cljbxxid,a.clxxryzpid
+	</select>
+	<!--车辆信息人员_照片(t_clxxry_zp)-->
+	<select id="getClxxry_zp" parameterType="clxxry_zp" resultMap="clxxry_zpResult">
+		select a.cljbxxid cljbxxid,a.clxxryzpid clxxryzpid,a.tpmc tpmc,a.tplx tplx,a.tpnr tpnr
+		from t_clxxry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.cljbxxid,a.clxxryzpid
+	</select>
+</mapper>

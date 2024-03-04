@@ -1,0 +1,290 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	stxzTzxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	qyjbxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!-- 机修台帐信息 -->
+	<select id="getStxztzxxListNoPage" parameterType="stxzTzxx" resultType="stxzTzxx">
+		select a.departcode,a.departname, 
+		(select count(b.qymc) from t_qyjbxx b where b.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' 
+               and b.qybm like #{hylbdm} || '%'  and b.scbz = '0' and b.zxbz = '0'  and b.zt = '1') qyzs,
+		(select count(1) from t_qyryxx c, t_qyjbxx b where c.scbz = '0'  and c.zxbz = '0' and b.qyid = c.qyid and b.qybm like #{hylbdm}|| '%' 
+           and b.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' and  b.scbz = '0' and  b.zxbz = '0'   and b.zt = '1') ryzs,
+		<if test="hylbdm == &quot;F02&quot;"><!-- 汽车租赁 -->
+		(select count(1) from t_qczlxxb d, t_qyjbxx b where   b.qyid = d.qyid and b.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%'
+           and  b.scbz = '0'  and  b.zxbz = '0'   and b.zt = '1' and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd')) scyws,
+        (select count(distinct(e.qyid)) from  t_qyjbxx e where   not exists( select * from t_qczlxxb d where e.qyid = d.qyid 
+           and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd'))
+           and e.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' and  e.scbz = '0'  and e.qybm like #{hylbdm} || '%'
+           and e.zxbz = '0'  and e.zt = '1' ) wscqys
+		</if>
+		<if test="hylbdm == &quot;C&quot;"><!-- 机修 -->
+		(select count(1) from t_jxcljbxx d, t_qyjbxx b where   b.qyid = d.qyid and b.gxdwbm like substr(a.departcode, 0, 4) || '%'
+           and  b.scbz = '0'  and  b.zxbz = '0'   and b.zt = '1' and d.jxzt!=2 and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd')) scyws,
+       (select count(distinct(e.qyid)) from  t_qyjbxx e where   not exists( select * from t_jxcljbxx d where e.qyid = d.qyid 
+           and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd'))
+           and e.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' and  e.scbz = '0'  and e.qybm like #{hylbdm} || '%'
+           and e.zxbz = '0'  and e.zt = '1' ) wscqys
+		</if>
+		<if test="hylbdm == &quot;E01&quot;"><!-- 二手车 -->
+		(select count(1) from t_escjyxx d, t_qyjbxx b,t_cljbxx c where   b.qyid = d.qyid and d.cldjid=c.cljbxxid and b.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%'
+           and   d.scbz = 0  and b.zxbz=0 and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd')) scyws,
+        (select count(distinct(e.qyid)) from  t_qyjbxx e where   not exists( select * from t_escjyxx d,t_cljbxx c where e.qyid = d.qyid and d.cldjid=c.cljbxxid 
+           and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd'))
+           and e.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' and  e.scbz = '0'  and e.qybm like #{hylbdm} || '%'
+           and e.zxbz = '0'  and e.zt = '1') wscqys
+		</if>
+		<if test="hylbdm == &quot;E02&quot;"><!-- 二手机 -->
+		(select count(1) from t_esjjy d, t_qyjbxx b where   b.qyid = d.qyid  and b.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%'
+           and   d.scbz = 0  and b.zxbz=0  and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd')) scyws,
+       (select count(distinct(e.qyid)) from  t_qyjbxx e where   not exists( select * from t_esjjy d where e.qyid = d.qyid 
+           and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd') and d.scbz=0)
+           and e.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' and  e.scbz = '0'  and e.qybm like #{hylbdm} || '%'
+           and e.zxbz = '0'  and e.zt = '1' ) wscqys
+		</if>
+		<if test="hylbdm == &quot;F01&quot;"><!-- 出租车 -->
+		(select count(1) from t_czcjsyxx d, t_qyjbxx b where   b.qyid = d.qyid   and b.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%'
+             and b.zxbz=0 and d.cxbz=0 and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd')) scyws,
+       (select count(distinct(e.qyid)) from  t_qyjbxx e where   not exists( select * from t_czcjsyxx d  where e.qyid = d.qyid  
+           and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd') and d.cxbz=0)
+           and e.gxdwbm like substr(a.departcode, 0, #{subCodeLen}) || '%' and  e.scbz = '0'  and e.qybm like #{hylbdm} || '%'
+           and e.zxbz = '0'  and e.zt = '1' ) wscqys
+		</if>
+		from t_department a 
+		where
+		a.departcode like  #{likeDepartCode}  
+		order by a.departcode
+	</select>
+	<!-- 台帐详细信息 - 企业总数 -->
+	<select id="getStxzTzxxQyzsList" parameterType="map" resultType="qyjbxx">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+			select distinct	a.qyid qyid,a.qybm qybm,a.qymc qymc,a.gxdwmc gxdwmc,
+					a.jjlxmc jjlxmc,a.lxdh lxdh,a.zt zt ,a.zrs zrs
+			from t_qyjbxx a
+			<if test="zrs != null and zrs != ''">,
+				t_qyryxx t
+			</if>
+			where  a.gxdwbm like #{gxdwbm}||'%'  and a.qybm like #{hylbdm} || '%'
+			and  a.scbz = '0'  and  a.zxbz = '0'  and a.zt = '1'
+			<if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+			<if test="zrs != null and zrs != ''">and
+				t.qyid=a.qyid  and t.scbz=0 and t.zxbz=0
+			</if>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<select id="getStxzTzxxQyzsListCount" parameterType="map" resultType="int">
+		select count(*) from (select  distinct  a.qyid qyid,a.qybm qybm,a.qymc qymc,a.gxdwmc gxdwmc,
+          a.jjlxmc jjlxmc,a.lxdh lxdh,a.zt zt ,a.zrs zrs
+		from t_qyjbxx a 
+		<if test="zrs != null and zrs != ''">,
+				t_qyryxx t
+			</if>
+		where  a.gxdwbm like #{gxdwbm}||'%'  and a.qybm like #{hylbdm} || '%'
+			   and  a.scbz = '0'  and  a.zxbz = '0'  and a.zt = '1'
+			   <if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+			 <if test="zrs != null and zrs != ''">and
+				t.qyid=a.qyid  and t.scbz=0 and t.zxbz=0
+			</if>
+		)
+	</select>
+	<!-- 台帐详细信息 - 未上传企业 -->
+	<select id="getStxzTzxxWscQyzsList" parameterType="map" resultType="qyjbxx">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+			select 	a.qyid qyid,a.qybm qybm,a.qymc qymc,a.gxdwmc gxdwmc,
+					a.jjlxmc jjlxmc,a.lxdh lxdh,a.zt zt,a.zrs zrs 
+			from t_qyjbxx a
+			where  a.gxdwbm like #{gxdwbm}||'%' and a.qybm like #{hylbdm} || '%'
+			and (a.scbz = '0' or (a.scbz = '1' and a.bcsj &gt; trunc(sysdate,'dd') and  a.bcsj &lt; trunc(sysdate+1,'dd'))) 
+			and (a.zxbz = '0' or (a.scbz = '1' and a.bcsj &gt; trunc(sysdate,'dd') and  a.bcsj &lt; trunc(sysdate+1,'dd'))) 
+			and a.zt = '1'
+			<if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+			and  not exists
+			<if test="hylbdm == &quot;F02&quot;"><!-- 汽车租赁 -->
+  			    ( select * from t_qczlxxb d where a.qyid = d.qyid 
+                  and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;C&quot;"><!-- 机修 -->
+  			    ( select * from t_jxcljbxx d where a.qyid = d.qyid 
+           		  and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E01&quot;"><!-- 二手车 -->
+  			    ( select * from t_escjyxx d,t_cljbxx c where a.qyid = d.qyid and d.cldjid=c.cljbxxid 
+           		  and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E02&quot;"><!-- 二手机 -->
+  			    ( select * from t_esjjy d where a.qyid = d.qyid 
+                  and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd') and d.scbz=0)
+            </if>
+			<if test="hylbdm == &quot;F01&quot;"><!-- 出租车 -->
+  			    ( select * from t_czcjsyxx d  where a.qyid = d.qyid  
+                  and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd') and d.cxbz=0)
+            </if>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<select id="getStxzTzxxWscQyzsListCount" parameterType="map" resultType="int">
+		select count(1)
+		from t_qyjbxx a
+		where  a.gxdwbm like #{gxdwbm}||'%' and a.qybm like #{hylbdm} || '%'
+			and (a.scbz = '0' or (a.scbz = '1' and a.bcsj &gt; trunc(sysdate,'dd') and  a.bcsj &lt; trunc(sysdate+1,'dd'))) 
+			and (a.zxbz = '0' or (a.scbz = '1' and a.bcsj &gt; trunc(sysdate,'dd') and  a.bcsj &lt; trunc(sysdate+1,'dd'))) 
+			and a.zt = '1'
+			<if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+			and  not exists
+			<if test="hylbdm == &quot;F02&quot;"><!-- 汽车租赁 -->
+  			    ( select * from t_qczlxxb d where a.qyid = d.qyid 
+                  and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;C&quot;"><!-- 机修 -->
+  			    ( select * from t_jxcljbxx d where a.qyid = d.qyid 
+                  and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E01&quot;"><!-- 二手车 -->
+  			    ( select * from t_escjyxx d,t_cljbxx c where a.qyid = d.qyid and d.cldjid=c.cljbxxid 
+           		  and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E02&quot;"><!-- 二手机 -->
+  			    ( select * from t_esjjy d where a.qyid = d.qyid 
+                  and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd') and d.scbz=0)
+            </if>
+			<if test="hylbdm == &quot;F01&quot;"><!-- 出租车 -->
+  			    ( select * from t_czcjsyxx d  where a.qyid = d.qyid  
+                  and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd') and d.cxbz=0)
+            </if>
+	</select>
+	<!-- 台帐详细信息 - 上传企业 -->
+	<select id="getStxzTzxxScQyzsList" parameterType="map" resultType="qyjbxx">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+			select 	a.qyid qyid,a.qybm qybm,a.qymc qymc,a.gxdwmc gxdwmc,
+					a.jjlxmc jjlxmc,a.lxdh lxdh,a.zt zt,
+		<if test="hylbdm == &quot;F02&quot;"><!-- 汽车租赁 -->
+		(select count(1) from t_qczlxxb d where   a.qyid = d.qyid and a.gxdwbm like #{gxdwbm}||'%'
+           and  a.scbz = '0'  and  a.zxbz = '0'   and a.zt = '1' and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd')) zrs
+		</if>
+		<if test="hylbdm == &quot;C&quot;"><!-- 机修 -->
+		(select count(1) from t_jxcljbxx d where   a.qyid = d.qyid and a.gxdwbm like #{gxdwbm}||'%'
+           and  a.scbz = '0'  and  a.zxbz = '0'   and a.zt = '1' and d.jxzt!=2 and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd')) zrs
+		</if>
+		<if test="hylbdm == &quot;E01&quot;"><!-- 二手车 -->
+		(select count(1) from t_escjyxx d,t_cljbxx c where   a.qyid = d.qyid and d.cldjid=c.cljbxxid and a.gxdwbm like #{gxdwbm}||'%'
+           and   d.scbz = 0  and a.zxbz=0 and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd')) zrs
+		</if>
+		<if test="hylbdm == &quot;E02&quot;"><!-- 二手机 -->
+		(select count(1) from t_esjjy d where   a.qyid = d.qyid  and a.gxdwbm like #{gxdwbm}||'%'
+           and   d.scbz = 0  and a.zxbz=0  and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd')) zrs
+		</if>
+		<if test="hylbdm == &quot;F01&quot;"><!-- 出租车 -->
+		(select count(1) from t_czcjsyxx d  where   a.qyid = d.qyid   and a.gxdwbm like #{gxdwbm}||'%'
+             and a.zxbz=0 and d.cxbz=0 and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd')) zrs
+		</if>
+			from t_qyjbxx a 
+			where a.gxdwbm like #{gxdwbm}||'%' and a.qybm like #{hylbdm} || '%'
+			<if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+			and  a.scbz = '0'  
+			and  a.zxbz = '0'  
+			and a.zt = '1'
+			and   exists
+				<if test="hylbdm == &quot;F02&quot;"><!-- 汽车租赁 -->
+  			    ( select * from t_qczlxxb d where a.qyid = d.qyid  and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;C&quot;"><!-- 机修 -->
+  			    ( select * from t_jxcljbxx d where a.qyid = d.qyid   and d.jxzt!=2 and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E01&quot;"><!-- 二手车 -->
+  			    ( select * from t_escjyxx d,t_cljbxx c where a.qyid = d.qyid and d.cldjid=c.cljbxxid and   d.scbz = 0  and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E02&quot;"><!-- 二手机 -->
+  			    ( select * from t_esjjy d where a.qyid = d.qyid   and d.scbz=0 and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;F01&quot;"><!-- 出租车 -->
+  			    ( select * from t_czcjsyxx d  where a.qyid = d.qyid    and d.cxbz=0 and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<select id="getStxzTzxxScQyzsListCount" parameterType="map" resultType="int">
+		select count(1)
+		from t_qyjbxx a 
+		where a.gxdwbm like #{gxdwbm}||'%' and a.qybm like #{hylbdm} || '%'
+		<if test="qymc != null and qymc != ''">and
+				a.qymc like '%${qymc}%'
+			</if>
+		and  a.scbz = '0'  
+		and  a.zxbz = '0'  
+		and a.zt = '1'
+		and  exists
+				<if test="hylbdm == &quot;F02&quot;"><!-- 汽车租赁 -->
+  			    ( select * from t_qczlxxb d where a.qyid = d.qyid  and d.blsj &gt; trunc(sysdate, 'dd') and  d.blsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;C&quot;"><!-- 机修 -->
+  			    ( select * from t_jxcljbxx d where a.qyid = d.qyid   and d.jxzt!=2 and d.scsj &gt; trunc(sysdate, 'dd') and  d.scsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E01&quot;"><!-- 二手车 -->
+  			    ( select * from t_escjyxx d,t_cljbxx c where a.qyid = d.qyid and d.cldjid=c.cljbxxid and   d.scbz = 0  and c.lrsj &gt; trunc(sysdate, 'dd') and  c.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;E02&quot;"><!-- 二手机 -->
+  			    ( select * from t_esjjy d where a.qyid = d.qyid   and d.scbz=0 and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+			<if test="hylbdm == &quot;F01&quot;"><!-- 出租车 -->
+  			    ( select * from t_czcjsyxx d  where a.qyid = d.qyid    and d.cxbz=0 and d.lrsj &gt; trunc(sysdate, 'dd') and  d.lrsj &lt; trunc(sysdate+1, 'dd'))
+            </if>
+	</select>
+</mapper>

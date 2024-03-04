@@ -1,0 +1,164 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bksjkz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--布控手机快照(t_bksjkz)-->
+	<resultMap id="bksjkzResult" type="bksjkz">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="bkwpjbxxkzid" column="bkwpjbxxkzid"/>
+		<result property="bksjkzid" column="bksjkzid"/>
+		<result property="sjch" column="sjch"/>
+		<result property="pp" column="pp"/>
+		<result property="xh" column="xh"/>
+		<result property="ys" column="ys"/>
+	</resultMap>
+	<!--布控手机快照(t_bksjkz)-->
+	<resultMap id="bksjkzListResult" type="bksjkz">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="bjxxid2" column="bjxxid2"/>
+		<result property="bkwpjbxxkzid" column="bkwpjbxxkzid"/>
+		<result property="bksjkzid" column="bksjkzid"/>
+		<result property="sjch" column="sjch"/>
+		<result property="pp" column="pp"/>
+		<result property="xh" column="xh"/>
+		<result property="ys" column="ys"/>
+	</resultMap>
+	<sql id="t_bksjkzWhere">
+			<if test="bjxxid2 != null and bjxxid2 != ''">and
+				a.bjxxid2=#{bjxxid2}
+			</if>
+			<if test="bkwpjbxxkzid != null and bkwpjbxxkzid != ''">and
+				a.bkwpjbxxkzid=#{bkwpjbxxkzid}
+			</if>
+			<if test="bksjkzid != null and bksjkzid != ''">and
+				a.bksjkzid=#{bksjkzid}
+			</if>
+	</sql>
+	<sql id="t_bksjkzPageWhere">
+		<include refid="t_bksjkzWhere"/>	</sql>
+	<sql id="t_bksjkzListWhere">
+		<include refid="t_bksjkzWhere"/>	</sql>
+	<sql id="t_bksjkzSelectWhere">
+		<include refid="t_bksjkzWhere"/>	</sql>
+	<!--布控手机快照(t_bksjkz)-->
+	<insert id="insertBksjkz" parameterType="bksjkz">
+		insert into t_bksjkz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--布控手机快照(t_bksjkz)-->
+	<update id="updateBksjkz" parameterType="bksjkz">
+		update t_bksjkz a set a.bksjkzid=a.bksjkzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--布控手机快照(t_bksjkz)-->
+	<delete id="deleteBksjkz" parameterType="bksjkz">
+		delete from t_bksjkz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--布控手机快照(t_bksjkz)-->
+	<select id="getBksjkzList" parameterType="map" resultMap="bksjkzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.bkwpjbxxkzid bkwpjbxxkzid,a.bksjkzid bksjkzid,a.sjch sjch,a.pp pp,a.xh xh,a.ys ys
+		from t_bksjkz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--布控手机快照(t_bksjkz)-->
+	<select id="getBksjkzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bksjkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--布控手机快照(t_bksjkz)-->
+	<select id="getBksjkzListNoPage" parameterType="bksjkz" resultMap="bksjkzListResult">
+		select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.bkwpjbxxkzid bkwpjbxxkzid,a.bksjkzid bksjkzid,a.sjch sjch,a.pp pp,a.xh xh,a.ys ys
+		from t_bksjkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2,a.bkwpjbxxkzid,a.bksjkzid
+	</select>
+	<!--布控手机快照(t_bksjkz)-->
+	<select id="getBksjkz" parameterType="bksjkz" resultMap="bksjkzResult">
+		select a.bjxxid2 bjxxid2,a.wpbjgzid wpbjgzid,a.bkwpjbxxkzid bkwpjbxxkzid,a.bksjkzid bksjkzid,a.sjch sjch,a.pp pp,a.xh xh,a.ys ys
+		from t_bksjkz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjxxid2,a.bkwpjbxxkzid,a.bksjkzid
+	</select>
+</mapper>

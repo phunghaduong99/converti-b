@@ -1,0 +1,171 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	wpbjbdtj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<resultMap id="wpbjbdtjResult" type="wpbjbdtj">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="wpbjbdtjid" column="wpbjbdtjid"/>
+		<result property="tjlx" column="tjlx"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdgx" column="bdgx"/>
+		<result property="gxc" column="gxc"/>
+		<result property="zxsx" column="zxsx"/>
+		<result property="ljgx" column="ljgx"/>
+		<result property="jibie" column="jibie"/>
+	</resultMap>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<resultMap id="wpbjbdtjListResult" type="wpbjbdtj">
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="wpbjbdtjid" column="wpbjbdtjid"/>
+		<result property="tjlx" column="tjlx"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdgx" column="bdgx"/>
+		<result property="gxc" column="gxc"/>
+		<result property="zxsx" column="zxsx"/>
+		<result property="ljgx" column="ljgx"/>
+		<result property="jibie" column="jibie"/>
+	</resultMap>
+	<sql id="t_wpbjbdtjWhere">
+			<if test="wpbjgzid != null and wpbjgzid != ''">and
+				a.wpbjgzid=#{wpbjgzid}
+			</if>
+			<if test="wpbjbdtjid != null and wpbjbdtjid != ''">and
+				a.wpbjbdtjid=#{wpbjbdtjid}
+			</if>
+	</sql>
+	<sql id="t_wpbjbdtjPageWhere">
+		<include refid="t_wpbjbdtjWhere"/>	</sql>
+	<sql id="t_wpbjbdtjListWhere">
+		<include refid="t_wpbjbdtjWhere"/>	</sql>
+	<sql id="t_wpbjbdtjSelectWhere">
+		<include refid="t_wpbjbdtjWhere"/>	</sql>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<insert id="insertWpbjbdtj" parameterType="wpbjbdtj">
+		insert into t_wpbjbdtj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<update id="updateWpbjbdtj" parameterType="wpbjbdtj">
+		update t_wpbjbdtj a set a.wpbjbdtjid=a.wpbjbdtjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<delete id="deleteWpbjbdtj" parameterType="wpbjbdtj">
+		delete from t_wpbjbdtj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<select id="getWpbjbdtjList" parameterType="map" resultMap="wpbjbdtjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.wpbjgzid wpbjgzid,a.wpbjbdtjid wpbjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_wpbjbdtj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<select id="getWpbjbdtjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wpbjbdtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<select id="getWpbjbdtjListNoPage" parameterType="wpbjbdtj" resultMap="wpbjbdtjListResult">
+		select a.wpbjgzid wpbjgzid,a.wpbjbdtjid wpbjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_wpbjbdtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wpbjgzid,a.wpbjbdtjid
+	</select>
+	<!--物品报警比对条件(t_wpbjbdtj)-->
+	<select id="getWpbjbdtj" parameterType="wpbjbdtj" resultMap="wpbjbdtjResult">
+		select a.wpbjgzid wpbjgzid,a.wpbjbdtjid wpbjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_wpbjbdtj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wpbjgzid,a.wpbjbdtjid
+	</select>
+	<select id="getWpbjbdtjListByGzID" parameterType="java.lang.Integer" resultMap="wpbjbdtjResult">
+		select a.wpbjgzid wpbjgzid,a.wpbjbdtjid wpbjbdtjid,a.tjlx tjlx,a.ywbzdm ywbzdm,a.bdbzdm bdbzdm,a.bdgx bdgx,a.gxc gxc,a.zxsx zxsx,a.ljgx ljgx,a.jibie jibie
+		from t_wpbjbdtj a
+		where wpbjgzid=#{wpbjgzid}
+		order by a.wpbjgzid,a.wpbjbdtjid
+	</select>
+</mapper>

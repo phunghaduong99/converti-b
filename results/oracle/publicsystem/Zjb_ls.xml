@@ -1,0 +1,167 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	zjb_ls
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--证件历史表(t_zjb_ls)-->
+	<resultMap id="zjb_lsResult" type="zjb_ls">
+		<result property="qyid" column="qyid"/>
+		<result property="qylsid" column="qylsid"/>
+		<result property="zjlsid" column="zjlsid"/>
+		<result property="fk_zjid" column="fk_zjid"/>
+		<result property="zjfl" column="zjfl"/>
+		<result property="zjbh" column="zjbh"/>
+		<result property="fzjg" column="fzjg"/>
+		<result property="qsrq" column="qsrq"/>
+		<result property="jzrq" column="jzrq"/>
+	</resultMap>
+	<!--证件历史表(t_zjb_ls)-->
+	<resultMap id="zjb_lsListResult" type="zjb_ls">
+		<result property="qyid" column="qyid"/>
+		<result property="qylsid" column="qylsid"/>
+		<result property="zjlsid" column="zjlsid"/>
+		<result property="fk_zjid" column="fk_zjid"/>
+		<result property="zjfl" column="zjfl"/>
+		<result property="zjbh" column="zjbh"/>
+		<result property="fzjg" column="fzjg"/>
+		<result property="qsrq" column="qsrq"/>
+		<result property="jzrq" column="jzrq"/>
+		<result property="fzjgdm" column="fzjgdm"/>
+	</resultMap>
+	<sql id="t_zjb_lsWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="qylsid != null and qylsid != ''">and
+				a.qylsid=#{qylsid}
+			</if>
+			<if test="zjlsid != null and zjlsid != ''">and
+				a.zjlsid=#{zjlsid}
+			</if>
+	</sql>
+	<sql id="t_zjb_lsPageWhere">
+		<include refid="t_zjb_lsWhere"/>	</sql>
+	<sql id="t_zjb_lsListWhere">
+		<include refid="t_zjb_lsWhere"/>	</sql>
+	<sql id="t_zjb_lsSelectWhere">
+		<include refid="t_zjb_lsWhere"/>	</sql>
+	<!--证件历史表(t_zjb_ls)-->
+	<insert id="insertZjb_ls" parameterType="zjb_ls">
+		insert into t_zjb_ls (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--证件历史表(t_zjb_ls)-->
+	<update id="updateZjb_ls" parameterType="zjb_ls">
+		update t_zjb_ls a set a.zjlsid=a.zjlsid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--证件历史表(t_zjb_ls)-->
+	<delete id="deleteZjb_ls" parameterType="zjb_ls">
+		delete from t_zjb_ls a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--证件历史表(t_zjb_ls)-->
+	<select id="getZjb_lsList" parameterType="map" resultMap="zjb_lsListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.qylsid qylsid,a.zjlsid zjlsid,a.fk_zjid fk_zjid,a.zjfl zjfl,a.zjbh zjbh,a.fzjg fzjg,a.qsrq qsrq,a.jzrq jzrq,a.fzjgdm fzjgdm
+		from t_zjb_ls a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--证件历史表(t_zjb_ls)-->
+	<select id="getZjb_lsListCount" parameterType="map" resultType="int">
+		select count(1) a from t_zjb_ls a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--证件历史表(t_zjb_ls)-->
+	<select id="getZjb_lsListNoPage" parameterType="zjb_ls" resultMap="zjb_lsListResult">
+		select a.qyid qyid,a.qylsid qylsid,a.zjlsid zjlsid,a.fk_zjid fk_zjid,a.zjfl zjfl,a.zjbh zjbh,a.fzjg fzjg,a.qsrq qsrq,a.jzrq jzrq,a.fzjgdm fzjgdm
+		from t_zjb_ls a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qylsid,a.zjlsid
+	</select>
+	<!--证件历史表(t_zjb_ls)-->
+	<select id="getZjb_ls" parameterType="zjb_ls" resultMap="zjb_lsResult">
+		select a.qyid qyid,a.qylsid qylsid,a.zjlsid zjlsid,a.fk_zjid fk_zjid,a.zjfl zjfl,a.zjbh zjbh,a.fzjg fzjg,a.qsrq qsrq,a.jzrq jzrq
+		from t_zjb_ls a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qylsid,a.zjlsid
+	</select>
+</mapper>

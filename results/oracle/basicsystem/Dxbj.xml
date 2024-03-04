@@ -1,0 +1,166 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	dxbj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--短信报警(t_dxbj)-->
+	<resultMap id="dxbjResult" type="dxbj">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="bjxxid" column="bjxxid"/>
+		<result property="dxbjid" column="dxbjid"/>
+		<result property="dxhm" column="dxhm"/>
+		<result property="dycfssj" column="dycfssj"/>
+		<result property="zhycfssj" column="zhycfssj"/>
+		<result property="fscs" column="fscs"/>
+		<result property="dxzt" column="dxzt"/>
+		<result property="dxnr" column="dxnr"/>
+	</resultMap>
+	<!--短信报警(t_dxbj)-->
+	<resultMap id="dxbjListResult" type="dxbj">
+		<result property="bjgzid" column="bjgzid"/>
+		<result property="bjxxid" column="bjxxid"/>
+		<result property="dxbjid" column="dxbjid"/>
+		<result property="dxhm" column="dxhm"/>
+		<result property="dycfssj" column="dycfssj"/>
+		<result property="zhycfssj" column="zhycfssj"/>
+		<result property="fscs" column="fscs"/>
+		<result property="dxzt" column="dxzt"/>
+		<result property="dxnr" column="dxnr"/>
+	</resultMap>
+	<sql id="t_dxbjWhere">
+			<if test="bjgzid != null and bjgzid != ''">and
+				a.bjgzid=#{bjgzid}
+			</if>
+			<if test="bjxxid != null and bjxxid != ''">and
+				a.bjxxid=#{bjxxid}
+			</if>
+			<if test="dxbjid != null and dxbjid != ''">and
+				a.dxbjid=#{dxbjid}
+			</if>
+	</sql>
+	<sql id="t_dxbjPageWhere">
+		<include refid="t_dxbjWhere"/>	</sql>
+	<sql id="t_dxbjListWhere">
+		<include refid="t_dxbjWhere"/>	</sql>
+	<sql id="t_dxbjSelectWhere">
+		<include refid="t_dxbjWhere"/>	</sql>
+	<!--短信报警(t_dxbj)-->
+	<insert id="insertDxbj" parameterType="dxbj">
+		insert into t_dxbj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--短信报警(t_dxbj)-->
+	<update id="updateDxbj" parameterType="dxbj">
+		update t_dxbj a set a.dxbjid=a.dxbjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--短信报警(t_dxbj)-->
+	<delete id="deleteDxbj" parameterType="dxbj">
+		delete from t_dxbj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--短信报警(t_dxbj)-->
+	<select id="getDxbjList" parameterType="map" resultMap="dxbjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.bjgzid bjgzid,a.bjxxid bjxxid,a.dxbjid dxbjid,a.dxhm dxhm,a.dycfssj dycfssj,a.zhycfssj zhycfssj,a.fscs fscs,a.dxzt dxzt,a.dxnr dxnr
+		from t_dxbj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--短信报警(t_dxbj)-->
+	<select id="getDxbjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_dxbj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--短信报警(t_dxbj)-->
+	<select id="getDxbjListNoPage" parameterType="dxbj" resultMap="dxbjListResult">
+		select a.bjgzid bjgzid,a.bjxxid bjxxid,a.dxbjid dxbjid,a.dxhm dxhm,a.dycfssj dycfssj,a.zhycfssj zhycfssj,a.fscs fscs,a.dxzt dxzt,a.dxnr dxnr
+		from t_dxbj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid,a.bjxxid,a.dxbjid
+	</select>
+	<!--短信报警(t_dxbj)-->
+	<select id="getDxbj" parameterType="dxbj" resultMap="dxbjResult">
+		select a.bjgzid bjgzid,a.bjxxid bjxxid,a.dxbjid dxbjid,a.dxhm dxhm,a.dycfssj dycfssj,a.zhycfssj zhycfssj,a.fscs fscs,a.dxzt dxzt,a.dxnr dxnr
+		from t_dxbj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.bjgzid,a.bjxxid,a.dxbjid
+	</select>
+</mapper>

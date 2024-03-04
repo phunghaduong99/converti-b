@@ -1,0 +1,795 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyxxExpImp
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!-- 企业认证 查询 -->
+	<resultMap id="qyxxListResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="frxm" column="frxm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	
+	<!-- 旅馆业 XML查询 -->
+	<resultMap id="lgyXmlMesResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qylx" column="qylx"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qycplxbm" column="qycplxbm"/>
+		<result property="frxm" column="frxm"/>
+		<result property="zjl" column="zjl"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="babdh" column="babdh"/>
+		<result property="qyzt" column="qyzt"/>
+		<result property="qyztgbrq" column="qyztgbrq"/>
+		<result property="jqbm" column="jqbm"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qyxz" column="qyxz"/>
+		<result property="cyrs" column="cyrs"/>
+		<result property="zbrys" column="zbrys"/>
+		<result property="jpxrs" column="jpxrs"/>
+		<result property="fwksrq" column="fwksrq"/>
+		<result property="fjs" column="fjs"/>
+		<result property="cws" column="cws"/>
+		<result property="bgxj" column="bgxj"/>
+		<result property="bgdj" column="bgdj"/>
+		<result property="zflbm" column="zflbm"/>
+	</resultMap>
+	
+	<!-- 公共模块业 XML查询 -->
+	<resultMap id="pubXmlMesResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="frxm" column="frxm"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="babdh" column="babdh"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="cyrs" column="cyrs"/>
+		<result property="zbrys" column="zbrys"/>
+		<result property="jpxrs" column="jpxrs"/>
+		<result property="fwksrq" column="fwksrq"/>
+		<result property="bxsl" column="bxsl"/>
+		<result property="cksl" column="cksl"/>
+		<result property="zflbm" column="zflbm"/>
+	</resultMap>
+	
+	<!-- 典当业 XML查询 -->
+	<resultMap id="ddyXmlMesResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="frxm" column="frxm"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="babdh" column="babdh"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="cyrs" column="cyrs"/>
+		<result property="zbrys" column="zbrys"/>
+		<result property="jpxrs" column="jpxrs"/>
+		<result property="fwksrq" column="fwksrq"/>
+	</resultMap>
+	
+	<!-- 机修业 XML查询 -->
+	<resultMap id="jxyXmlMesResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="frxm" column="frxm"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="babdh" column="babdh"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="cyrs" column="cyrs"/>
+		<result property="zbrys" column="zbrys"/>
+		<result property="jpxrs" column="jpxrs"/>
+		<result property="fwksrq" column="fwksrq"/>
+		<result property="zflbm" column="zflbm"/>
+	</resultMap>
+	
+	<!-- 印章业 XML查询 -->
+	<resultMap id="yzyXmlMesResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="frxm" column="frxm"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="babdh" column="babdh"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="fwksrq" column="fwksrq"/>
+	</resultMap>
+	
+	<!-- 出租房屋业 XML查询 -->
+	<resultMap id="czfwyXmlMesResult" type="qyxxExpImp">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="frxm" column="frxm"/>
+		<result property="zafzr" column="zafzr"/>
+		<result property="dizhi" column="dizhi"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="fwksrq" column="fwksrq"/>
+	</resultMap>
+
+	
+	<!-- 公共 查询条件 -->
+	<sql id="t_allPageWhere">
+		<if test="cxtjDcbs != null and cxtjDcbs != ''">and
+			a.dcbs = #{cxtjDcbs}
+		</if>
+		<if test="cxtjDcsj != null and cxtjDcsj != ''">and
+			a.dcsj &gt;=#cxtjDcsj:DATE# and a.dcsj &lt; #cxtjDcsj:DATE#+1
+		</if>
+	</sql>
+	<!-- 公共模块 查询条件 -->
+	<sql id="t_publicPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			a.qybm like '%${qybm}%'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			a.qymc like '%${qymc}%'
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			a.gxdwbm like '${gxdwbm}%'
+		</if>
+	</sql>
+	<!-- 旅馆业 查询条件 -->
+	<sql id="t_lgyPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			a.qiyebianma like '%${qybm}%'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			a.qiyemc like '%${qymc}%'
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			a.gxdwbm like '${gxdwbm}%'
+		</if>
+	</sql>
+	<!-- 典当业 查询条件 -->
+	<sql id="t_ddyPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			a.ddqybm like '%${qybm}%'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			a.ddqymc like '%${qymc}%'
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			a.gxdwbm like '${gxdwbm}%'
+		</if>
+	</sql>
+	<!-- 机修业 查询条件 gxdwdm -->
+	<sql id="t_jxyPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			a.jxqybm like '%${qybm}%'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			a.jxqymc like '%${qymc}%'
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			a.gxdwdm  like '${gxdwbm}%'
+		</if>
+	</sql>
+	<!-- 印章业 查询条件 -->
+	<sql id="t_yzyPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			a.zzdwbm like '%${qybm}%'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			a.zzdwmc like '%${qymc}%'
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			a.gxdwbm  like '${gxdwbm}%'
+		</if>
+	</sql>
+	<!-- 出租房屋业 查询条件 -->
+	<sql id="t_czfwyPageWhere">
+		<if test="qybm != null and qybm != ''">and
+			a.CAIJIDIANBM like '%${qybm}%'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+			a.CAIJIDIANMC like '%${qymc}%'
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+			a.GXDWBM  like '${gxdwbm}%'
+		</if>
+	</sql>
+	<!-- 公用模块 企业信息 -->
+	<select id="getPublicQyxxList" parameterType="map" resultMap="qyxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.qyid qyid,a.qybm qybm,a.qymc qymc,
+		a.frdb frxm,a.lxdh lxdh,a.jydz dizhi,a.gxdwmc gxdwmc
+		from t_qyjbxx a
+		where a.zxbz = 0 and a.scbz = 0 and a.hylbdm = #{hylbdm}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid desc )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 公用模块 企业信息 -->
+	<select id="getPublicQyxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjbxx a
+		where a.zxbz = 0 and a.scbz = 0 and a.hylbdm = #{hylbdm}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 旅馆业 企业信息 -->
+	<select id="getLgyQyxxList" parameterType="map" resultMap="qyxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.qiyeid qyid,a.qiyebianma qybm,a.qiyemc qymc,
+		a.farenmc frxm,a.lianxidh lxdh,a.xiangxidizhi dizhi,a.gxdwmc gxdwmc 
+		from t_lvguan a 
+		where a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qiyeid desc )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 旅馆业 企业信息 -->
+	<select id="getLgyQyxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_lvguan a 
+		where a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 典当业 企业信息 -->
+	<select id="getDdyQyxxList" parameterType="map" resultMap="qyxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.ddqyid qyid,a.ddqybm qybm,a.ddqymc qymc,
+		a.frdb frxm,a.lxdh lxdh,a.jydz dizhi,a.gxdwmc gxdwmc 
+		from t_ddqyxx a where a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ddqyid desc )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 典当业 企业信息 -->
+	<select id="getDdyQyxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_ddqyxx a 
+		where a.zxbz = 0 and a.scbz = 0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 机修业 企业信息 -->
+	<select id="getJxyQyxxList" parameterType="map" resultMap="qyxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.jxqyid qyid,a.jxqybm qybm,a.jxqymc qymc,
+		a.frdb frxm,a.lxdh lxdh,a.jydz dizhi,a.gxdwmc gxdwmc 
+		from t_jxqyxx a where a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.jxqyid desc )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 机修业 企业信息 -->
+	<select id="getJxyQyxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_jxqyxx a 
+		where a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 印章业 企业信息 -->
+	<select id="getYzyQyxxList" parameterType="map" resultMap="qyxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.zzdwid qyid,a.zzdwbm qybm,a.zzdwmc qymc,
+		a.frdb frxm,a.lxdh lxdh,a.jydz dizhi,a.gxdwmc gxdwmc 
+		from t_yzzzdwxx a where a.zxbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zzdwid desc )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 印章业 企业信息 -->
+	<select id="getYzyQyxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_yzzzdwxx a 
+		where a.zxbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 出租房屋业 企业信息 -->
+	<select id="getCzfwyQyxxList" parameterType="map" resultMap="qyxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.WYBZ qyid,a.CAIJIDIANBM qybm,a.CAIJIDIANMC qymc,
+		a.FUZEREN frxm,a.LIANXIDH lxdh,a.XIANGXIDIZHI dizhi,a.GXDWMC gxdwmc 
+		from t_caijidian a where a.ISZHUXIAO = 0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.WYBZ desc )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 出租房屋业 企业信息 -->
+	<select id="getCzfwyQyxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_caijidian a where a.ISZHUXIAO = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	<!-- 旅馆业 导出标识修改 -->
+	<update id="updateLgyxx" parameterType="qyxxExpImp">
+		update t_lvguan a set a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1 and a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!-- 旅馆业 xml数据查询 不分页 -->
+	<select id="getLgyXmlMes" parameterType="qyxxExpImp" resultMap="lgyXmlMesResult">
+		select a.qiyeid qyid,a.hangyelx qylx,a.qiyebianma qybm,a.qiyemc qymc,
+		a.qitaisblx qycplxbm,a.farenmc frxm,a.zongjingli zjl,
+		a.zhianzrr zafzr,a.xiangxidizhi dizhi,a.lianxidh lxdh,
+		a.baoanbudh babdh,a.zhuangtai qyzt,a.zhuangtaigbrq qyztgbrq,
+		a.jiqijiamibh jqbm,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+		a.qiyexingzhi_dm qyxz,a.congyerenshu cyrs,a.zhibaorenshu zbrys,
+		a.jingpeixunrs jpxrs,a.dengjiriqi fwksrq,a.fangjianshu fjs,
+		a.chuangweishu cws,a.qiyexingji bgxj,a.qiyedengji bgdj,a.yewulbbm zflbm 
+		from t_lvguan a 
+		where a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qiyeid desc
+	</select>
+	<!-- 旅馆业 xml数据查询 分页 -->
+	<select id="getLgyXmlMesPage" parameterType="map" resultMap="lgyXmlMesResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.qiyeid qyid,a.hangyelx qylx,a.qiyebianma qybm,a.qiyemc qymc,
+		a.qitaisblx qycplxbm,a.farenmc frxm,a.zongjingli zjl,
+		a.zhianzrr zafzr,a.xiangxidizhi dizhi,a.lianxidh lxdh,
+		a.baoanbudh babdh,a.zhuangtai qyzt,a.zhuangtaigbrq qyztgbrq,
+		a.jiqijiamibh jqbm,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+		a.qiyexingzhi_dm qyxz,a.congyerenshu cyrs,a.zhibaorenshu zbrys,
+		a.jingpeixunrs jpxrs,a.dengjiriqi fwksrq,a.fangjianshu fjs,
+		a.chuangweishu cws,a.qiyexingji bgxj,a.qiyedengji bgdj,a.yewulbbm zflbm
+		from t_lvguan a 
+		where a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qiyeid desc
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 旅馆业 xml数据查询 分页 -->
+	<select id="getLgyXmlMesPageCount" parameterType="map" resultType="int">
+		select count(1) a from t_lvguan a where a.zhuxiaobz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	<!-- 公共模块 导出标识修改 -->
+	<update id="updatePublicQyxx" parameterType="qyxxExpImp">
+		update t_qyjbxx a set a.scbz = 0
+			<if test="qyid != null and qyid != ''">,
+				a.qyid = #{qyid} 
+			</if>
+			<if test="qybm != null and qybm != ''">,
+				a.qybm = #{qybm} 
+			</if>
+			<if test="dcbs != null and dcbs != ''">,
+				a.dcbs = #{dcbs}
+			</if>
+			<if test="dcsj != null and dcsj != ''">,
+				a.dcsj = #dcsj:DATE#
+			</if>
+		where a.zxbz = 0 and a.scbz = 0 and a.hylbdm = #{hylbdm}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!-- 公共模块 xml数据查询 -->
+	<select id="getPublicQyxxXmlMes" parameterType="qyxxExpImp" resultMap="pubXmlMesResult">
+		select a.qyid qyid,a.qybm qybm ,a.qymc qymc,
+		a.frdb frxm,a.bafzrxm zafzr,a.jydz dizhi,
+		a.lxdh lxdh,a.bafzrdh babdh,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+		a.zrs cyrs,a.bars zbrys,
+		a.jgpxrs jpxrs,a.lrsj fwksrq,
+		a.bxbjsl bxsl,a.cksl cksl,a.qyzflbm zflbm 
+		from t_qyjbxx a where a.zxbz = 0 and a.scbz = 0 and a.hylbdm = #{hylbdm} 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid desc
+	</select>
+	<!-- 公共模块 xml数据查询 分页 -->
+	<select id="getPublicQyxxXmlMesPage" parameterType="map" resultMap="pubXmlMesResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.qyid qyid,a.qybm qybm ,a.qymc qymc,
+		a.frdb frxm,a.bafzrxm zafzr,a.jydz dizhi,
+		a.lxdh lxdh,a.bafzrdh babdh,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+		a.zrs cyrs,a.bars zbrys,
+		a.jgpxrs jpxrs,a.lrsj fwksrq,
+		a.bxbjsl bxsl,a.cksl cksl,a.qyzflbm zflbm 
+		from t_qyjbxx a where a.zxbz = 0 and a.scbz = 0 and a.hylbdm = #{hylbdm} 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid desc
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 公共模块 xml数据查询 分页 -->
+	<select id="getPublicQyxxXmlMesPageCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyjbxx a 
+		where a.zxbz = 0 and a.scbz = 0 and a.hylbdm = #{hylbdm} 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	<!-- 典当业 导出标识修改 -->
+	<update id="updateDdyQyxx" parameterType="qyxxExpImp">
+		update t_ddqyxx a set a.scbz = 0 
+			<if test="qyid != null and qyid != ''">,
+				a.ddqyid = #{qyid} 
+			</if>
+			<if test="qybm != null and qybm != ''">,
+				a.ddqybm = #{qybm} 
+			</if>
+			<if test="dcbs != null and dcbs != ''">,
+				a.dcbs = #{dcbs}
+			</if>
+			<if test="dcsj != null and dcsj != ''">,
+				a.dcsj = #dcsj:DATE#
+			</if>
+		where a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!-- 典当业 xml数据查询 -->
+	<select id="getDdyQyxxXmlMes" parameterType="qyxxExpImp" resultMap="ddyXmlMesResult">
+		select a.ddqyid qyid,a.ddqybm qybm ,a.ddqymc qymc,
+		a.frdb frxm,b.bafzrxm zafzr,a.jydz dizhi,
+		a.lxdh lxdh,b.bafzrdh babdh,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+		b.zrs cyrs,b.bars zbrys,
+		b.jgpxrs jpxrs,a.lrsj fwksrq
+		from t_ddqyxx a , t_ddcdryxx b
+	    where a.ddqyid = b.ddqyid
+	    and a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ddqyid desc
+	</select>
+	<!-- 典当业 xml数据查询 分页 -->
+	<select id="getDdyQyxxXmlMesPage" parameterType="map" resultMap="ddyXmlMesResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.ddqyid qyid,a.ddqybm qybm ,a.ddqymc qymc,
+		a.frdb frxm,b.bafzrxm zafzr,a.jydz dizhi,
+		a.lxdh lxdh,b.bafzrdh babdh,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,
+		b.zrs cyrs,b.bars zbrys,
+		b.jgpxrs jpxrs,a.lrsj fwksrq
+		from t_ddqyxx a , t_ddcdryxx b
+	    where a.ddqyid = b.ddqyid
+	    and a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ddqyid desc
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 典当业 xml数据查询 分页 -->
+	<select id="getDdyQyxxXmlMesPageCount" parameterType="map" resultType="int">
+		select count(1) a from t_ddqyxx a , t_ddcdryxx b
+	    where a.ddqyid = b.ddqyid
+	    and a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	<!-- 机修业 导出标识修改 -->
+	<update id="updateJxyQyxx" parameterType="qyxxExpImp">
+		update t_jxqyxx a set a.scbz = 0 
+			<if test="qyid != null and qyid != ''">,
+				a.jxqyid = #{qyid} 
+			</if>
+			<if test="qybm != null and qybm != ''">,
+				a.jxqybm = #{qybm} 
+			</if>
+			<if test="dcbs != null and dcbs != ''">,
+				a.dcbs = #{dcbs}
+			</if>
+			<if test="dcsj != null and dcsj != ''">,
+				a.dcsj = #dcsj:DATE#
+			</if>
+		where a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!-- 机修业 xml数据查询 -->
+	<select id="getJxyQyxxXmlMes" parameterType="qyxxExpImp" resultMap="jxyXmlMesResult">
+		select a.jxqyid qyid,a.jxqybm qybm ,a.jxqymc qymc,
+		a.frdb frxm,b.bafzrxm zafzr,a.jydz dizhi,
+		a.lxdh lxdh,b.bafzrdh babdh,
+		a.gxdwdm gxdwbm,a.gxdwmc gxdwmc,
+		b.zrs cyrs,b.bars zbrys,
+		b.jgpxrs jpxrs,a.lrsj fwksrq,a.qyflbm zflbm
+		from t_jxqyxx a , t_jxcdryxx b
+	    where a.jxqyid = b.jxqyid
+	    and a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.jxqyid desc
+	</select>
+	<!-- 机修业 xml数据查询 分页 -->
+	<select id="getJxyQyxxXmlMesPage" parameterType="map" resultMap="jxyXmlMesResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.jxqyid qyid,a.jxqybm qybm ,a.jxqymc qymc,
+		a.frdb frxm,b.bafzrxm zafzr,a.jydz dizhi,
+		a.lxdh lxdh,b.bafzrdh babdh,
+		a.gxdwdm gxdwbm,a.gxdwmc gxdwmc,
+		b.zrs cyrs,b.bars zbrys,
+		b.jgpxrs jpxrs,a.lrsj fwksrq,a.qyflbm zflbm
+		from t_jxqyxx a , t_jxcdryxx b
+	    where a.jxqyid = b.jxqyid
+	    and a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.jxqyid desc
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 机修业 xml数据查询 分页 -->
+	<select id="getJxyQyxxXmlMesPageCount" parameterType="map" resultType="int">
+		select count(1) a from t_jxqyxx a , t_jxcdryxx b
+	    where a.jxqyid = b.jxqyid
+	    and a.zxbz = 0 and a.scbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	<!-- 印章业 导出标识修改 -->
+	<update id="updateYzyQyxx" parameterType="qyxxExpImp">
+		update t_yzzzdwxx a set a.zxbz = 0 
+			<if test="qyid != null and qyid != ''">,
+				a.zzdwid = #{qyid} 
+			</if>
+			<if test="qybm != null and qybm != ''">,
+				a.zzdwbm = #{qybm} 
+			</if>
+			<if test="dcbs != null and dcbs != ''">,
+				a.dcbs = #{dcbs}
+			</if>
+			<if test="dcsj != null and dcsj != ''">,
+				a.dcsj = #dcsj:DATE#
+			</if>
+		where a.zxbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!-- 印章业 xml数据查询 -->
+	<select id="getYzyQyxxXmlMes" parameterType="qyxxExpImp" resultMap="yzyXmlMesResult">
+		select a.zzdwid qyid,a.zzdwbm qybm ,a.zzdwmc qymc,
+		a.frdb frxm,a.zafzr zafzr,a.jydz dizhi,
+		a.lxdh lxdh,a.bwbmdh babdh,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.lrsj fwksrq
+		from t_yzzzdwxx a 
+	    where a.zxbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zzdwid desc
+	</select>
+	<!-- 印章业 xml数据查询 分页 -->
+	<select id="getYzyQyxxXmlMesPage" parameterType="map" resultMap="yzyXmlMesResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.zzdwid qyid,a.zzdwbm qybm ,a.zzdwmc qymc,
+		a.frdb frxm,a.zafzr zafzr,a.jydz dizhi,
+		a.lxdh lxdh,a.bwbmdh babdh,
+		a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.lrsj fwksrq
+		from t_yzzzdwxx a 
+	    where a.zxbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.zzdwid desc
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 印章业 xml数据查询 分页 -->
+	<select id="getYzyQyxxXmlMesPageCount" parameterType="map" resultType="int">
+		select count(1) a from t_yzzzdwxx a 
+	    where a.zxbz = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	<!-- 出租房屋业 导出标识修改 -->
+	<update id="updateCzfwyQyxx" parameterType="qyxxExpImp">
+		update t_caijidian a set a.ISZHUXIAO = 0 
+			<if test="qyid != null and qyid != ''">,
+				a.WYBZ = #{qyid} 
+			</if>
+			<if test="qybm != null and qybm != ''">,
+				a.CAIJIDIANBM = #{qybm} 
+			</if>
+			<if test="dcbs != null and dcbs != ''">,
+				a.dcbs = #{dcbs}
+			</if>
+			<if test="dcsj != null and dcsj != ''">,
+				a.dcsj = #dcsj:DATE#
+			</if>
+		where a.ISZHUXIAO = 0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!-- 出租房屋业 xml数据查询 -->
+	<select id="getCzfwyQyxxXmlMes" parameterType="qyxxExpImp" resultMap="czfwyXmlMesResult">
+		select a.WYBZ qyid,a.CAIJIDIANBM qybm ,a.CAIJIDIANMC qymc,
+		a.FUZEREN frxm,a.GUANXIAMINJING zafzr,a.XIANGXIDIZHI dizhi,
+		a.LIANXIDH lxdh,
+		a.GXDWBM gxdwbm,a.GXDWMC gxdwmc,a.DENGJIRQ fwksrq
+		from t_caijidian a where a.ISZHUXIAO = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.WYBZ desc
+	</select>
+	<!-- 出租房屋业 xml数据查询 分页 -->
+	<select id="getCzfwyQyxxXmlMesPage" parameterType="map" resultMap="czfwyXmlMesResult">
+		select x.* from (
+		select rownum rowno,z.* from (
+		select a.WYBZ qyid,a.CAIJIDIANBM qybm ,a.CAIJIDIANMC qymc,
+		a.FUZEREN frxm,a.GUANXIAMINJING zafzr,a.XIANGXIDIZHI dizhi,
+		a.LIANXIDH lxdh,
+		a.GXDWBM gxdwbm,a.GXDWMC gxdwmc,a.DENGJIRQ fwksrq
+		from t_caijidian a where a.ISZHUXIAO = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.WYBZ desc
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!-- 出租房屋业 xml数据查询 分页 -->
+	<select id="getCzfwyQyxxXmlMesPageCount" parameterType="map" resultType="int">
+		select count(1) a from t_caijidian a where a.ISZHUXIAO = 0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	<!-- 删除授权信息 -->
+	<delete id="deleteLicense" parameterType="qyxxExpImp">
+		delete from license a where stationid = #{stationid}
+	</delete>
+	<!-- 添加授权信息 -->
+	<insert id="insertLicense" parameterType="qyxxExpImp">
+		insert into license (stationid,encodestr) values ( #{stationid},#{encodestr} )
+	</insert>
+</mapper>

@@ -1,0 +1,162 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyry_tjxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<resultMap id="qyry_tjxxResult" type="qyry_tjxx">
+		<result property="qyid" column="qyid"/>
+		<result property="ryid" column="ryid"/>
+		<result property="tjxxid" column="tjxxid"/>
+		<result property="tijianrq" column="tijianrq"/>
+		<result property="tjzkjms" column="tjzkjms"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrrq" column="lrrq"/>
+	</resultMap>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<resultMap id="qyry_tjxxListResult" type="qyry_tjxx">
+		<result property="qyid" column="qyid"/>
+		<result property="ryid" column="ryid"/>
+		<result property="tjxxid" column="tjxxid"/>
+		<result property="tijianrq" column="tijianrq"/>
+		<result property="tjzkjms" column="tjzkjms"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrrq" column="lrrq"/>
+	</resultMap>
+	<sql id="t_qyry_tjxxWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="ryid != null and ryid != ''">and
+				a.ryid=#{ryid}
+			</if>
+			<if test="tjxxid != null and tjxxid != ''">and
+				a.tjxxid=#{tjxxid}
+			</if>
+	</sql>
+	<sql id="t_qyry_tjxxPageWhere">
+		<include refid="t_qyry_tjxxWhere"/>	</sql>
+	<sql id="t_qyry_tjxxListWhere">
+		<include refid="t_qyry_tjxxWhere"/>	</sql>
+	<sql id="t_qyry_tjxxSelectWhere">
+		<include refid="t_qyry_tjxxWhere"/>	</sql>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<insert id="insertQyry_tjxx" parameterType="qyry_tjxx">
+		insert into t_qyry_tjxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<update id="updateQyry_tjxx" parameterType="qyry_tjxx">
+		update t_qyry_tjxx a set a.tjxxid=a.tjxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<delete id="deleteQyry_tjxx" parameterType="qyry_tjxx">
+		delete from t_qyry_tjxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<select id="getQyry_tjxxList" parameterType="map" resultMap="qyry_tjxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.ryid ryid,a.tjxxid tjxxid,a.tijianrq tijianrq,a.tjzkjms tjzkjms,a.lrr lrr,a.lrrq lrrq
+		from t_qyry_tjxx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<select id="getQyry_tjxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyry_tjxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<select id="getQyry_tjxxListNoPage" parameterType="qyry_tjxx" resultMap="qyry_tjxxListResult">
+		select a.qyid qyid,a.ryid ryid,a.tjxxid tjxxid,a.tijianrq tijianrq,a.tjzkjms tjzkjms,a.lrr lrr,a.lrrq lrrq
+		from t_qyry_tjxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.ryid,a.tjxxid
+	</select>
+	<!--企业人员体检信息(t_qyry_tjxx)-->
+	<select id="getQyry_tjxx" parameterType="qyry_tjxx" resultMap="qyry_tjxxResult">
+		select a.qyid qyid,a.ryid ryid,a.tjxxid tjxxid,a.tijianrq tijianrq,a.tjzkjms tjzkjms,a.lrr lrr,a.lrrq lrrq
+		from t_qyry_tjxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.ryid,a.tjxxid
+	</select>
+</mapper>

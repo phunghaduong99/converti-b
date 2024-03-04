@@ -1,0 +1,116 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:53:46 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	long
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	hsahmap
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	string
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	taxiUser
+		See console output for further details 
+	-->
+	<select id="getAllUserPhone" resultType="long">
+		select phoneNumber from t_taxiserver_taxiuser
+	</select>
+	<select id="getAllLoginName" resultType="string">
+	select loginName from t_taxiserver_taxiuser
+	</select>
+
+	<select id="getUserList" parameterType="taxiUser" resultType="taxiUser">
+		select * from t_taxiserver_taxiuser where 1=1
+		<if test="loginName != null">and
+			loginName like
+			'%${loginName}%'
+		</if>
+		<if test="phoneNumber != null">and
+			phoneNumber like
+			'%${phoneNumber}%'
+		</if>
+	</select>
+	<select id="countUserList" parameterType="taxiUser" resultType="long">
+		select count(*) from t_taxiserver_taxiuser where 1=1
+		<if test="loginName != null">and
+			loginName like
+			'%${loginName}%'
+		</if>
+		<if test="phoneNumber != null">and
+			phoneNumber like
+			'%${phoneNumber}%'
+		</if>
+	</select>
+
+	<select id="getUserObject" parameterType="long" resultType="taxiUser">
+		select * from t_taxiserver_taxiuser where uid=#{uid}
+	</select>
+	<select id="isNewUser" parameterType="taxiUser" resultType="taxiUser">
+		select * from t_taxiserver_taxiuser where loginName=#{loginName} or
+		phoneNumber=#{phoneNumber}
+		<!-- dynamic prepend="where"> <isNotNull property="loginName"> loginName=#{loginName} 
+			</isNotNull> <isNotNull prepend="or" property="phoneNumber"> phoneNumber=#{phoneNumber} 
+			</isNotNull> </dynamic -->
+	</select>
+
+	<insert id="isAddUser" parameterType="taxiUser">
+	insert into t_taxiserver_taxiuser(userName,phoneNumber,loginName,password,email,roleid,isLogin) values(#{userName},#{phoneNumber},#{loginName},#{password},#{email},#{roleid},#{isLogin})
+		<selectKey keyProperty="uid" resultType="Long">
+	SELECT LAST_INSERT_ID() AS ID 
+		</selectKey>
+	</insert>
+
+	<update id="isUpdateUser" parameterType="taxiUser">
+		update
+		t_taxiserver_taxiuser set
+		userName=#{userName},phoneNumber=#{phoneNumber},loginName=#{loginName}
+		<if test="password != null">,password=#{password}</if>
+		,email=#{email},roleid=#{roleid},isLogin=#{isLogin}
+		where uid=#{uid}
+	</update>
+
+	<delete id="isOutUser" parameterType="long">
+		delete
+		t_taxiserver_taxiuser where uid=#{uid}
+	</delete>
+
+</mapper>

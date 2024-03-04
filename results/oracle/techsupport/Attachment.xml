@@ -1,0 +1,181 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:56 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	
+	<!--
+		Sorry, I can`t migrate	Attachment
+		See console output for further details 
+	-->
+	
+	<resultMap id="AttachmentResult" type="Attachment">
+		<result property="attachmentId" column="attachment_Id"/>
+		<result property="attachmentName" column="attachment_Name"/>
+		<result property="attachmentComment" column="attachment_Comment"/>
+		<result property="attachmentSize" column="attachment_Size"/>
+		<result property="stId" column="st_id"/>
+		<result property="attachmentPath" column="attachment_Path"/>
+		<result property="uploadTime" column="upload_Time"/>
+		<result property="attachmentContentType" column="attachment_ContentType"/>
+		<result property="batchNumber" column="batch_Number"/>
+	</resultMap>
+	
+	<sql id="AttachmentFrom">
+	</sql>
+	<sql id="AttachmentWhere">
+		<if test="attachmentId != null">and
+			t.attachment_Id = #{attachmentId}
+		</if>
+		<if test="attachmentName != null">and
+			t.attachment_Name like '${attachmentName}%'
+		</if>
+		<if test="attachmentComment != null">and
+			t.attachment_Comment like '%${attachmentComment}%'
+		</if>
+	
+		<if test="batchNumber != null">and
+			t.batch_Number = #{batchNumber}
+		</if>
+		
+	</sql>
+	
+	<sql id="AttachmentPageWhere">
+		<include refid="AttachmentWhere"/>
+		
+		<if test="stId != null">and
+			t.st_Id = #{stId}
+		</if>
+		<if test="uploadTimeF != null">and
+			t.upload_Time &gt;= #{uploadTimeF}
+		</if>
+		<if test="uploadTimeT != null">and
+			t.upload_Time &lt;= #{uploadTimeT}
+		</if>
+	</sql>
+<!-- 	插入 -->
+	<insert id="Attachment.insert" parameterType="Attachment">
+		insert into T_TS_SUPPORT_ATTACHMENT (
+			<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+		)
+		values(
+			<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+		)
+	</insert>
+	
+<!-- 	更新 -->
+	<update id="Attachment.update" parameterType="Attachment">
+		update T_TS_SUPPORT_ATTACHMENT t set attachment_Id=attachment_Id
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+		where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+<!-- 	删除  -->
+	<delete id="Attachment.delete" parameterType="Attachment">
+		delete from T_TS_SUPPORT_ATTACHMENT t
+		where 1=1
+		<include refid="AttachmentWhere"/>
+	</delete>
+	
+<!-- 	分页查询 -->
+	<select id="Attachment.queryForPage" parameterType="map" resultMap="AttachmentResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select   t.*
+		 from T_TS_SUPPORT_ATTACHMENT t 
+		
+		 <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+		<!--
+		Sorry, I can`t migrate	where
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow}
+	</select>
+	
+<!-- 	分页用获取记录数 -->
+	<select id="Attachment.queryForPageCount" parameterType="map" resultType="int">
+		select count(1) from T_TS_SUPPORT_ATTACHMENT t 
+		
+		 <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<!--
+		Sorry, I can`t migrate	where
+		See console output for further details 
+	-->
+	</select>
+	
+<!-- 	获取列表 -->
+	<select id="Attachment.query" parameterType="Attachment" resultMap="AttachmentResult">
+		select   t.*
+		 from T_TS_SUPPORT_ATTACHMENT t 
+		
+		 <!--
+		Sorry, I can`t migrate	,
+		See console output for further details 
+	-->
+		
+		<!--
+		Sorry, I can`t migrate	where
+		See console output for further details 
+	--> 
+	</select>
+	
+<!-- 	获取单一 -->
+	<select id="Attachment.get" parameterType="Attachment" resultMap="AttachmentResult">
+		select   t.*
+		 from T_TS_SUPPORT_ATTACHMENT t 
+		where t.attachment_Id = #{attachmentId}
+		
+	</select>
+</mapper>

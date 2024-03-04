@@ -1,0 +1,318 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	bldsjksb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<resultMap id="bldsjksbResult" type="bldsjksb">
+		<result property="qyid" column="qyid"/>
+		<result property="bldsjksbid" column="bldsjksbid"/>
+		<result property="wlcslxbm" column="wlcslxbm"/>
+		<result property="wlcslxmc" column="wlcslxmc"/>
+		<result property="sbjcjgmc" column="sbjcjgmc"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="sccsmc" column="sccsmc"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="azsl" column="azsl"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="sflx" column="sflx"/>
+		<result property="ipdz" column="ipdz"/>
+		<result property="anwz" column="anwz"/>
+		<!-- 公共行业用到 -->
+		<result property="zt" column="zt"/> 
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="jibr" column="jibr"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<resultMap id="bldsjksbListResult" type="bldsjksb">
+		<result property="qyid" column="qyid"/>
+		<result property="bldsjksbid" column="bldsjksbid"/>
+		<result property="wlcslxbm" column="wlcslxbm"/>
+		<result property="wlcslxmc" column="wlcslxmc"/>
+		<result property="sbjcjgmc" column="sbjcjgmc"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="sccsmc" column="sccsmc"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="azsl" column="azsl"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="sflx" column="sflx"/>
+		<result property="ipdz" column="ipdz"/>
+		<result property="anwz" column="anwz"/>
+		<!-- 公共行业用到 -->
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="jibr" column="jibr"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	<!--闭路电视监控设备(t_bldsjksb)  公安端闭路电视监控设备查询-->
+	<resultMap id="bldsjksbGadListResult" type="bldsjksb">
+		<result property="qyid" column="qyid"/>
+		<result property="bldsjksbid" column="bldsjksbid"/>
+		<result property="wlcslxbm" column="wlcslxbm"/>
+		<result property="wlcslxmc" column="wlcslxmc"/>
+		<result property="sbjcjgmc" column="sbjcjgmc"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="sccsmc" column="sccsmc"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="azsl" column="azsl"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="sflx" column="sflx"/>
+		<result property="ipdz" column="ipdz"/>
+		<result property="anwz" column="anwz"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<!-- 公共行业用到 -->
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="jibr" column="jibr"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	
+	<!--公共 视频监控设备 公安端 查询-->
+	<resultMap id="spjksbGadListResult" type="bldsjksb">
+		<result property="qyid" column="qyid"/>
+		<result property="bldsjksbid" column="bldsjksbid"/>
+		<result property="wlcslxbm" column="wlcslxbm"/>
+		<result property="wlcslxmc" column="wlcslxmc"/>
+		<result property="sbjcjgmc" column="sbjcjgmc"/>
+		<result property="azsxtsl" column="azsxtsl"/>
+		<result property="sbxh" column="sbxh"/>
+		<result property="sccsmc" column="sccsmc"/>
+		<result property="ggxh" column="ggxh"/>
+		<result property="azsl" column="azsl"/>
+		<result property="sbmc" column="sbmc"/>
+		<result property="sflx" column="sflx"/>
+		<result property="ipdz" column="ipdz"/>
+		<result property="anwz" column="anwz"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<!-- 公共行业用到 -->
+		<result property="zt" column="zt"/>
+		<result property="tyyy" column="tyyy"/>
+		<result property="tysj" column="tysj"/>
+		<result property="jibr" column="jibr"/>
+		<result property="bz" column="bz"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrsj" column="lrsj"/>
+	</resultMap>
+	<sql id="t_bldsjksbWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="bldsjksbid != null and bldsjksbid != ''">and
+				a.bldsjksbid=#{bldsjksbid}
+			</if>
+	</sql>
+	<sql id="t_bldsjksbPageWhere">
+		<include refid="t_bldsjksbWhere"/>	</sql>
+	<sql id="t_bldsjksbListWhere">
+		<include refid="t_bldsjksbWhere"/>	</sql>
+	<sql id="t_bldsjksbSelectWhere">
+		<include refid="t_bldsjksbWhere"/>	</sql>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<insert id="insertBldsjksb" parameterType="bldsjksb">
+		insert into t_bldsjksb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<update id="updateBldsjksb" parameterType="bldsjksb">
+		update t_bldsjksb a set a.bldsjksbid=a.bldsjksbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<delete id="deleteBldsjksb" parameterType="bldsjksb">
+		delete from t_bldsjksb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<select id="getBldsjksbList" parameterType="map" resultMap="bldsjksbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.bldsjksbid bldsjksbid,a.wlcslxbm wlcslxbm,a.wlcslxmc wlcslxmc,a.sbjcjgmc sbjcjgmc,a.azsxtsl azsxtsl,a.sbxh sbxh,a.sccsmc sccsmc,a.ggxh ggxh,a.azsl azsl,a.sbmc sbmc,a.sflx sflx,a.ipdz ipdz,a.anwz anwz
+		,a.zt zt,a.tyyy tyyy,a.tysj tysj,a.jibr jibr,a.bz bz,a.lrr lrr ,a.lrsj lrsj
+		from t_bldsjksb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<select id="getBldsjksbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bldsjksb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<select id="getBldsjksbListNoPage" parameterType="bldsjksb" resultMap="spjksbGadListResult">
+		select a.qyid qyid,a.bldsjksbid bldsjksbid,a.wlcslxbm wlcslxbm,a.wlcslxmc wlcslxmc,
+		a.sbjcjgmc sbjcjgmc,a.azsxtsl azsxtsl,a.sbxh sbxh,a.sccsmc sccsmc,a.ggxh ggxh,
+		a.azsl azsl,a.sbmc sbmc,a.sflx sflx,a.ipdz ipdz,a.anwz anwz,
+		a.zt zt,a.tyyy tyyy,a.tysj tysj,a.jibr jibr,a.bz bz,a.lrr lrr ,a.lrsj lrsj,
+		b.qybm,b.qymc,b.qyzflbm,b.qyzflmc,b.hylbdm hylbdm,b.hylb hylb
+		from t_bldsjksb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.bldsjksbid
+	</select>
+	<!--闭路电视监控设备(t_bldsjksb)-->
+	<select id="getBldsjksb" parameterType="bldsjksb" resultMap="bldsjksbResult">
+		select a.qyid qyid,a.bldsjksbid bldsjksbid,a.wlcslxbm wlcslxbm,a.wlcslxmc wlcslxmc,a.sbjcjgmc sbjcjgmc,a.azsxtsl azsxtsl,a.sbxh sbxh,a.sccsmc sccsmc,a.ggxh ggxh,a.azsl azsl,a.sbmc sbmc,a.sflx sflx,a.ipdz ipdz,a.anwz anwz,a.zt zt,a.tyyy tyyy,a.tysj tysj,a.jibr jibr,a.bz bz,a.lrr lrr ,a.lrsj lrsj
+		from t_bldsjksb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.bldsjksbid
+	</select>
+	<!--闭路电视监控设备(t_bldsjksb)公安端闭路电视监控设备查询-->
+	<select id="getBldsjksbGadList" parameterType="map" resultMap="bldsjksbGadListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.bldsjksbid bldsjksbid,a.wlcslxbm wlcslxbm,a.wlcslxmc wlcslxmc,
+		a.sbjcjgmc sbjcjgmc,a.azsxtsl azsxtsl,a.sbxh sbxh,a.sccsmc sccsmc,a.ggxh ggxh,
+		a.azsl azsl,a.sbmc sbmc,a.sflx sflx,a.ipdz ipdz,a.anwz anwz,a.zt zt,a.tyyy tyyy,a.tysj tysj,a.jibr jibr,a.bz bz,a.lrr lrr ,a.lrsj lrsj,
+		b.qybm,b.qymc,b.qyzflbm,b.qyzflmc
+		from t_bldsjksb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--闭路电视监控设备(t_bldsjksb)公安端闭路电视监控设备查询-->
+	<select id="getBldsjksbGadListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bldsjksb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	
+	<!-- 公共 视频监控设备 公安端 分页查询 -->
+	<select id="getSpjksbGadList" parameterType="map" resultMap="spjksbGadListResult">
+		select x.* from ( select rownum rowno,z.* from (
+		select a.qyid qyid,a.bldsjksbid bldsjksbid,a.wlcslxbm wlcslxbm,a.wlcslxmc wlcslxmc,
+		a.sbjcjgmc sbjcjgmc,a.azsxtsl azsxtsl,a.sbxh sbxh,a.sccsmc sccsmc,a.ggxh ggxh,
+		a.azsl azsl,a.sbmc sbmc,a.sflx sflx,a.ipdz ipdz,a.anwz anwz,
+		a.zt zt,a.tyyy tyyy,a.tysj tysj,a.jibr jibr,a.bz bz,a.lrr lrr ,a.lrsj lrsj,
+		b.qybm,b.qymc,b.qyzflbm,b.qyzflmc,b.hylbdm hylbdm,b.hylb hylb
+		from t_bldsjksb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	
+	<!-- 公共 视频监控设备 公安端 分页查询 数量 -->
+	<select id="getSpjksbGadListCount" parameterType="map" resultType="int">
+		select count(1) a from t_bldsjksb a ,t_qyjbxx b
+		where 1=1 and a.qyid=b.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!-- 视频监控设备数量 -->
+	<select id="getSpjksbCount" parameterType="bldsjksb" resultType="int">
+		select NVL(sum(a.azsxtsl), 0) azsxtsl from t_bldsjksb a
+		where a.zt=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+</mapper>

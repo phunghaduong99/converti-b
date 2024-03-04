@@ -1,0 +1,382 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	jqhzlgy
+		See console output for further details 
+	-->
+	<!--抓逃信心统计-->
+	<resultMap id="jqhzlgyListResult" type="jqhzlgy">
+		<result property="departbrevitycode" column="departbrevitycode"/>
+		<result property="departname" column="departname"/>
+		<result property="bjzs" column="bjzs"/>
+		<result property="zhs" column="zhs"/>
+		<result property="bdzhs" column="bdzhs"/>
+		<result property="bszhs" column="bszhs"/>
+		<result property="kszhs" column="kszhs"/>
+	</resultMap>
+
+	<sql id="t_jqhzlgyWhere">
+			<if test="hylbdm != null and hylbdm != ''">and
+				BJXX.hylbdm=#{hylbdm}
+			</if>
+	  </sql>
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getJqhzlgyList" parameterType="map" resultMap="jqhzlgyListResult">
+	 
+	 SELECT * FROM 
+	 (
+	 SELECT A.*, ROWNUM RN 
+	 FROM (
+		  SELECT
+		  	   PCS.DEPARTBREVITYCODE DEPARTBREVITYCODE,
+			   PCS.DEPARTNAME DEPARTNAME,
+		       NVL(BJZS.BJZS,'0') bjzs,
+		       NVL(ZTS.ZTS,'0') zhs,
+		       NVL(bdzhs.bdzhs,'0') bdzhs,
+		       NVL(bszhs.bszhs,'0') bszhs,
+		       NVL(kszhs.kszhs,'0') kszhs
+		      
+		  FROM (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+		          FROM T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			           AND DEPT.DEPARTCODE LIKE #{gxdwbm} ) PCS,
+		       
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) BJZS
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+				   AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+				   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) BJZS,
+		       
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) ZTS
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) ZTS,
+		     
+		        (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) bdzhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,4) = SUBSTR(gnlklsxx.GXDWBM,0,4)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) bdzhs,
+		      
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) bszhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,2) = SUBSTR(gnlklsxx.GXDWBM,0,2)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) bszhs,
+		         
+		         (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) kszhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,2) != SUBSTR(gnlklsxx.GXDWBM,0,2)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) kszhs
+		
+			 WHERE PCS.DEPARTBREVITYCODE = BJZS.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = ZTS.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = bdzhs.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = bszhs.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = kszhs.PAICHUSUOBM(+)
+	  		   ORDER BY ${pageSort}
+  		) A
+  		
+  		WHERE ROWNUM &lt;= #{endRow}
+		)
+		WHERE RN &gt; #{beginRow}
+	  
+	</select>
+	
+	<select id="getJqhzlgyTotalNum" parameterType="map" resultMap="jqhzlgyListResult">
+	
+	 SELECT
+	 	SUBSTR('${gxdwbm}', 0, LENGTH('${gxdwbm}')-1) DEPARTBREVITYCODE,
+	 	'合计' DEPARTNAME,
+	 	SUM(TOTALNUM.bjzs) bjzs,
+	 	NVL(SUM(TOTALNUM.zhs),0) zhs,
+	 	SUM(TOTALNUM.bdzhs) bdzhs,
+	 	SUM(TOTALNUM.bszhs) bszhs,
+	 	SUM(TOTALNUM.kszhs) kszhs
+	 FROM (
+		   SELECT
+		  	   PCS.DEPARTBREVITYCODE DEPARTBREVITYCODE,
+			   PCS.DEPARTNAME DEPARTNAME,
+		       NVL(BJZS.BJZS,'0') bjzs,
+		       NVL(ZTS.ZTS,'0') zhs,
+		       NVL(bdzhs.bdzhs,'0') bdzhs,
+		       NVL(bszhs.bszhs,'0') bszhs,
+		       NVL(kszhs.kszhs,'0') kszhs
+		      
+		  FROM (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+		          FROM T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			           AND DEPT.DEPARTCODE LIKE #{gxdwbm} ) PCS,
+		       
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) BJZS
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+				   AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+				   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) BJZS,
+		       
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) ZTS
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) ZTS,
+		     
+		        (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) bdzhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,4) = SUBSTR(gnlklsxx.GXDWBM,0,4)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) bdzhs,
+		      
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) bszhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,2) = SUBSTR(gnlklsxx.GXDWBM,0,2)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) bszhs,
+		         
+		         (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) kszhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,2) != SUBSTR(gnlklsxx.GXDWBM,0,2)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) kszhs
+		
+			 WHERE PCS.DEPARTBREVITYCODE = BJZS.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = ZTS.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = bdzhs.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = bszhs.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = kszhs.PAICHUSUOBM(+)
+			   
+		   ) TOTALNUM
+	 
+	</select>
+	
+	<!--报警信息表(t_bjxxb)-->
+	<select id="getJqhzlgyListCount" parameterType="map" resultType="int">
+
+		SELECT COUNT(*) 
+		FROM ( 
+		 SELECT
+		  	   PCS.DEPARTBREVITYCODE DEPARTBREVITYCODE,
+			   PCS.DEPARTNAME DEPARTNAME,
+		       NVL(BJZS.BJZS,'0') bjzs,
+		       NVL(ZTS.ZTS,'0') zhs,
+		       NVL(bdzhs.bdzhs,'0') bdzhs,
+		       NVL(bszhs.bszhs,'0') bszhs,
+		       NVL(kszhs.kszhs,'0') kszhs
+		      
+		  FROM (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+		          FROM T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			           AND DEPT.DEPARTCODE LIKE #{gxdwbm} ) PCS,
+		       
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) BJZS
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+				   AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+				   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) BJZS,
+		       
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) ZTS
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) ZTS,
+		     
+		        (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) bdzhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,4) = SUBSTR(gnlklsxx.GXDWBM,0,4)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) bdzhs,
+		      
+		       (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) bszhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,2) = SUBSTR(gnlklsxx.GXDWBM,0,2)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) bszhs,
+		         
+		         (SELECT SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) PAICHUSUOBM,
+		               COUNT(1) kszhs
+		          FROM T_BJXXB BJXX, T_DEPARTMENT DEPT, t_gnlk_lsxx gnlklsxx
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND BJXX.CJJGDM = '1'
+		           AND BJXX.BJSJ BETWEEN #{bjsj1,jdbcType=TIMESTAMP} AND #{bjsj2,jdbcType=TIMESTAMP}
+		           AND BJXX.GXDWBM LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           and BJXX.YWBZJ = gnlklsxx.GNLKLSID
+		           and SUBSTR(gnlklsxx.SHENGSHIXIAN,0,2) != SUBSTR(gnlklsxx.GXDWBM,0,2)
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(BJXX.GXDWBM, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) kszhs
+		
+			 WHERE PCS.DEPARTBREVITYCODE = BJZS.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = ZTS.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = bdzhs.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = bszhs.PAICHUSUOBM(+)
+			   AND PCS.DEPARTBREVITYCODE = kszhs.PAICHUSUOBM(+)
+			
+		   	)
+
+	</select>
+	
+</mapper>

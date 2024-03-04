@@ -1,0 +1,270 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qgztjx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--全国在逃简项(t_qgztjx)-->
+	<resultMap id="qgztjxResult" type="qgztjx">
+		<result property="qgztjxid" column="qgztjxid"/>
+		<result property="tbbh" column="tbbh"/>
+		<result property="xzqhbm" column="xzqhbm"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="xm" column="xm"/>
+		<result property="bm" column="bm"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="hjdbm" column="hjdbm"/>
+		<result property="hjd" column="hjd"/>
+		<result property="hjxxdz" column="hjxxdz"/>
+		<result property="xzdqbm" column="xzdqbm"/>
+		<result property="xzdq" column="xzdq"/>
+		<result property="xzdxxdz" column="xzdxxdz"/>
+		<result property="qtzjlx" column="qtzjlx"/>
+		<result property="qtzjhm" column="qtzjhm"/>
+		<result property="ajjbbm" column="ajjbbm"/>
+		<result property="ajjb" column="ajjb"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="djrq" column="djrq"/>
+		<result property="djr" column="djr"/>
+		<result property="ladqbm" column="ladqbm"/>
+		<result property="ladq" column="ladq"/>
+		<result property="badwbm" column="badwbm"/>
+		<result property="badw" column="badw"/>
+		<result property="tbr" column="tbr"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+	</resultMap>
+	<!--全国在逃简项(t_qgztjx)-->
+	<resultMap id="qgztjxListResult" type="qgztjx">
+		<result property="qgztjxid" column="qgztjxid"/>
+		<result property="tbbh" column="tbbh"/>
+		<result property="xzqhbm" column="xzqhbm"/>
+		<result property="xzqh" column="xzqh"/>
+		<result property="xmpy" column="xmpy"/>
+		<result property="xm" column="xm"/>
+		<result property="bm" column="bm"/>
+		<result property="xbdm" column="xbdm"/>
+		<result property="xb" column="xb"/>
+		<result property="csrq" column="csrq"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="hjdbm" column="hjdbm"/>
+		<result property="hjd" column="hjd"/>
+		<result property="hjxxdz" column="hjxxdz"/>
+		<result property="xzdqbm" column="xzdqbm"/>
+		<result property="xzdq" column="xzdq"/>
+		<result property="xzdxxdz" column="xzdxxdz"/>
+		<result property="qtzjlx" column="qtzjlx"/>
+		<result property="qtzjhm" column="qtzjhm"/>
+		<result property="ajjbbm" column="ajjbbm"/>
+		<result property="ajjb" column="ajjb"/>
+		<result property="ajlbbm" column="ajlbbm"/>
+		<result property="ajlb" column="ajlb"/>
+		<result property="jyaq" column="jyaq"/>
+		<result property="djrq" column="djrq"/>
+		<result property="djr" column="djr"/>
+		<result property="ladqbm" column="ladqbm"/>
+		<result property="ladq" column="ladq"/>
+		<result property="badwbm" column="badwbm"/>
+		<result property="badw" column="badw"/>
+		<result property="tbr" column="tbr"/>
+		<result property="lxr" column="lxr"/>
+		<result property="lxfs" column="lxfs"/>
+	</resultMap>
+	<sql id="t_qgztjxWhere">
+			<if test="qgztjxid != null and qgztjxid != ''">and
+				a.qgztjxid=#{qgztjxid}
+			</if>
+	</sql>
+	<sql id="t_qgztjxQueryWhere">
+			<if test="qgztjxid != null and qgztjxid != ''">and
+				a.qgztjxid=#{qgztjxid}
+			</if>
+			<if test="xm != null and xm != ''">and
+				a.xm=#{xm}
+			</if>
+			<if test="gmsfhm != null and gmsfhm != ''">and
+				a.gmsfhm=#{gmsfhm}
+			</if>
+			<if test="xbdm != null and xbdm != ''">and
+				a.xbdm=#{xbdm}
+			</if>
+			<if test="hjdbm != null and hjdbm != ''">and
+				a.hjdbm=#{hjdbm}
+			</if>
+			<if test="djrq != null and djrq != ''">and
+				a.djrq=#{djrq,jdbcType=TIMESTAMP}
+			</if>
+			<if test="tbbh != null and tbbh != ''">and
+				a.tbbh=#{tbbh}
+			</if>
+			<if test="xmpy != null and xmpy != ''">and
+				a.xmpy=#{xmpy}
+			</if>
+	</sql>
+	
+	<sql id="t_qgztjxPageWhere">
+		<include refid="t_qgztjxWhere"/>	</sql>
+	<sql id="t_qgztjxListWhere">
+		<include refid="t_qgztjxWhere"/>	</sql>
+	<sql id="t_qgztjxSelectWhere">
+		<include refid="t_qgztjxWhere"/>	</sql>
+	<!--全国在逃简项(t_qgztjx)-->
+	<insert id="insertQgztjx" parameterType="qgztjx">
+		insert into t_qgztjx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	
+	<!--全国在逃简项(t_qgztjx)-->
+	<update id="updateQgztjx" parameterType="qgztjx">
+		update t_qgztjx a set a.qgztjxid=a.qgztjxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--全国在逃简项(t_qgztjx)-->
+	<delete id="deleteQgztjx" parameterType="qgztjx">
+		delete from t_qgztjx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--全国在逃简项(t_qgztjx)-->
+	<select id="getQgztjxList" parameterType="map" resultMap="qgztjxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qgztjxid qgztjxid,a.tbbh tbbh,a.xzqhbm xzqhbm,a.xzqh xzqh,a.xmpy xmpy,a.xm xm,a.bm bm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdbm hjdbm,a.hjd hjd,a.hjxxdz hjxxdz,a.xzdqbm xzdqbm,a.xzdq xzdq,a.xzdxxdz xzdxxdz,a.qtzjlx qtzjlx,a.qtzjhm qtzjhm,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs
+		from t_qgztjx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--全国在逃简项(t_qgztjx)-->
+	<select id="getQgztjxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qgztjx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--全国在逃简项(t_qgztjx)-->
+	<select id="getQgztjxListNoPage" parameterType="qgztjx" resultMap="qgztjxListResult">
+		select a.qgztjxid qgztjxid,a.tbbh tbbh,a.xzqhbm xzqhbm,a.xzqh xzqh,a.xmpy xmpy,a.xm xm,a.bm bm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdbm hjdbm,a.hjd hjd,a.hjxxdz hjxxdz,a.xzdqbm xzdqbm,a.xzdq xzdq,a.xzdxxdz xzdxxdz,a.qtzjlx qtzjlx,a.qtzjhm qtzjhm,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs
+		from t_qgztjx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qgztjxid
+	</select>
+	<!--全国在逃简项(t_qgztjx)-->
+	<select id="getQgztjx" parameterType="qgztjx" resultMap="qgztjxResult">
+		select a.qgztjxid qgztjxid,a.tbbh tbbh,a.xzqhbm xzqhbm,a.xzqh xzqh,a.xmpy xmpy,a.xm xm,a.bm bm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdbm hjdbm,a.hjd hjd,a.hjxxdz hjxxdz,a.xzdqbm xzdqbm,a.xzdq xzdq,a.xzdxxdz xzdxxdz,a.qtzjlx qtzjlx,a.qtzjhm qtzjhm,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs
+		from t_qgztjx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qgztjxid
+	</select>
+	<!--全国在逃简项(t_qgztjx) 导出-->
+	<select id="getQgztjxListExcel" parameterType="map" resultMap="qgztjxListResult">
+		select a.qgztjxid qgztjxid,a.tbbh tbbh,a.xzqhbm xzqhbm,a.xzqh xzqh,a.xmpy xmpy,a.xm xm,a.bm bm,a.xbdm xbdm,a.xb xb,a.csrq csrq,a.gmsfhm gmsfhm,a.hjdbm hjdbm,a.hjd hjd,a.hjxxdz hjxxdz,a.xzdqbm xzdqbm,a.xzdq xzdq,a.xzdxxdz xzdxxdz,a.qtzjlx qtzjlx,a.qtzjhm qtzjhm,a.ajjbbm ajjbbm,a.ajjb ajjb,a.ajlbbm ajlbbm,a.ajlb ajlb,a.jyaq jyaq,a.djrq djrq,a.djr djr,a.ladqbm ladqbm,a.ladq ladq,a.badwbm badwbm,a.badw badw,a.tbr tbr,a.lxr lxr,a.lxfs lxfs
+		from t_qgztjx a
+		where  rownum &lt;= ${endRow}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort}
+	</select>
+	<!--全国在逃简项临时表(t_qgztjx_lsb)-->
+	<insert id="insertQgztjxlsb" parameterType="qgztjx">
+		insert into t_qgztjx_lsb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--全国在逃简项临时表(t_qgztjx_lsb)-->
+	<delete id="deleteQgztjxlsb" parameterType="qgztjx">
+		truncate table t_qgztjx_lsb 
+	</delete>
+	
+	<!--全国在逃简项交换(t_qgztjx)-->
+	<update id="InsertQgztjxIn" parameterType="qgztjx">
+		alter table T_QGZTJX exchange partition T_QGZTJX with table T_QGZTJX_LSB including indexes without validation
+	</update>
+</mapper>

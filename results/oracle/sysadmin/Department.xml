@@ -1,0 +1,358 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:13 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	department
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--机构(t_department)-->
+	<resultMap id="departmentResult" type="department">
+		<result property="departid" column="departid"/>
+		<result property="departcode" column="departcode"/>
+		<result property="departname" column="departname"/>
+		<result property="departlevel" column="departlevel"/>
+		<result property="parentdepartid" column="parentdepartid"/>
+		<result property="departfullcode" column="departfullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="departsimplepin" column="departsimplepin"/>
+		<result property="departallpin" column="departallpin"/>
+		<result property="departbrevitycode" column="departbrevitycode"/>
+	</resultMap>
+	<!--机构(t_department)-->
+	<resultMap id="departmentResultTran" type="department">
+		<result property="departid" column="departid"/>
+		<result property="departcode" column="departcode"/>
+		<result property="departname" column="departname"/>
+		<result property="departlevel" column="departlevel"/>
+		<result property="parentdepartid" column="parentdepartid"/>
+		<result property="departfullcode" column="departfullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="departsimplepin" column="departsimplepin"/>
+		<result property="departallpin" column="departallpin"/>
+		<result property="departbrevitycode" column="departbrevitycode"/>
+		<result property="parentdepartname" column="parentdepartname"/>
+		<result property="child_count" column="child_count"/>
+	</resultMap>
+	<!--机构(t_department)-->
+	<resultMap id="departmentListResult" type="department">
+		<result property="departid" column="departid"/>
+		<result property="departcode" column="departcode"/>
+		<result property="departname" column="departname"/>
+		<result property="departlevel" column="departlevel"/>
+		<result property="parentdepartid" column="parentdepartid"/>
+		<result property="departfullcode" column="departfullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="departsimplepin" column="departsimplepin"/>
+		<result property="departallpin" column="departallpin"/>
+		<result property="departbrevitycode" column="departbrevitycode"/>
+	</resultMap>
+	<!--机构(t_department)sql翻译-->
+	<resultMap id="departmentListResultTran" type="department">
+		<result property="departid" column="departid"/>
+		<result property="departcode" column="departcode"/>
+		<result property="departname" column="departname"/>
+		<result property="departlevel" column="departlevel"/>
+		<result property="parentdepartid" column="parentdepartid"/>
+		<result property="departfullcode" column="departfullcode"/>
+		<result property="nodeorder" column="nodeorder"/>
+		<result property="isleaf" column="isleaf"/>
+		<result property="departsimplepin" column="departsimplepin"/>
+		<result property="departallpin" column="departallpin"/>
+		<result property="departbrevitycode" column="departbrevitycode"/>
+		<result property="parentdepartname" column="parentdepartname"/>
+		<result property="child_count" column="child_count"/>
+	</resultMap>
+	
+	<!--机构(t_department) 获得下一个排序号-->
+	<resultMap id="nodeorderResult" type="department">
+		<result property="nodeorder" column="nodeorder"/>
+	</resultMap>
+	<sql id="t_departmentWhere">
+			<if test="departid != null and departid != ''">and
+				a.departid=#{departid}
+			</if>
+	</sql>
+	<sql id="t_departmentPageWhere">
+		<include refid="t_departmentWhere"/>
+			<if test="parentdepartid != null and parentdepartid != ''">and
+				a.parentdepartid=#{parentdepartid}
+			</if>
+			</sql>
+	<sql id="t_departmentListWhere">
+		<include refid="t_departmentWhere"/>	</sql>
+	<sql id="t_departmentSelectWhere">
+		<include refid="t_departmentWhere"/>
+			<if test="departcode != null and departcode != ''">and
+			     a.departcode=#{departcode}
+			</if>
+			</sql>
+		
+	<!--机构(t_department)-->
+	<insert id="insertDepartment" parameterType="department">
+		insert into t_department (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--机构(t_department)-->
+	<update id="updateDepartment" parameterType="department">
+		update t_department a set departid=departid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--机构(t_department)-->
+	<delete id="deleteDepartment" parameterType="department">
+	
+	 <!--  
+      表间关系：与部门表t_department有连带关系的有五张表，分别为用户表t_user,角色表t_role,用户角色表 t_user_role;角色菜单表t_role_menu,
+                角色功能表t_role_Func ；层次关系为 一层t_department,二层t_user,t_role，三层t_role_Func,t_role_menu,t_user_role
+      删除一个部门的过程：
+         删除顺序依次为三层t_role_Func,t_role_menu，t_user_role 二层t_user,t_role，一层t_department
+        注：它的下属部门也要删除
+        根据部门的code及各条记录的字段departFullCode选出部门表中本部门及下属部门的departID
+        然后根据departID删除所有的在各表中对应的记录
+	  begin 
+  delete  from  t_role_menu  trm where trm.roleid in  (select roleid from t_role  where departid in (select departid from t_department where departfullcode like '${departfullcode}%' ));
+    delete from t_role_func trf  where trf.roleid in (select roleid from t_role where  departid in (select departid from t_department where departfullcode like '${departfullcode}%' ));
+     delete from t_user_role tur where tur.roleid in (select roleid from t_role  where departid in (select departid from t_department where departfullcode like '${departfullcode}%' ));
+      delete from t_user_role tur where tur.userid in (select userid from t_user  where departid in (select departid from t_department where departfullcode like '${departfullcode}%' ));
+       delete from t_role  where departid in (select departid from t_department where departfullcode like '${departfullcode}%' );
+       delete from t_user where departid in (select departid from t_department where departfullcode like '${departfullcode}%' );
+    end;
+     -->
+       delete from t_department where departfullcode like '${departfullcode}%'
+	
+    
+
+		
+	</delete>
+	<!--机构(t_department)-->
+	<select id="getDepartmentList" parameterType="map" resultMap="departmentListResultTran">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.departid departid,a.departcode departcode,a.departname departname,
+		a.departlevel departlevel,a.parentdepartid parentdepartid,
+		a.departfullcode departfullcode,a.nodeorder nodeorder,
+		a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,
+		a.departbrevitycode departbrevitycode,
+       	nvl(b.departname,'顶级') parentdepartname
+       	,
+        (case when 
+		(select count(1)
+		           from t_user t1
+		          where t1.departid in
+		                (select departid
+		                   from t_department t2
+		                  where t2.departfullcode like trim(a.departfullcode) || '%'
+		                  )) +
+		        (select count(1)
+		           from t_role t1
+		          where t1.departid in
+		                (select departid
+		                   from t_department t2
+		                   where t2.departfullcode like trim(a.departfullcode) || '%'
+		                  )) &gt;0 then 1 else 0 end) child_count
+		from t_department a ,(select t.departid,t.departname from t_department t) b
+		where 1=1 and a.parentdepartid=b.departid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort} )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--机构(t_department)-->
+	<select id="getDepartmentListCount" parameterType="map" resultType="int">
+		select count(1) a from t_department a ,(select t.departid,t.departname from t_department t) b
+		where 1=1 and a.parentdepartid=b.departid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--机构(t_department)-->
+	<select id="getDepartmentListNoPage" parameterType="department" resultMap="departmentListResult">
+		select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.departcode
+	</select>
+	<!--机构(t_department)-->
+	<select id="getDepartmentListForCache" parameterType="department" resultMap="departmentListResult">
+		select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a
+		where a.departcode not like 'CJD%' and a.departcode not like 'ZJD%' and a.departcode not like 'qyd%'
+			 and a.departcode &lt;&gt; '111' and length(a.departcode)=12
+		order by a.departcode
+	</select>
+	<!--机构(t_department)-->
+	<select id="getDepartment" parameterType="department" resultMap="departmentResultTran">
+		select a.departid departid,a.departcode departcode,a.departname departname,
+			a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,
+			a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,
+			a.departallpin departallpin,a.departbrevitycode departbrevitycode,
+	           nvl(b.departname,'顶级') parentdepartname,(case when 
+				(select count(1)
+				           from t_user t1
+				          where t1.departid in
+				                (select departid
+				                   from t_department t2
+				                  where t2.departfullcode like trim(a.departfullcode) || '%'
+				                  )) +
+				        (select count(1)
+				           from t_role t1
+				          where t1.departid in
+				                (select departid
+				                   from t_department t2
+				                   where t2.departfullcode like trim(a.departfullcode) || '%'
+				                  )) &gt;0 then 1 else 0 end) child_count
+      from t_department a ,(select t.departid,t.departname from t_department t) b
+      where  a.parentdepartid=b.departid(+)
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.departid
+	</select>
+	  <select id="getChildDepartment" parameterType="department" resultMap="departmentResult">
+  select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a
+		where a.parentdepartid = #{departid}
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+    order by nodeorder
+  </select>
+   <select id="getParentDepartment" parameterType="department" resultMap="departmentResult">
+  select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a  where a.departid= #{parentdepartid}
+  </select>
+  
+   <select id="getDepartInfo" parameterType="department" resultMap="departmentResult">
+      select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a  where 1=1
+      <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		  order by nodeorder 
+  </select>
+  <select id="getAllChildDepartment" parameterType="department" resultMap="departmentResult">
+  select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode from t_department a where departfullcode like '%${departfullcode}%' and departid&lt;&gt;#{departid} 
+    
+   <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+  order by nodeorder
+  </select>
+  <select id="getAllChildDepartmentByFullCode" parameterType="department" resultMap="departmentResult">
+  select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode from t_department a where departcode in (${departfullcode}) and parentdepartid &lt;&gt; 0 
+    
+  order by departlevel
+  </select>
+    <!-- child include cs -->
+  <select id="getChildDepartmentCs" parameterType="department" resultMap="departmentResult">
+    select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a
+    where parentdepartid = #{departid}  
+    <if test="flag != null and flag != ''">
+       <if test="flag == 4">and
+	     substr(a.departCode,0,4) in(select substr(t.gxdwbm,0,4) from t_ylcsjbxx t where  t.gxdwbm like CONCAT(substr(a.departCode,0,4),'%'))  
+	   </if>
+       <if test="flag == 6">and
+	      substr(a.departCode,0,6) in(select substr(t.gxdwbm,0,6) from t_ylcsjbxx t where substr(t.gxdwbm,0,6) = substr(a.departCode,0,6))  
+	   </if>
+	   <if test="flag == 8">and
+	     a.departCode in(select t.gxdwbm from t_ylcsjbxx t where t.gxdwbm = a.departCode)  
+	   </if>
+    </if>
+    order by nodeorder
+  </select>
+  
+  
+    <!--  checkChild  -->
+   <select id="checkChild" parameterType="department" resultType="int">
+    select  count(1) from t_department  where parentdepartid = #{parentdepartid}
+  </select>
+	<!--  获得所有兄弟节点最大排序号+1  -->
+  <select id="getNextNodeorder" parameterType="department" resultMap="nodeorderResult">
+    	select nvl((max(a.nodeorder)+1),0) nodeorder from t_department a
+    	 where 1=1 
+    	 <if test="parentdepartid != null and parentdepartid != ''">and
+			a.parentdepartid = #{parentdepartid}
+		</if>
+  </select>
+  
+  <!--机构(t_department)-->
+	<select id="getAllDepartmentListNoPage" parameterType="department" resultMap="departmentListResult">
+		select a.departid departid,a.departcode departcode,a.departname departname,a.departlevel departlevel,a.parentdepartid parentdepartid,a.departfullcode departfullcode,a.nodeorder nodeorder,a.isleaf isleaf,a.departsimplepin departsimplepin,a.departallpin departallpin,a.departbrevitycode departbrevitycode
+		from t_department a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.departcode
+	</select>
+  
+</mapper>

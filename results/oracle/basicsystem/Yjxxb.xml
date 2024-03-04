@@ -1,0 +1,207 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	yjxxb
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--预警信息表(t_yjxxb)-->
+	<resultMap id="yjxxbResult" type="yjxxb">
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="yjxxid" column="yjxxid"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="ssqydz" column="ssqydz"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="yjlx" column="yjlx"/>
+		<result property="yjsj" column="yjsj"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="xm" column="xm"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="gxbbh" column="gxbbh"/>
+		<result property="ywlb" column="ywlb"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="qkms" column="qkms"/>
+	</resultMap>
+	<!--预警信息表(t_yjxxb)-->
+	<resultMap id="yjxxbListResult" type="yjxxb">
+		<result property="yjgzid" column="yjgzid"/>
+		<result property="yjxxid" column="yjxxid"/>
+		<result property="ssqymc" column="ssqymc"/>
+		<result property="ssqydz" column="ssqydz"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="yjlx" column="yjlx"/>
+		<result property="yjsj" column="yjsj"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="xm" column="xm"/>
+		<result property="gmsfhm" column="gmsfhm"/>
+		<result property="gxbbh" column="gxbbh"/>
+		<result property="ywlb" column="ywlb"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="qkms" column="qkms"/>
+	</resultMap>
+	<sql id="t_yjxxbWhere">
+			<if test="yjgzid != null and yjgzid != ''">and
+				a.yjgzid=#{yjgzid}
+			</if>
+			<if test="yjxxid != null and yjxxid != ''">and
+				a.yjxxid=#{yjxxid}
+			</if>
+	</sql>
+	<sql id="t_yjxxbPageWhere">
+		<include refid="t_yjxxbWhere"/>	</sql>
+	<sql id="t_yjxxbListWhere">
+		<include refid="t_yjxxbWhere"/>	</sql>
+	<sql id="t_yjxxbSelectWhere">
+		<include refid="t_yjxxbWhere"/>	</sql>
+	<!--预警信息表(t_yjxxb)-->
+	<insert id="insertYjxxb" parameterType="yjxxb">
+		insert into t_yjxxb (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--预警信息表(t_yjxxb)-->
+	<update id="updateYjxxb" parameterType="yjxxb">
+		update t_yjxxb a set a.yjxxid=a.yjxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--预警信息表(t_yjxxb)-->
+	<delete id="deleteYjxxb" parameterType="yjxxb">
+		delete from t_yjxxb a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--预警信息表(t_yjxxb)-->
+	<select id="getYjxxbList" parameterType="map" resultMap="yjxxbListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.yjgzid yjgzid,a.yjxxid yjxxid,a.ssqymc ssqymc,a.ssqydz ssqydz,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.yjlx yjlx,a.yjsj yjsj,a.bdbm bdbm,a.ywbm ywbm,a.hylb hylb,a.xm xm,a.gmsfhm gmsfhm,a.gxbbh gxbbh,a.ywlb ywlb,a.lxdh lxdh,a.qkms qkms
+		from t_yjxxb a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--预警信息表(t_yjxxb)-->
+	<select id="getYjxxbListCount" parameterType="map" resultType="int">
+		select count(1) a from t_yjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--预警信息表(t_yjxxb)-->
+	<select id="getYjxxbListNoPage" parameterType="yjxxb" resultMap="yjxxbListResult">
+		select a.yjgzid yjgzid,a.yjxxid yjxxid,a.ssqymc ssqymc,a.ssqydz ssqydz,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.yjlx yjlx,a.yjsj yjsj,a.bdbm bdbm,a.ywbm ywbm,a.hylb hylb,a.xm xm,a.gmsfhm gmsfhm,a.gxbbh gxbbh,a.ywlb ywlb,a.lxdh lxdh,a.qkms qkms
+		from t_yjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.yjgzid,a.yjxxid
+	</select>
+	<!--预警信息表(t_yjxxb)-->
+	<select id="getYjxxb" parameterType="yjxxb" resultMap="yjxxbResult">
+		select a.yjgzid yjgzid,a.yjxxid yjxxid,a.ssqymc ssqymc,a.ssqydz ssqydz,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.yjlx yjlx,a.yjsj yjsj,a.bdbm bdbm,a.ywbm ywbm,a.hylb hylb,a.xm xm,a.gmsfhm gmsfhm,a.gxbbh gxbbh,a.ywlb ywlb,a.lxdh lxdh,a.qkms qkms
+		from t_yjxxb a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.yjgzid,a.yjxxid
+	</select>
+	
+<!--预警信息表(t_yjxxb) 关注对象比对报警查询结果-->
+	<select id="getYjxxbListBDBJNoPage" parameterType="yjxxb" resultType="yjxxb">
+        select '1' as yjgzid,
+             l.qiyemc SSQYMC,
+             l.xiangxidizhi SSQYDZ,
+             t.gxdwbm gxdwbm,
+             t.gxdwmc gxdwmc,
+             '关注对象预警' yjlx,
+             sysdate yjsj,
+             'T_GZDX' bdbm,
+             'T_GNLK' ywbm,
+             'A' hylb,
+             x.xm xm,
+             x.zjhm gmsfhm,
+             '0' gxbbh,
+             t.yewulbbm ywlb,
+             x.lxdh lxdh,
+             x.bz qkms,
+             t.gnlkid ywbzj,
+             x.gzdxid bdbzj
+      
+        from t_gnlk t
+        left join t_gzdx x on t.zhengjianhm = x.zjhm
+        left join t_lvguan l on t.qiyebianma = l.qiyebianma
+       where t.zhengjianhm in (select g.zjhm from t_gzdx g) and t.gzdx_biduiflag ='0'
+	
+	</select>
+</mapper>

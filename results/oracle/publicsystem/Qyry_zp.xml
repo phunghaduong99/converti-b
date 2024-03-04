@@ -1,0 +1,160 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyry_zp
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业人员_照片(t_qyry_zp)-->
+	<resultMap id="qyry_zpResult" type="qyry_zp">
+		<result property="qyid" column="qyid"/>
+		<result property="ryid" column="ryid"/>
+		<result property="zpid" column="zpid"/>
+		<result property="tpmc" column="tpmc"/>
+		<result property="tplx" column="tplx"/>
+		<result property="tpnr" column="tpnr"/>
+	</resultMap>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<resultMap id="qyry_zpListResult" type="qyry_zp">
+		<result property="qyid" column="qyid"/>
+		<result property="ryid" column="ryid"/>
+		<result property="zpid" column="zpid"/>
+		<result property="tpmc" column="tpmc"/>
+		<result property="tplx" column="tplx"/>
+		<result property="tpnr" column="tpnr"/>
+	</resultMap>
+	<sql id="t_qyry_zpWhere">
+			<if test="tplx != null and tplx != ''">and
+				a.tplx=#{tplx}
+			</if>
+			<if test="ryid != null and ryid != ''">and
+				a.ryid=#{ryid}
+			</if>
+			<if test="zpid != null and zpid != ''">and
+				a.zpid=#{zpid}
+			</if>
+	</sql>
+	<sql id="t_qyry_zpPageWhere">
+		<include refid="t_qyry_zpWhere"/>	</sql>
+	<sql id="t_qyry_zpListWhere">
+		<include refid="t_qyry_zpWhere"/>	</sql>
+	<sql id="t_qyry_zpSelectWhere">
+		<include refid="t_qyry_zpWhere"/>	</sql>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<insert id="insertQyry_zp" parameterType="qyry_zp">
+		insert into t_qyry_zp (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<update id="updateQyry_zp" parameterType="qyry_zp">
+		update t_qyry_zp a set a.zpid=a.zpid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<delete id="deleteQyry_zp" parameterType="qyry_zp">
+		delete from t_qyry_zp a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<select id="getQyry_zpList" parameterType="map" resultMap="qyry_zpListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.ryid ryid,a.zpid zpid,a.tpmc tpmc,a.tplx tplx,a.tpnr tpnr
+		from t_qyry_zp a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<select id="getQyry_zpListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<select id="getQyry_zpListNoPage" parameterType="qyry_zp" resultMap="qyry_zpListResult">
+		select a.qyid qyid,a.ryid ryid,a.zpid zpid,a.tpmc tpmc,a.tplx tplx,a.tpnr tpnr
+		from t_qyry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.ryid,a.zpid
+	</select>
+	<!--企业人员_照片(t_qyry_zp)-->
+	<select id="getQyry_zp" parameterType="qyry_zp" resultMap="qyry_zpResult">
+		select a.qyid qyid,a.ryid ryid,a.zpid zpid,a.tpmc tpmc,a.tplx tplx,a.tpnr tpnr
+		from t_qyry_zp a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.ryid,a.zpid
+	</select>
+</mapper>

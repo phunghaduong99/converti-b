@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<!DOCTYPE sqlMap PUBLIC "-//iBATIS.com//DTD SQL Map 2.0//EN" "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+ 
+<sqlMap>
+	
+	<typeAlias type="com.apress.prospring.ch10.domain.Order" alias="order"/>
+	<typeAlias type="com.apress.prospring.ch10.domain.OrderLine" alias="orderLine"/>
+	
+	<resultMap class="order" id="result">
+		<result property="orderId" column="OrderId"/>
+		<result property="customer" column="Customer"/>
+		<result property="orderLines" select="getOrderLinesByOrder" column="OrderId"/>
+	</resultMap>
+	
+	<resultMap class="orderLine" id="resultLine">
+		<result property="orderLineId" column="OrderLineId"/>
+		<result property="order" column="Order"/>
+		<result property="product" column="Product"/>
+		<result property="price" column="Price"/>
+	</resultMap>	
+	
+	<select id="getOrderById" resultMap="result" parameterClass="int">
+		select * from Orders where OrderId=#value#
+	</select>
+	
+	<select id="getOrderLinesByOrder" resultMap="resultLine" parameterClass="int">
+		select * from OrderLines where "Order"=#value#
+	</select>
+
+</sqlMap>

@@ -1,0 +1,156 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	ryxxczrz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<resultMap id="ryxxczrzResult" type="ryxxczrz">
+		<result property="ryxxczrzid" column="ryxxczrzid"/>
+		<result property="czsj" column="czsj"/>
+		<result property="czlx" column="czlx"/>
+		<result property="cznr" column="cznr"/>
+		<result property="czr" column="czr"/>
+		<result property="qybm" column="qybm"/>
+		<result property="cyrybh" column="cyrybh"/>
+	</resultMap>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<resultMap id="ryxxczrzListResult" type="ryxxczrz">
+		<result property="ryxxczrzid" column="ryxxczrzid"/>
+		<result property="czsj" column="czsj"/>
+		<result property="czlx" column="czlx"/>
+		<result property="cznr" column="cznr"/>
+		<result property="czr" column="czr"/>
+		<result property="qybm" column="qybm"/>
+		<result property="cyrybh" column="cyrybh"/>
+	</resultMap>
+	<sql id="t_ryxxczrzWhere">
+			<if test="ryxxczrzid != null and ryxxczrzid != ''">and
+				a.ryxxczrzid=#{ryxxczrzid}
+			</if>
+	</sql>
+	<sql id="t_ryxxczrzPageWhere">
+		<include refid="t_ryxxczrzWhere"/>	</sql>
+	<sql id="t_ryxxczrzListWhere">
+		<include refid="t_ryxxczrzWhere"/>	</sql>
+	<sql id="t_ryxxczrzSelectWhere">
+		<include refid="t_ryxxczrzWhere"/>	</sql>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<insert id="insertRyxxczrz" parameterType="ryxxczrz">
+		insert into t_ryxxczrz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<update id="updateRyxxczrz" parameterType="ryxxczrz">
+		update t_ryxxczrz a set a.ryxxczrzid=a.ryxxczrzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<delete id="deleteRyxxczrz" parameterType="ryxxczrz">
+		delete from t_ryxxczrz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<select id="getRyxxczrzList" parameterType="map" resultMap="ryxxczrzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.ryxxczrzid ryxxczrzid,a.czsj czsj,a.czlx czlx,a.cznr cznr,a.czr czr,a.qybm qybm,a.cyrybh cyrybh
+		from t_ryxxczrz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<select id="getRyxxczrzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_ryxxczrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<select id="getRyxxczrzListNoPage" parameterType="ryxxczrz" resultMap="ryxxczrzListResult">
+		select a.ryxxczrzid ryxxczrzid,a.czsj czsj,a.czlx czlx,a.cznr cznr,a.czr czr,a.qybm qybm,a.cyrybh cyrybh
+		from t_ryxxczrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ryxxczrzid
+	</select>
+	<!--人员信息操作日志(t_ryxxczrz)-->
+	<select id="getRyxxczrz" parameterType="ryxxczrz" resultMap="ryxxczrzResult">
+		select a.ryxxczrzid ryxxczrzid,a.czsj czsj,a.czlx czlx,a.cznr cznr,a.czr czr,a.qybm qybm,a.cyrybh cyrybh
+		from t_ryxxczrz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.ryxxczrzid
+	</select>
+</mapper>

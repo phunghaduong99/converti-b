@@ -1,0 +1,162 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	xctbhf
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--协查通报回复(t_xctbhf)-->
+	<resultMap id="xctbhfResult" type="xctbhf">
+		<result property="tbid" column="tbid"/>
+		<result property="jsdwid" column="jsdwid"/>
+		<result property="hfid" column="hfid"/>
+		<result property="hfsj" column="hfsj"/>
+		<result property="hfnr" column="hfnr"/>
+		<result property="hfr" column="hfr"/>
+	</resultMap>
+	<!--协查通报回复(t_xctbhf)-->
+	<resultMap id="xctbhfListResult" type="xctbhf">
+		<result property="tbid" column="tbid"/>
+		<result property="jsdwid" column="jsdwid"/>
+		<result property="hfid" column="hfid"/>
+		<result property="hfsj" column="hfsj"/>
+		<result property="hfnr" column="hfnr"/>
+		<result property="hfr" column="hfr"/>
+		<result property="jsdwmc" column="jsdwmc"/>
+		
+	</resultMap>
+	<sql id="t_xctbhfWhere">
+			<if test="tbid != null and tbid != ''">and
+				a.tbid=#{tbid}
+			</if>
+			<if test="jsdwid != null and jsdwid != ''">and
+				a.jsdwid=#{jsdwid}
+			</if>
+			<if test="hfid != null and hfid != ''">and
+				a.hfid=#{hfid}
+			</if>
+	</sql>
+	<sql id="t_xctbhfPageWhere">
+		<include refid="t_xctbhfWhere"/>	</sql>
+	<sql id="t_xctbhfListWhere">
+		<include refid="t_xctbhfWhere"/>	</sql>
+	<sql id="t_xctbhfSelectWhere">
+		<include refid="t_xctbhfWhere"/>	</sql>
+	<!--协查通报回复(t_xctbhf)-->
+	<insert id="insertXctbhf" parameterType="xctbhf">
+		insert into t_xctbhf (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--协查通报回复(t_xctbhf)-->
+	<update id="updateXctbhf" parameterType="xctbhf">
+		update t_xctbhf a set a.hfid=a.hfid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--协查通报回复(t_xctbhf)-->
+	<delete id="deleteXctbhf" parameterType="xctbhf">
+		delete from t_xctbhf a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--协查通报回复(t_xctbhf)-->
+	<select id="getXctbhfList" parameterType="map" resultMap="xctbhfListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tbid tbid,a.jsdwid jsdwid,a.hfid hfid,a.hfsj hfsj,a.hfnr hfnr,a.hfr hfr,c.jsdwmc jsdwmc
+		from t_xctbhf a,t_xctbjsdw c
+		where a.tbid = c.tbid and a.jsdwid = c.jsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--协查通报回复(t_xctbhf)-->
+	<select id="getXctbhfListCount" parameterType="map" resultType="int">
+		select count(1) a from t_xctbhf a,t_xctbjsdw c
+		where a.tbid = c.tbid and a.jsdwid = c.jsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--协查通报回复(t_xctbhf)-->
+	<select id="getXctbhfListNoPage" parameterType="xctbhf" resultMap="xctbhfListResult">
+		select a.tbid tbid,a.jsdwid jsdwid,a.hfid hfid,a.hfsj hfsj,a.hfnr hfnr,a.hfr hfr,,c.jsdwmc jsdwmc
+		from t_xctbhf a,t_xctbjsdw c
+		where a.tbid = c.tbid and a.jsdwid = c.jsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid,a.jsdwid,a.hfid
+	</select>
+	<!--协查通报回复(t_xctbhf)-->
+	<select id="getXctbhf" parameterType="xctbhf" resultMap="xctbhfResult">
+		select a.tbid tbid,a.jsdwid jsdwid,a.hfid hfid,a.hfsj hfsj,a.hfnr hfnr,a.hfr hfr
+		from t_xctbhf a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid,a.jsdwid,a.hfid
+	</select>
+</mapper>

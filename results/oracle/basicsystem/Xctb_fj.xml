@@ -1,0 +1,156 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	xctb_fj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--协查通报_附件(t_xctb_fj)-->
+	<resultMap id="xctb_fjResult" type="xctb_fj">
+		<result property="tbid" column="tbid"/>
+		<result property="fjid" column="fjid"/>
+		<result property="fjmc" column="fjmc"/>
+		<result property="fjlx" column="fjlx"/>
+		<result property="fjnr" column="fjnr"/>
+		<result property="fjxh" column="fjxh"/>
+	</resultMap>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<resultMap id="xctb_fjListResult" type="xctb_fj">
+		<result property="tbid" column="tbid"/>
+		<result property="fjid" column="fjid"/>
+		<result property="fjmc" column="fjmc"/>
+		<result property="fjlx" column="fjlx"/>
+		<result property="fjxh" column="fjxh"/>
+	</resultMap>
+	<sql id="t_xctb_fjWhere">
+			<if test="tbid != null and tbid != ''">and
+				a.tbid=#{tbid}
+			</if>
+			<if test="fjid != null and fjid != ''">and
+				a.fjid=#{fjid}
+			</if>
+	</sql>
+	<sql id="t_xctb_fjPageWhere">
+		<include refid="t_xctb_fjWhere"/>	</sql>
+	<sql id="t_xctb_fjListWhere">
+		<include refid="t_xctb_fjWhere"/>	</sql>
+	<sql id="t_xctb_fjSelectWhere">
+		<include refid="t_xctb_fjWhere"/>	</sql>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<insert id="insertXctb_fj" parameterType="xctb_fj">
+		insert into t_xctb_fj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<update id="updateXctb_fj" parameterType="xctb_fj">
+		update t_xctb_fj a set a.fjid=a.fjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<delete id="deleteXctb_fj" parameterType="xctb_fj">
+		delete from t_xctb_fj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<select id="getXctb_fjList" parameterType="map" resultMap="xctb_fjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.tbid tbid,a.fjid fjid,a.fjmc fjmc,a.fjlx fjlx,a.fjxh fjxh
+		from t_xctb_fj a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<select id="getXctb_fjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_xctb_fj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<select id="getXctb_fjListNoPage" parameterType="xctb_fj" resultMap="xctb_fjListResult">
+		select a.tbid tbid,a.fjid fjid,a.fjmc fjmc,a.fjlx fjlx,a.fjxh fjxh
+		from t_xctb_fj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid,a.fjid
+	</select>
+	<!--协查通报_附件(t_xctb_fj)-->
+	<select id="getXctb_fj" parameterType="xctb_fj" resultMap="xctb_fjResult">
+		select a.tbid tbid,a.fjid fjid,a.fjmc fjmc,a.fjlx fjlx,a.fjnr fjnr,a.fjxh fjxh
+		from t_xctb_fj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.tbid,a.fjid
+	</select>
+</mapper>

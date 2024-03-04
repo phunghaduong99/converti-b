@@ -1,0 +1,161 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:59:56 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	Tracking
+		See console output for further details 
+	-->
+	<!--<cacheModel id="oneDayCategory" type="LRU">
+		<flushInterval hours="24" />
+	</cacheModel>-->
+	<!-- 追踪批复结果集 -->
+	<resultMap id="TrackingResult" type="Tracking">
+		<result property="id" column="ID"/>
+		<result property="trackingDate" column="TRACKING_DATE"/>
+		<result property="newProcess" column="NEW_PROCESS"/>
+		<result property="processor.userid" column="PROCESSOR"/><!-- 对应用户user类 -->
+		<result property="processor.username" column="USERNAME"/>
+		<result property="stId" column="ST_ID"/>
+		<result property="approvalCode" column="APPROVAL_CODE"/>
+		<result property="type" column="TYPE"/>
+	</resultMap>
+
+
+	
+	<sql id="TrackingWhere">
+			<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->			
+			<if test="trackingDate != null">and
+				t.TRACKING_DATE=#{trackingDate}
+			</if>
+			<if test="stId != null">and
+				T.ST_ID = #{stId}
+			</if>
+			<if test="type != null">and
+				t.TYPE = #{type}
+			</if>
+			<if test="approvalCode != null">and
+				t.APPROVAL_CODE = #{approvalCode}
+			</if>
+			<if test="processorId != null">and
+				t.processor = #{processorId}
+			</if>
+			<if test="superbWhere != null">and
+				${superbWhere}
+			</if>
+			
+	</sql>
+	<sql id="TrackingPageWhere">
+		<include refid="TrackingWhere"/>
+	</sql>
+	<sql id="TrackingListWhere">
+		<include refid="TrackingWhere"/>
+	</sql>
+	
+	<select id="tracking.get" parameterType="Tracking" resultMap="TrackingResult">
+		select t.*,u.username from T_TS_TRACKING t, t_user u  where u.userid=t.processor and  t.ID = #{id} 
+	</select>
+	
+	<select id="tracking.getList" parameterType="Tracking" resultMap="TrackingResult">
+		select t.*,u.username from T_TS_TRACKING t , t_user u 
+		<!--
+		Sorry, I can`t migrate	where
+		See console output for further details 
+	-->
+		order by t.id desc
+	</select>
+	
+	<select id="tracking.getPageCount" parameterType="map" resultType="integer">
+		select count(*) from
+		t_ts_tracking t , t_user u
+		<!--
+		Sorry, I can`t migrate	where
+		See console output for further details 
+	-->
+	</select>
+
+	<select id="tracking.getPage" parameterType="map" resultMap="TrackingResult">
+		select x.* from (
+		select rownum rowno,z.* from
+		( select t.*,u.username from
+		t_ts_tracking t, t_user u
+		<!--
+		Sorry, I can`t migrate	where
+		See console output for further details 
+	-->
+		order by ${pageSort}) z) x where rowno &gt;${beginRow} and rowno &lt;=
+		${endRow}
+	</select>
+
+	<!-- 追踪或者审核信息的插入 -->
+	<insert id="tracking.insert" parameterType="Tracking">
+		insert
+		into t_ts_tracking (
+		<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+		)
+		values(
+		<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+
+		)
+	</insert>
+
+	<!-- 更新修改 -->
+	<update id="tracking.update" parameterType="Tracking">
+		update t_ts_tracking set
+		<!--
+		Sorry, I can`t migrate	 
+		See console output for further details 
+	-->
+
+		where id = #{id}
+	</update>
+
+	<delete id="tracking.delete" parameterType="Tracking">
+		delete from
+		T_TS_TRACKING T where T.ID = #{id} 
+	</delete>
+
+
+</mapper>

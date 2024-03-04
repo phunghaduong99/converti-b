@@ -1,0 +1,85 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:51:59 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	
+	<!--
+		Sorry, I can`t migrate	com.apress.prospring.ch10.domain.Test
+		See console output for further details 
+	-->
+	
+	<resultMap id="result" type="test">
+		<result property="testId" column="TestId"/>
+		<result property="name" column="Name"/>
+		<result property="runDate" column="RunDate"/>
+	</resultMap>	
+	
+	<select id="getAllTests" resultMap="result">
+		select * from Test
+	</select>
+	
+	<select id="getTestsByNameAndRunDateMap" parameterType="map" resultMap="result">
+		select * from Test where Name like #{name} and RunDate=#{runDate}
+	</select>
+
+	<select id="getTestsByNameAndRunDateDO" parameterType="test" resultMap="result">
+		select * from Test where Name like #{name} and RunDate=#{runDate}
+	</select>
+	
+	<update id="updateTest" parameterType="test">
+		update Test set Name=#{name}, RunDate=#{runDate} where TestId=#{testId}
+	</update>
+
+	<update id="updateTestNameDO" parameterType="test">
+		update Test set Name=#{name} where TestId=#{testId}
+	</update>
+
+	<update id="updateTestNameMap" parameterType="map">
+		update Test set Name=#{name} where TestId=#{testId}
+	</update>
+	
+	<delete id="deleteTest" parameterType="int">
+		delete from Test where TestId=#{value}
+	</delete>
+	
+	<insert id="insertTest" parameterType="test">
+		<selectKey keyProperty="testId" resultType="int">
+			select nextval('Test_TestId_Seq')
+		</selectKey>
+		insert into Test (TestId, Name, RunDate) values (#{testId}, #{name}, #{runDate})
+	</insert>
+	
+</mapper>

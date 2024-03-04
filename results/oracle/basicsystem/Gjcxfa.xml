@@ -1,0 +1,158 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	gjcxfa
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--高级查询方案(t_gjcxfa)-->
+	<resultMap id="gjcxfaResult" type="gjcxfa">
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="gjcxfamc" column="gjcxfamc"/>
+		<result property="ssyhzh" column="ssyhzh"/>
+		<result property="ssgnmc" column="ssgnmc"/>
+		<result property="gjcxlx" column="gjcxlx"/>
+	</resultMap>
+	<!--高级查询方案(t_gjcxfa)-->
+	<resultMap id="gjcxfaListResult" type="gjcxfa">
+		<result property="gjcxfaid" column="gjcxfaid"/>
+		<result property="gjcxfamc" column="gjcxfamc"/>
+		<result property="ssyhzh" column="ssyhzh"/>
+		<result property="ssgnmc" column="ssgnmc"/>
+		<result property="gjcxlx" column="gjcxlx"/>
+	</resultMap>
+	<sql id="t_gjcxfaWhere">
+			<if test="gjcxfaid != null and gjcxfaid != ''">and
+				a.gjcxfaid=#{gjcxfaid}
+			</if>
+			<if test="ssyhzh != null and ssyhzh != ''">and
+				a.ssyhzh=#{ssyhzh}
+			</if>
+			<if test="ssgnmc != null and ssgnmc != ''">and
+				a.ssgnmc=#{ssgnmc}
+			</if>
+	</sql>
+	<sql id="t_gjcxfaPageWhere">
+		<include refid="t_gjcxfaWhere"/>	</sql>
+	<sql id="t_gjcxfaListWhere">
+		<include refid="t_gjcxfaWhere"/>	</sql>
+	<sql id="t_gjcxfaSelectWhere">
+		<include refid="t_gjcxfaWhere"/>	</sql>
+	<!--高级查询方案(t_gjcxfa)-->
+	<insert id="insertGjcxfa" parameterType="gjcxfa">
+		insert into t_gjcxfa (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--高级查询方案(t_gjcxfa)-->
+	<update id="updateGjcxfa" parameterType="gjcxfa">
+		update t_gjcxfa a set a.gjcxfaid=a.gjcxfaid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--高级查询方案(t_gjcxfa)-->
+	<delete id="deleteGjcxfa" parameterType="gjcxfa">
+		delete from t_gjcxfa a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--高级查询方案(t_gjcxfa)-->
+	<select id="getGjcxfaList" parameterType="map" resultMap="gjcxfaListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.gjcxfaid gjcxfaid,a.gjcxfamc gjcxfamc,a.ssyhzh ssyhzh,a.ssgnmc ssgnmc,a.gjcxlx gjcxlx
+		from t_gjcxfa a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--高级查询方案(t_gjcxfa)-->
+	<select id="getGjcxfaListCount" parameterType="map" resultType="int">
+		select count(1) a from t_gjcxfa a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--高级查询方案(t_gjcxfa)-->
+	<select id="getGjcxfaListNoPage" parameterType="gjcxfa" resultMap="gjcxfaListResult">
+		select a.gjcxfaid gjcxfaid,a.gjcxfamc gjcxfamc,a.ssyhzh ssyhzh,a.ssgnmc ssgnmc,a.gjcxlx gjcxlx
+		from t_gjcxfa a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gjcxfaid
+	</select>
+	<!--高级查询方案(t_gjcxfa)-->
+	<select id="getGjcxfa" parameterType="gjcxfa" resultMap="gjcxfaResult">
+		select a.gjcxfaid gjcxfaid,a.gjcxfamc gjcxfamc,a.ssyhzh ssyhzh,a.ssgnmc ssgnmc,a.gjcxlx gjcxlx
+		from t_gjcxfa a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gjcxfaid
+	</select>
+</mapper>

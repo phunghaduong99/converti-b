@@ -1,0 +1,167 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qybaxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业备案信息(t_qybaxx)-->
+	<resultMap id="qybaxxResult" type="qybaxx">
+		<result property="qyid" column="qyid"/>
+		<result property="qybaxxid" column="qybaxxid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qybabm" column="qybabm"/>
+		<result property="barq" column="barq"/>
+		<result property="babmbm" column="babmbm"/>
+		<result property="babmmc" column="babmmc"/>
+		<result property="bar" column="bar"/>
+		<result property="sftjwz" column="sftjwz"/>
+	</resultMap>
+	<!--企业备案信息(t_qybaxx)-->
+	<resultMap id="qybaxxListResult" type="qybaxx">
+		<result property="qyid" column="qyid"/>
+		<result property="qybaxxid" column="qybaxxid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qybabm" column="qybabm"/>
+		<result property="barq" column="barq"/>
+		<result property="babmbm" column="babmbm"/>
+		<result property="babmmc" column="babmmc"/>
+		<result property="bar" column="bar"/>
+		<result property="sftjwz" column="sftjwz"/>
+	</resultMap>
+	<sql id="t_qybaxxWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="qybaxxid != null and qybaxxid != ''">and
+				a.qybaxxid=#{qybaxxid}
+			</if>
+	</sql>
+	<sql id="t_qybaxxPageWhere">
+		<include refid="t_qybaxxWhere"/>	</sql>
+	<sql id="t_qybaxxListWhere">
+		<include refid="t_qybaxxWhere"/>	</sql>
+	<sql id="t_qybaxxSelectWhere">
+		<include refid="t_qybaxxWhere"/>	</sql>
+	<!--企业备案信息(t_qybaxx)-->
+	<insert id="insertQybaxx" parameterType="qybaxx">
+		insert into t_qybaxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业备案信息(t_qybaxx)-->
+	<update id="updateQybaxx" parameterType="qybaxx">
+		update t_qybaxx a set a.qybaxxid=a.qybaxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业备案信息(t_qybaxx)-->
+	<delete id="deleteQybaxx" parameterType="qybaxx">
+		update t_qybaxx a set a.scbz=1  where 1=1
+			<if test="qybaxxid != null">and
+				a.qybaxxid=#{qybaxxid}
+			</if>
+			<!-- 
+		<dynamic prepend="">
+			<include refid="t_qybaxxWhere" />
+		</dynamic>
+		 -->
+	</delete>
+	<!--企业备案信息(t_qybaxx)-->
+	<select id="getQybaxxList" parameterType="map" resultMap="qybaxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.qybaxxid qybaxxid,a.qybm qybm,a.qybabm qybabm,a.barq barq,a.babmbm babmbm,a.babmmc babmmc,a.bar bar,a.sftjwz sftjwz
+		from t_qybaxx a,t_qyjbxx b
+		where a.qyid = b.qyid and a.scbz=0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业备案信息(t_qybaxx)-->
+	<select id="getQybaxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qybaxx a,t_qyjbxx b
+		where a.qyid = b.qyid and a.scbz=0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业备案信息(t_qybaxx)-->
+	<select id="getQybaxxListNoPage" parameterType="qybaxx" resultMap="qybaxxListResult">
+		select a.qyid qyid,a.qybaxxid qybaxxid,a.qybm qybm,a.qybabm qybabm,a.barq barq,a.babmbm babmbm,a.babmmc babmmc,a.bar bar,a.sftjwz sftjwz
+		from t_qybaxx a
+		where a.scbz=0 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qybaxxid
+	</select>
+	<!--企业备案信息(t_qybaxx)-->
+	<select id="getQybaxx" parameterType="qybaxx" resultMap="qybaxxResult">
+		select a.qyid qyid,a.qybaxxid qybaxxid,a.qybm qybm,a.qybabm qybabm,a.barq barq,a.babmbm babmbm,a.babmmc babmmc,a.bar bar,a.sftjwz sftjwz
+		from t_qybaxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.qybaxxid
+	</select>
+</mapper>

@@ -1,0 +1,331 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	clyjxx
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--车辆预警信息(t_clyjxx)-->
+	<resultMap id="clyjxxResult" type="clyjxx">
+		<result property="clyjxxid" column="clyjxxid"/>
+		<result property="cllxbm" column="cllxbm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clppbm" column="clppbm"/>
+		<result property="clpp" column="clpp"/>
+		<result property="cszsbm" column="cszsbm"/>
+		<result property="cszs" column="cszs"/>
+		<result property="dyfsbm" column="dyfsbm"/>
+		<result property="dyfs" column="dyfs"/>
+		<result property="drfsbm" column="drfsbm"/>
+		<result property="drfs" column="drfs"/>
+		<result property="cphjcdm" column="cphjcdm"/>
+		<result property="cphjc" column="cphjc"/>
+		<result property="cphxh" column="cphxh"/>
+		<result property="cph" column="cph"/>
+		<result property="sfycphbz" column="sfycphbz"/>
+		<result property="wcphyybm" column="wcphyybm"/>
+		<result property="wcphyy" column="wcphyy"/>
+		<result property="wcphyyms" column="wcphyyms"/>
+		<result property="hpzlbm" column="hpzlbm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="cjh" column="cjh"/>
+		<result property="slsj" column="slsj"/>
+		<result property="slr" column="slr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="cxsj" column="cxsj"/>
+		<result property="cxr" column="cxr"/>
+		<result property="clxzbm" column="clxzbm"/>
+		<result property="clxz" column="clxz"/>
+		<result property="czm" column="czm"/>
+		<result property="czdh" column="czdh"/>
+		<result property="czgjdm" column="czgjdm"/>
+		<result property="czgj" column="czgj"/>
+		<result property="czhjdz" column="czhjdz"/>
+		<result property="czxzqhdm" column="czxzqhdm"/>
+		<result property="czxzqh" column="czxzqh"/>
+		<result property="czxbdm" column="czxbdm"/>
+		<result property="czxb" column="czxb"/>
+		<result property="czcyzjlxdm" column="czcyzjlxdm"/>
+		<result property="czcyzj" column="czcyzj"/>
+		<result property="czzjhm" column="czzjhm"/>
+		<result property="czzt" column="czzt"/>
+		<result property="xslc" column="xslc"/>
+		<result property="clzt" column="clzt"/>
+		<result property="bz" column="bz"/>
+		<result property="cxbz" column="cxbz"/>
+		<result property="ccrq" column="ccrq"/>
+		<result property="clcd" column="clcd"/>
+		<result property="clcdbm" column="clcdbm"/>
+		<result property="clcs" column="clcs"/>
+		<result property="clcsbm" column="clcsbm"/>
+		<result property="clxhbm" column="clxhbm"/>
+		<result property="clxh" column="clxh"/>
+		<result property="yjclid" column="yjclid"/>
+		<result property="yjclhylbbm" column="yjclhylbbm"/>
+		<result property="yjclhylb" column="yjclhylb"/>
+		<result property="byjclid" column="byjclid"/>
+		<result property="byjclhylbbm" column="byjclhylbbm"/>
+		<result property="byjclhylb" column="byjclhylb"/>
+		<result property="yjqyid" column="yjqyid"/>
+		<result property="byjqyid" column="byjqyid"/>
+	</resultMap>
+	<!--车辆预警信息(t_clyjxx)-->
+	<resultMap id="clyjxxListResult" type="clyjxx">
+		<result property="clyjxxid" column="clyjxxid"/>
+		<result property="cllxbm" column="cllxbm"/>
+		<result property="cllx" column="cllx"/>
+		<result property="clppbm" column="clppbm"/>
+		<result property="clpp" column="clpp"/>
+		<result property="cszsbm" column="cszsbm"/>
+		<result property="cszs" column="cszs"/>
+		<result property="dyfsbm" column="dyfsbm"/>
+		<result property="dyfs" column="dyfs"/>
+		<result property="drfsbm" column="drfsbm"/>
+		<result property="drfs" column="drfs"/>
+		<result property="cphjcdm" column="cphjcdm"/>
+		<result property="cphjc" column="cphjc"/>
+		<result property="cphxh" column="cphxh"/>
+		<result property="cph" column="cph"/>
+		<result property="sfycphbz" column="sfycphbz"/>
+		<result property="wcphyybm" column="wcphyybm"/>
+		<result property="wcphyy" column="wcphyy"/>
+		<result property="wcphyyms" column="wcphyyms"/>
+		<result property="hpzlbm" column="hpzlbm"/>
+		<result property="hpzl" column="hpzl"/>
+		<result property="fdjh" column="fdjh"/>
+		<result property="cjh" column="cjh"/>
+		<result property="slsj" column="slsj"/>
+		<result property="slr" column="slr"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="cxsj" column="cxsj"/>
+		<result property="cxr" column="cxr"/>
+		<result property="clxzbm" column="clxzbm"/>
+		<result property="clxz" column="clxz"/>
+		<result property="czm" column="czm"/>
+		<result property="czdh" column="czdh"/>
+		<result property="czgjdm" column="czgjdm"/>
+		<result property="czgj" column="czgj"/>
+		<result property="czhjdz" column="czhjdz"/>
+		<result property="czxzqhdm" column="czxzqhdm"/>
+		<result property="czxzqh" column="czxzqh"/>
+		<result property="czxbdm" column="czxbdm"/>
+		<result property="czxb" column="czxb"/>
+		<result property="czcyzjlxdm" column="czcyzjlxdm"/>
+		<result property="czcyzj" column="czcyzj"/>
+		<result property="czzjhm" column="czzjhm"/>
+		<result property="czzt" column="czzt"/>
+		<result property="xslc" column="xslc"/>
+		<result property="clzt" column="clzt"/>
+		<result property="bz" column="bz"/>
+		<result property="cxbz" column="cxbz"/>
+		<result property="ccrq" column="ccrq"/>
+		<result property="clcd" column="clcd"/>
+		<result property="clcdbm" column="clcdbm"/>
+		<result property="clcs" column="clcs"/>
+		<result property="clcsbm" column="clcsbm"/>
+		<result property="clxhbm" column="clxhbm"/>
+		<result property="clxh" column="clxh"/>
+		<result property="yjclid" column="yjclid"/>
+		<result property="yjclhylbbm" column="yjclhylbbm"/>
+		<result property="yjclhylb" column="yjclhylb"/>
+		<result property="byjclid" column="byjclid"/>
+		<result property="byjclhylbbm" column="byjclhylbbm"/>
+		<result property="byjclhylb" column="byjclhylb"/>
+		<result property="yjsj" column="yjsj"/>
+		<result property="yjqyid" column="yjqyid"/>
+		<result property="byjqyid" column="byjqyid"/>
+	</resultMap>
+	<resultMap id="checkClxxResult" type="clyjxx">
+		<result property="byjqyid" column="byjqyid"/>
+		<result property="byjclid" column="byjclid"/>
+		<result property="byjclhylbbm" column="byjclhylbbm"/>
+		<result property="byjclhylb" column="byjclhylb"/>
+	</resultMap>
+	<sql id="t_clyjxxWhere">
+			<if test="clyjxxid != null and clyjxxid != ''">and
+				a.clyjxxid=#{clyjxxid}
+			</if>
+	</sql>
+	<sql id="t_clyjxxPageWhere">
+		<if test="cllxbm != null and cllxbm != ''">and
+			a.cllxbm=#{cllxbm}
+		</if>
+		<if test="cszs != null and cszs != ''">and
+			a.cszs=#{cszs}
+		</if>
+		<if test="dyfs != null and dyfs != ''">and
+			a.dyfs=#{dyfs}
+		</if>
+		<if test="drfs != null and drfs != ''">and
+			a.drfs=#{drfs}
+		</if>
+		<if test="cph != null and cph != ''">and
+			instr(a.cph,#{cph})&gt;0
+		</if>
+		<if test="fdjh != null and fdjh != ''">and
+			a.fdjh=#{fdjh}
+		</if>
+		<if test="cjh != null and cjh != ''">and
+			a.cjh=#{cjh}
+		</if>
+		<if test="czm != null and czm != ''">and
+			instr(a.czm,#{czm})&gt;0
+		</if>
+		<if test="czdh != null and czdh != ''">and
+			a.czdh=#{czdh}
+		</if>
+		<if test="czzjhm != null and czzjhm != ''">and
+			a.czzjhm=#{czzjhm}
+		</if>
+		<include refid="t_clyjxxWhere"/>	
+	</sql>
+	<sql id="t_clyjxxListWhere">
+		<include refid="t_clyjxxWhere"/>	</sql>
+	<sql id="t_clyjxxSelectWhere">
+		<include refid="t_clyjxxWhere"/>	</sql>
+	<!--车辆预警信息(t_clyjxx)-->
+	<insert id="insertClyjxx" parameterType="clyjxx">
+		insert into t_clyjxx (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--车辆预警信息(t_clyjxx)-->
+	<update id="updateClyjxx" parameterType="clyjxx">
+		update t_clyjxx a set a.clyjxxid=a.clyjxxid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--车辆预警信息(t_clyjxx)-->
+	<delete id="deleteClyjxx" parameterType="clyjxx">
+		delete from t_clyjxx a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--车辆预警信息(t_clyjxx)-->
+	<select id="getClyjxxList" parameterType="map" resultMap="clyjxxListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.clyjxxid clyjxxid,a.cllxbm cllxbm,a.cllx cllx,a.clppbm clppbm,a.clpp clpp,a.cszsbm cszsbm,a.cszs||' '||a.dyfs||' '||a.drfs cszs,a.dyfsbm dyfsbm,a.dyfs dyfs,a.drfsbm drfsbm,a.drfs drfs,a.cphjcdm cphjcdm,a.cphjc cphjc,a.cphxh cphxh,a.cph cph,a.sfycphbz sfycphbz,a.wcphyybm wcphyybm,a.wcphyy wcphyy,a.wcphyyms wcphyyms,a.hpzlbm hpzlbm,a.hpzl hpzl,a.fdjh fdjh,a.cjh cjh,a.slsj slsj,a.slr slr,a.lrsj lrsj,a.lrr lrr,a.cxsj cxsj,a.cxr cxr,a.clxzbm clxzbm,a.clxz clxz,a.czm czm,a.czdh czdh,a.czgjdm czgjdm,a.czgj czgj,a.czhjdz czhjdz,a.czxzqhdm czxzqhdm,a.czxzqh czxzqh,a.czxbdm czxbdm,a.czxb czxb,a.czcyzjlxdm czcyzjlxdm,a.czcyzj czcyzj,a.czzjhm czzjhm,a.czzt czzt,a.xslc xslc,a.clzt clzt,a.bz bz,a.cxbz cxbz,a.ccrq ccrq,a.clcd clcd,a.clcdbm clcdbm,a.clcs clcs,a.clcsbm clcsbm,a.clxhbm clxhbm,a.clxh clxh,a.yjclid yjclid,a.yjclhylbbm yjclhylbbm,a.yjclhylb yjclhylb,a.byjclid byjclid,a.byjclhylbbm byjclhylbbm,a.byjclhylb byjclhylb,a.yjsj yjsj,a.yjqyid yjqyid,a.byjqyid byjqyid
+		from t_clyjxx a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--车辆预警信息(t_clyjxx)-->
+	<select id="getClyjxxListCount" parameterType="map" resultType="int">
+		select count(1) a from t_clyjxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--车辆预警信息(t_clyjxx)-->
+	<select id="getClyjxxListNoPage" parameterType="clyjxx" resultMap="clyjxxListResult">
+		select a.clyjxxid clyjxxid,a.cllxbm cllxbm,a.cllx cllx,a.clppbm clppbm,a.clpp clpp,a.cszsbm cszsbm,a.cszs cszs,a.dyfsbm dyfsbm,a.dyfs dyfs,a.drfsbm drfsbm,a.drfs drfs,a.cphjcdm cphjcdm,a.cphjc cphjc,a.cphxh cphxh,a.cph cph,a.sfycphbz sfycphbz,a.wcphyybm wcphyybm,a.wcphyy wcphyy,a.wcphyyms wcphyyms,a.hpzlbm hpzlbm,a.hpzl hpzl,a.fdjh fdjh,a.cjh cjh,a.slsj slsj,a.slr slr,a.lrsj lrsj,a.lrr lrr,a.cxsj cxsj,a.cxr cxr,a.clxzbm clxzbm,a.clxz clxz,a.czm czm,a.czdh czdh,a.czgjdm czgjdm,a.czgj czgj,a.czhjdz czhjdz,a.czxzqhdm czxzqhdm,a.czxzqh czxzqh,a.czxbdm czxbdm,a.czxb czxb,a.czcyzjlxdm czcyzjlxdm,a.czcyzj czcyzj,a.czzjhm czzjhm,a.czzt czzt,a.xslc xslc,a.clzt clzt,a.bz bz,a.cxbz cxbz,a.ccrq ccrq,a.clcd clcd,a.clcdbm clcdbm,a.clcs clcs,a.clcsbm clcsbm,a.clxhbm clxhbm,a.clxh clxh,a.yjclid yjclid,a.yjclhylbbm yjclhylbbm,a.yjclhylb yjclhylb,a.byjclid byjclid,a.byjclhylbbm byjclhylbbm,a.byjclhylb byjclhylb,a.yjsj yjsj,a.yjqyid yjqyid,a.byjqyid byjqyid
+		from t_clyjxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.clyjxxid
+	</select>
+	<!--车辆预警信息(t_clyjxx)-->
+	<select id="getClyjxx" parameterType="clyjxx" resultMap="clyjxxResult">
+		select a.clyjxxid clyjxxid,a.cllxbm cllxbm,a.cllx cllx,a.clppbm clppbm,a.clpp clpp,a.cszsbm cszsbm,a.cszs cszs,a.dyfsbm dyfsbm,a.dyfs dyfs,a.drfsbm drfsbm,a.drfs drfs,a.cphjcdm cphjcdm,a.cphjc cphjc,a.cphxh cphxh,a.cph cph,a.sfycphbz sfycphbz,a.wcphyybm wcphyybm,a.wcphyy wcphyy,a.wcphyyms wcphyyms,a.hpzlbm hpzlbm,a.hpzl hpzl,a.fdjh fdjh,a.cjh cjh,a.slsj slsj,a.slr slr,a.lrsj lrsj,a.lrr lrr,a.cxsj cxsj,a.cxr cxr,a.clxzbm clxzbm,a.clxz clxz,a.czm czm,a.czdh czdh,a.czgjdm czgjdm,a.czgj czgj,a.czhjdz czhjdz,a.czxzqhdm czxzqhdm,a.czxzqh czxzqh,a.czxbdm czxbdm,a.czxb czxb,a.czcyzjlxdm czcyzjlxdm,a.czcyzj czcyzj,a.czzjhm czzjhm,a.czzt czzt,a.xslc xslc,a.clzt clzt,a.bz bz,a.cxbz cxbz,a.ccrq ccrq,a.clcd clcd,a.clcdbm clcdbm,a.clcs clcs,a.clcsbm clcsbm,a.clxhbm clxhbm,a.clxh clxh,a.yjclid yjclid,a.yjclhylbbm yjclhylbbm,a.yjclhylb yjclhylb,a.byjclid byjclid,a.byjclhylbbm byjclhylbbm,a.byjclhylb byjclhylb,a.yjsj yjsj,a.yjqyid yjqyid,a.byjqyid byjqyid
+		from t_clyjxx a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.clyjxxid
+	</select>
+	<!--检查车辆是否存在预警-->
+	<select id="checkOtherYjxxExist" parameterType="map" resultType="int">
+		select count(1) from t_clyjxx a where a.clyjxxid = (select max(a.clyjxxid) clyjxxid
+    	from t_clyjxx yj where 1=1
+           <if test="yjclhylbbm != null and yjclhylbbm != ''">and
+			yj.yjclhylbbm=#{yjclhylbbm}
+		</if>
+		<if test="yjclid != null and yjclid != ''">and
+			yj.yjclid=#{yjclid}
+		</if>
+	       )
+		<if test="cph != null and cph != ''">and
+			a.cph=#{cph}
+		</if> 
+	</select>
+	<!--检查车辆是否存在-->
+	<select id="checkClxxExist" parameterType="map" resultMap="checkClxxResult">
+		select a.qyid byjqyid,a.cljbxxid byjclid,qy.hylbdm byjclhylbbm, qy.hylb byjclhylb from t_cljbxx a,t_qyjbxx qy where a.qyid=qy.qyid
+		<if test="superbWhere != null and superbWhere != ''">and
+			${superbWhere}
+		</if>
+		<if test="hylbdm != null and hylbdm != ''">and
+			qy.hylbdm=#{hylbdm}
+		</if>
+	</select>
+</mapper>

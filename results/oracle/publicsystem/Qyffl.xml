@@ -1,0 +1,157 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyffl
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业副分类(t_qyffl)-->
+	<resultMap id="qyfflResult" type="qyffl">
+		<result property="qyflid" column="qyflid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="qyflbm" column="qyflbm"/>
+		<result property="sjcsflmc" column="sjcsflmc"/>
+		<result property="sjcsflbm" column="sjcsflbm"/>
+		<result property="qyflmc" column="qyflmc"/>
+	</resultMap>
+	<!--企业副分类(t_qyffl)-->
+	<resultMap id="qyfflListResult" type="qyffl">
+		<result property="qyflid" column="qyflid"/>
+		<result property="qyid" column="qyid"/>
+		<result property="qyflbm" column="qyflbm"/>
+		<result property="sjcsflmc" column="sjcsflmc"/>
+		<result property="sjcsflbm" column="sjcsflbm"/>
+		<result property="qyflmc" column="qyflmc"/>
+	</resultMap>
+	<sql id="t_qyfflWhere">
+			<if test="qyflid != null and qyflid != ''">and
+				a.qyflid=#{qyflid}
+			</if>
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+	</sql>
+	<sql id="t_qyfflPageWhere">
+		<include refid="t_qyfflWhere"/>	</sql>
+	<sql id="t_qyfflListWhere">
+		<include refid="t_qyfflWhere"/>	</sql>
+	<sql id="t_qyfflSelectWhere">
+		<include refid="t_qyfflWhere"/>	</sql>
+	<!--企业副分类(t_qyffl)-->
+	<insert id="insertQyffl" parameterType="qyffl">
+		insert into t_qyffl (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业副分类(t_qyffl)-->
+	<update id="updateQyffl" parameterType="qyffl">
+		update t_qyffl a set a.qyflid=a.qyflid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业副分类(t_qyffl)-->
+	<delete id="deleteQyffl" parameterType="qyffl">
+		delete from t_qyffl a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业副分类(t_qyffl)-->
+	<select id="getQyfflList" parameterType="map" resultMap="qyfflListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyflid qyflid,a.qyid qyid,a.qyflbm qyflbm,a.sjcsflbm sjcsflbm,a.sjcsflmc sjcsflmc,a.qyflmc qyflmc
+		from t_qyffl a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业副分类(t_qyffl)-->
+	<select id="getQyfflListCount" parameterType="map" resultType="int">
+		select count(1) a from t_qyffl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--企业副分类(t_qyffl)-->
+	<select id="getQyfflListNoPage" parameterType="qyffl" resultMap="qyfflListResult">
+		select a.qyflid qyflid,a.qyid qyid,a.qyflbm qyflbm,a.sjcsflbm sjcsflbm,a.sjcsflmc sjcsflmc,a.qyflmc qyflmc
+		from t_qyffl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyflid,a.qyid
+	</select>
+	<!--企业副分类(t_qyffl)-->
+	<select id="getQyffl" parameterType="qyffl" resultMap="qyfflResult">
+		select a.qyflid qyflid,a.qyid qyid,a.qyflbm qyflbm,a.sjcsflbm sjcsflbm,a.sjcsflmc sjcsflmc,a.qyflmc qyflmc
+		from t_qyffl a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyflid,a.qyid
+	</select>
+</mapper>

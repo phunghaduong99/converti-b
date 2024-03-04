@@ -1,0 +1,576 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	rcjc
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--日常检查(t_rcjc)-->
+	<resultMap id="rcjcResult" type="rcjc">
+		<result property="qyid" column="qyid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="hylb" column="hylb"/>
+		<result property="rcjcid" column="rcjcid"/>
+		<result property="rcjcbh" column="rcjcbh"/>
+		<result property="jcjgdm" column="jcjgdm"/>
+		<result property="jcjgmc" column="jcjgmc"/>
+		<result property="jcrybh" column="jcrybh"/>
+		<result property="jcrxm" column="jcrxm"/>
+		<result property="zwdm" column="zwdm"/>
+		<result property="jcrzw" column="jcrzw"/>
+		<result property="jcfs" column="jcfs"/>
+		<result property="lsdw" column="lsdw"/>
+		<result property="jcrq" column="jcrq"/>
+		<result property="jcsx" column="jcsx"/>
+		<result property="fxwt" column="fxwt"/>
+		<result property="cljg" column="cljg"/>
+		<result property="csfzr" column="csfzr"/>
+		<result property="csfzrbh" column="csfzrbh"/>
+		<result property="sfzdjcjg" column="sfzdjcjg"/>
+		<result property="bz" column="bz"/>
+		<result property="scbz" column="scbz"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="mjjczbh" column="mjjczbh"/>
+	</resultMap>
+	<!--日常检查(t_rcjc)-->
+	<resultMap id="rcjcListResult" type="rcjc">
+		<result property="qyid" column="qyid"/>
+		<result property="qymc" column="qymc"/>
+		<result property="rcjcid" column="rcjcid"/>
+		<result property="rcjcbh" column="rcjcbh"/>
+		<result property="jcjgdm" column="jcjgdm"/>
+		<result property="jcjgmc" column="jcjgmc"/>
+		<result property="jcrybh" column="jcrybh"/>
+		<result property="jcrxm" column="jcrxm"/>
+		<result property="zwdm" column="zwdm"/>
+		<result property="jcrzw" column="jcrzw"/>
+		<result property="jcfs" column="jcfs"/>
+		<result property="lsdw" column="lsdw"/>
+		<result property="jcrq" column="jcrq"/>
+		<result property="jcsx" column="jcsx"/>
+		<result property="fxwt" column="fxwt"/>
+		<result property="cljg" column="cljg"/>
+		<result property="csfzr" column="csfzr"/>
+		<result property="sfzdjcjg" column="sfzdjcjg"/>
+		<result property="bz" column="bz"/>
+		<result property="scbz" column="scbz"/>
+		<result property="mjjczbh" column="mjjczbh"/>
+		<result property="nwwbz" column="nwwbz"/>
+	</resultMap>
+	<resultMap id="rcjcyjListResult" type="rcjc">
+		<result property="rcjcid" column="rcjcid"/>
+		<result property="jcjgdm" column="jcjgdm"/>
+		<result property="jcjgmc" column="jcjgmc"/>
+		<result property="mjjczbh" column="mjjczbh"/>
+		<result property="jcrq" column="jcrq"/>
+		<result property="jcrybh" column="jcrybh"/>
+		<result property="jcrxm" column="jcrxm"/>
+		<result property="jcrzw" column="jcrzw"/>
+	</resultMap>
+	<sql id="t_rcjcWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="rcjcid != null and rcjcid != ''">and
+				a.rcjcid=#{rcjcid}
+			</if>
+			
+	</sql>
+	<sql id="t_rcjcPageWhere">
+		<include refid="t_rcjcWhere"/>	
+		<if test="cljg != null and cljg != ''">and
+				a.cljg like '%${cljg}%'
+		</if>
+		<if test="jcrqf != null and jcrqf != ''">and
+				to_char(a.jcrq,'yyyy-MM-dd') &gt;=to_char(#{jcrqf,jdbcType=TIMESTAMP},'yyyy-MM-dd')		
+		</if>
+		<if test="jcrqt != null and jcrqt != ''">and
+			to_char(a.jcrq,'yyyy-MM-dd') &lt;=to_char(#{jcrqt,jdbcType=TIMESTAMP},'yyyy-MM-dd')||' 23:59:59'
+		</if>
+		<if test="qymc != null and qymc != ''">and
+				t.qymc=#{qymc}
+		</if>
+		<if test="qybm != null and qybm != ''">and
+				t.qybm like '%${qybm}%'
+		</if>
+		<if test="hylbdm != null and hylbdm != ''">and
+				t.hylbdm=#{hylbdm}
+		</if>
+		<if test="gxdwbm != null and gxdwbm != ''">and
+				t.gxdwbm like '${gxdwbm}%'
+		</if>	
+		<if test="jcjgdm != null and jcjgdm != ''">and
+				a.jcjgdm like '${jcjgdm}%'
+		</if>
+		<if test="jcfs != null and jcfs != ''">and
+				a.jcfs=#{jcfs}
+		</if>	
+	</sql>
+	<sql id="t_rcjcListWhere">
+		<include refid="t_rcjcWhere"/>	</sql>
+	<sql id="t_rcjcSelectWhere">
+		<include refid="t_rcjcWhere"/>	</sql>
+	<!--日常检查(t_rcjc)-->
+	<insert id="insertRcjc" parameterType="rcjc">
+		insert into t_rcjc (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--日常检查(t_rcjc)-->
+	<update id="updateRcjc" parameterType="rcjc">
+		update t_rcjc a set 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--日常检查(t_rcjc)-->
+	<delete id="deleteRcjc" parameterType="rcjc">
+		update t_rcjc a set a.scbz=1 where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--日常检查(t_rcjc)-->
+	<select id="getRcjcList" parameterType="map" resultMap="rcjcListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.nwwbz nwwbz,a.qyid qyid,a.scbz scbz,a.rcjcid rcjcid,a.rcjcbh rcjcbh,a.jcjgdm jcjgdm,a.jcjgmc jcjgmc,a.jcrybh jcrybh,a.jcrxm jcrxm,a.zwdm zwdm,a.jcrzw jcrzw,a.jcfs jcfs,a.lsdw lsdw,a.jcrq jcrq,a.jcsx jcsx,a.fxwt fxwt,a.cljg cljg,a.csfzr csfzr,a.sfzdjcjg sfzdjcjg,a.bz bz,t.qymc qymc,a.mjjczbh
+		from t_rcjc a ,t_qyjbxx t
+		where a.qyid=t.qyid and a.scbz=0
+		
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getRcjcListCount" parameterType="map" resultType="int">
+		select count(1) a from t_rcjc a ,t_qyjbxx t
+		where a.qyid=t.qyid and a.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getRcjcListNoPage" parameterType="rcjc" resultMap="rcjcListResult">
+		select a.qyid qyid,a.rcjcid rcjcid,a.rcjcbh rcjcbh,a.jcjgdm jcjgdm,a.jcjgmc jcjgmc,a.jcrybh jcrybh,a.jcrxm jcrxm,a.zwdm zwdm,a.jcrzw jcrzw,a.jcfs jcfs,a.lsdw lsdw,a.jcrq jcrq,a.jcsx jcsx,a.fxwt fxwt,a.cljg cljg,a.csfzr csfzr,a.sfzdjcjg sfzdjcjg,a.bz bz
+		from t_rcjc a ,t_qyjbxx t
+		where a.qyid=t.qyid and a.scbz=0
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.rcjcid
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getRcjc" parameterType="rcjc" resultMap="rcjcResult">
+		select a.scbz scbz,t.qymc qymc,t.qybm qybm,t.hylb hylb,t.hylbdm hylbdm,a.qyid qyid,a.rcjcid rcjcid,a.rcjcbh rcjcbh,a.jcjgdm jcjgdm,a.jcjgmc jcjgmc,a.jcrybh jcrybh,a.jcrxm jcrxm,a.zwdm zwdm,a.jcrzw jcrzw,a.jcfs jcfs,a.lsdw lsdw,a.jcrq jcrq,a.jcsx jcsx,a.fxwt fxwt,a.cljg cljg,a.csfzr csfzr,a.csfzrbh csfzrbh,a.sfzdjcjg sfzdjcjg,a.bz bz,a.mjjczbh 
+		from t_rcjc a,t_qyjbxx t
+		where a.qyid=t.qyid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.rcjcid
+	</select>
+	
+	
+	
+	
+	<!--日常检查统计(t_rcjc)-->
+	<resultMap id="rcjcListTjResult" type="rcjc">
+	    <result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="rcjccs" column="rcjccs"/>
+	</resultMap>
+	
+	
+	
+	
+	
+	<sql id="t_rcjcTjWhere">
+		<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+		</if>
+		<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+		</if>
+		<if test="gxdwdm != null and gxdwdm != ''">and
+			a.gxdwdm=#{gxdwdm}
+		</if>	
+		<if test="qybm != null and qybm != ''">and
+			b.qybm=#{qybm}
+		</if>
+		
+		<if test="hylbdm != null and hylbdm != ''">and
+			b.hylbdm=#{hylbdm}
+		</if>
+		
+		<if test="qsrq != null and qsrq != ''">and
+			
+ 				a.jcrq &gt;= #qsrq:DATE#
+ 			
+		</if>
+		<if test="jzrq != null and jzrq != ''">and
+			
+ 				a.jcrq &lt;= #jzrq:DATE#
+ 			
+		</if>
+	    <if test="shenheFlagCx != null and shenheFlagCx != ''">and
+			( b.zt='1' or b.zt='2') 
+	    </if>
+	     <if test="scbzFlagCx != null and scbzFlagCx != ''">and
+			b.scbz=0
+	    </if>
+	    <if test="yyzt != null and yyzt != ''">and
+			b.zjztdm='1'
+	    </if>
+	     <if test="qyyyzt != null and qyyyzt != ''">and
+			b.yyztdm='1'
+	    </if>
+	</sql>
+	
+	<!--日常检查统计(t_rcjc)-->
+	<select id="getRcjcTjList" parameterType="map" resultMap="rcjcListTjResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+		
+		select   count(1) as  rcjccs 
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if> from  
+		
+		(select t.* ,
+		
+		substr(t.jcjgdm, 0, 8)||'0000' as gxdwdm,
+   (select d.departname as gxdwmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 8)||'0000'=d.departcode) as gxdwmc,
+		
+		substr(t.jcjgdm, 0, 6)||'000000' as fxjdm,
+   (select d.departname as fxjmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 6)||'000000'=d.departcode) as fxjmc,
+                 
+              substr(t.jcjgdm, 0, 4)||'00000000' as dsjgdm,
+               (select d.departname as dsjgmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 4)||'00000000'=d.departcode) as dsjgmc
+              
+          from t_rcjc  t,   t_department d
+        
+                where  t.jcjgdm = d.departcode
+                
+                <if test="qsrq != null and qsrq != ''">and
+			
+ 				t.jcrq &gt;= #qsrq:DATE#
+ 			
+		</if>
+		<if test="jzrq != null and jzrq != ''">and
+			
+ 				t.jcrq &lt;= #jzrq:DATE#
+ 			
+		</if>
+                 )a ,
+		
+		
+		t_qyjbxx b
+		where a.qyid=b.qyid 
+		
+	<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		
+		 )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--日常检查统计(t_rcjc)-->
+	<select id="getRcjcTjListCount" parameterType="map" resultType="int">
+		select count(1) a from (
+		
+		select   count(1) as  rcjccs 
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if> from  
+		
+		(select t.* ,
+		
+		substr(t.jcjgdm, 0, 8)||'0000' as gxdwdm,
+   (select d.departname as gxdwmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 8)||'0000'=d.departcode) as gxdwmc,
+		
+		substr(t.jcjgdm, 0, 6)||'000000' as fxjdm,
+   (select d.departname as fxjmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 6)||'000000'=d.departcode) as fxjmc,
+                 
+              substr(t.jcjgdm, 0, 4)||'00000000' as dsjgdm,
+               (select d.departname as dsjgmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 4)||'00000000'=d.departcode) as dsjgmc
+              
+          from t_rcjc  t,   t_department d
+        
+                where  t.jcjgdm = d.departcode
+                
+                <if test="qsrq != null and qsrq != ''">and
+			
+ 				t.jcrq &gt;= #qsrq:DATE#
+ 			
+		</if>
+		<if test="jzrq != null and jzrq != ''">and
+			
+ 				t.jcrq &lt;= #jzrq:DATE#
+ 			
+		</if>
+                 )a ,
+		
+		
+		t_qyjbxx b
+		where a.qyid=b.qyid 
+		
+	<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		) where 1=1
+	</select>
+	
+	
+	
+	
+		<!--日常检查统计(t_rcjc)-->
+	<resultMap id="rcjcListTjxxResult" type="rcjc">
+	    <result property="qyid" column="qyid"/>
+		<result property="jcrq" column="jcrq"/>
+		<result property="rcjcid" column="rcjcid"/>
+		<result property="cljg" column="cljg"/>
+		<result property="jcrxm" column="jcrxm"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+	</resultMap>
+	
+	<!--日常检查统计(t_rcjc)-->
+	<select id="getRcjcTjxxList" parameterType="map" resultMap="rcjcListTjxxResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(
+		select a.qyid as qyid,a.jcrq as jcrq,a.rcjcid as rcjcid,a.cljg as cljg,a.jcrxm as jcrxm,b.qybm,b.qymc
+	from  
+		
+		(select t.* ,
+		
+		substr(t.jcjgdm, 0, 8)||'0000' as gxdwdm,
+   (select d.departname as gxdwmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 8)||'0000'=d.departcode) as gxdwmc,
+		
+		substr(t.jcjgdm, 0, 6)||'000000' as fxjdm,
+   (select d.departname as fxjmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 6)||'000000'=d.departcode) as fxjmc,
+                 
+              substr(t.jcjgdm, 0, 4)||'00000000' as dsjgdm,
+               (select d.departname as dsjgmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 4)||'00000000'=d.departcode) as dsjgmc
+              
+          from t_rcjc  t,   t_department d
+        
+                where  t.jcjgdm = d.departcode
+                
+                <if test="qsrq != null and qsrq != ''">and
+			
+ 				t.jcrq &gt;=  #qsrq:DATE#
+ 			
+		</if>
+		<if test="jzrq != null and jzrq != ''">and
+			
+ 				t.jcrq &lt;=  #jzrq:DATE#
+ 			
+		</if>
+                 )a ,
+		
+		
+		t_qyjbxx b
+		where a.qyid=b.qyid 
+		
+	<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		 order by  a.jcrq desc  )  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--日常检查统计详细(t_rcjc)-->
+	<select id="getRcjcTjxxListCount" parameterType="map" resultType="int">
+		select count(1) a from (
+		select a.qyid as qyid,a.jcrq as jcrq,a.rcjcid as rcjcid,a.cljg as cljg,a.jcrxm as jcrxm,b.qybm,b.qymc
+	from  
+		
+		(select t.* ,
+		
+		substr(t.jcjgdm, 0, 8)||'0000' as gxdwdm,
+   (select d.departname as gxdwmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 8)||'0000'=d.departcode) as gxdwmc,
+		
+		substr(t.jcjgdm, 0, 6)||'000000' as fxjdm,
+   (select d.departname as fxjmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 6)||'000000'=d.departcode) as fxjmc,
+                 
+              substr(t.jcjgdm, 0, 4)||'00000000' as dsjgdm,
+               (select d.departname as dsjgmc from
+                
+                 t_department d where substr(t.jcjgdm, 0, 4)||'00000000'=d.departcode) as dsjgmc
+              
+          from t_rcjc  t,   t_department d
+        
+                where  t.jcjgdm = d.departcode
+                
+                <if test="qsrq != null and qsrq != ''">and
+			
+ 				t.jcrq &gt;= #qsrq:DATE#
+ 			
+		</if>
+		<if test="jzrq != null and jzrq != ''">and
+			
+ 				t.jcrq &lt;= #jzrq:DATE#
+ 			
+		</if>
+                 )a ,
+		
+		
+		t_qyjbxx b
+		where a.qyid=b.qyid 
+		
+	<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		 order by  a.jcrq desc
+		) where 1=1
+	</select>
+	
+	<!--日常检查(t_rcjc)异常预警 查询同一张检查证对同一个企业检查时间间隔小于rcjcjgsj小时的记录，rcjcjgsj由全局参数来定-->
+	<select id="getRcjcyjList" parameterType="map" resultMap="rcjcyjListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.rcjcid,a.jcjgdm,a.jcjgmc,a.mjjczbh,a.jcrq,a.jcrybh,a.jcrxm,a.jcrzw
+		  from t_rcjc a, t_qyjbxx b
+		 where a.qyid = b.qyid
+		   and exists
+		 (select *
+		          from t_rcjc b
+		         where abs((b.jcrq - a.jcrq)) * 24 &lt;= #{rcjcjgsj}
+		           and b.rcjcid &lt;&gt; a.rcjcid
+		           and b.qyid = a.qyid
+		           and b.mjjczbh = a.mjjczbh)
+		   and a.jcrq is not null
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getRcjcyjListCount" parameterType="map" resultType="int">
+		select count(1) a from t_rcjc a, t_qyjbxx b
+		 where a.qyid = b.qyid
+		   and exists
+		 (select *
+		          from t_rcjc b
+		         where abs((b.jcrq - a.jcrq)) * 24 &lt;= #{rcjcjgsj}
+		           and b.rcjcid &lt;&gt; a.rcjcid
+		           and b.qyid = a.qyid
+		           and b.mjjczbh = a.mjjczbh)
+		   and a.jcrq is not null
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</mapper>

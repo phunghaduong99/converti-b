@@ -1,0 +1,166 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:05 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	gatztbjsdw
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<resultMap id="gatztbjsdwResult" type="gatztbjsdw">
+		<result property="gatbid" column="gatbid"/>
+		<result property="gajsdwid" column="gajsdwid"/>
+		<result property="jsdwbm" column="jsdwbm"/>
+		<result property="jsdwmc" column="jsdwmc"/>
+		<result property="sqsj" column="sqsj"/>
+		<result property="hylxdm" column="hylxdm"/>
+		<result property="hylx" column="hylx"/>
+		<result property="sqip" column="sqip"/>
+	</resultMap>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<resultMap id="gatztbjsdwListResult" type="gatztbjsdw">
+		<result property="gatbid" column="gatbid"/>
+		<result property="gajsdwid" column="gajsdwid"/>
+		<result property="jsdwbm" column="jsdwbm"/>
+		<result property="jsdwmc" column="jsdwmc"/>
+		<result property="sqsj" column="sqsj"/>
+		<result property="hylxdm" column="hylxdm"/>
+		<result property="hylx" column="hylx"/>
+		<result property="sqip" column="sqip"/>
+	</resultMap>
+	<sql id="t_gatztbjsdwWhere">
+			<if test="gatbid != null and gatbid != ''">and
+				a.gatbid=#{gatbid}
+			</if>
+			<if test="jsdwbm != null and jsdwbm != ''">and
+				a.jsdwbm=#{jsdwbm}
+			</if>
+			<if test="gajsdwid != null and gajsdwid != ''">and
+				a.gajsdwid=#{gajsdwid}
+			</if>
+			<if test="sjListflg != null and sjListflg != ''">and
+				a.sqsj is not null 
+			</if>
+	</sql>
+	<sql id="t_gatztbjsdwPageWhere">
+		<include refid="t_gatztbjsdwWhere"/>	</sql>
+	<sql id="t_gatztbjsdwListWhere">
+		<include refid="t_gatztbjsdwWhere"/>	</sql>
+	<sql id="t_gatztbjsdwSelectWhere">
+		<include refid="t_gatztbjsdwWhere"/>	</sql>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<insert id="insertGatztbjsdw" parameterType="gatztbjsdw">
+		insert into t_gatztbjsdw (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<update id="updateGatztbjsdw" parameterType="gatztbjsdw">
+		update t_gatztbjsdw a set a.gajsdwid=a.gajsdwid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<if test="gajsdwid != null and gajsdwid != ''">and
+				a.gajsdwid=#{gajsdwid}
+		</if>
+	</update>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<delete id="deleteGatztbjsdw" parameterType="gatztbjsdw">
+		delete from t_gatztbjsdw a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<select id="getGatztbjsdwList" parameterType="map" resultMap="gatztbjsdwListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.gatbid gatbid,a.gajsdwid gajsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,a.sqsj sqsj,a.hylxdm hylxdm,a.hylx hylx,a.sqip sqip
+		from t_gatztbjsdw a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<select id="getGatztbjsdwListCount" parameterType="map" resultType="int">
+		select count(1) a from t_gatztbjsdw a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<select id="getGatztbjsdwListNoPage" parameterType="gatztbjsdw" resultMap="gatztbjsdwListResult">
+		select a.gatbid gatbid,a.gajsdwid gajsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,a.sqsj sqsj,a.hylxdm hylxdm,a.hylx hylx,a.sqip sqip
+		from t_gatztbjsdw a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gatbid,a.gajsdwid
+	</select>
+	<!--公安通知通报接收单位(t_gatztbjsdw)-->
+	<select id="getGatztbjsdw" parameterType="gatztbjsdw" resultType="gatztbjsdw">
+		select a.gatbid gatbid,a.gajsdwid gajsdwid,a.jsdwbm jsdwbm,a.jsdwmc jsdwmc,a.sqsj sqsj,a.hylxdm hylxdm,a.hylx hylx,a.sqip sqip,a.qsr qsr,a.qsyj qsyj
+		from t_gatztbjsdw a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.gatbid,a.gajsdwid
+	</select>
+</mapper>

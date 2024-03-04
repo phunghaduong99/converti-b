@@ -1,0 +1,181 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	wpbjgz
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--物品报警规则(t_wpbjgz)-->
+	<resultMap id="wpbjgzResult" type="wpbjgz">
+		
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdlxdm" column="bdlxdm"/>
+		<result property="bdlx" column="bdlx"/>
+		<result property="sfyx" column="sfyx"/>
+		<result property="fbcl" column="fbcl"/>
+		<result property="fbfs" column="fbfs"/>
+		<result property="txdwzd" column="txdwzd"/>
+		<result property="gxdwzd" column="gxdwzd"/>
+		<result property="bjjb" column="bjjb"/>
+		<result property="bjfs" column="bjfs"/>
+		<result property="bjlxdm" column="bjlxdm"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	<!--物品报警规则(t_wpbjgz)-->
+	<resultMap id="wpbjgzListResult" type="wpbjgz">
+		
+		<result property="wpbjgzid" column="wpbjgzid"/>
+		<result property="ywbm" column="ywbm"/>
+		<result property="ywbzdm" column="ywbzdm"/>
+		<result property="bdbm" column="bdbm"/>
+		<result property="bdbzdm" column="bdbzdm"/>
+		<result property="bdlxdm" column="bdlxdm"/>
+		<result property="bdlx" column="bdlx"/>
+		<result property="sfyx" column="sfyx"/>
+		<result property="fbcl" column="fbcl"/>
+		<result property="fbfs" column="fbfs"/>
+		<result property="txdwzd" column="txdwzd"/>
+		<result property="gxdwzd" column="gxdwzd"/>
+		<result property="bjjb" column="bjjb"/>
+		<result property="bjfs" column="bjfs"/>
+		<result property="bjlxdm" column="bjlxdm"/>
+		<result property="bjlx" column="bjlx"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+	</resultMap>
+	<sql id="t_wpbjgzWhere">
+			
+			<if test="wpbjgzid != null and wpbjgzid != ''">and
+				a.wpbjgzid=#{wpbjgzid}
+			</if>
+	</sql>
+	<sql id="t_wpbjgzPageWhere">
+		<include refid="t_wpbjgzWhere"/>	</sql>
+	<sql id="t_wpbjgzListWhere">
+		<include refid="t_wpbjgzWhere"/>	</sql>
+	<sql id="t_wpbjgzSelectWhere">
+		<include refid="t_wpbjgzWhere"/>	</sql>
+	<!--物品报警规则(t_wpbjgz)-->
+	<insert id="insertWpbjgz" parameterType="wpbjgz">
+		insert into t_wpbjgz (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--物品报警规则(t_wpbjgz)-->
+	<update id="updateWpbjgz" parameterType="wpbjgz">
+		update t_wpbjgz a set a.wpbjgzid=a.wpbjgzid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--物品报警规则(t_wpbjgz)-->
+	<delete id="deleteWpbjgz" parameterType="wpbjgz">
+		delete from t_wpbjgz a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--物品报警规则(t_wpbjgz)-->
+	<select id="getWpbjgzList" parameterType="map" resultMap="wpbjgzListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.wpbjgzid wpbjgzid,a.ywbm ywbm,a.ywbzdm ywbzdm,a.bdbm bdbm,a.bdbzdm bdbzdm,a.bdlxdm bdlxdm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.bjjb bjjb,a.bjfs bjfs,a.bjlxdm bjlxdm,a.bjlx bjlx,a.hylbdm hylbdm,a.hylb hylb
+		from t_wpbjgz a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--物品报警规则(t_wpbjgz)-->
+	<select id="getWpbjgzListCount" parameterType="map" resultType="int">
+		select count(1) a from t_wpbjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--物品报警规则(t_wpbjgz)-->
+	<select id="getWpbjgzListNoPage" parameterType="wpbjgz" resultMap="wpbjgzListResult">
+		select a.wpbjgzid wpbjgzid,a.ywbm ywbm,a.ywbzdm ywbzdm,a.bdbm bdbm,a.bdbzdm bdbzdm,a.bdlxdm bdlxdm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.bjjb bjjb,a.bjfs bjfs,a.bjlxdm bjlxdm,a.bjlx bjlx,a.hylbdm hylbdm,a.hylb hylb
+		from t_wpbjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wpbjgzid
+	</select>
+	<!--物品报警规则(t_wpbjgz)-->
+	<select id="getWpbjgz" parameterType="wpbjgz" resultMap="wpbjgzResult">
+		select a.wpbjgzid wpbjgzid,a.ywbm ywbm,a.ywbzdm ywbzdm,a.bdbm bdbm,a.bdbzdm bdbzdm,a.bdlxdm bdlxdm,a.bdlx bdlx,a.sfyx sfyx,a.fbcl fbcl,a.fbfs fbfs,a.txdwzd txdwzd,a.gxdwzd gxdwzd,a.bjjb bjjb,a.bjfs bjfs,a.bjlxdm bjlxdm,a.bjlx bjlx,a.hylbdm hylbdm,a.hylb hylb
+		from t_wpbjgz a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.wpbjgzid
+	</select>
+</mapper>

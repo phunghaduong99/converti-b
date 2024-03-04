@@ -1,0 +1,173 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	tyrcjc
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--日常检查(t_rcjc)-->
+	<resultMap id="tyrcjcResult" type="tyrcjc">
+		<result property="rcjcid" column="rcjcid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="jcrxm" column="jcrxm"/>
+		<result property="jcrzw" column="jcrzw"/>
+		<result property="lsdw" column="lsdw"/>
+		<result property="jcrq" column="jcrq"/>
+		<result property="jcsx" column="jcsx"/>
+		<result property="fxwt" column="fxwt"/>
+		<result property="cljg" column="cljg"/>
+		<result property="sfzdjcjg" column="sfzdjcjg"/>
+		<result property="bz" column="bz"/>
+		<result property="jcfs" column="jcfs"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="rcjcbh" column="rcjcbh"/>
+		<result property="jcrybh" column="jcrybh"/>
+		<result property="jcjgdm" column="jcjgdm"/>
+		<result property="jcjgmc" column="jcjgmc"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+	</resultMap>
+	<!--日常检查(t_rcjc)-->
+	<resultMap id="tyrcjcListResult" type="tyrcjc">
+		<result property="rcjcid" column="rcjcid"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="jcrxm" column="jcrxm"/>
+		<result property="jcrq" column="jcrq"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+	</resultMap>
+	<sql id="t_tyrcjcWhere">
+			<if test="qybm != null and qybm != ''">and
+				a.qiyebianma=#{qybm}
+			</if>
+			<if test="rcjcid != null and rcjcid != ''">and
+				a.rcjcid=#{rcjcid}
+			</if>
+	</sql>
+	<sql id="t_tyrcjcPageWhere">
+		<include refid="t_tyrcjcWhere"/>	</sql>
+	<sql id="t_tyrcjcListWhere">
+		<include refid="t_tyrcjcWhere"/>	</sql>
+	<sql id="t_tyrcjcSelectWhere">
+		<include refid="t_tyrcjcWhere"/>	</sql>
+	<!--日常检查(t_rcjc)-->
+	<insert id="insertTyrcjc" parameterType="tyrcjc">
+		insert into t_tyrcjc (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--日常检查(t_tyrcjc)-->
+	<update id="updateTyrcjc" parameterType="tyrcjc">
+		update t_tyrcjc a set a.rcjcbh=a.rcjcbh
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--日常检查(t_rcjc)-->
+	<delete id="deleteTyrcjc" parameterType="tyrcjc">
+		delete from t_tyrcjc a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--日常检查(t_rcjc)-->
+	<select id="getTyrcjcList" parameterType="map" resultMap="tyrcjcListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.rcjcid rcjcid,a.qiyebianma qybm,a.qiyemc qymc,a.jcrxm jcrxm,a.jcrq jcrq,a.gxdwmc gxdwmc from t_tyrcjc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getTyrcjcListCount" parameterType="map" resultType="int">
+		select count(1) a from t_tyrcjc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getTyrcjcListNoPage" parameterType="tyrcjc" resultMap="tyrcjcListResult">
+		select a.qybm qybm,a.rcjcid rcjcid,a.qybm,a.qymc,a.jcrxm jcrxm,a.jcrzw jcrzw,a.lsdw lsdw,a.jcrq jcrq,a.jcsx jcsx,a.fxwt fxwt,a.cljg cljg,a.sfzdjcjg sfzdjcjg,a.bz bz,a.jcfs jcfs
+		from t_tyrcjc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.rcjcid
+	</select>
+	<!--日常检查(t_rcjc)-->
+	<select id="getTyrcjc" parameterType="tyrcjc" resultMap="tyrcjcResult">
+		select a.qiyebianma qybm,a.qiyemc qymc,a.rcjcbh,a.jcrybh,a.jcjgdm,a.jcjgmc,a.rcjcid rcjcid,a.jcrxm jcrxm,a.jcrzw jcrzw,a.lsdw lsdw,a.jcrq jcrq,a.jcsx jcsx,a.fxwt fxwt,a.cljg cljg,a.sfzdjcjg sfzdjcjg,a.bz bz,a.jcfs jcfs,a.yewulbbm hylbdm,a.yewulb hylb,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc
+		from t_tyrcjc a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.rcjcid
+	</select>
+</mapper>

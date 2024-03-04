@@ -1,0 +1,368 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:12 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qyyyrztj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<resultMap id="qyyyrztjListtjResult" type="qyyyrztj">
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qyzs" column="qyzs"/>
+		<result property="sccss" column="sccss"/>
+		<result property="wsccss" column="wsccss"/>
+		<result property="cyrys" column="cyrys"/>
+		<result property="sbrs" column="sbrs"/>
+		<result property="xzrys" column="xzrys"/>
+		<result property="lzrys" column="lzrys"/>
+	</resultMap>
+	<!--企业营业日志统计明细(t_qyyyrztj)-->
+	<resultMap id="qyyyrztjListResult" type="qyyyrztj">
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="qyzs" column="qyzs"/>
+		<result property="sccss" column="sccss"/>
+		<result property="wsccss" column="wsccss"/>
+		<result property="cyrys" column="cyrys"/>
+		<result property="sbrs" column="sbrs"/>
+		<result property="xzrys" column="xzrys"/>
+		<result property="lzrys" column="lzrys"/>
+		<result property="tjrq" column="tjrq"/>
+	</resultMap>
+	<!--企业营业日志明细(t_qyyyrztj)-->
+	<resultMap id="qyyyrzmxListResult" type="qyyyrztj">
+		<result property="qyid" column="qyid"/>
+		<result property="yyrzid" column="yyrzid"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="ksyysj" column="ksyysj"/>
+		<result property="jsyysj" column="jsyysj"/>
+		<result property="csfe" column="csfe"/>
+		<result property="sffsaj" column="sffsaj"/>
+		<result property="sfglbmjc" column="sfglbmjc"/>
+		<result property="cyryzs" column="cyryzs"/>
+		<result property="dtsbrs" column="dtsbrs"/>
+		<result property="dtxzrys" column="dtxzrys"/>
+		<result property="dtlzrs" column="dtlzrs"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="zajbmc" column="zajbmc"/>
+		<result property="zrs" column="zrs"/>
+		<result property="zt" column="zt"/>
+		<result property="lxdh" column="lxdh"/>
+	</resultMap>
+	
+	<!-- noused start-->
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<resultMap id="qyyyrztjResult" type="qyyyrztj">
+		<result property="qyid" column="qyid"/>
+		<result property="yyrzid" column="yyrzid"/>
+		<result property="yyrztjid" column="yyrztjid"/>
+		<result property="riqi" column="riqi"/>
+		<result property="ksyysj" column="ksyysj"/>
+		<result property="jsyysj" column="jsyysj"/>
+		<result property="csfzrbh" column="csfzrbh"/>
+		<result property="csfe" column="csfe"/>
+		<result property="zafzrbh" column="zafzrbh"/>
+		<result property="zafzrxm" column="zafzrxm"/>
+		<result property="sffsaj" column="sffsaj"/>
+		<result property="sfglbmjc" column="sfglbmjc"/>
+		<result property="dryysj" column="dryysj"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="qybm" column="qybm"/>
+		<result property="qymc" column="qymc"/>
+		<result property="qyqp" column="qyqp"/>
+		<result property="qyjp" column="qyjp"/>
+		<result property="qyzflbm" column="qyzflbm"/>
+		<result property="qyzflmc" column="qyzflmc"/>
+		<result property="qyfflbm" column="qyfflbm"/>
+		<result property="qyfflmc" column="qyfflmc"/>
+		<result property="gxdwbm" column="gxdwbm"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="ssdxjgajgdm" column="ssdxjgajgdm"/>
+		<result property="ssdxjgajgmc" column="ssdxjgajgmc"/>
+		<result property="ssddsjgdm" column="ssddsjgdm"/>
+		<result property="ssddsjgmc" column="ssddsjgmc"/>
+		<result property="qyzzjgdm" column="qyzzjgdm"/>
+		<result property="lxdh" column="lxdh"/>
+		<result property="yzbm" column="yzbm"/>
+		<result property="chzh" column="chzh"/>
+		<result property="jwdzb" column="jwdzb"/>
+		<result property="jjlxbm" column="jjlxbm"/>
+		<result property="jjlxmc" column="jjlxmc"/>
+		<result property="jyfwzy" column="jyfwzy"/>
+		<result property="jyfwjy" column="jyfwjy"/>
+		<result property="zczj" column="zczj"/>
+		<result property="jymj" column="jymj"/>
+		<result property="zabdm" column="zabdm"/>
+		<result property="zajbmc" column="zajbmc"/>
+		<result property="yyztdm" column="yyztdm"/>
+		<result property="yyztmc" column="yyztmc"/>
+		<result property="frdb" column="frdb"/>
+		<result property="frdbzjlb" column="frdbzjlb"/>
+		<result property="frdbzjhm" column="frdbzjhm"/>
+		<result property="frdblxfs" column="frdblxfs"/>
+		<result property="kyrq" column="kyrq"/>
+		<result property="yysj" column="yysj"/>
+		<result property="babh" column="babh"/>
+		<result property="barq" column="barq"/>
+		<result property="tyrq" column="tyrq"/>
+		<result property="jyfs" column="jyfs"/>
+		<result property="jydz" column="jydz"/>
+		<result property="dwfzrzjlb" column="dwfzrzjlb"/>
+		<result property="dwfzrzjhm" column="dwfzrzjhm"/>
+		<result property="dwfzr" column="dwfzr"/>
+		<result property="dwfzrlxfs" column="dwfzrlxfs"/>
+		<result property="xfshdw" column="xfshdw"/>
+		<result property="xfhgzh" column="xfhgzh"/>
+		<result property="hcdw" column="hcdw"/>
+		<result property="hcr" column="hcr"/>
+		<result property="hcsj" column="hcsj"/>
+		<result property="gdxx" column="gdxx"/>
+		<result property="zrs" column="zrs"/>
+		<result property="hdrs" column="hdrs"/>
+		<result property="bagsmc" column="bagsmc"/>
+		<result property="bafzrgmsfhm" column="bafzrgmsfhm"/>
+		<result property="bafzrxm" column="bafzrxm"/>
+		<result property="bafzrdh" column="bafzrdh"/>
+		<result property="bars" column="bars"/>
+		<result property="jgpxrs" column="jgpxrs"/>
+		<result property="bagsyj" column="bagsyj"/>
+		<result property="cksl" column="cksl"/>
+		<result property="bxbjsl" column="bxbjsl"/>
+		<result property="bz" column="bz"/>
+		<result property="dcbs" column="dcbs"/>
+		<result property="dcsj" column="dcsj"/>
+		<result property="zt" column="zt"/>
+		<result property="ztgbrq" column="ztgbrq"/>
+		<result property="scbz" column="scbz"/>
+		<result property="jqbm" column="jqbm"/>
+		<result property="zxbz" column="zxbz"/>
+		<result property="zxyy" column="zxyy"/>
+		<result property="zdskb" column="zdskb"/>
+		<result property="bcsj" column="bcsj"/>
+		<result property="lrsj" column="lrsj"/>
+		<result property="lrr" column="lrr"/>
+		<result property="lrdwbm" column="lrdwbm"/>
+		<result property="lrdwmc" column="lrdwmc"/>
+	</resultMap>
+	<sql id="t_qyyyrztjWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="yyrzid != null and yyrzid != ''">and
+				a.yyrzid=#{yyrzid}
+			</if>
+			<if test="yyrztjid != null and yyrztjid != ''">and
+				a.yyrztjid=#{yyrztjid}
+			</if>
+	</sql>
+	<sql id="t_qyyyrztjPageWhere">
+		<include refid="t_qyyyrztjWhere"/>	</sql>
+	<sql id="t_qyyyrztjListWhere">
+		<include refid="t_qyyyrztjWhere"/>	</sql>
+	<sql id="t_qyyyrztjSelectWhere">
+		<include refid="t_qyyyrztjWhere"/>	</sql>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<insert id="insertQyyyrztj" parameterType="qyyyrztj">
+		insert into t_qyyyrztj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<update id="updateQyyyrztj" parameterType="qyyyrztj">
+		update t_qyyyrztj a set a.yyrztjid=a.yyrztjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<delete id="deleteQyyyrztj" parameterType="qyyyrztj">
+		delete from t_qyyyrztj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<select id="getQyyyrztjListNoPage" parameterType="qyyyrztj" resultMap="qyyyrztjListResult">
+		select a.qyid qyid,a.yyrzid yyrzid,a.yyrztjid yyrztjid,a.riqi riqi,a.ksyysj ksyysj,a.jsyysj jsyysj,a.csfzrbh csfzrbh,a.csfe csfe,a.zafzrbh zafzrbh,a.zafzrxm zafzrxm,a.sffsaj sffsaj,a.sfglbmjc sfglbmjc,a.dryysj dryysj,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc
+		from t_qyyyrztj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.yyrzid,a.yyrztjid
+	</select>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<select id="getQyyyrztj" parameterType="qyyyrztj" resultMap="qyyyrztjResult">
+		select a.qyid qyid,a.yyrzid yyrzid,a.yyrztjid yyrztjid,a.riqi riqi,a.ksyysj ksyysj,a.jsyysj jsyysj,a.csfzrbh csfzrbh,a.csfe csfe,a.zafzrbh zafzrbh,a.zafzrxm zafzrxm,a.sffsaj sffsaj,a.sfglbmjc sfglbmjc,a.dryysj dryysj,a.hylbdm hylbdm,a.hylb hylb,a.qybm qybm,a.qymc qymc,a.qyqp qyqp,a.qyjp qyjp,a.qyzflbm qyzflbm,a.qyzflmc qyzflmc,a.qyfflbm qyfflbm,a.qyfflmc qyfflmc,a.gxdwbm gxdwbm,a.gxdwmc gxdwmc,a.ssdxjgajgdm ssdxjgajgdm,a.ssdxjgajgmc ssdxjgajgmc,a.ssddsjgdm ssddsjgdm,a.ssddsjgmc ssddsjgmc,a.qyzzjgdm qyzzjgdm,a.lxdh lxdh,a.yzbm yzbm,a.chzh chzh,a.jwdzb jwdzb,a.jjlxbm jjlxbm,a.jjlxmc jjlxmc,a.jyfwzy jyfwzy,a.jyfwjy jyfwjy,a.zczj zczj,a.jymj jymj,a.zabdm zabdm,a.zajbmc zajbmc,a.yyztdm yyztdm,a.yyztmc yyztmc,a.frdb frdb,a.frdbzjlb frdbzjlb,a.frdbzjhm frdbzjhm,a.frdblxfs frdblxfs,a.kyrq kyrq,a.yysj yysj,a.babh babh,a.barq barq,a.tyrq tyrq,a.jyfs jyfs,a.jydz jydz,a.dwfzrzjlb dwfzrzjlb,a.dwfzrzjhm dwfzrzjhm,a.dwfzr dwfzr,a.dwfzrlxfs dwfzrlxfs,a.xfshdw xfshdw,a.xfhgzh xfhgzh,a.hcdw hcdw,a.hcr hcr,a.hcsj hcsj,a.gdxx gdxx,a.zrs zrs,a.hdrs hdrs,a.bagsmc bagsmc,a.bafzrgmsfhm bafzrgmsfhm,a.bafzrxm bafzrxm,a.bafzrdh bafzrdh,a.bars bars,a.jgpxrs jgpxrs,a.bagsyj bagsyj,a.cksl cksl,a.bxbjsl bxbjsl,a.bz bz,a.dcbs dcbs,a.dcsj dcsj,a.zt zt,a.ztgbrq ztgbrq,a.scbz scbz,a.jqbm jqbm,a.zxbz zxbz,a.zxyy zxyy,a.zdskb zdskb,a.bcsj bcsj,a.lrsj lrsj,a.lrr lrr,a.lrdwbm lrdwbm,a.lrdwmc lrdwmc
+		from t_qyyyrztj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.yyrzid,a.yyrztjid
+	</select>
+	<!-- noused end-->
+	<!--企业营业日志统计 使用  -->
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<select id="getQyyyrztjListtj" parameterType="map" resultMap="qyyyrztjListtjResult">
+		select x.* from (select rownum rowno,z.* from 
+		(
+			select nvl(tj.qyzs,0) qyzs,nvl(tj.sccss,0) sccss,nvl(tj.wsccss,0) wsccss,nvl(tj.cyrys,0) cyrys,nvl(tj.sbrs,0) sbrs,nvl(tj.xzrys,0) xzrys,nvl(tj.lzrys,0) lzrys,
+			${selectTab} 
+			from t_department dept,
+			(select count(1) qyzs,sum(case when rzscbs = '1' then 1 else 0 end) sccss,sum(case when rzscbs = '0' then 1 else 0 end) wsccss,
+       			sum(cyryzs) cyrys,sum(dtsbrs) sbrs,sum(dtxzrys) xzrys,sum(dtlzrs) lzrys,
+			${selectConditon}
+			from t_qyyyrztj 
+			where 1=1
+				<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+			<if test="groupBy != null and groupBy != ''">
+			group by ${groupBy}
+			 </if>
+			) tj
+			where 1=1
+			 ${whereFlg} 
+	 		<if test="deptcode != null and deptcode != ''">and
+				dept.departcode like '${deptcode}%'
+		    </if>
+	 		<if test="deptlevel != null and deptlevel != ''">and
+				dept.departlevel &lt;=#{deptlevel} and dept.departlevel &gt; 1
+		    </if>
+		    <if test="groupBy != null and groupBy != ''">
+			order by ${groupBy}
+			</if>
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<select id="getQyyyrztjListtjCount" parameterType="map" resultType="int">
+		select count(1) a from dual
+	</select>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<select id="getQyyyrztjList" parameterType="map" resultMap="qyyyrztjListResult">
+		select x.* from (select rownum rowno,z.* from 
+		(
+			select tjrq,count(1) qyzs,sum(case when rzscbs = '1' then 1 else 0 end) sccss,sum(case when rzscbs = '0' then 1 else 0 end) wsccss,
+			nvl(sum(cyryzs),0) cyrys,nvl(sum(dtsbrs),0) sbrs,nvl(sum(dtxzrys),0) xzrys,nvl(sum(dtlzrs),0) lzrys,
+			${selectConditon}
+			from t_qyyyrztj 
+			where 1=1
+				<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+			group by tjrq
+			<if test="groupBy != null and groupBy != ''">,
+			${groupBy}
+			</if>
+			order by ${pageSort}
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业营业日志统计(t_qyyyrztj)-->
+	<select id="getQyyyrztjListCount" parameterType="map" resultType="int">
+		select count(1) a from (
+			dual
+		) z
+	</select>
+	<!--企业营业日志统计明细(t_qyyyrztj)-->
+	<select id="getQyyyrzmxList" parameterType="map" resultMap="qyyyrzmxListResult">
+		select x.* from (select rownum rowno,z.* from 
+		(
+			select a.yyrzid,a.tjrq,a.ksyysj,a.jsyysj,a.csfe,a.sffsaj,a.sfglbmjc,a.cyryzs,a.dtsbrs,a.dtxzrys,a.dtlzrs,
+			b.qyid qyid,  b.qybm qybm, b.qymc qymc, b.qyzflmc qyzflmc, b.yyztmc yyztmc, b.zajbmc zajbmc, b.zrs zrs, b.zt zt,b.lxdh lxdh
+			from t_qyyyrztj a,t_qyjbxx b
+			where a.qyid=b.qyid
+				<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+			order by ${pageSort}
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业营业日志明细(t_qyyyrztj)-->
+	<select id="getQyyyrzmxListCount" parameterType="map" resultType="int">
+		select count(1) a from (
+			select a.yyrzid,a.tjrq,a.ksyysj,a.jsyysj,a.csfe,a.sffsaj,a.sfglbmjc,a.cyryzs,a.dtsbrs,a.dtxzrys,a.dtlzrs,
+			b.qyid qyid,  b.qybm qybm, b.qymc qymc, b.qyzflmc qyzflmc, b.yyztmc yyztmc, b.zajbmc zajbmc, b.zrs zrs, b.zt zt,b.lxdh lxdh
+			from t_qyyyrztj a,t_qyjbxx b
+			where a.qyid=b.qyid
+				<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+			order by ${pageSort}
+		) z
+	</select>
+	<!--企业营业日志统计 使用  -->
+</mapper>

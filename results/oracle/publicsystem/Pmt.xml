@@ -1,0 +1,165 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:58:11 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	pmt
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--平面图(t_pmt)-->
+	<resultMap id="pmtResult" type="pmt">
+		<result property="qyid" column="qyid"/>
+		<result property="pmtid" column="pmtid"/>
+		<result property="pmtlxdm" column="pmtlxdm"/>
+		<result property="pmtlxmc" column="pmtlxmc"/>
+		<result property="pmtz" column="pmtz"/>
+	</resultMap>
+	<!--平面图(t_pmt)-->
+	<resultMap id="pmtListResult" type="pmt">
+		<result property="qyid" column="qyid"/>
+		<result property="pmtid" column="pmtid"/>
+		<result property="pmtlxdm" column="pmtlxdm"/>
+		<result property="pmtlxmc" column="pmtlxmc"/>
+	</resultMap>
+	<sql id="t_pmtWhere">
+			<if test="qyid != null and qyid != ''">and
+				a.qyid=#{qyid}
+			</if>
+			<if test="pmtid != null and pmtid != ''">and
+				a.pmtid=#{pmtid}
+			</if>
+	</sql>
+	<sql id="t_pmtPageWhere">
+		<include refid="t_pmtWhere"/>	</sql>
+	<sql id="t_pmtListWhere">
+		<include refid="t_pmtWhere"/>	</sql>
+	<sql id="t_pmtSelectWhere">
+		<include refid="t_pmtWhere"/>	</sql>
+	<!--平面图(t_pmt)-->
+	<insert id="insertPmt" parameterType="pmt">
+		insert into t_pmt (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--平面图(t_pmt)-->
+	<update id="updatePmt" parameterType="pmt">
+		update t_pmt a set a.pmtid=a.pmtid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--平面图(t_pmt)-->
+	<delete id="deletePmt" parameterType="pmt">
+		delete from t_pmt a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--平面图(t_pmt)-->
+	<select id="getPmtList" parameterType="map" resultMap="pmtListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.qyid qyid,a.pmtid pmtid,a.pmtlxdm pmtlxdm,a.pmtlxmc pmtlxmc,a.pmtz pmtz
+		from t_pmt a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--平面图(t_pmt)-->
+	<select id="getPmtListCount" parameterType="map" resultType="int">
+		select count(1) a from t_pmt a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--平面图(t_pmt)-->
+	<select id="getPmtListNoPage" parameterType="pmt" resultMap="pmtListResult">
+		select a.qyid qyid,a.pmtid pmtid,a.pmtlxdm pmtlxdm,a.pmtlxmc pmtlxmc,a.pmtz pmtz
+		from t_pmt a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.pmtid
+	</select>
+	<!--平面图(t_pmt)-->
+	<select id="getPmt" parameterType="pmt" resultMap="pmtResult">
+		select a.qyid qyid,a.pmtid pmtid,a.pmtlxdm pmtlxdm,a.pmtlxmc pmtlxmc,a.pmtz pmtz
+		from t_pmt a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.pmtid
+	</select>
+	<!--平面图(t_pmt)不查询BLOB-->
+	<select id="getPmtNoBlob" parameterType="pmt" resultMap="pmtListResult">
+		select a.qyid qyid,a.pmtid pmtid,a.pmtlxdm pmtlxdm,a.pmtlxmc pmtlxmc
+		from t_pmt a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qyid,a.pmtid
+	</select>
+</mapper>

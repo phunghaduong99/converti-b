@@ -1,0 +1,185 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	sjbjg
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--数据表结构(t_sjbjg)-->
+	<resultMap id="sjbjgResult" type="sjbjg">
+		<result property="sjbjgid" column="sjbjgid"/>
+		<result property="sjbid" column="sjbid"/>
+		<result property="zdm" column="zdm"/>
+		<result property="zdzwm" column="zdzwm"/>
+		<result property="zdlx" column="zdlx"/>
+		<result property="zdcd" column="zdcd"/>
+		<result property="qsz" column="qsz"/>
+		<result property="px" column="px"/>
+		<result property="gs" column="gs"/>
+		<result property="sfdjhwb" column="sfdjhwb"/>
+		<result property="sfbt" column="sfbt"/>
+		<result property="sfzd" column="sfzd"/>
+		<result property="sfkj" column="sfkj"/>
+		<result property="sfcx" column="sfcx"/>
+		<result property="xlklx" column="xlklx"/>
+		<result property="dzxlkdqy" column="dzxlkdqy"/>
+		<result property="xlkkd" column="xlkkd"/>
+		<result property="xlkgd" column="xlkgd"/>
+		<result property="bz" column="bz"/>
+		<result property="xlknr" column="xlknr"/>
+	</resultMap>
+	<!--数据表结构(t_sjbjg)-->
+	<resultMap id="sjbjgListResult" type="sjbjg">
+		<result property="sjbjgid" column="sjbjgid"/>
+		<result property="sjbid" column="sjbid"/>
+		<result property="zdm" column="zdm"/>
+		<result property="zdzwm" column="zdzwm"/>
+		<result property="zdlx" column="zdlx"/>
+		<result property="zdcd" column="zdcd"/>
+		<result property="qsz" column="qsz"/>
+		<result property="px" column="px"/>
+		<result property="gs" column="gs"/>
+		<result property="sfdjhwb" column="sfdjhwb"/>
+		<result property="sfbt" column="sfbt"/>
+		<result property="sfzd" column="sfzd"/>
+		<result property="sfkj" column="sfkj"/>
+		<result property="sfcx" column="sfcx"/>
+		<result property="xlklx" column="xlklx"/>
+		<result property="dzxlkdqy" column="dzxlkdqy"/>
+		<result property="xlkkd" column="xlkkd"/>
+		<result property="xlkgd" column="xlkgd"/>
+		<result property="bz" column="bz"/>
+		<result property="xlknr" column="xlknr"/>
+	</resultMap>
+	<sql id="t_sjbjgWhere">
+			<if test="sjbjgid != null and sjbjgid != ''">and
+				a.sjbjgid=#{sjbjgid}
+			</if>
+			<if test="sjbid != null and sjbid != ''">and
+				a.sjbid=#{sjbid}
+			</if>
+	</sql>
+	<sql id="t_sjbjgPageWhere">
+		<include refid="t_sjbjgWhere"/>	</sql>
+	<sql id="t_sjbjgListWhere">
+		<include refid="t_sjbjgWhere"/>	</sql>
+	<sql id="t_sjbjgSelectWhere">
+		<include refid="t_sjbjgWhere"/>	</sql>
+	<!--数据表结构(t_sjbjg)-->
+	<insert id="insertSjbjg" parameterType="sjbjg">
+		insert into t_sjbjg (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--数据表结构(t_sjbjg)-->
+	<update id="updateSjbjg" parameterType="sjbjg">
+		update t_sjbjg a set a.sjbid=a.sjbid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--数据表结构(t_sjbjg)-->
+	<delete id="deleteSjbjg" parameterType="sjbjg">
+		delete from t_sjbjg a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--数据表结构(t_sjbjg)-->
+	<select id="getSjbjgList" parameterType="map" resultMap="sjbjgListResult">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select a.sjbjgid sjbjgid,a.sjbid sjbid,a.zdm zdm,a.zdzwm zdzwm,a.zdlx zdlx,a.zdcd zdcd,a.qsz qsz,a.px px,a.gs gs,a.sfdjhwb sfdjhwb,a.sfbt sfbt,a.sfzd sfzd,a.sfkj sfkj,a.sfcx sfcx,a.xlklx xlklx,a.dzxlkdqy dzxlkdqy,a.xlkkd xlkkd,a.xlkgd xlkgd,a.bz bz,a.xlknr xlknr
+		from t_sjbjg a 
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by ${pageSort})  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--数据表结构(t_sjbjg)-->
+	<select id="getSjbjgListCount" parameterType="map" resultType="int">
+		select count(1) a from t_sjbjg a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</select>
+	<!--数据表结构(t_sjbjg)-->
+	<select id="getSjbjgListNoPage" parameterType="sjbjg" resultMap="sjbjgListResult">
+		select a.sjbjgid sjbjgid,a.sjbid sjbid,a.zdm zdm,a.zdzwm zdzwm,a.zdlx zdlx,a.zdcd zdcd,a.qsz qsz,a.px px,a.gs gs,a.sfdjhwb sfdjhwb,a.sfbt sfbt,a.sfzd sfzd,a.sfkj sfkj,a.sfcx sfcx,a.xlklx xlklx,a.dzxlkdqy dzxlkdqy,a.xlkkd xlkkd,a.xlkgd xlkgd,a.bz bz,a.xlknr xlknr
+		from t_sjbjg a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.sjbjgid,a.sjbid
+	</select>
+	<!--数据表结构(t_sjbjg)-->
+	<select id="getSjbjg" parameterType="sjbjg" resultMap="sjbjgResult">
+		select a.sjbjgid sjbjgid,a.sjbid sjbid,a.zdm zdm,a.zdzwm zdzwm,a.zdlx zdlx,a.zdcd zdcd,a.qsz qsz,a.px px,a.gs gs,a.sfdjhwb sfdjhwb,a.sfbt sfbt,a.sfzd sfzd,a.sfkj sfkj,a.sfcx sfcx,a.xlklx xlklx,a.dzxlkdqy dzxlkdqy,a.xlkkd xlkkd,a.xlkgd xlkgd,a.bz bz,a.xlknr xlknr
+		from t_sjbjg a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.sjbjgid,a.sjbid
+	</select>
+</mapper>

@@ -1,0 +1,682 @@
+<!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<?xml version="1.0" encoding="UTF-8"?><!--
+
+    Copyright 2004-2024 the original author or authors.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+       https://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+--><!--Converted at: Mon Mar 04 23:56:06 KST 2024-->
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="">
+	<!--
+		Sorry, I can`t migrate	qycftj
+		See console output for further details 
+	-->
+	<!--
+		Sorry, I can`t migrate	oneDayCategory
+		See console output for further details 
+	-->
+	<!--企业处罚统计表(t_qycftj)-->
+	<resultMap id="qycftjResult" type="qycftj">
+		<result property="qycftjid" column="qycftjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		<result property="jgcs" column="jgcs"/>
+		<result property="fmcs" column="fmcs"/>
+		<result property="tdcs" column="tdcs"/>
+		<result property="zjcs" column="zjcs"/>
+		<result property="qtfmcs" column="qtfmcs"/>
+	</resultMap>
+	<!--企业处罚统计表(t_qycftj)-->
+	<resultMap id="qycftjListResult" type="qycftj">
+		<result property="qycftjid" column="qycftjid"/>
+		<result property="hylbdm" column="hylbdm"/>
+		<result property="hylb" column="hylb"/>
+		<result property="tjrq" column="tjrq"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+		<result property="jgcs" column="jgcs"/>
+		<result property="fmcs" column="fmcs"/>
+		<result property="tdcs" column="tdcs"/>
+		<result property="zjcs" column="zjcs"/>
+		<result property="qtfmcs" column="qtfmcs"/>
+	</resultMap>
+	
+	
+		<!--企业处罚统计表(t_qycftj)-->
+	<resultMap id="qycftjListResultTj" type="qycftj">
+		<result property="jgcs" column="jgcs"/>
+		<result property="fmcs" column="fmcs"/>
+		<result property="tdcs" column="tdcs"/>
+		<result property="zjcs" column="zjcs"/>
+		<result property="qtfmcs" column="qtfmcs"/>
+		<result property="xiaoji" column="xiaoji"/>
+		
+		
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+	</resultMap>
+	
+	<!--企业处罚统计表(t_qycftj)-->
+	<resultMap id="qycftjListResultTjYZ" type="qycftj">
+	    <result property="gxdwdm" column="gxdwdm"/>
+	    <result property="gxdwmc" column="gxdwmc"/>
+	    
+	    <result property="xiaoji" column="xiaoji"/>
+		<result property="jgcs" column="jgcs"/>
+		<result property="fmcs" column="fmcs"/>
+		<result property="tdcs" column="tdcs"/>
+		<result property="zjcs" column="zjcs"/>
+		<result property="qtfmcs" column="qtfmcs"/>
+		
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+	</resultMap>
+	<!--企业处罚统计表(t_qycftj)-->
+	<resultMap id="qycftjListResultBzh" type="qycftj">
+	    <result property="jczsT" column="jczsT"/>
+        <result property="cfzsT" column="cfzsT"/>
+        <result property="jlzsT" column="jlzsT"/>
+	    <result property="jczs" column="jczs"/>
+        <result property="cfzs" column="cfzs"/>
+        <result property="jgcs" column="jgcs"/>
+        <result property="fmcs" column="fmcs"/>
+        <result property="tdcs" column="tdcs"/>
+        <result property="zjcs" column="zjcs"/>
+		<result property="qtfmcs" column="qtfmcs"/>
+		<result property="jlzs" column="jlzs"/>
+		<result property="tbbycs" column="tbbycs"/>
+		<result property="wzjlcs" column="wzjlcs"/>
+		<result property="qtjlcs" column="qtjlcs"/>
+		<result property="dsjgdm" column="dsjgdm"/>
+		<result property="dsjgmc" column="dsjgmc"/>
+		<result property="fxjdm" column="fxjdm"/>
+		<result property="fxjmc" column="fxjmc"/>
+		<result property="gxdwmc" column="gxdwmc"/>
+		<result property="gxdwdm" column="gxdwdm"/>
+		<result property="csbm" column="csbm"/>
+		<result property="csmc" column="csmc"/>
+	</resultMap>
+	<sql id="t_qycftjPageWhereBzh">
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="csbm != null and csbm != ''">and
+				a.csbm=#{csbm}
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+		    </if>
+	</sql>
+	
+	<sql id="t_qycftjTongjiPageWhere">
+			<if test="gxdwdm != null and gxdwdm != ''">and
+				a.gxdwdm=#{gxdwdm}
+			</if>
+			<if test="fxjdm != null and fxjdm != ''">and
+				a.fxjdm=#{fxjdm}
+			</if>
+			<if test="dsjgdm != null and dsjgdm != ''">and
+				a.dsjgdm=#{dsjgdm}
+			</if>
+			<if test="csbm != null and csbm != ''">and
+				a.csbm=#{csbm}
+			</if>
+			
+			<if test="tjrq != null and tjrq != ''">and
+				a.tjrq &gt;=#tjrq:DATE#
+			</if>
+			<if test="tjrqzhi != null and tjrqzhi != ''">and
+				a.tjrq &lt; #tjrqzhi:DATE#+1
+			</if>
+			<if test="hylbdm != null and hylbdm != ''">and
+				a.hylbdm=#{hylbdm}
+			</if>
+	</sql>
+	
+	
+	<sql id="t_qycftjWhere">
+			<if test="qycftjid != null and qycftjid != ''">and
+				a.qycftjid=#{qycftjid}
+			</if>
+	</sql>
+	<sql id="t_qycftjPageWhere">
+		<include refid="t_qycftjWhere"/>	</sql>
+	<sql id="t_qycftjListWhere">
+		<include refid="t_qycftjWhere"/>	</sql>
+	<sql id="t_qycftjSelectWhere">
+		<include refid="t_qycftjWhere"/>	</sql>
+		
+	 <sql id="t_qycftjListYzWhere">
+		<if test="hylbdm != null and hylbdm != ''">and
+				qycf.hylbdm=#{hylbdm}
+		</if>
+	</sql>
+		
+	<!--企业处罚统计表(t_qycftj)-->
+	<insert id="insertQycftj" parameterType="qycftj">
+		insert into t_qycftj (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		) values (
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		)
+	</insert>
+	<!--企业处罚统计表(t_qycftj)-->
+	<update id="updateQycftj" parameterType="qycftj">
+		update t_qycftj a set a.qycftjid=a.qycftjid
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</update>
+	<!--企业处罚统计表(t_qycftj)-->
+	<delete id="deleteQycftj" parameterType="qycftj">
+		delete from t_qycftj a where 1=1 
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+	</delete>
+	<!--企业处罚统计表(t_qycftj)-->
+	<select id="getQycftjList" parameterType="map" resultMap="qycftjListResultTj">
+		select m.* from (select rownum rowno, x.* from (
+		select z.* from 
+		(select 
+		  sum(a.jgcs) jgcs,
+	      sum(a.fmcs) fmcs,
+		  sum(a.tdcs) tdcs,
+		    sum(a.zjcs) zjcs,
+		      sum(a.qtfmcs) qtfmcs,
+		         sum(a.jgcs+a.fmcs+a.tdcs+a.zjcs+a.qtfmcs) xiaoji
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_qycftj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)  z order by ${pageSort} ) x ) m where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业处罚统计表(t_qycftj)-->
+	<select id="getQycftjListCount" parameterType="map" resultType="int">
+			select count(1) from (
+		select count(1)  from t_qycftj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)
+	
+	</select>
+	<!--企业处罚统计表(t_qycftj)-->
+	<select id="getQycftjListNoPage" parameterType="qycftj" resultMap="qycftjListResult">
+		select a.qycftjid qycftjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.csbm csbm,a.csmc csmc,a.jgcs jgcs,a.fmcs fmcs,a.tdcs tdcs,a.zjcs zjcs,a.qtfmcs qtfmcs
+		from t_qycftj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qycftjid
+	</select>
+	<!--企业处罚统计表(t_qycftj)-->
+	<select id="getQycftj" parameterType="qycftj" resultMap="qycftjResult">
+		select a.qycftjid qycftjid,a.hylbdm hylbdm,a.hylb hylb,a.tjrq tjrq,a.dsjgdm dsjgdm,a.dsjgmc dsjgmc,a.fxjdm fxjdm,a.fxjmc fxjmc,a.gxdwmc gxdwmc,a.gxdwdm gxdwdm,a.csbm csbm,a.csmc csmc,a.jgcs jgcs,a.fmcs fmcs,a.tdcs tdcs,a.zjcs zjcs,a.qtfmcs qtfmcs
+		from t_qycftj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		order by a.qycftjid
+	</select>
+	
+	<!--企业处罚统计表印章业(t_qycftj)-->
+	<select id="getQycftjListyzy" parameterType="map" resultMap="qycftjListResultTjYZ">
+	
+	SELECT * FROM (
+	 SELECT A.*, ROWNUM rowno
+	 from ( 
+	   SELECT PCS.DEPARTBREVITYCODE gxdwdm,
+		      PCS.DEPARTNAME gxdwmc,
+		       NVL(JGCS.JGCS,'0')+ NVL(FMCS.FMCS,'0')+ NVL(TDCS.TDCS,'0')+NVL(ZJCS.ZJCS,'0')+ NVL(QTCS.QTCS,'0') xiaoji,
+		       NVL(JGCS.JGCS,'0') jgcs,
+		       NVL(FMCS.FMCS,'0') fmcs,
+		       NVL(TDCS.TDCS,'0') tdcs,
+		       NVL(ZJCS.ZJCS,'0') zjcs,
+		       NVL(QTCS.QTCS,'0') qtfmcs,
+		       '' csbm,
+		       '' csmc
+		       
+	   from (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+		          FROM T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			           AND DEPT.DEPARTCODE LIKE #{gxdwbm}  order by dept.nodeorder ) PCS,
+			 
+			(SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) JGCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='1'
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) JGCS,
+		         
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) FMCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND (qycf.cfjgdm ='2' or qycf.cfjgdm ='3' or qycf.cfjgdm ='4')
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) FMCS,
+		    
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) TDCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND (qycf.cfjgdm ='5' or qycf.cfjgdm ='6')
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) TDCS,
+		    
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) ZJCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='7' 
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) ZJCS,
+		         
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) QTCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='9' 
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) QTCS
+		         
+		   WHERE PCS.DEPARTBREVITYCODE = JGCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = FMCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = TDCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = ZJCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = QTCS.ssdwbm(+)
+  		   ORDER BY ${pageSort}
+	 
+	 ) A
+	 
+  		WHERE ROWNUM &lt;= #{endRow}
+		)
+		WHERE rowno &gt; #{beginRow}
+	  
+	  
+	</select>
+	<!--企业处罚统计表(t_qycftj)-->
+	<select id="getQycftjListyzyCount" parameterType="map" resultType="int">
+	SELECT COUNT(*) FROM (
+	   SELECT PCS.DEPARTBREVITYCODE gxdwdm,
+		      PCS.DEPARTNAME gxdwmc,
+		       NVL(JGCS.JGCS,'0')+ NVL(FMCS.FMCS,'0')+ NVL(TDCS.TDCS,'0')+NVL(ZJCS.ZJCS,'0')+ NVL(QTCS.QTCS,'0') xiaoji,
+		       NVL(JGCS.JGCS,'0') jgcs,
+		       NVL(FMCS.FMCS,'0') fmcs,
+		       NVL(TDCS.TDCS,'0') tdcs,
+		       NVL(ZJCS.ZJCS,'0') zjcs,
+		       NVL(QTCS.QTCS,'0') qtfmcs,
+		       '' csbm,
+		       '' csmc
+		       
+	   from (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+		          FROM T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			           AND DEPT.DEPARTCODE LIKE #{gxdwbm}  order by dept.nodeorder ) PCS,
+			 
+			(SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) JGCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='1'
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) JGCS,
+		         
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) FMCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND (qycf.cfjgdm ='2' or qycf.cfjgdm ='3' or qycf.cfjgdm ='4')
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) FMCS,
+		    
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) TDCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND (qycf.cfjgdm ='5' or qycf.cfjgdm ='6')
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) TDCS,
+		    
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) ZJCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='7' 
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) ZJCS,
+		         
+		    (SELECT SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE)) ssdwbm,
+		               COUNT(1) QTCS
+		          FROM t_qycf qycf, T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTLEVEL = #{gxdwlevel}
+			       AND DEPT.DEPARTCODE LIKE #{gxdwbm}
+		           AND qycf.ssdwbm LIKE DEPT.DEPARTBREVITYCODE || '%'
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='9' 
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY SUBSTR(qycf.ssdwbm, 0, LENGTH(DEPT.DEPARTBREVITYCODE))) QTCS
+		    
+		   WHERE PCS.DEPARTBREVITYCODE = JGCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = FMCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = TDCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = ZJCS.ssdwbm(+)
+		   AND PCS.DEPARTBREVITYCODE = QTCS.ssdwbm(+)
+	  )
+	
+	</select>
+	
+	<select id="getQycftjTotalNum" parameterType="map" resultMap="qycftjListResultTjYZ">
+	
+	   SELECT PCS.DEPARTBREVITYCODE gxdwdm,
+		      PCS.DEPARTNAME gxdwmc,
+		       NVL(JGCS.JGCS,'0')+ NVL(FMCS.FMCS,'0')+ NVL(TDCS.TDCS,'0')+NVL(ZJCS.ZJCS,'0')+ NVL(QTCS.QTCS,'0') xiaoji,
+		       NVL(JGCS.JGCS,'0') jgcs,
+		       NVL(FMCS.FMCS,'0') fmcs,
+		       NVL(TDCS.TDCS,'0') tdcs,
+		       NVL(ZJCS.ZJCS,'0') zjcs,
+		       NVL(QTCS.QTCS,'0') qtfmcs,
+		       '' csbm,
+		       '' csmc
+		       
+	   from (SELECT DEPT.DEPARTCODE, DEPT.DEPARTBREVITYCODE, DEPT.DEPARTNAME, DEPT.NODEORDER
+		          FROM T_DEPARTMENT DEPT
+		         WHERE DEPT.DEPARTCODE = #{gxdwbmall} 
+			        order by dept.nodeorder    ) PCS,
+			           
+			 (SELECT qycf.ssdwbm ssdwbm,
+		               COUNT(1) JGCS
+		          FROM t_qycf qycf 
+		         WHERE  qycf.ssdwbm = #{gxdwbmall}
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='1'
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY qycf.ssdwbm ) JGCS, 
+		         
+		         (SELECT qycf.ssdwbm ssdwbm,
+		               COUNT(1) FMCS
+		          FROM t_qycf qycf 
+		         WHERE  qycf.ssdwbm = #{gxdwbmall}
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND (qycf.cfjgdm ='2' or qycf.cfjgdm ='3' or qycf.cfjgdm ='4')
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY qycf.ssdwbm ) FMCS, 
+		         
+		     (SELECT qycf.ssdwbm ssdwbm,
+		               COUNT(1) TDCS
+		          FROM t_qycf qycf  
+		         WHERE qycf.ssdwbm = #{gxdwbmall}
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND (qycf.cfjgdm ='5' or qycf.cfjgdm ='6')
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY qycf.ssdwbm ) TDCS,   
+		         
+		       (SELECT qycf.ssdwbm  ssdwbm,
+		               COUNT(1) ZJCS
+		          FROM t_qycf qycf 
+		         WHERE qycf.ssdwbm = #{gxdwbmall}
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='7' 
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY qycf.ssdwbm ) ZJCS,  
+		         
+		       (SELECT qycf.ssdwbm ssdwbm,
+		               COUNT(1) QTCS
+		          FROM t_qycf qycf  
+		         WHERE qycf.ssdwbm = #{gxdwbmall}
+		           AND qycf.djsj BETWEEN #{qssj,jdbcType=TIMESTAMP} AND #{jzsj,jdbcType=TIMESTAMP}
+		           AND qycf.cfjgdm ='9' 
+		           <!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		         GROUP BY qycf.ssdwbm ) QTCS 
+		         
+		   WHERE PCS.DEPARTCODE = JGCS.ssdwbm(+)
+			   AND PCS.DEPARTCODE = FMCS.ssdwbm(+)
+			   AND PCS.DEPARTCODE = TDCS.ssdwbm(+)
+			   AND PCS.DEPARTCODE = ZJCS.ssdwbm(+)
+			   AND PCS.DEPARTCODE = QTCS.ssdwbm(+)
+	   
+	
+	</select>
+	
+	<!--企业处罚统计表标准化(t_qycftj)-->
+	<select id="getQycftjListBzh" parameterType="map" resultMap="qycftjListResultBzh">
+		select x.* from (
+		select rownum rowno,z.* from 
+		(select  
+		    NVL(sum(b.jgcsT+b.fmcsT+b.tdcsT+b.zjcsT+b.qtfmcsT+b.tbbycsT+b.wzjlcsT+b.qtjlcsT),'0') as jczsT,
+		    NVL(sum(b.jgcsT+b.fmcsT+b.tdcsT+b.zjcsT+b.qtfmcsT),'0') as cfzsT,
+		    NVL(sum(b.tbbycsT+b.wzjlcsT+b.qtjlcsT),'0') as jlzsT,
+		    NVL(sum(b.jgcs+b.fmcs+b.tdcs+b.zjcs+b.qtfmcs+b.tbbycs+b.wzjlcs+b.qtjlcs),'0') as jczs,
+		    NVL(sum(b.jgcs+b.fmcs+b.tdcs+b.zjcs+b.qtfmcs),'0') as cfzs,
+		    NVL(sum(b.tbbycs+b.wzjlcs+b.qtjlcs),'0') as jlzs,
+		    NVL(sum(b.jgcsT),'0') as jgcsT,
+		    NVL(sum(b.fmcsT),'0') as fmcsT,
+		    NVL(sum(b.tdcsT),'0') as tdcsT,
+		    NVL(sum(b.zjcsT),'0') as zjcsT,
+		    NVL(sum(b.qtfmcsT),'0') as qtfmcsT,
+		    NVL(sum(b.tbbycsT),'0') as tbbycsT,
+		    NVL(sum(b.wzjlcsT),'0') as wzjlcsT,
+		    NVL(sum(b.qtjlcsT),'0') as qtjlcsT,
+		    NVL(sum(b.jgcs),'0') as jgcs,
+		    NVL(sum(b.fmcs),'0') as fmcs,
+		    NVL(sum(b.tdcs),'0') as tdcs,
+		    NVL(sum(b.zjcs),'0') as zjcs,
+		    NVL(sum(b.qtfmcs),'0') as qtfmcs,
+		    NVL(sum(b.tbbycs),'0') as tbbycs,
+		    NVL(sum(b.wzjlcs),'0') as wzjlcs,
+		    NVL(sum(b.qtjlcs),'0') as qtjlcs
+		    <if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		    </if>
+		from
+		(select 
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.jgcs end) as jgcsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.fmcs end) as fmcsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.tdcs end) as tdcsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.zjcs end) as zjcsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.qtfmcs end) as qtfmcsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.tbbycs end) as tbbycsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.wzjlcs end) as wzjlcsT,
+		 sum(case when a.tjrq &lt; #jzrq:DATE#+1 then a.qtjlcs end) as qtjlcsT,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.jgcs end) as jgcs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.fmcs end) as fmcs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.tdcs end) as tdcs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.zjcs end) as zjcs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.qtfmcs end) as qtfmcs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.tbbycs end) as tbbycs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.wzjlcs end) as wzjlcs,
+		 sum(case when a.tjrq &gt;=#qsrq:DATE# and a.tjrq &lt; #jzrq:DATE#+1 then a.qtjlcs end) as qtjlcs
+		<if test="selectConditon != null and selectConditon != ''">,
+				${selectConditon}
+		</if>
+		from t_qycftj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		) b
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		order by ${pageSort}
+		)  z) x where rowno &gt;${beginRow} and rowno &lt;= ${endRow} 
+	</select>
+	<!--企业处罚统计表标准化(t_qycftj)-->
+	<select id="getQycftjListBzhCount" parameterType="map" resultType="int">
+			select count(1) from (
+		select count(1)  from t_qycftj a
+		where 1=1
+		<!--
+		Sorry, I can`t migrate	
+		See console output for further details 
+	-->
+		<if test="groupBy != null and groupBy != ''"> 
+				group by ${groupBy}
+		</if>
+		)
+	
+	</select>
+</mapper>
